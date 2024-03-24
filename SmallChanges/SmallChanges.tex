@@ -9,7 +9,7 @@ We explore how small changes to the input of a function change the output.
 \end{abstract}
 \maketitle
 
-The main idea of differential calculus is that for some functions (called \emph{differentiable}) the change in the output is approximately proportional to the change in the input. The proportionality factor is called the derivative. In this chapter we explore this idea in a few scenarios.
+The main idea of differential calculus is that for some functions (called \emph{differentiable}) the change in the output is approximately proportional to the change in the input. The proportionality factor is called the derivative. In this chapter we explore this idea.
 
 
 \section{The Falling Ladder}
@@ -49,7 +49,7 @@ Desmos activity available at
 
 \pskip
 
-(b) Now let's focus the particular position of the ladder where the bottom end is  $s=8$ feet from the wall. For this, turn on the ``one position" folder in Line 3.
+(b) Now let's focus on the particular position of the ladder where the bottom end is  $s=8$ feet from the wall. For this, turn on the ``one position" folder in Line 3.
 
 \pskip
 
@@ -59,7 +59,7 @@ Desmos activity available at
 \[
   h = f(s) , 0\leq s \leq 10 ,
 \]
-that expresses the height of the top end (in feet) in terms of the distance of the bottom end from the wall (in feet). %Activate the folder ``graph of function" in Line 8.
+that expresses the height of the ladder's top end above the ground (in feet) in terms of the distance of its bottom end from the wall (in feet). %Activate the folder ``graph of function" in Line 8.
 
 (iii) Use your function $f$ to construct another table, like the one in part (i), with $s=7.9, 7.99, 7.999,8, 8.0001, 8.01, 8.1$. Do this by finding expressions for 
 \[
@@ -69,14 +69,24 @@ and
 \[
    r = g(s) = \frac{\Delta h}{\Delta s} = \frac{f(s) - f(8)}{s-8} ,
 \]
-both in terms of $s$.
+both in terms of $s$ (and \emph{not} $\Delta s$).
 
 (iv) Does  your table from part (iii) suggest that the ratios $\Delta h/ \Delta s$ approach some number as $\Delta s$ approaches zero? If so, what would is your guess for the exact value of this limit? What are its units?
 
-(v) Activate the folder ``graph of function" on Line 8. How is the line $PQ$, through the fixed point $P(8,6)$ and the variable point $Q$ on the graph of the function $h=f(s)$ related to the ratios $\Delta h / \Delta s$?
+(v) Activate the folder ``graph of function" on Line 8. How is the line $PQ$, through the fixed point $P(8,6)$ and the variable point $Q(s,h)$ on the graph of the function $h=f(s)$ related to the ratios $\Delta h / \Delta s$?
 
-(vi) Activate the folder ``graph: average rate of change function" on Line 18.
+(vi) Change the bounds for $s$ in Line 1 to run between $s=7.9$ and $s=8.1$. Then activate the folder ``graph: average rate of change function" on Line 18. Move the slider $s$ and use the graph of the function $r=g(s)$ to check your computations in part (iii).
 
+(vii) Write an approximation for the change in height
+\[
+   \Delta h = h-8
+\]
+in terms of the change
+\[
+  \Delta s = s - 8 .
+\]  
+
+(viii) The graph of the function $h=f(s)$ suggests another, geometric way to find the proportionality constant that relates $\Delta h$ to $\Delta s$. Explain how.
 
 \end{question}
 
