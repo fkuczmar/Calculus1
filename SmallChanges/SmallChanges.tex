@@ -9,37 +9,73 @@ We explore how small changes to the input of a function change the output.
 \end{abstract}
 \maketitle
 
+The main idea of differential calculus is that for some functions (called \emph{differentiable}) the change in the output is approximately proportional to the change in the input. The proportionality factor is called the derivative. In this chapter we explore this idea in a few scenarios.
+
 
 \section{The Falling Ladder}
 
 
 \begin{example}   \label{Ex435rsfeetr}
 
-The top end of a ladder leans against a vertical wall and the bottom end rests on the horizontal floor. We analyze how a small change in the distance between the wall and the bottom of the ladder affects the height of the ladder's top above the floor. 
+The top end of a ten-foot ladder leans against a vertical wall and the bottom end rests on the horizontal floor. We analyze how a small change in the distance between the wall and the bottom of the ladder affects the height of the ladder's top above the floor. 
 
 \pdfOnly{
 Access Desmos interactives through the online version of this text at
  
-\href{https://www.desmos.com/calculator/80shjak0az}.
+\href{https://www.desmos.com/calculator/dvyuifyyg4}.
 }
  
 \begin{onlineOnly}
     \begin{center}
-\desmos{80shjak0az}{900}{600}
+\desmos{dvyuifyyg4}{900}{600}
 \end{center}
 \end{onlineOnly}
 
 Desmos activity available at
 
-\href{https://www.desmos.com/calculator/80shjak0az}{151: Ladder 1B}
+\href{https://www.desmos.com/calculator/dvyuifyyg4}{151: Ladder 1B}
 
 \pskip \pskip
 
 \begin{question}  \label{Qdsfesarr4}
 
-(a) The slider $s$ in Line 1 of the demonstration above controls the distance between the wall and the bottom of the ladder, measured in feet. Use the slider $s$ to describe \emph{qualitatively} how a small change in $s$ changes the height $h$ (also measured in feet) of the ladder's top end above the floor.
+(a) The slider $s$ in Line 1 of the demonstration above controls the distance between the wall and the bottom of the ladder, measured in feet. Use the slider $s$ to describe \emph{qualitatively} how a small change in $s$ changes the height $h$ (also measured in feet) of the ladder's top end above the floor. 
 
-(b) Now let's focus the particular position of the ladder where the bottom end is  $s=8$ feet from the wall. For this, turn on the ``one position" folder in Line 14.
+\pskip
+
+(i) Do the small changes have the same or opposite signs?
+
+(ii) At what positions of the ladder does a small change in $s$ result in a comparatively greater change in $h$?
+
+\pskip
+
+(b) Now let's focus the particular position of the ladder where the bottom end is  $s=8$ feet from the wall. For this, turn on the ``one position" folder in Line 3.
+
+\pskip
+
+(i) Drag the slider $s$ close to $s=8$ and use the cordinates of the endpoints of the ladder to construct a table with five columns showing the values of $s$, $h$, $\Delta s$, $\Delta h$, and $\Delta h / \Delta s$. Include units in the heading of each column. The table should include seven rows, with $s=7.7, 7.8, \ldots 8.2, 8.3$.
+
+(ii) Find a function
+\[
+  h = f(s) , 0\leq s \leq 10 ,
+\]
+that expresses the height of the top end (in feet) in terms of the distance of the bottom end from the wall (in feet). %Activate the folder ``graph of function" in Line 8.
+
+(iii) Use your function $f$ to construct another table, like the one in part (i), with $s=7.9, 7.99, 7.999,8, 8.0001, 8.01, 8.1$. Do this by finding expressions for 
+\[
+    \Delta h = f(s) - f(8)
+\]
+and
+\[
+   r = g(s) = \frac{\Delta h}{\Delta s} = \frac{f(s) - f(8)}{s-8} ,
+\]
+both in terms of $s$.
+
+(iv) Does  your table from part (iii) suggest that the ratios $\Delta h/ \Delta s$ approach some number as $\Delta s$ approaches zero? If so, what would is your guess for the exact value of this limit? What are its units?
+
+(v) Activate the folder ``graph of function" on Line 8. How is the line $PQ$, through the fixed point $P(8,6)$ and the variable point $Q$ on the graph of the function $h=f(s)$ related to the ratios $\Delta h / \Delta s$?
+
+(vi) Activate the folder ``graph: average rate of change function" on Line 18.
 
 
 \end{question}
