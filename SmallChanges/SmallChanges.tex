@@ -12,7 +12,7 @@ We explore how small changes to the input of a function change the output.
 The main idea of differential calculus is to approximate the change in the output of a function in terms of a small change in the input. For some functions, called \emph{differentiable}, the change in the output is approximately proportional to the (small) change in the input. The proportionality factor is called the derivative. In this chapter we explore this idea.
 
 
-\section{Odometer Reading}
+\section{Odometer Reading, Part 1}
 
 \begin{example}
 The graph of the function
@@ -24,34 +24,66 @@ that expresses the trip odometer reading (measured in miles) on your car in term
 \pdfOnly{
 Access Desmos interactives through the online version of this text at
  
-\href{https://www.desmos.com/calculator/hgr4vmqvbj}.
+\href{https://www.desmos.com/calculator/pjzklxgypc}.
 }
  
 \begin{onlineOnly}
     \begin{center}
-\desmos{hgr4vmqvbj}{900}{600}
+\desmos{pjzklxgypc}{900}{600}
 \end{center}
 \end{onlineOnly}
 
 Desmos activity available at
 
-\href{https://www.desmos.com/calculator/hgr4vmqvbj}{151: Odometer}
+\href{https://www.desmos.com/calculator/pjzklxgypc}{151: Odometer}
 
 \pskip \pskip
 
-https://www.desmos.com/calculator/hgr4vmqvbj
-
-Our goal is to approximate the car's speed at 12:15pm in three ways:
+Our goal is to approximate the car's speed at 12:30pm in three ways:
 
 \pskip
 
-(1) geometrically, using the above graph.
+(1) geometrically, using the above graph as is.
 
-(2) arithmetically, using the specific expression for the function $f$.
+(2) geometrically, by zooming in on the above graph.
 
-(3) algebraically, also using the specific expression for $f$.
+(3) arithmetically, using the specific expression for the function $f$.
+
+%(3) algebraically, also using the specific expression for $f$.
 
 \pskip
+
+(a) Start by using the graph above to describe how the speed of the car varies over the two-hour period. Explain your reasoning Then play the Slider $u$ in Line 2 and use the animation to check if your description was accurate. Explain.
+
+(b) Set the slider in Line 6 to $n=20$. Use \emph{only} the graph (with $u=2$) to create a table with five columns showing the values of $t$, $s$ (approximate this), $\Delta t$, $\Delta s$, and $\Delta s / \Delta t$. Include units in the heading of each column. The table should include seven rows, with $t=0.2, 0.3, \ldots 0.7, 0.8$. 
+
+(c) Explain the meaning of the fifth column in the table of part (b). What do the entries in this column suggest about the speed of the car at 12:30pm?
+
+(d) Now we'll use the fact that
+\[
+   s = f(t) = 48t^2 - 16t^3, 0 \leq t \leq 2 ,
+\]
+to construct another table like the one in part (b), this time with $s=0.4, 0.49, 0.499, 5, 5.001, 5.01, 5.1$. Do this by finding expressions for 
+\[
+    \Delta s = f(t) - f(0.5)
+\]
+and
+\[
+   r = g(t) = \frac{\Delta s}{\Delta t} = \frac{f(t) - f(0.5)}{t-0.5} ,
+\]
+both in terms of $t$ (and \emph{not} $\Delta t$).
+
+
+(e) Does  your table from part (d) suggest that the ratios $\Delta s/ \Delta t$ approach some number as $t\to 0.5$? If so, what would is your guess for the exact value of this limit? What are its units? What is its meaning?
+
+(f) Activate the folder ``Graph of average speed" on Line 9. 
+
+(i) Use the graph to check some your entries in the fifth column of your table from part (d). Explain.
+
+(ii) How is the line $PQ$, through the fixed point $P(0.5,10)$ and the variable point $Q(t,s)$ on the graph of the function $r=g(t)$ related to the ratios $\Delta s / \Delta t$?
+
+(iii) Describe what happens to the line $PQ$ as point $Q$ approaches point $P$.
+
 
 
 \end{example}
@@ -116,7 +148,7 @@ and
 \]
 both in terms of $s$ (and \emph{not} $\Delta s$).
 
-(iv) Does  your table from part (iii) suggest that the ratios $\Delta h/ \Delta s$ approach some number as $\Delta s$ approaches zero? If so, what would is your guess for the exact value of this limit? What are its units?
+(iv) Does  your table from part (iii) suggest that the ratios $\Delta h/ \Delta s$ approach some number as $s\to 8$? If so, what would is your guess for the exact value of this limit? What are its units? What is its meaning?
 
 (v) Activate the folder ``graph of function" on Line 8. How is the line $PQ$, through the fixed point $P(8,6)$ and the variable point $Q(s,h)$ on the graph of the function $h=f(s)$ related to the ratios $\Delta h / \Delta s$?
 
