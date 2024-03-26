@@ -55,7 +55,7 @@ Our goal is to approximate the car's speed at 12:30pm in three ways:
 
 (a) Start by using the graph above to describe how the speed of the car varies over the two-hour period. Explain your reasoning Then play the Slider $u$ in Line 2 and use the animation to check if your description was accurate. Explain.
 
-(b) Set the slider in Line 6 to $n=20$. Use \emph{only} the graph (with $u=2$) to create a table with five columns showing the values of $t$, $s$ (approximate this), $\Delta t$, $\Delta s$, and $\Delta s / \Delta t$. Include units in the heading of each column. The table should include seven rows, with $t=0.2, 0.3, \ldots 0.7, 0.8$. 
+(b) Set the slider in Line 6 to $n=20$. Use \emph{only} the graph (with $u=2$) to create a table with five columns showing the values of $t$, $s$ (approximate this), $\Delta t = t-0.5$, $\Delta s=f(t)-f(0.5)$, and $\Delta s / \Delta t$. Include units in the heading of each column. The table should include seven rows, with $t=0.2, 0.3, \ldots 0.7, 0.8$. 
 
 (c) Explain the meaning of the fifth column in the table of part (b). What do the entries in this column suggest about the speed of the car at 12:30pm?
 
@@ -63,7 +63,7 @@ Our goal is to approximate the car's speed at 12:30pm in three ways:
 \[
    s = f(t) = 48t^2 - 16t^3, 0 \leq t \leq 2 ,
 \]
-to construct another table like the one in part (b), this time with $s=0.4, 0.49, 0.499, 5, 5.001, 5.01, 5.1$. Do this by finding expressions for 
+to construct another table like the one in part (b), this time with $t=0.4, 0.49, 0.499, 5, 5.001, 5.01, 5.1$. Do this by finding expressions for 
 \[
     \Delta s = f(t) - f(0.5)
 \]
@@ -74,7 +74,7 @@ and
 both in terms of $t$ (and \emph{not} $\Delta t$).
 
 
-(e) Does  your table from part (d) suggest that the ratios $\Delta s/ \Delta t$ approach some number as $t\to 0.5$? If so, what would is your guess for the exact value of this limit? What are its units? What is its meaning?
+(e) Does  your table from part (d) suggest that the ratios $\Delta s/ \Delta t$ approach some number as $t\to 0.5$? If so, what would be your guess for the exact value of this limit? What are its units? What is its meaning?
 
 (f) Activate the folder ``Graph of average speed" on Line 9. 
 
@@ -88,6 +88,22 @@ both in terms of $t$ (and \emph{not} $\Delta t$).
 
 (h) Summarize your conclusions by comparing your three estimates for the car's speed at 12:15pm. Which estimate do you think is most accurate? Least accurate?
 
+
+
+\end{example}
+
+
+\begin{example} \label{Exsdf4r55ytyh}
+This is a continuation of the previous example where we'll algebraically compute the exact speed of the car at 12:30pm, using the odometer function
+\[
+     s = f(t) = 48t^2 - 16t^3, 0\leq t \leq 2.
+\]
+
+THe idea is to first find an algebraic expression for the car's average speed between time $t$ and time $t=0.5$ hours past noon. Then we'll evaluate the limit of this average speed as $t\to 0.5$ to find the (instantaneous) speed at 12:30pm.
+
+\pskip
+
+ 
 
 
 \end{example}
