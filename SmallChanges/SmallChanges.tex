@@ -99,11 +99,44 @@ This is a continuation of the previous example where we'll algebraically compute
      s = f(t) = 48t^2 - 16t^3, 0\leq t \leq 2.
 \]
 
-THe idea is to first find an algebraic expression for the car's average speed between time $t$ and time $t=0.5$ hours past noon. Then we'll evaluate the limit of this average speed as $t\to 0.5$ to find the (instantaneous) speed at 12:30pm.
+The idea is to first find an algebraic expression for the car's average speed between time $t$ and time $t=0.5$ hours past noon. Then we'll evaluate the limit of this average speed as $t\to 0.5$ to find the (instantaneous) speed at 12:30pm.
 
 \pskip
 
- 
+
+\begin{question} \label{Q:43fggte}
+First we'll find the average speed between time $t$ and time $t=0.5$. 
+
+(a) Explain in general how to compute a car's average speed over some time interval. What do you need to know? What is the computation. Make up your own specific example.
+
+(b) Now for our particular odometer function above, the average speed $v_{\text{avg}}$, measured in miles/hour, between time $t$ and time $t=0.5$ is
+\begin{align*}
+   v_{\text{avg}} &= \frac{f(t) - f(0.5)}{t - 0.5} \\
+                        &= \frac{48t^2 - 16t^3 - 10 }{t-0.5} \\
+                        &= \frac{(2t-1)(\answer{-8t^2 + 20t + 10})}{t-0.5} \\
+                        & = \answer{-16t^2+40t + 20}
+\end{align*}
+
+The key step in the computation above is in the third line. How did we know $2t-1$ was a factor of 
+\[
+   f(t) - f(0.5) = 48t^2 - 16t^3 - 10 ?
+\]  
+The reason is that $t=0.5$ is a root of the polynomial $f(t)-f(0.5)$ and therefore $t - 0.5$ is a factor of $f(t)-f(0.5)$. And so 
+\[
+   2(t-0.5) = 2t-1
+\]
+is also a factor. Then we can use long division to simplify the quotient.
+
+(c) Show the steps in the long division.
+
+(d) The final step in computing the car's speed $v$ (in miles/hour) at 12:30pm is to evaluate the limit of these average speeds at $t\to 0.5$. We get
+\begin{align*}
+    v &= \lim_{t\to 0.5} (\answer{-16t^2+40t + 20}) \\
+       & = \answer{36} .
+\end{align*}
+
+\end{question}
+
 
 
 \end{example}
