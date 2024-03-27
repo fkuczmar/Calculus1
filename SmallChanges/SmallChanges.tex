@@ -199,7 +199,7 @@ Desmos activity available at
 
 \pskip
 
-(i) Drag the slider $s$ close to $s=8$ and use the cordinates of the endpoints of the ladder to construct a table with five columns showing the values of $s$, $h$, $\Delta s$, $\Delta h$, and $\Delta h / \Delta s$. Include units in the heading of each column. The table should include seven rows, with $s=7.7, 7.8, \ldots 8.2, 8.3$.
+(i) Drag the slider $s$ close to $s=8$ and use the cordinates of the endpoints of the ladder to construct a table with five columns showing the values of $s$, $h$, $\Delta s = s - 8$, $\Delta h = f(s)-f(8)$, and $\Delta h / \Delta s$. Include units in the heading of each column. The table should include seven rows, with $s=7.7, 7.8, \ldots 8.2, 8.3$. Here $h=f(s)$ is the function described in part (ii) below.
 
 (ii) Find a function
 \[
@@ -223,7 +223,7 @@ both in terms of $s$ (and \emph{not} $\Delta s$).
 
 (vi) Change the bounds for $s$ in Line 1 to run between $s=7.9$ and $s=8.1$. Then activate the folder ``graph: average rate of change function" on Line 18. Move the slider $s$ and use the graph of the function $r=g(s)$ to check your computations in part (iii).
 
-(vii) Write an approximation for the change in height
+(vii) Use the result of part (iv) to write an approximation for the change in height
 \[
    \Delta h = h-8
 \]
@@ -232,7 +232,7 @@ in terms of the change
   \Delta s = s - 8 .
 \]  
 
-(viii) The graph of the function $h=f(s)$ suggests another, geometric way to find the proportionality constant that relates $\Delta h$ to $\Delta s$. Explain how.
+(viii) The graph of the function $h=f(s)$ suggests another, geometric way to find the proportionality constant (of part (vii)) that relates $\Delta h$ to $\Delta s$. Explain how.
 
 \end{question}
 
@@ -243,7 +243,7 @@ in terms of the change
 
 \begin{example}  \label{Ex324trertg}
 
-A tree leans precariously with its trunk making an angle of $\phi = \pi/6$ radians with the ground. One end of a ten-foot ladder leans against the trunk, the other rests on the horizontal ground. We analyze how a small change in the distance between the bottom of the ladder and the base of the trunk affects the distance between the top of the ladder and the base of the trunk.
+A tree leans precariously with its trunk making an angle of $\phi = \pi/6$ radians with the ground. One end of a ten-foot ladder leans against the trunk, the other rests on the horizontal ground. We analyze how a small change in the distance between the bottom of the ladder and the base of the trunk changes the distance between the top of the ladder and the base of the trunk.
 
 
 \pdfOnly{
@@ -258,53 +258,53 @@ Access Geogebra interactives through the online version of this text at
 \end{center}
 \end{onlineOnly}
 
-We'll let $s$ be the distance between the top of the ladder and the base of the trunk (measured in feet) and $g$ the distance between the bottom of the ladder and the base of the trunk (also measured in feet).
+We'll let $t$ be the distance between the top of the ladder and the base of the trunk (measured in feet) and $s$ the distance between the bottom of the ladder and the base of the trunk (also measured in feet).
 
 The slider $\theta$ in the demonstration above controls the angle that the ladder makes with the ground, but this angle does not come into play in our problem.
 
 \pskip
 
-(a) Use the slider $\theta$ to describe qualitatively how a small change in $g$ changes $s$:
+(a) Use the slider $\theta$ to describe qualitatively how a small change in $s$ changes $t$:
 
 (i) For what positions of the ladder do these small changes have the same signs? Opposite signs?
 
-(ii) For what positions of the ladder does a small change in $g$ result in a comparatively large change in $s$?
+(ii) For what positions of the ladder does a small change in $s$ result in a comparatively large change in $t$?
 
 \pskip
 
 (b) Now let's focus on the particular position of the ladder when the bottom end $C$ is $16$ feet from the trunk's base and the top end $D$ is about $8$ feet \emph from the base \emph{as illustrated above}. Our first step is to find a function 
 \[
-    s = f(g) 
+   t = f(s) 
 \]
 that expresses $s$ in terms of $g$ for values of $g$ and $s$ near $g=16$ and $s=8$ respectively. 
 
-To do this, first use the law of cosines to write an equation relating $s$ and $g$. Then \emph{complete the square} to solve this equation for $s$ in terms of $g$ to find the function $g = f(s)$. Keep in mind that when $g=16$, we must have $s\sim 8$. %Note that the inputs and outputs to this function are $
+To do this, first use the law of cosines to write an equation relating $s$ and $t$. Then \emph{complete the square} to solve this equation for $t$ in terms of $s$ to find the function $t = f(s)$. Keep in mind that when $s=16$, we must have $t\sim 8$. %Note that the inputs and outputs to this function are $
 
 
 (c) Use your function from part (b) to find an expressions for
 \[
-  \Delta s = f(g) - f(16)
+  \Delta t = f(s) - f(16)
 \]
 and for the function
 \[
-  r = h(g) = \frac{\Delta s}{\Delta g} = \frac{f(g) - f(16)}{g-16} .
+  r = g(s) = \frac{\Delta t}{\Delta s} = \frac{f(s) - f(16)}{s-16} .
 \]
-Explain what the output of the function $h$ measures. What are its units?
+Explain what the output of the function $g$ measures. What are its units?
 
 
-(d) Use the results of part (c) to construct a table with five columns showing the values of $g$, $s$, $\Delta g$, $\Delta s$, and $\Delta s / \Delta g$. Include units in the heading of each column. The table should include seven rows, with $g=15.9,15.99, 15.999, 16, 16.001, 16.01, 16.1$.
+(d) Use the results of part (c) to construct a table with five columns showing the values of $s$, $t$, $\Delta s = s-16$, $\Delta t =f(s)-f(16)$, and $\Delta t / \Delta s$. Include units in the heading of each column. The table should include seven rows, with $s=15.9,15.99, 15.999, 16, 16.001, 16.01, 16.1$.
 
-(e) Does  your table from part (d) suggest that the ratio $\Delta s/ \Delta g$ approaches some number as $\Delta g \to 0$? If so, approximate the value of this number. What are its units?
+(e) Does  your table from part (d) suggest that the ratio $\Delta t/ \Delta s$ approaches some number as $s \to 160$? If so, approximate the value of this number. What are its units?
 
 (f) Check the box ``GraphofRelation'' in the demonstration above and explain how the line $EF$ is related to part (d).
 
-(g) Write an approximation for the change
+(g) Use the result of part (e) to write an approximation for the change
 \[
-   \Delta s = s- f(16)
+   \Delta t = f(s)- f(16)
 \]
 in terms of the change
 \[
-  \Delta g = g - 16 . 
+  \Delta s = s - 16 . 
 \]  
 Use this approximation to estimate the distance between the top of the ladder and the base of the trunk when the bottom of the ladder is $16.4$ feet from the trunk's base. Compare your approximation with the exact distance.
 
