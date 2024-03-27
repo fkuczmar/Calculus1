@@ -12,14 +12,14 @@ We explore how small changes to the input of a function change the output.
 The main idea of differential calculus is to approximate the change in the output of a function in terms of a small change in the input. For some functions, called \emph{differentiable}, the change in the output is approximately proportional to the (small) change in the input. The proportionality factor is called the derivative. In this chapter we explore this idea.
 
 
-\section{Odometer Reading, Part 1}
+\section{Odometer Readings, Part 1}
 
-\begin{example}
+\begin{example} \label{Ex:lkdftr45}
 The graph of the function
 \[
     s = f(t) , 0\leq t \leq 2 ,
 \]
-that expresses the trip odometer reading (measured in miles) on your car in terms of the number of hours past noon is shown below.
+that expresses the trip odometer reading (measured in miles) on your car in terms of the number of hours past noon during a two-hour trip is shown below.
 
 \pdfOnly{
 Access Desmos interactives through the online version of this text at
@@ -53,7 +53,7 @@ Our goal is to approximate the car's speed at 12:30pm in three ways:
 
 \pskip
 
-(a) Start by using the graph above to describe how the speed of the car varies over the two-hour period. Explain your reasoning Then play the Slider $u$ in Line 2 and use the animation to check if your description was accurate. Explain.
+(a) Start by using the graph above to describe how the speed of the car varies over the two-hour period. Explain your reasoning. Then play the Slider $u$ in Line 2 and use the animation of the motion to check if your description was accurate. Explain.
 
 (b) Set the slider in Line 6 to $n=20$. Use \emph{only} the graph (with $u=2$) to create a table with five columns showing the values of $t$, $s$ (approximate this), $\Delta t = t-0.5$, $\Delta s=f(t)-f(0.5)$, and $\Delta s / \Delta t$. Include units in the heading of each column. The table should include seven rows, with $t=0.2, 0.3, \ldots 0.7, 0.8$. 
 
@@ -74,13 +74,13 @@ and
 both in terms of $t$ (and \emph{not} $\Delta t$).
 
 
-(e) Does  your table from part (d) suggest that the ratios $\Delta s/ \Delta t$ approach some number as $t\to 0.5$? If so, what would be your guess for the exact value of this limit? What are its units? What is its meaning?
+(e) Does  your table from part (d) suggest that the ratios $\Delta s/ \Delta t$ approach some number as $t\to 0.5$? If so, what would be your guess for the exact value of this number? What are its units? What is its meaning?
 
 (f) Activate the folder ``Graph of average speed" on Line 9. 
 
 (i) Use the graph to check some your entries in the fifth column of your table from part (d). Explain.
 
-(ii) How is the line $PQ$, through the fixed point $P(0.5,10)$ and the variable point $Q(t,s)$ on the graph of the function $r=g(t)$ related to the ratios $\Delta s / \Delta t$?
+(ii) How is the line $PQ$, through the fixed point $P(0.5,10)$ and the variable point $Q(t,s)$ on the graph of the function $r=g(t)$ related to the ratio $\Delta s / \Delta t$?
 
 (iii) Describe what happens to the line $PQ$ as point $Q$ approaches point $P$.
 
@@ -107,33 +107,49 @@ The idea is to first find an algebraic expression for the car's average speed be
 \begin{question} \label{Q:43fggte}
 First we'll find the average speed between time $t$ and time $t=0.5$. 
 
-(a) Explain in general how to compute a car's average speed over some time interval. What do you need to know? What is the computation. Make up your own specific example.
+(a) Explain in general how to compute a car's average speed over some time interval. What do you need to know? What is the computation? Make up your own specific example.
 
-(b) Now for our particular odometer function above, the average speed $v_{\text{avg}}$, measured in miles/hour, between time $t$ and time $t=0.5$ is
+(b) Now for our particular odometer function above, the average speed $v_{\text{avg}}(t)$, measured in miles/hour, between time $t$ and time $t=0.5$ is
 \begin{align*}
-   v_{\text{avg}} &= \frac{f(t) - f(0.5)}{t - 0.5} \\
+   v_{\text{avg}}(t) &= \frac{f(t) - f(0.5)}{t - 0.5} \\
                         &= \frac{48t^2 - 16t^3 - 10 }{t-0.5} \\
                         &= \frac{(2t-1)(\answer{-8t^2 + 20t + 10})}{t-0.5} \\
-                        & = \answer{-16t^2+40t + 20}
+                        & = \answer{-16t^2+40t + 20} \text{ if } t\neq \answer{0.5}.
 \end{align*}
 
 The key step in the computation above is in the third line. How did we know $2t-1$ was a factor of 
 \[
    f(t) - f(0.5) = 48t^2 - 16t^3 - 10 ?
 \]  
-The reason is that $t=0.5$ is a root of the polynomial $f(t)-f(0.5)$ and therefore $t - 0.5$ is a factor of $f(t)-f(0.5)$. And so 
+The reason is that $t=0.5$ is a root of the polynomial $f(t)-f(0.5)$ and therefore $t - 0.5$ is a factor. And so 
 \[
    2(t-0.5) = 2t-1
 \]
-is also a factor. Then we can use long division to simplify the quotient.
+is also a factor. Then we can use long division to find the quotient.
 
 (c) Show the steps in the long division.
 
-(d) The final step in computing the car's speed $v$ (in miles/hour) at 12:30pm is to evaluate the limit of these average speeds at $t\to 0.5$. We get
+(d) The final step in computing the car's speed $v$ (in miles/hour) at 12:30pm is to evaluate the limit of these average speeds as $t\to 0.5$. We get
 \begin{align*}
     v &= \lim_{t\to 0.5} (\answer{-16t^2+40t + 20}) \\
        & = \answer{36} .
 \end{align*}
+
+
+(e) Here's another way to simplify the average speed in part (b). Fill in the missing steps.
+\begin{align*}
+   v_{\text{avg}}(t) &= \frac{f(t) - f(0.5)}{t - 0.5} \\
+                        &= \frac{(48t^2 - 16t^3) - (48(0.5)^2 -16(0.5)^3)}{t-0.5} \\
+                        &= \frac{(48t^2 - 48(0.5)^2) - (16t^3 -16(0.5)^3) }{t-0.5} \\
+                        &= \frac{48(t^2 - (0.5)^2) - 16(t^3 -(0.5)^3) }{t-0.5} \\
+                       &= \frac{48(t-0.5)(\answer{t+0.5})) - 16(t-0.5)(\answer{t^2 + 0.5 t + 0.25}) }{t-0.5} \\
+                       &=  48(\answer{t+0.5})) - 16(\answer{t^2 + 0.5 t + 0.25})  \text{ if } t\neq \answer{0.5}.
+\end{align*}
+
+(f) Use the above expression for the average speed function to compute the (instantaneous) speed of the car at 12:30pm by evaluating the approriate limit.
+
+(g) Sketch \emph{by hand} a graph of the average speed function $y=v_{avg}(t)$ over the appropriate domain. Be sure also to state this function's domain. 
+
 
 \end{question}
 
