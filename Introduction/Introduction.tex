@@ -10,9 +10,7 @@ Introduction to Differential Calculus
 \maketitle
 
 
-This course is listed as Calculus I in the catalogue, but it really should be called Differential Calculus. \emph{Differential} has the same root as \emph{difference} and \emph{calculus} the same root as \emph{calculate}. So this class is really about calculating differences, or more simply put it's about subtracting.
-
-The central idea of this class is approximating the change in the output of a function given a small change in the input. Let's look at a few examples.
+This course is listed as Calculus I in the catalogue, but it really should be called Differential Calculus. \emph{Differential} has the same root as \emph{difference} and \emph{calculus} the same root as \emph{calculate}. So this class is really about calculating differences, or more simply put it's about subtracting. The central idea of this class is approximating the change in the output of a function given a small change in the input. Let's look at a few examples.
 
 \section{Odometer Readings}
 
@@ -47,13 +45,47 @@ Our goal is to approximate the car's speed at 12:30pm.
 
 (a) Use the graph above to describe how the speed of the car varies over the two-hour period. Over what time intervals is the speed increasing? Decreasing? Explain your reasoning. Then play the Slider $u$ in Line 2 and use the animation of the motion to check if your description was accurate. Explain.
 
-(b) To approximate the car's speed at 12:30pm, zoom in sufficiently close to point $P$ in the graph above to make the graph of $s=f(t)$ look like a line. Use the coordinates of point $P$ and a second point in the window far away from $P$ to estimate the slope of this line. How is the slope related to the car's speed at 12:30pm? Explain your reasoning.
+(b) To approximate the car's speed at 12:30pm, set the Slider $u=0$ and zoom in sufficiently close to point $P$ in the graph above to make the graph of $s=f(t)$ look like a line. Use the coordinates of point $P$ and a second point in the window far away from $P$ to estimate the slope of this line. How is the slope related to the car's speed at 12:30pm? Explain your reasoning.
 
 (c) Use your approximation to write an equation of the line through $P$ with your slope from part (b). Use point-slope:
 \begin{question}  \label{Q:3422d3}
 \[
-     s - \answer{10} = \answer{36}(t - \answer{0.5}) , 0\leq t \leq 2 .
+     s =  \answer{10} + \answer{36}(t - \answer{0.5}) , 0\leq t \leq 2 .
 \]
+
+(d) Enter your equation from part (c) on Line 30. Change the color to something other than red. What can you say about the line and the graph of $f$ near $P$? Now zoom back out. How is the line related to the graph of the function $f$?
+
+(e) We can use the equation of the line to approximate the odometer reading at times near 12:30pm, or equivalently the change
+\[
+   \Delta s = f(0.5) - 10
+\]
+in the odometer reading in terms of the change
+\[
+   \Delta t = t -0.5
+\]   
+in time. To do this write your equation from part (c) in the form
+\[
+      s - \answer{10}= \answer{36}(t - \answer{0.5}) , 0\leq t \leq 2 .
+\]
+This tells us that 
+\[
+      \Delta s = f(0.5) - \answer{10} \sim  \answer{36}(t - \answer{0.5}) 
+\]
+for $t\sim 0.5$.
+
+(f) Use the result of part (e) to approximate when the odometer reads $10.1$ miles by substituting 
+\[
+    \Delta s = 10.1 - 10  = 0.1
+\]
+and solving for $\Delta t$ to get
+\[
+     \Delta t \sim \answer{1/360} .
+\]
+Check your work by entering $f(0.5+\answer{1/360})$ in Line 31 above.
+
+(g) Was your estimate from part (f) greater or less than the actual time? Explain why.
+
+
 \end{question}
 
 (d) 
