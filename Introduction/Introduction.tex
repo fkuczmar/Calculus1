@@ -106,9 +106,8 @@ Suppose between noon and 10pm, the population of a colony of bacteria grows expo
 \]
 that expresses the population (measured in hundreds of thousands of bacteria) in terms of the number of hours past noon. Explain your reasoning. Do this by first describing the exponential growth and then by writing about about growth factors. Do \emph{not} use the number $e$.
  
-(b) Enter your function from part (a) below and in Line 1 of the desmos worksheet below.
-
 \begin{question} \label{Qer45gh54}
+(b) Enter your function from part (a) below and in Line 1 of the desmos worksheet below.
 \[
     P = f(t) = \answer{4}(\answer{1.24})^{\answer{t/3}} , 0\leq t \leq 10 .
 \]
@@ -117,22 +116,35 @@ that expresses the population (measured in hundreds of thousands of bacteria) in
 \pdfOnly{
 Access Desmos interactives through the online version of this text at
  
-\href{https://www.desmos.com/calculator/lmvoqovxjz}.
+\href{https://www.desmos.com/calculator/ntguz3lsmd}.
 }
  
 \begin{onlineOnly}
     \begin{center}
-\desmos{lmvoqovxjz}{900}{600}
+\desmos{ntguz3lsmd}{900}{600}
 \end{center}
 \end{onlineOnly}
 
 Desmos activity available at
 
-\href{https://www.desmos.com/calculator/lmvoqovxjz}{151: Exponential Growth 1}
+\href{https://www.desmos.com/calculator/ntguz3lsmd}{151: Exponential Growth 1}
 
 \pskip \pskip
 
-(c) Follow steps (b)-(g) of Example 1, adjusted accordingly, in regard to the (instantaneous) growth rate of the population at 3:00pm.
+(c) Follow steps (b)-(d) of Example 1, adjusted accordingly, and estimate (instantaneous) growth rate of the population at 3:00pm.
+Use this to write an equation of the line that best approximates the graph near the point $(3,496)$.
+
+(d) Follow step of Example 1, adjusted accordingly, to approximate the change 
+\[
+\Delta P = f(t) - f(3)
+\]
+in terms of the change 
+\[
+  \Delta t = t-3
+\]
+for $t\sim 3$. 
+
+(e) Make up and solve your own questions like parts (f) and (g) of Example 1.
 
 \end{question}
 \end{example}
@@ -142,6 +154,73 @@ Desmos activity available at
 \section{Riding a Ferris Wheel}
 
 \begin{example} \label{Exdfgt4ttth4}
+A ferris wheel has radius $30$ meters and the center of the wheel is $40$ meters above the ground. You ride the wheel for one revolution.
+
+
+\pdfOnly{
+Access Desmos interactives through the online version of this text at
+ 
+\href{https://www.desmos.com/calculator/llx8zqaovd}.
+}
+ 
+\begin{onlineOnly}
+    \begin{center}
+\desmos{llx8zqaovd}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Desmos worksheet available at
+
+\href{https://www.desmos.com/calculator/llx8zqaovd}{151: Ferris Wheel 1}
+
+
+\end{example}
+
+\end{document}
+
+
+
+
+
+Let 
+\[
+    h = f(\theta) \, , 0\leq \theta \leq 2\pi ,
+\]
+be the function that expresses your height above the ground in terms of the wheel's angle of rotation, measured from the time you  boarded.
+
+(a)  Assume $0 < \theta < \pi/2$ and draw a picture that captures the scenario. Include the ground, the ferris wheel, a point $P$ on the wheel representing your position after the wheel has turned through $\theta$ radians, and other lines as necessary. Label the angle $\theta$.
+
+(b) Use your picture from part (a) to find an expression for $f(\theta)$.
+
+(c) Suppose the wheel stops when you are at the angular position $\theta$ and that it then turns through a small angle $\Delta \theta$ and stops again.  Use the exploration below to describe qualitatively how the small change
+\[
+    \Delta h = f(\theta + \Delta \theta) - f(\theta)
+\]
+in your height depends on the angle $\theta$. 
+
+(d) Fix $\Delta \theta \sim 0$ and use the exploration to sketch by hand a graph of the function 
+\[
+     \Delta h = g(\theta) \, , 0\leq \theta \leq 2\pi ,
+\]
+that takes as an input the wheel's angle of rotation $\theta$ and returns as an output the change $\Delta h$
+in your height as the wheel turns through the small angle $\Delta \theta$.
+
+\begin{exploration}
+
+\pdfOnly{
+Access Desmos interactives through the online version of this text at
+ 
+\href{https://www.desmos.com/calculator/8swp20zond}.
+}
+ 
+\begin{onlineOnly}
+    \begin{center}
+\desmos{8swp20zond}{900}{600}
+\end{center}
+\end{onlineOnly}
+\end{exploration} 
+\end{question}
+
 
 
 \end{example}
