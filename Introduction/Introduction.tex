@@ -10,7 +10,7 @@ Introduction to Differential Calculus
 \maketitle
 
 
-This course is listed as Calculus I in the catalogue, but it really should be called Differential Calculus. \emph{Differential} has the same root as \emph{difference} and \emph{calculus} the same root as \emph{calculate}. So this class is really about calculating differences, or more simply put it's about subtracting. The central idea of this class is approximating the change in the output of a function given a small change in the input. Let's look at a few examples.
+This course is listed as Calculus I in the catalogue, but it really should be called Differential Calculus. \emph{Differential} has the same root as \emph{difference} and \emph{calculus} the same root as \emph{calculate}. So this class is really about calculating differences, or more simply put it's about subtracting; but subtracting in the context of functions. We start by approximating the change in the output of a function given a small change in its input. Let's look at a few examples to get an idea what this means.
 
 \section{Odometer Readings}
 
@@ -39,7 +39,7 @@ Desmos activity available at
 
 \pskip \pskip
 
-Our goal is to approximate the car's speed at 12:30pm.
+We first approximate the car's speed at 12:30pm.
 
 \pskip
 
@@ -67,11 +67,15 @@ in time. To do this write your equation from part (c) in the form
 \[
       s - \answer{10}= \answer{36}(t - \answer{0.5}) , 0\leq t \leq 2 .
 \]
-This tells us that 
+This tells us that for $t\sim 0.5$,
 \[
-      \Delta s = f(0.5) - \answer{10} \sim  \answer{36}(t - \answer{0.5}) 
+       f(0.5) - \answer{10} \sim  \answer{36}(t - \answer{0.5}) 
 \]
-for $t\sim 0.5$.
+or that
+\[
+    \Delta s \sim  \answer{36} \Delta \answer{t} .
+\]    
+
 
 (f) Use the result of part (e) to approximate when the odometer reads $10.1$ miles by substituting 
 \[
@@ -89,15 +93,16 @@ Check your work by entering $f(0.5+\answer{1/360})$ in Line 31 above.
 \end{question}
 \end{example}
 
+\section{Exponential Growth}
 
 \begin{example} \label{Ex9d8gsd8}
-Suppose between noon and 5pm, the population of a colony of bacteria grows exponentially, increasing by $24\%$ every three hours. Suppose also that the population is $400,000$ at noon.
+Suppose between noon and 10pm, the population of a colony of bacteria grows exponentially, increasing by $24\%$ every three hours. Suppose also that the population is $400,000$ at noon.
 
 \pskip
 
 (a) Find a function
 \[
-       P = f(t) , 0\leq t \leq 5,
+       P = f(t) , 0\leq t \leq 10,
 \]
 that expresses the population (measured in hundreds of thousands of bacteria) in terms of the number of hours past noon. Explain your reasoning. Do this by thinking about growth factors. Do \emph{not} use the number $e$.
  
@@ -105,7 +110,7 @@ that expresses the population (measured in hundreds of thousands of bacteria) in
 
 \begin{question} \label{Qer45gh54}
 \[
-    P = f(t) = \answer{4}(\answer{1.24})^{\answer{t/3}} , 0\leq t \leq 5 .
+    P = f(t) = \answer{4}(\answer{1.24})^{\answer{t/3}} , 0\leq t \leq 10 .
 \]
 
 
@@ -127,10 +132,16 @@ Desmos activity available at
 
 \pskip \pskip
 
-
-
+(c) Follow steps (b)-(g) of Example 1, adjusted accordingly, in regard to estimating the instantaneous growth rate of the population at 3:00pm and all that follows from that.
 
 \end{question}
+\end{example}
+
+
+
+\section{Riding a Ferris Wheel}
+
+\begin{example} \label{Exdfgt4ttth4}
 
 
 \end{example}
