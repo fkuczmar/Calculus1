@@ -10,7 +10,10 @@ Introduction to Differential Calculus
 \maketitle
 
 
-This course is listed as Calculus I in the catalogue, but it really should be called Differential Calculus. \emph{Differential} has the same root as \emph{difference} and \emph{calculus} the same root as \emph{calculate}. So this class is really about calculating differences, or more simply put it's about subtracting; but subtracting in the context of functions. We start by approximating the change in the output of a function given a small change in its input. Let's look at a few examples to get an idea what this means.
+This course is listed as Calculus I in the catalogue, but it really should be called Differential Calculus. \emph{Differential} has the same root as \emph{difference} and \emph{calculus} the same root as \emph{calculate}. So this class is really about calculating differences, or more simply put it's about subtracting; but subtracting in the context of functions. 
+
+
+We start by approximating the change in the output of a function given a small change in its input. Let's look at a few examples to get an idea what this means.
 
 \section{Odometer Readings}
 
@@ -154,8 +157,15 @@ for $t\sim 3$.
 \section{Riding a Ferris Wheel}
 
 \begin{example} \label{Exdfgt4ttth4}
-A ferris wheel has radius $30$ meters and the center of the wheel is $40$ meters above the ground. You ride the wheel for one revolution.
+A ferris wheel has radius $30$ meters and the center of the wheel is $40$ meters above the ground. You ride the wheel for one revolution and get off.
 
+We'll let $\theta$, $0\leq \theta \leq 2\pi$, be the rotation angle of the wheel, measured in radians from the time you got on and 
+\[
+   h = f(\theta) , 0\leq \theta \leq 2\pi,
+\]
+be the function that expresses your height above the ground (in meters) in terms of the rotation angle.
+
+Suppose the wheel gets stuck after turning through the angle $\theta = 5\pi/24$ radians. It gets unstuck and turns through a small angle $\Delta \theta$ before getting stuck again. We wish to approximate the change $\Delta h$ in your height after the wheel turns through this small angle $\Delta \theta$.
 
 \pdfOnly{
 Access Desmos interactives through the online version of this text at
