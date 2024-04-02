@@ -10,17 +10,17 @@ Introduction to Differential Calculus
 \maketitle
 
 
-This course is listed as Calculus I in the catalogue, but it really should be called Differential Calculus. \emph{Differential} has the same root as \emph{difference} and \emph{calculus} the same root as \emph{calculate}. So this class is really about calculating differences, or more simply put it's about subtracting; but subtracting in the context of functions. 
+This course is listed as Calculus I in the catalogue, but it really should be called Differential Calculus. \emph{Differential} has the same root as \emph{difference} and \emph{calculus} the same root as \emph{calculate}. So this class is really about calculating differences, or more simply put it's about subtracting. But it's about subtracting in the context of functions. 
 
 %We start by approximating the change in the output of a function given a small change in its input. Let's look at a few examples to get an idea what this means.
 
-Pick a specific input to specific function and you'll likely find that the changes in the output are approximately proportional to \emph{small} changes in the input. If so, we say that the function is \emph{differentiable} at that input and we call the  proportionality constant the \emph{derivative}.
+Pick a specific input to specific function and you'll likely find that the changes in the function's output are approximately proportional to \emph{small} changes in the input. If so, we say that the function is \emph{differentiable} at that input and we call the  proportionality constant the \emph{derivative}.
 
 For example, let's look at the behavior of the function
 \[
    A = f(s) = s^2 , s\geq 0,
 \]
-near the input $s=5$. To emphasize the importance of units in this class, let's define the input $s$ to be the side length of a square measured in feet and the output $f(s)$ to be the area of that square, measured in square feet. The problem before us is to describe a simple relationship between a small change in the side length 
+near the input $s=5$. To emphasize the importance of units, let's define the input $s$ to be the side length of a square measured in feet and the output $f(s)$ to be the area of that square, measured in square feet. The problem before us is to describe a simple relationship between a small change in the side length 
 \[
      \Delta s = s -5
 \]
@@ -36,7 +36,7 @@ in its area.
 \begin{center}
   \begin{tabular}{ | c| c | c | c | c |}
     \hline
-    $s$ (ft) & $A = f(s)$ ($\text{ft}^2$) & $\Delta s = s-5$ (ft)  & $\Delta A = f(s) - 25$ ($\text{ft}^2)$ & $\Delta A/\Delta s \, (\text{ft}^2/\text{ft})$ \\ \hline
+    $s$ (ft) & $A = s^2$ ($\text{ft}^2$) & $\Delta s = s-5$ (ft)  & $\Delta A = s^2 - 25$ ($\text{ft}^2)$ & $\Delta A/\Delta s \, (\text{ft}^2/\text{ft})$ \\ \hline
     $4.9$ & $\answer{24.01}$ & $\answer{-0.1}$ &  $\answer{-0.99}$ & $\answer{9.9}$ \\ \hline
     $4.99$ & $\answer{24.9001}$ & $\answer{-0.01}$ &  $\answer{-0.0999}$ & $\answer{9.99}$ \\ \hline
     $5$  &  25 & $0$ & $0$ & $-$  \\ \hline
@@ -48,11 +48,46 @@ in its area.
 
 \pskip
 
-(b) The data in the table above should suggest an approximate proportional relationship between $\Delta A$ and $\Delta s$, namely that for $\Delta s \sim 0$, 
+(b) The data in the table above suggests an approximate proportional relationship between $\Delta A$ and $\Delta s$. We can guess the constant of proportionality from the fifth column. As $s\to 5$ (as $s$ approaches $5$), it looks like the ratio $\Delta A/\Delta s$ approaches some number, the constant of proportionality.
+
+i) What is that number? $\answer{10}$
+
+ii) What are its units?
+
+\pskip
+
+So for $\Delta s \sim 0$, we suspect that
 \[
    \Delta A \sim \answer{10} \Delta s .
 \]
 
+(c) The constant of proportionality is called the derivative, in this case of the function $A=s^2$, at the input $s=5$. We write this as
+\[
+   \frac{dA}{ds}\Big|_{s=5} = \answer{10} .
+\]
+
+We could take an algebraic approach to determe this constant of proportionality instead. The idea is to first simplfiy the quotient $\Delta A/\Delta s$ as
+\begin{align*}
+            \frac{\Delta A}{\Delta s} &= \frac{s^2-25}{s-5}  \\
+                                                &= \frac{(s + \answer{5})((s - \answer{5})}{s-5} \\
+                                               &= \answer{s+5} \text{ if } s\neq {\answer{5}} .
+\end{align*}
+
+So, for example, if $s=4.99$, then
+\[
+\frac{\Delta A}{\Delta s} = \answer{4.99} + 5 = \answer{9.99} 
+\]
+as shown in the second row of the above table.
+
+The advantage of this algebraic approach is that we can now compute the proportionality constant as a limit:
+\begin{align*}
+                    \frac{dA}{ds}\Big|_{s=5} &= \lim_{s\to 5} \frac{\Delta A}{\Delta s} \\
+                                                         &=  \lim_{s\to 5} (s+\answer{5}) \\
+                                                         &= \answer{5} + \answer{5} \\
+                                                           &= \answer{10} .
+\end{align*}
+
+(d) We can also take a graphical approach by interpreting the ratios $\Delta A/\Delta s$ as slopes
 
 \end{question}
 
