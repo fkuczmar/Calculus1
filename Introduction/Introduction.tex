@@ -93,13 +93,13 @@ The advantage of this algebraic approach is that we can now compute the proporti
 \[
   \frac{\Delta A}{\Delta s} = \frac{f(s) - f(5)}{s-5} 
 \]
-geometrically. Move the slider $s$ in the demonstration below and describe:
+geometrically. Move the slider $s$ in the demonstration below and describe
 
-(i) how the line through the points $P$ and $Q$ is related to the ration $\Delta A/\Delta s$ show on Line 2
+(i) how the line through the points $P$ and $Q$ is related to the ratio $\Delta A/\Delta s$ show on Line 2, 
 
-(ii) what happens to the line $PQ$ as $s\to 5$?
+(ii) what happens to the line $PQ$ as $s\to 5$, and
 
-(iii) What happens to the line $PQ$ when $s=5$.
+(iii) what happens to the line $PQ$ when $s=5$.
 
 \begin{freeResponse}
 \end{freeResponse}
@@ -135,7 +135,7 @@ Continuing with the above demonstration,
 \begin{itemize}
 \item{If we change the side of a square from a length of $5$ feet to a length of $s\sim 5$ feet, then the area of the square changes by approximately
 \[
- \Delta A = 10 \Delta s = 10 (s-5)
+ \Delta A = s^2-25  \sim 10 \Delta s = 10 (s-5)
 \]
 square feet. The proportionality constant $10$ has units $ft^2/ft = ft$.
 }
@@ -160,13 +160,10 @@ On a clear day with an unobstructed view (like you might have at the beach or in
 
 In fact, as long as you are not too high above the surface of the earth, the function
 \[
-      s = f(s) = 1.22\sqrt{s}, 0\leq s \leq 20,000,
+      s = f(h) = 1.22\sqrt{h}, 0\leq h \leq 20,000,
 \]
 gives a good approximation to the distance to the horizon (the length of the red arc $AT$ below, measured in miles) in terms of your height above the ground (the distance $AP$ below, measured in feet).
 
-Our aim is to approximate the change in the distance to the horizon (in miles) in terms of a small change in height (in feet) from a height of $25$ feet.
-
-Go through a similar analysis as in parts (a)-(e) of Example 1, to approximate the change $\Delta s$ in the distance to the horizon in terms of the change $\Delta h = h-25$ in your height above the ground.
 
 \pdfOnly{
 Access Desmos interactives through the online version of this text at
@@ -184,6 +181,29 @@ Desmos activity available at
 
 \href{https://www.desmos.com/calculator/ewowig5sgk}{151:Distance to Horizon 1}
 
+\pskip \pskip
+
+Our aim is to approximate the change in the distance to the horizon (in miles) in terms of a small change in height (in feet) from a height of $25$ feet.
+
+(i) To start, what are the units of the constant $1.22$ above? Explain how  you know.
+
+\begin{freeResponse}
+\end{freeResponse}
+
+(ii) Go through a similar analysis as in parts (a)-(e) of Example 1, to approximate the change $\Delta s = s - f(25)$ in the distance to the horizon in terms of the change $\Delta h = h-25$ in your height above the ground. Start by completing the column headings (with units) and the missing entries in the table below.
+
+\begin{center}
+  \begin{tabular}{ | c| c | c | c | c |}
+    \hline
+    $h$ (ft) & $s = 1.22\sqrt{h}$ (miles) & $\Delta h = s-25$ (ft)  & $\Delta s =f(h) - f(25)$ (miles) & $\Delta s/\Delta h \, (units?)$ \\ \hline
+    $4.9^2$ &  &  &   & \\ \hline
+    $4.99^2$ &  &  &   &  \\ \hline
+    $25$  &  & $0$ & $0$ & $-$  \\ \hline
+    $5.01^2$ &  &  &   &  \\ \hline
+    $5.1^2$ &  &  &   &  \\ \hline
+    \hline
+  \end{tabular}
+\end{center}
 
 
 
