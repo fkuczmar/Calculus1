@@ -211,11 +211,11 @@ Our aim is to approximate the change in the distance to the horizon (in miles) i
 \begin{question}  \label{Q34eefg4t3}
 This question is similar to the last, but suppose instead we are looking down on the earth from the space station or a rocket. Then the approximation to the distance to the horizon from the previous problem will not work.
 
-So the first step is to find a function
+So our first step is to find a function
 \[
    s = f(h), h\geq 0 ,
 \]
-that expresses the distance to the horizon (still measured in miles) in terms of our height above the earth's surface, \emph{now measured in miles instead of feet}. We'll suppose the earth to be a perfect sphere of radius $4000$ miles. The distance to the horizon is the arclength $AT$ below, meaured along the surface of the earth (you can think of this distance as the radius of the spherical disk that is the portion of the earth we can see). Our height is the distance $AP$. 
+that expresses the distance to the horizon (still measured in miles) in terms of our height above the earth's surface, \emph{now measured in miles instead of feet}. We'll suppose the earth to be a perfect sphere of radius $3960$ miles. The distance to the horizon is the arclength $AT$ below, meaured along the surface of the earth (you can think of this distance as the radius of the spherical disk visible to us). Our height is the distance $AP$. 
 
  
 \begin{onlineOnly}
@@ -226,10 +226,43 @@ that expresses the distance to the horizon (still measured in miles) in terms of
 
 (a) Find an expression for the above function. 
 \begin{hint}
-Use right triangle $\Delta OTP$ to find an expression for the radian measure of angle $\angle POT$. Then use this angle to find an expression for the arclength $A$.
+Use right triangle $\Delta OTP$ to find an expression for the radian measure of angle $\angle POT$. Then use this angle to find an expression for the arclength $AT$.
 \end{hint}
 
-(b) Now suppose we are $240$ miles above the surface of the earth. We wish to approximate how a small change in our altitude changes the distance to the horizon.
+(b) Now suppose we are $165$ miles above the surface of the earth and we wish to approximate how a small change in our altitude changes the distance to the horizon.
+
+To do this, fill in the missing entries in the table below.
+
+\begin{center}
+  \begin{tabular}{ | c| c | c | c | c |}
+    \hline
+    $h$ (ft) & $s = f(h)$ (miles) & $\Delta h = s-165$ (miles)  & $\Delta s =f(h) - f(165)$ (miles) & $\Delta s/\Delta h \, (units?)$ \\ \hline
+     $162$ &  &  &   & \\ \hline
+    $163$ &  &  &   & \\ \hline
+    $164$ &  &  &   &  \\ \hline
+    $165$  &  &  &  &   \\ \hline
+    $166$ &  &  &   &  \\ \hline
+    $167$ &  &  &   &  \\ \hline
+    $168$ &  &  &   &  \\ \hline
+    \hline
+  \end{tabular}
+\end{center}
+
+(c) Do the data above suggest that the quotients $\Delta s / \Delta h$ approach some number as $h$ approaches 165? If so, use the data to approximate that number. If not, explain why not.
+
+(d) Make your own table similar to the one above to get a better approximation, correct to the nearest thousandth, to
+\[
+   \lim_{h\to 165} \frac{f(h) - f(165)}{h-165} .
+\]
+
+
+(e) Use your result from part (d), rounded to the nearest thousandth, to approximate $\Delta s$ in terms of $\Delta h$ and enter your result below.
+\[
+  \Delta s \sim \answer{3.291} \Delta h .
+\] 
+
+(f) Explain the meaning of the proportionality constant above. Be sure to include units in your explanation.
+
 
 \end{question}
 
