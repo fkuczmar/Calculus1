@@ -53,31 +53,45 @@ Desmos activity available at
 \begin{example} \label{Ex:9sd8gfs}
 The function 
 \[
-   G = f(s) = \frac{2}{5} +\frac{1}{5000}(40s^2 - s^3) , \, 2\leq s \leq 25 ,
+   G = f(s) = \frac{2}{5} +\frac{1}{5000}(40(s+2)^2 - (s+2)^3) , \, 0\leq s \leq 23 ,
 \]
 expresses the number of gallons of gas in your car in terms of your distance from home. The distance is measured in miles along your route. 
 
 \begin{onlineOnly}
     \begin{center}
-\desmos{e2uxt3o4sr}{900}{600}
+\desmos{ndpieuhgfa}{900}{600}
 \end{center}
 \end{onlineOnly}
 
 Desmos activity available at
-\href{https://www.desmos.com/calculator/e2uxt3o4sr}{151: Gas as a Function of Distance}
+\href{https://www.desmos.com/calculator/ndpieuhgfa}{151: Gas as a Function of Distance}
 
 
 (a) Use the graph of the function $f$ shown above to determine if you are driving toward or away from home. Explain your reasoning.
 
-(b) Use numerical methods to approximate your gas mileage at the moment you are $20$ miles from home.
+(b) Find your average gas mileage (in miles/gallon) over the interval $s \in [8,18]$.
 
-(c) Use the algebra of limits to determine your exact gas mileage at the moment you are $20$ miles from home.
+(c) Use the graph to approximate your gas mileage at the moment you are $18$ miles from home. Do this by zooming in on the appropriate point.
 
-(d) Use the graph to approximate your distance from home when your car was getting the best mileage. Explain your reasoning. 
+(d) Use the algebra of limits to determine your exact gas mileage at the moment you are $18$ miles from home.
 
-(e) Use the graph to approximate your distance from home when your car was getting the least mileage. Explain your reasoning. 
+%(d) Use the graph to approximate your distance from home when your car was getting the best mileage. Explain your reasoning. 
 
-(f) Use the algebra of limts to determine your best and worst gas mileages during the trip.
+%(e) Use the graph to approximate your distance from home when your car was getting the least mileage. Explain your reasoning. 
+
+%(f) Use the algebra of limts to determine your best and worst gas mileages during the trip.
+
+(e) Use the result of part (d) to approximate the change in the volume of gas
+\[
+    \Delta G = f(s)-f(18)
+\]
+in terms of the change
+\[
+   \Delta s = s - 18
+\]
+in your distance from home for values of $s$ near $18$ miles. What are the units of the proportionality constant?
+
+(f) Use the result of part (e) to approximate your distance from home when there are $1.9$ gallons of gas in your tank.
 
 
 
