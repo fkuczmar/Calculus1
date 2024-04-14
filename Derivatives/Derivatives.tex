@@ -11,6 +11,71 @@ Computing derivative with limits.
   
 
 
-Nothing yet.
+\begin{example}  \label{Ex:43tggt5t5}
+Suppose 
+\[
+    y = f(x) = x^2
+\]
+and let's use limits to evaluate
+\[
+    f^\prime(3) =   \frac{dy}{dx}\Big|_{x=3} = \frac{d(x^2)}{dx}\Big|_{x=3} .
+\]
+
+We have
+\begin{align*}
+ f^\prime(3) = \frac{d(x^2)}{dx}\Big|_{x=3} &= \lim_{v\to 3} \frac{f(v)-f(3)}{v-3} \\
+                                              &= \lim_{v\to 3} \frac{v^2 - 9}{v-3} \\
+                                              &= \lim_{v\to 3} \frac{(v-3)(v+3)}{v-3} \\
+                                             &= \lim_{v\to 3} (v+3) \\
+                                           &= (3+3)  \\
+                                           &= 6 .
+\end{align*}
+
+Next let's do almost the same thing and compute
+\[
+   f^\prime(x) =   \frac{dy}{dx}
+\] 
+for the function
+\[
+   y = f(x) = x^2 
+\]
+by replacing $3$ in the above computation with $x$. 
+
+We get
+\begin{align*}
+ \frac{dy}{dx}= \frac{d(x^2)}{dx}&= \lim_{v\to x} \frac{f(v)-f(x)}{v-x} \\
+                                              &= \lim_{v\to x} \frac{v^2 - x^2}{v-x} \\
+                                              &= \lim_{v\to x} \frac{(v-x)(v+x)}{v-x} \\
+                                             &= \lim_{v\to x} (v+x) \\
+                                           &= (x+x)  \\
+                                           &= 2x .
+\end{align*}
+
+Just as a check, when $x=3$,
+\[
+   \frac{dy}{dx}\Big|_{x=3} = (2x)\Big|_{x=3} = 2(3) = 6.
+\]
+\end{example}
+
+
+\pskip
+
+\begin{example} \label{Ex:3245trg}
+Use the result of the previous example to solve each of the following problems. Do \emph{not} use limits.
+
+(a) Find an equation of the tangent line to the parabola $y=x^2$ at the point $(-4,16)$.
+
+(b) Find an equation of the tangent line to the parabola perpendicular to the tangent line in part (a).
+
+(c) Find the coordinates of the point where the lines in parts (a) and (b) intersect.
+
+(d) Let ${\cal L}$ be the line through the points of tangency of the lines in parts (a) and (b). Find the coordinates of the point where ${\cal L}$ intersects the $y$-axis.
+
+
+
+
+\end{example}
+
+
 
 \end{document}
