@@ -5,7 +5,7 @@
 
 \begin{document}
 \begin{abstract}
-Computing derivative with limits.
+Computing derivatives with limits.
 \end{abstract}
 \maketitle
   
@@ -162,7 +162,7 @@ Make a table that shows enough data to suggest a progression toward a limit. Inc
 
 (e) Use the result of part (c) to approximate the change 
 \[
-       \Delta r = r - f(63)
+       \Delta r = f(v) - f(63)
 \]
 in the rate at which your car burns gas in terms of the change
 \[
@@ -186,7 +186,12 @@ that expresses the rate (in gal/hr) at which the car burns gas in terms of its s
 
 (i) At what rate does the car burn gas at a speed of $50$ miles/hour? $\answer{25/21}$ gal/mile
 
-(ii) The function is
+(ii) Find a function that expresses the gas mileage $G$ (measured in miles/gallon) in terms of the speed (measured in miles/hr).
+\[
+         G = \answer{42 - 0.02(v-50)^2} \, , \, 30\leq v \leq 70 .
+\]
+
+(ii) The rate (in gal/hr) at which the car burns gas as a function of its speed (in miles/hr) is
 \[
          r = h(v) = \answer{\frac{v}{42 - 0.02(v-50)^2}} \, , \, 30\leq v \leq 70  .
 \]
@@ -194,7 +199,7 @@ that expresses the rate (in gal/hr) at which the car burns gas in terms of its s
 
 (b) Use the algebra of limits to evaluate the derivative
 \[
-    h^\prime(40) = \frac{dr}{dv}\Big|_{v-40} .
+    h^\prime(40) = \frac{dr}{dv}\Big|_{v=40} .
 \]
 
 (c) What are the units of the above derivative? How do you know?
