@@ -159,7 +159,7 @@ expresses the population (in millions) of a colony of bacteria in terms of the n
 
 (a) Describe how the population grows. Is your description sufficient?
 
-(b) Find an expression for the relative (average) growth rate between time $u$ hours past noon and time $u+h$ hours past noon. Measure the rate relative to the population at time $u$.
+(b) Find an expression for the relative growth rate between time $t=u$ hours past noon and time $t=u+h$ hours past noon. Measure the rate relative to the population at time $t=u$. Is this question asking about an average or an instantaneous relative growth rate?
 
 (c) What are the units of the average growth rate in part (b)?
 
@@ -167,11 +167,16 @@ expresses the population (in millions) of a colony of bacteria in terms of the n
 
 (e) What do you notice about the distance between points $R$ and $S$ as you drag the slider $u$ below. What does this suggest?
 
-(f) Use limits to write an expression for the relative (instantaneous) growth rate at time $t=u$ hours past noon. Simplify this expression as much as possible.
+(f) Use limits to write an expression for the relative growth rate at time $t=u$ hours past noon. Simplify this expression as much as possible.  What can you conclude about the relative growth rate at any instant?
 
-(g) Interpret your expression from part (f) as the derivative of a specific function evaluated at a specific input. What does this tell you?
+(g) Interpret your expression from part (f) as the derivative of a specific function evaluated at a specific input. What does this tell you about the relative growth rate of this particular population?
 
 (h) Use part (f) to numerically approximate the relative (instantaneous) growth rate of the population.
+
+(i) Use a similar method to approximate the relative growth rate of the function 
+\[
+   P = f(t) = 5 (3)^t .
+\]
 
 
 
@@ -183,7 +188,47 @@ expresses the population (in millions) of a colony of bacteria in terms of the n
 
 
 Desmos activity available at \href{https://www.desmos.com/calculator/omjbec2hpu}{151: Exponential Growth 1}
+\end{question}
 
+
+\begin{question}  \label{Qcgbt4tt}
+Parts (h) and (i) of the previous question suggest that there is a number $e$ between $2$ and $3$ that makes the 
+relative growth rate of the function 
+\[
+         P = f(t) = P_0 e^t , -3\leq t \leq 5
+\]
+equal to $100\%$/hr, where we assume here that $t$ is measured in hours. 
+
+(a) What is the one-hour growth factor for this population?
+
+(b) Describe what happens to the population every hour.
+
+(c) At what relative rate is the population increasing at 1:00pm?
+
+(d) Suppose at 1:00pm the population is $500,000$. Approximate the population at 1:03pm and compare your approximation to the actual population at that time.
+\end{question}
+
+
+\begin{question}  \label{Qcgt4ghggyt4r}
+The function
+\[
+     P = g(t) = P_0 e^{t/2}, -6 \leq t \leq 10
+\]
+expresses the population (Colony B) of bacteria in terms of the number of hours past noon.
+
+(a) Describe a transformation that take the graph of the population function 
+\[
+           P = f(t) = P_0 e^t , -3\leq t \leq 5 
+\]
+for Colony A (where $t$ is also the number of hours past noon) to the graph of $P=g(t)$.
+
+(b) Suppose that the population of Colony A is $400,000$ at 4:00pm.
+
+(i) When is the population of Colony B equal to $400,000$?
+
+(ii) What are the growth rates of the two populations when they each have 400,000 bacteria?
+
+(iii) What are the relative growth rates of the two populations when they each have 400,000 bacteria?
 
 \end{question}
 
