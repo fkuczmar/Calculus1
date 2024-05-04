@@ -161,19 +161,19 @@ expresses the population (in millions) of a colony of bacteria in terms of the n
 
 (b) Find an expression for the relative growth rate between time $t=u$ hours past noon and time $t=u+h$ hours past noon. Measure the rate relative to the population at time $t=u$. Is this question asking about an average or an instantaneous relative growth rate?
 
-(c) What are the units of the average growth rate in part (b)?
+(c) What are the units of the relative average growth rate in part (b)?
 
 (d) Input your function from part (b) on Line 5 in the worksheet below. 
 
-(e) What do you notice about the distance between points $R$ and $S$ as you drag the slider $u$ below. What does this suggest?
+(e) What do you notice about the distance between points $R$ and $S$ as you drag the slider $u$ below. How is this distance related to the relative average growth rate in part (b)?
 
 (f) Use limits to write an expression for the relative growth rate at time $t=u$ hours past noon. Simplify this expression as much as possible.  What can you conclude about the relative growth rate at any instant?
 
 (g) Interpret your expression from part (f) as the derivative of a specific function evaluated at a specific input. What does this tell you about the relative growth rate of this particular population?
 
-(h) Use part (f) to numerically approximate the relative (instantaneous) growth rate of the population.
+(h) Use part (f) to numerically approximate the relative (instantaneous) growth rate of the population. Show a table that suggests a progressoin toward a limit.
 
-(i) Use a similar method to approximate the relative growth rate of the function 
+(i) Use a similar method to approximate the relative instantaneous growth rate of the population
 \[
    P = f(t) = 5 (3)^t .
 \]
@@ -216,7 +216,7 @@ The function
 \]
 expresses the population (Colony B) of bacteria in terms of the number of hours past noon.
 
-(a) Describe a transformation that take the graph of the population function 
+(a) Describe a transformation that takes the graph of the population function 
 \[
            P = f(t) = P_0 e^t , -3\leq t \leq 5 
 \]
@@ -226,11 +226,67 @@ for Colony A (where $t$ is also the number of hours past noon) to the graph of $
 
 (i) When is the population of Colony B equal to $400,000$?
 
-(ii) What are the growth rates of the two populations when they each have 400,000 bacteria?
+(ii) What are the growth rates of the two populations when they each have respective populations of 400,000 bacteria?
 
-(iii) What are the relative growth rates of the two populations when they each have 400,000 bacteria?
+(iii) What are the relative growth rates of the two populations when they each have respective populations of 400,000 bacteria?
 
 \end{question}
+
+
+
+\begin{question}   \label{Q45fggfbhyhy}
+The function
+\[
+     P = f(t) , 0\leq t \leq 2,
+\]
+expresses the balance (in dollars) in an account in terms of the number of years since the start of 2022. Suppose 
+\[
+      \frac{1}{P} \frac{dP}{dt} \Big|_{P=5000} = 0.08 .
+\]
+
+(a) What are the units of the above derivative? How do you know?
+
+(b) Interpret the meaning of the above derivative.
+
+(c) Approximate the balance in the account four days after the account has $\$5,000$. Explain your reasoning.
+
+\end{question}
+
+
+\begin{question}  \label{Qe5r54tggrgtre}
+The function 
+\[
+    q = f(p) = 0.5(p-16)^2 \, , \, 6\leq p \leq 15 , 
+\]
+expresses the average number of burgers/day sold at Five Guys of Edmonds in terms of the price (in $\$$/burger).
+
+(a) At what relative rate does the quantity sold ($q$) change with respect to the price ($p$) at a price of $\$10$/burger?
+
+(b) What are the units of the above relative rate of change?
+
+(c) Explain the meaning of the relative rate of change in part (a).
+
+(d) Use the graph of the function $q=f(p)$ and the slider $u$ in the desmos activity below to interpret the relative rate of change in part (a) geometrically. Explain your reasoning.
+
+(e) Use the result of part (a) to approximate the relative change in the average number of burgers sold per day if the Five Guys increases the price from $\$10$/burger to $\$10.25$/burger. Explain your reasoning.
+
+(f) Use the result of part (a) to approximate the relative change in the average number of burgers sold per day in terms of a small relative change in the price from $\$10$/burger. Explain your reasoning.
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{ylgk03oaza}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+
+Desmos activity available at \href{https://www.desmos.com/calculator/ylgk03oaza}{151: Burgers 1}
+
+
+
+
+\end{question}
+
 
 
 \begin{question} \label{Qdcvbrtt}
@@ -312,7 +368,7 @@ Let $k>0$ be a constant and let
 \[
      f(x) = k e^x .
 \]
-For $a\in \mathbb{R}$ let point $P$ with coordinates $(a, f(a))$ be a curve on the curve$y=f(x)$. Let $Q$ be the point where the tangent line to the curve intersects the $x$-axis and let $R$ be the point with coordinates $(a,0)$
+For $a\in \mathbb{R}$ let point $P$ with coordinates $(a, f(a))$ be a curve on the curve $y=f(x)$. Let $Q$ be the point where the tangent line to the curve intersects the $x$-axis and let $R$ be the point with coordinates $(a,0)$
 
 (a) Find the length of segment $\overline{QR}$.
 
