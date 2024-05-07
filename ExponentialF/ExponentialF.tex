@@ -159,7 +159,23 @@ expresses the population (in millions) of a colony of bacteria in terms of the n
 
 (a) Describe how the population grows. Is your description sufficient?
 
-(b) Find an expression for the relative growth rate between time $t=u$ hours past noon and time $t=u+h$ hours past noon. Measure the rate relative to the population at time $t=u$. Is this question asking about an average or an instantaneous relative growth rate?
+\pskip
+
+The population $\answer{doubles}$ every $\answer{hour}$.
+
+\pskip
+
+(b) Find an expression for the relative growth \emph{rate} between time $t=u$ hours past noon and time $t=u+h$ hours past noon. Measure the rate relative to the population at time $t=u$. Is this question asking about an average or an instantaneous relative growth rate?
+
+\pskip
+
+The relative growth rate is
+\begin{align*}
+    \frac{1}{P} \left(  \frac{\Delta \answer{P}}{\Delta \answer{t}} \right)   &= \frac{1}{\answer{f(u)}} \left( \frac{\answer{f(u+h)} - f(u)}{\answer{h}}     \right)   \\ \\
+                &= \frac{1}{3(2)^{\answer{u}}}   \left(   \frac{\answer{3(2)^{u+h}-3(2)^u}}{\answer{h}}     \right)  \\ \\
+                &= \frac{1}{3(2)^u}   \left(   \frac{\answer{3(2)^u}(2^{\answer{h}}  -1}{h}  \right)  \\ \\
+                &= \frac{\answer{2^h} - 1}{h}
+\end{align*}
 
 (c) What are the units of the relative average growth rate in part (b)?
 
@@ -169,9 +185,17 @@ expresses the population (in millions) of a colony of bacteria in terms of the n
 
 (f) Use limits to write an expression for the relative growth rate at time $t=u$ hours past noon. Simplify this expression as much as possible.  What can you conclude about the relative growth rate at any instant?
 
+\pskip
+
+The relative growth rate is 
+\[
+    \lim_{h \to \answer{0}} \frac{\answer{2^h} - 1}{h} .
+\]
+
+
 (g) Interpret your expression from part (f) as the derivative of a specific function evaluated at a specific input. What does this tell you about the relative growth rate of this particular population?
 
-(h) Use part (f) to numerically approximate the relative (instantaneous) growth rate of the population. Show a table that suggests a progressoin toward a limit.
+(h) Use part (f) to numerically approximate the relative (instantaneous) growth rate of the population. Show a table that suggests a progression toward a limit.
 
 (i) Use a similar method to approximate the relative instantaneous growth rate of the population
 \[
@@ -264,17 +288,27 @@ in terms of $t$.
 \begin{question}  \label{Qe545tgbvb}
 Between 11am and 8pm, a population of bacteria grows exponentially. The population is 4 million at noon and 5 million at 1pm.
 
-(a) What is the one year growth factor?
+(a) What is the one year growth factor?  $\answer{1.25}$
 
-(b) Describe how the population grows.
+(b) Describe how the population grows. 
 
-(c) Find a function that expresses the population (in millions of bacteria) in terms of the number of hours past noon. Define meaningful variables and include a domain.
+\pskip
 
-(d) What is the relative instantaneous growth rate of the population?
+The population increases by $\answer{25}\%$ every hour.
 
-(e) At what rate is the population growing when there are $10$ million bacteria?
+(c) Use your description from part (b) to find a function that expresses the population (in millions of bacteria) in terms of the number of hours past noon. Do \emph{not} use $e$ in your function. Define meaningful variables and include a domain.
 
-(f) Find the population when it is increasing at the rate of $3$ million bacteria/hour.
+(d) Use the fact that $k = e^{\ln k}$ for $k>0$ to express your function from part (c) using an exponential function with base $e$.
+
+(e) Use the fact that 
+\[
+     \frac{d}{dt}(e^{kt}) = k e^{kt}
+\]
+to find the relative instantaneous growth rate of the population.
+
+(f) At what rate is the population growing when there are $10$ million bacteria?
+
+(g) Find the population when it is increasing at the rate of $3$ million bacteria/hour.
 
 \end{question}
 
