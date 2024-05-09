@@ -9,6 +9,63 @@ An introduction to the chain rule.
 \end{abstract}
 \maketitle
 
+
+The chain rule tells us how to differentiate the composition of two functions. It say that the derivative of the composition is the product of the derivatives of the two functions.
+
+Here is a more formal statement.
+
+\begin{theorem}
+(The Chain Rule) If $y=f(u)$ is a differentiable function of $u$ and $u=g(t)$ is a differentiable function of $t$, then the composition
+\[
+      y = f(g(t))
+\]
+is a differentiable function of $t$ and
+\[
+   \frac{dy}{dt} = \frac{dy}{du} \cdot \frac{du}{dt} .
+\]
+Or paying closer attention to the inputs,
+\[
+      \frac{dy}{dt}\Big|_{t=t_0} = \frac{dy}{du}\Big|_{u=g(t_0)} \cdot \frac{du}{dt}\Big|_{t=t_0} . 
+\]
+
+\end{theorem}
+
+
+We'll go through some examples to get an understanding of how to use the chain rule and also why it works.
+
+\begin{example}  \label{Ex:CHr34rrer}
+(a) Find the slope of the tangent line to the curve
+\[
+   y = f(\theta) = 6 \sin \theta
+\]
+at the point with coordinates $P(2\pi/3, 3\sqrt{3})$. We do not need the chain rule for this.
+
+(b) Describe a transformation that takes the graph of $y=f(\theta)$ to the graph of the function
+\[
+        y = g(\theta) = 6\sin (\theta/2) .
+\]
+
+(c) Find the image of the point $P(2\pi/3,3\sqrt{3})$ under the above transformation.
+
+(d) Use the results of parts (a) - (c) and the demonstration below to guess the slope of the tangent line to the curve $y=g(\theta)$ at the point $Q(2\pi,3\sqrt{3})$.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{mqjxpsqyo5}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Desmos activity available at \href{https://www.desmos.com/calculator/mqjxpsqyo5}{151: Chain Rule 1}
+
+\pskip
+
+(e) Use the chain rule to confirm your guess from part (d).
+
+
+\end{example}
+
+
+
 You ride a ferris wheel for one revolution and get off. The function 
 \[
     h = f(\theta) = \, , \, 0\leq \theta \leq 2\pi    %40 - 30\cos \theta \, , \, 0\leq \theta \leq 2\pi ,
