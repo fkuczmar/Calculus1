@@ -214,7 +214,7 @@ Let $t$ be the distance between the top of the ladder and the base of the trunk 
 
 (b) Use the result of part (a) to find the two possible values of $t$ when $s=16$. Give exact values (ie. not decimal approximations from a calculator).
 
-(c) We'll focus now on the ladder in its various positions when $s \sim 16$ and $t\sim 8$. For these positions, complete the square to find a function 
+(c) For the remainder of this problem we'll focuson the ladder in its various positions when $s \sim 16$ and $t\sim 8$. For these positions, complete the square to find a function 
 \[
     t = f(s)
 \]
@@ -227,7 +227,7 @@ that expresses the distance (in feet) from the top of the ladder to the base of 
        \frac{dt}{ds}\Big|_{s=16} .
 \]
 
-(f) What are the units of the derivative in part (e)? Explain the meaning of the derivative, \emph{not} by giving a standard and meaningless response about the rate of change of some quantity with respect to another, but by relating small changes.
+(f) What are the units of the derivative in part (e)? Explain the meaning of the derivative, \emph{not} by giving a standard response about the rate of change of some quantity with respect to another, but by relating small changes.
 
 (g) Use your response to part (f) to write an approximation for the change
 \[
@@ -268,6 +268,51 @@ Desmos activity available at \href{https://www.desmos.com/calculator/mqjxpsqyo5}
 \pskip
 
 (e) Use the chain rule to confirm your guess from part (d).
+
+\end{example}
+
+
+
+\begin{example}  \label{Ex:df4thghg}
+Find an equation of the tangent line to the curve
+\[
+  y = f(t) = 4 \sin^2 \left( \frac{\pi}{6}t \right)
+\]
+at the point $(2,3)$.
+
+\begin{explanation}
+Let 
+\[
+       y = 4 \sin^2 \left( \frac{\pi}{6}t \right) =  4 \left( \sin \left( \frac{\pi}{6}t \right)\right)^2
+\]
+and 
+\[
+      u = \sin\left( \frac{\pi}{6}t \right) .
+\]
+Then
+\[
+     y =4 u^2
+\]
+and
+\begin{align*}
+\frac{dy}{dt} &= \frac{dy}{du} \cdot \frac{du}{dt}  \\
+                     &= \frac{d}{du} \left( 4u^2 \right)  \cdot \frac{d}{dt}\left(  \sin\left( \frac{\pi}{6}t \right)  \right)  \\
+                     &= 8u   \cos \left(   \frac{\pi}{6}t  \right) \frac{d}{dt} \left( \frac{\pi}{6}t  \right)     \\
+                     &= 8\sin\left( \frac{\pi}{6}t \right)  \cos \left(   \frac{\pi}{6}t  \right) \frac{\pi}{6} .
+\end{align*}
+
+\begin{question}  \label{Q:dsf4tt}
+(a) The third equality above uses the chain rule again. Fill in the missing details of this computation by first letting
+\[
+    z = \sin \left(  \frac{\pi}{6}y \right)
+\]
+and making an explicit substitution using the variable $v$ in place of $u$.
+
+(b) Complete the solution by finding an equation of the tangent line to th ecurve at the point $(2,3)$. 
+\end{question}
+
+
+\end{explanation}
 
 \end{example}
 
