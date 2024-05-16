@@ -539,34 +539,66 @@ Simplify the function first.
 
 
 \begin{exercise}  \label{Ex:dsfthnmmm}
-You jog around a circular track of radius $r$ feet at the contant speed of speed of $v$ ft/sec. A flagpole lies $b$ feet due east of the track's center.
+You jog around a circular track of radius $r$ feet at the constant speed of speed of $v$ ft/sec. A flagpole lies $b$ feet due east of the track's center.
 
-(a) Find a function 
+(a) Use the animation below (and nothing else) to sketch by hand a graph of the function 
 \[
    s = f(\theta) \, , \theta \geq 0,
 \]
-that expresses your distance (in feet) to the flagpole in terms of your angle $\theta = \angle FOJ$ of rotation about the track's center, measured in radians from the time you start. Assume you start at the point $A$ on the track nearest the flagpole.
+that expresses your distance (in feet) to the flagpole in terms of your angle $\theta = \angle FOJ$ of rotation about the track's center, measured in radians from the time you start. Assume you start at the point $A$ on the track nearest the flagpole. Be sure to include variable names, units, and scales on your axes. Explain your reasoning. For this particular graph assume that $r=40$ and $b=96$ (be sure to adjust the sliders in the worksheet to have these values).
 
 \begin{onlineOnly}
     \begin{center}
-\desmos{4hcjhpytzf}{900}{600}
+\desmos{4pndurvhdd}{900}{600}
 \end{center}
 \end{onlineOnly}
 
-Worksheet available at \href{https://www.desmos.com/calculator/4hcjhpytzf}{151: Jogger}
+Worksheet available at \href{https://www.desmos.com/calculator/4pndurvhdd}{151: Jogger}
+
+(b) Using only your graph of the function $f$ from part (a), sketch by hand a graph of the derivative
+\[
+    y = f^\prime(\theta) = ds/d\theta .
+\]
+Be sure to include variable names, units, and scales on your axes. Explain your reasoning.
+
+(c) Using only the animation (stop the motion), approximate the value of the derivative
+\[
+     \frac{ds}{d\theta} \Big|_{\theta = 3\pi/2} .
+\]
+Include units. Explain your reasoning.
+
+(d) Use trigonometry to find an expression for the function $s=f(\theta)$.
+
+(e) Find an expression for the derivative $ds/d\theta$. Show \emph{every step} in using the chain rule as in Examples 1 and 2. %and interpret its meaning. Graph the derivative and reconcile the graph with the physical situation.
+
+(f) Use your result from part (f) and a calculator (or desmos) to approximate the value of the derivative
+\[
+     \frac{ds}{d\theta} \Big|_{\theta = 3\pi/2} 
+\]
+to the nearest thousandth.
+
+(g) What are the units of the derivative in part (f)? Explain the meaning of the derivative, \emph{not} by giving a standard response about the rate of change of some quantity with respect to another, but by relating small changes.
+
+(h) Use your response to part (f) to write an approximation for the change
+\[
+         \Delta s = f(\theta) - f(3\pi/2)
+\]
+in terms of the change 
+\[
+     \Delta \theta = \theta - 3\pi/2
+\]
+for values of $theta$ near $\theta=3\pi/2$. 
 
 
-(b) Find an expression for the derivative $ds/d\theta$ and interpret its meaning. Graph the derivative and reconcile the graph with the physical situation.
-
-(c) Find a function 
+(i) Find a function 
 \[
    s = g(t) \, , t\geq 0,
 \]
 that expresses your distance (in feet) to the flagpole in terms of the number of seconds since you started jogging. Assume you start at the point on the track nearest the flagpole.
 
-(d) Find a function that expresses the rate of change (with respect to time) in your distance to the flagpole in terms of the number of seconds since you began jogging.
+(j) Find a function that expresses the rate of change (with respect to time) in your distance to the flagpole in terms of the number of seconds since you began jogging.
 
-(e) Express the rate of change in part (b) in terms of your speed and the angle between the following two vectors:
+(k) Express the rate of change in part (b) in terms of your speed and the angle between the following two vectors:
 
 \begin{itemize}
 \item{the vector that gives your position relative to the flagpole}
