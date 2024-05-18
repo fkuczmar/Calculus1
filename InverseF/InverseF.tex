@@ -38,7 +38,7 @@ Here are some examples.
     \frac{dy}{dx}\Big|_{x=1.1} =  \frac{dy}{dx}\Big|_{y=3}
 \]
 
-(b) Use the result of part (a) to estimate the value of the derivative 
+(b) Use the result of part (a) and the graph below to estimate the value of the derivative 
 \[
       \frac{dx}{dy}\Big|_{x=1.1} = \frac{dx}{dy}\Big|_{y=3} .
 \]
@@ -54,7 +54,7 @@ Here are some examples.
     \frac{dy}{dx}\Big|_{x=0.6931} = \frac{dy}{dx}\Big|_{y=2}
 \]
 
-(d) Use the result of part (a) to estimate the value of the derivative 
+(d) Use the result of part (c) and the graph above to estimate the value of the derivative 
 \[
       \frac{dx}{dy}\Big|_{x=0.6931} = \frac{dx}{dy}\Big|_{y=2} .
 \]
@@ -89,6 +89,34 @@ Our conclusion is that
 Geogebra activity available at \href{https://www.desmos.com/calculator/nnshzdh6jp}{151: Magnification Factor 3}
 
 \end{example}
+
+\begin{question}  \label{Qddfs8888}
+Here's an equivalent, but more computational way to show that
+\[
+  \frac{d}{dx} \left(  \ln x  \right) = 1/x.
+\]
+The key is to recognize that the chain rule tells us that if $u=g(x)$ is a differentiable function of $x$, then
+\[
+  \frac{d}{dx}\left( e^u  \right) = e^u \cdot \frac{du}{dx} .
+\]
+
+Now to compute the derivative above, we know that since the functions $f(x)=\ln x$ and $g(x)=e^x$ are inverses of one another,
+\[
+    e^{\ln x} = x .
+\]
+Then differentiate both sides of this equation with respect to $x$ to get
+\[
+        \frac{d}{dx} \left(  e^{\ln x} \right) = \frac{dx}{dx} .
+\]
+And by the chain rule we can rewrite this equation as
+\[
+         \left(  e^{\ln x} \right)   \frac{\answer{d}}{dx} \left(  \answer{\ln x} \right) = \answer{1} . 
+\]
+And since $e^{\ln x} = \answer{x}$, 
+\[
+         \frac{d}{dx} \left(  \ln x  \right) = \answer{1/x}.
+\]
+\end{question}
 
 
 \begin{question}   \label{QDEgfdghb}
@@ -132,7 +160,7 @@ and
 \]
 wihout the chain rule as follows:
 \begin{align*}
-    \frac{d}{dx} \left(  \ln (4x) \right)  &=  \frac{d}{dx} \left(  \ln 4 \answer{+} \ln x) \right) \\
+    \frac{d}{dx} \left(  \ln (4x) \right)  &=  \frac{d}{dx} \left(  \ln 4 \answer{+} \ln x \right) \\
                                                        &=  \frac{d}{dx}\left( \ln 4  \right) \answer{+}   \frac{d}{dx}\left( \ln x  \right) \\
                                                       &=\answer{0} + \answer{\frac{1}{x}} .
 \end{align*}
@@ -151,6 +179,48 @@ both with and without the chain rule. Follow the steps \emph{exactly} as in the 
 (c) Graph the function $g(x) = \ln (x^2)$ and its derivative on the same coordinate system \emph{by hand}.
 
 \end{question}
+
+\begin{question}  \label{Qdefrgbhrdtgr}
+(a) Use the chain rule to compute the derivative
+\[
+   \frac{d}{dx} \left(  |x| \right) .
+\]
+Do this by noting that
+\[
+|x| = 
+\begin{cases}
+    x , \text{ if } x\geq 0 \\
+   -x ,  \text{ if } x<0
+\end{cases}
+\]
+and using the chain rule to compute 
+\[
+  \frac{d}{dx}  \left(  -x \right).
+\]
+
+(b) A reflection about the $y$-axis takes the graph of $y=f(x)$ go the graph of $y=g(x)$. Describe the transformation that takes the graph of $y=f^\prime(x)$ to the graph of $y=g^\prime(x)$.
+
+\end{question}
+
+\begin{question} \label{Qmf4566544}
+(a) Find a function
+\[
+      T = f(k) , \, k\geq 1,
+\]
+that expresses the time (in years) it takes an investment to grow by a factor of $k$. Assume the investment grows at a constant relative instantaneous rate of $i\%$/yr. So, for example if $i=5$, $f(3)$ would be the time it takes an investment to triple at an relative instantaneous growth rate of $5\%$/yr.
+
+(b) Suppose $i=5$ and evaluate the derivative
+\[
+    \frac{dT}{dk} \Big|_{k=3} .
+\]
+
+(c) What are the units of the above derivative? Explain its meaning in terms of small changes.
+
+(d) Use the result of part (b) and the appropriate linear approximation to estimate how much longer it would take an investment growing at an relative instantaneous rate of $5\%$/yr to increase by $210\%$ than it would take to triple.
+\end{question}
+
+
+\section*{The Inverse Sine Function}
 
 
 \end{document}
