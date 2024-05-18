@@ -9,7 +9,25 @@ Using the chain rule to compute the derivative of the inverse of a function.
 \end{abstract}
 \maketitle
 
-We can use the chain rule and our knowledge of the derivative of a function $y=f(x)$ to compute the derivative $dx/dy$ of the inverse function $x = f^{-1}(y)$. We'll work through some examples.
+We can use the chain rule and our knowledge of the derivative $dy/dx$ of a function $y=f(x)$ to compute the derivative $dx/dy$ of the inverse function $x = f^{-1}(y)$. The Leibniz notation proves very useful here as it suggests that
+\begin{align*}
+\frac{d}{dy} \left(  f^{-1}(y)  \right)  &= \frac{dx}{dy}  \\
+                                                      & = \frac{1}{dy/dx} .
+\end{align*}
+This turns out to be correct as long as we take care to evaluate the above derivatives at the correct inputs.
+
+Suppose $b = f(a)$, a more precise statement of the relation between the derivative of a function and the derivative of its inverse would be
+\begin{align*}
+\frac{d}{dy} \left(  f^{-1}(y)  \right)\Big|_{y=b}  &= \frac{dx}{dy} \Big|_{y=b} \\
+                                                      & = \frac{1}{\frac{dy}{dx} \Big|_{x=a}} .
+\end{align*}
+
+That is, \emph{the derivative of the inverse (of a function) is the reciprocal of the derivative (of that function).}
+
+Here are some examples.
+
+
+
 
 \section*{The Derivative of the Natural Log Function}
 
@@ -60,28 +78,79 @@ and more generally
              \frac{dx}{dy}\Big|_{y=a} = \frac{d}{dy}\left(  \ln y  \right)\Big|_{y=a} . 
 \]
 
-%(e) We can now use our knowledge of the derivative of the function 
-%\[
-%     y = f(x)=e^x
-%\]
-%to compute the derivative of the inverse function 
-%\[
-%   x = f^{-1}(y) = \ln y .
-%\]
 
-%The idea is that since
-%\[
-%  \frac{d}{dx}(e^x)\Big|_{x=a}  =   \frac{dy}{dx}\Big|_{x=a} = e^a = y , 
-%\]
-%we know that
-%\[
-% \frac{d}{dy}(\ln y)\Big|_{x=a}  =   \frac{dy}{dx}\Big|_{x=a} = e^a = y 
-%\]
+\begin{question}  \label{Q:Dfdsfgt4gg}
+Our conclusion is that
+\[
+   \frac{d}{dx} \left(  \ln x \right) = \answer{\frac{1}{x}} . 
+\]
+\end{question}
 
 Geogebra activity available at \href{https://www.desmos.com/calculator/nnshzdh6jp}{151: Magnification Factor 3}
 
 \end{example}
 
+
+\begin{question}   \label{QDEgfdghb}
+Find an equation of the tangent line to the curve $y=\ln x$ at the point $(4,\ln 4)$.
+\[
+     y - \answer{\ln 4} = \answer{\frac{1}{4}} \left( x - \answer{4}  \right).
+\]
+\end{question}
+
+\begin{question} \label{Qdfvbtnnn}
+(a) Use the chain rule to compute the derivative
+\[
+    \frac{d}{dx} \left(  \ln (4x) \right) .
+\]
+(b) Compute the same derivative \emph{without} using the chain rule.
+
+\begin{explanation}
+Let 
+\[
+    y  =\ln (4x)
+\]
+and
+\[
+       u = \answer{4x} .
+\]
+Then 
+\[
+    y  = \ln \answer{u}
+\] 
+and
+\begin{align*}
+   \frac{dy}{dx} & = \frac{dy}{\answer{du}} \cdot \frac{\answer{du}}{\answer{dx}} \\
+                       & = \frac{\answer{d}}{\answer{du}} \left( \ln \answer{u}  \right) \cdot \frac{\answer{d}}{\answer{dx}}\left(  \answer{4x} \right)  \\
+                        &= \frac{\answer{4}}{u} \\
+                        &= \answer{\frac{1}{x}} .
+ \end{align*}
+
+(b) We can compute the derivative
+\[
+    \frac{d}{dx} \left(  \ln (4x) \right) 
+\]
+wihout the chain rule as follows:
+\begin{align*}
+    \frac{d}{dx} \left(  \ln (4x) \right)  &=  \frac{d}{dx} \left(  \ln 4 \answer{+} \ln x) \right) \\
+                                                       &=  \frac{d}{dx}\left( \ln 4  \right) \answer{+}   \frac{d}{dx}\left( \ln x  \right) \\
+                                                      &=\answer{0} + \answer{\frac{1}{x}} .
+\end{align*}
+\end{explanation}
+\end{question}
+
+\begin{question}  \label{Qdfbb44443243}
+(a) Compute the derivative 
+\[
+       \frac{d}{dx} \left( \ln(x^2)  \right)
+\]
+both with and without the chain rule. Follow the steps \emph{exactly} as in the previous example when using the chain rule.
+
+(b) What are the domains of the functions $f(x)=\ln x$ and $g(x) = \ln (x^2)$ and their derivatives.
+
+(c) Graph the function $g(x) = \ln (x^2)$ and its derivative on the same coordinate system \emph{by hand}.
+
+\end{question}
 
 
 \end{document}
