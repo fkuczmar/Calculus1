@@ -9,17 +9,76 @@ Using the chain rule to compute the derivative of the inverse of a function.
 \end{abstract}
 \maketitle
 
+We can use the chain rule and our knowledge of the derivative of a function $y=f(x)$ to compute the derivative $dx/dy$ of the inverse function $x = f^{-1}(y)$. We'll work through some examples.
+
 \section*{The Derivative of the Natural Log Function}
 
 \begin{example}   \label{Ex:LDfjbbrt}
 
+(a) Use the graph of the function $y=f(x)$ below to estimate the value of the derivative
+\[
+    \frac{dy}{dx}\Big|_{x=1.1} =  \frac{dy}{dx}\Big|_{y=3}
+\]
+
+(b) Use the result of part (a) to estimate the value of the derivative 
+\[
+      \frac{dx}{dy}\Big|_{x=1.1} = \frac{dx}{dy}\Big|_{y=3} .
+\]
+
 \begin{onlineOnly}
     \begin{center}
-\desmos{t3x7sdfast}{900}{600}
+\desmos{nnshzdh6jp}{900}{600}
 \end{center}
 \end{onlineOnly}
 
-Geogebra activity available at \href{https://www.desmos.com/calculator/t3x7sdfast}{151: Magnification Factor 3}
+(c) Set $u=0.6931$ and $n=90$ in the demonstration above and estimate the value of the derivative
+\[
+    \frac{dy}{dx}\Big|_{x=0.6931} = \frac{dy}{dx}\Big|_{y=2}
+\]
+
+(d) Use the result of part (a) to estimate the value of the derivative 
+\[
+      \frac{dx}{dy}\Big|_{x=0.6931} = \frac{dx}{dy}\Big|_{y=2} .
+\]
+
+\begin{question}  \label{Q:dfrr4f}
+Parts (a) and (c) and perhaps a few more derivatives suggest that
+\[
+     f(x) = \answer{e^x} .
+\]
+\end{question}
+
+(e) Use the results of parts (b) and (d) to evaluate the derivatives
+\[
+         \frac{dx}{dy}\Big|_{y=3} = \frac{d}{dy}\left(  \ln y  \right)\Big|_{y=3} ,
+\]
+\[
+         \frac{dx}{dy}\Big|_{y=2} = \frac{d}{dy}\left(  \ln y  \right)\Big|_{y=2}  ,
+\]
+and more generally
+\[
+             \frac{dx}{dy}\Big|_{y=a} = \frac{d}{dy}\left(  \ln y  \right)\Big|_{y=a} . 
+\]
+
+%(e) We can now use our knowledge of the derivative of the function 
+%\[
+%     y = f(x)=e^x
+%\]
+%to compute the derivative of the inverse function 
+%\[
+%   x = f^{-1}(y) = \ln y .
+%\]
+
+%The idea is that since
+%\[
+%  \frac{d}{dx}(e^x)\Big|_{x=a}  =   \frac{dy}{dx}\Big|_{x=a} = e^a = y , 
+%\]
+%we know that
+%\[
+% \frac{d}{dy}(\ln y)\Big|_{x=a}  =   \frac{dy}{dx}\Big|_{x=a} = e^a = y 
+%\]
+
+Geogebra activity available at \href{https://www.desmos.com/calculator/nnshzdh6jp}{151: Magnification Factor 3}
 
 \end{example}
 
