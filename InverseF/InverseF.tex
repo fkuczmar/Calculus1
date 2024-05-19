@@ -24,7 +24,7 @@ The key to the first problem was to differentiate the function
 \] 
 that expresses the volume (in cubic cm) of the cube in terms of its edge length (in cm). We used limits and found that
 \[
-   \frac{dV}{ds}\Big|_{s=12} = 12 .
+   \frac{dV}{ds}\Big|_{s=2} = \answer{12}.
 \]
 
 \begin{question} \label{Q34rgbds}
@@ -35,11 +35,11 @@ that expresses the volume (in cubic cm) of the cube in terms of its edge length 
 
 From here, we let 
 \[
-         \Delta s = s- 2
+         \Delta s = s- \answer{2}
 \]
 be the error in our measurement (measured in cm) and 
 \[
-      \Delta V = s^3 -  8
+      \Delta V = s^3 -  \answer{8}
 \]
 the error in the computed volume (measured in cubic cm). Then for small errors $\Delta s \sim 0$, 
 \[
@@ -52,8 +52,32 @@ and so
 
 For the second problem we used limits to differentiate the function
 \[
-    s = f^{-1}(V) \, , \, V>0. 
+    s = f^{-1}(V) \, , \, V>0  .
 \] 
+We found that
+\[
+    \frac{dV}{ds}\Big|_{V=\answer{8}} = \answer{1/12}. 
+\]
+\begin{question}  \label{Q:Lldfb9833}
+What are the units of the above derivative? How do you know?
+\end{question}
+
+Then for small errors  $\Delta \answer{V}$ in our measurement of the volume,
+\[
+  \Delta s \sim \answer{\frac{1}{12}} \Delta V
+\]
+
+But all this work took us back to the same approximate relation between the two errors $\Delta V$ and $\Delta s$ that we had already found in solving the first problem.
+
+Expressed another way, having found that
+\[
+        \frac{dV}{ds}\Big|_{s=2} = \answer{12},
+\]
+we should have known immediately (without any computations) that
+\[
+        \frac{ds}{dV}\Big|_{V=\answer{8}} = \answer{1/22}.
+\]
+
 
 
 We can use the chain rule and our knowledge of the derivative $dy/dx$ of a function $y=f(x)$ to compute the derivative $dx/dy$ of the inverse function $x = f^{-1}(y)$. The Leibniz notation proves very useful here as it suggests that
