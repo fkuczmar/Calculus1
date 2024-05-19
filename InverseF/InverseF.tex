@@ -9,6 +9,53 @@ Using the chain rule to compute the derivative of the inverse of a function.
 \end{abstract}
 \maketitle
 
+We saw at the beginning of the class the relationship between the derivative of a function and the derivative its inverse. Recall the two problems:
+
+\begin{itemize}
+\item{You measure the edge length of a cube to be $2$ cm and use this measurement to compute its volume. How is the error in computing the volume related to the error (assumed to be small) in your measurement of the edge length?}
+
+\item{You submerge a cube in water and measure its volume to be $8 \text{ cm}^3$. You then use this measurement to compute the edge length of the cube. How is the error in computing the edge length related to the error (assumed to be small) in your measurement of the volume?}
+
+\end{itemize}
+
+The key to the first problem was to differentiate the function
+\[
+      V = f(s) = s^3 \, , s>0
+\] 
+that expresses the volume (in cubic cm) of the cube in terms of its edge length (in cm). We used limits and found that
+\[
+   \frac{dV}{ds}\Big|_{s=12} = 12 .
+\]
+
+\begin{question} \label{Q34rgbds}
+(a) What are the units of the above derivative? How do you know?
+
+(b) Interpret the meaning of the above derivative in terms of the geometry of the cube.
+\end{question}
+
+From here, we let 
+\[
+         \Delta s = s- 2
+\]
+be the error in our measurement (measured in cm) and 
+\[
+      \Delta V = s^3 -  8
+\]
+the error in the computed volume (measured in cubic cm). Then for small errors $\Delta s \sim 0$, 
+\[
+       \frac{\Delta V}{\Delta s} \sim  \frac{dV}{ds}\Big|_{s=2} = \answer{$12$} ,
+\]
+and so
+\[
+       \Delta V \sim 12 \Delta s.
+\]
+
+For the second problem we used limits to differentiate the function
+\[
+    s = f^{-1}(V) \, , \, V>0. 
+\] 
+
+
 We can use the chain rule and our knowledge of the derivative $dy/dx$ of a function $y=f(x)$ to compute the derivative $dx/dy$ of the inverse function $x = f^{-1}(y)$. The Leibniz notation proves very useful here as it suggests that
 \begin{align*}
 \frac{d}{dy} \left(  f^{-1}(y)  \right)  &= \frac{dx}{dy}  \\
