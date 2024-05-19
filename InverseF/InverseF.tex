@@ -9,6 +9,8 @@ Using the chain rule to compute the derivative of the inverse of a function.
 \end{abstract}
 \maketitle
 
+
+\section*{Introduction}
 We saw at the beginning of the class the relationship between the derivative of a function and the derivative its inverse. Recall the two problems:
 
 \begin{itemize}
@@ -47,16 +49,16 @@ the error in the computed volume (measured in cubic cm). Then for small errors $
 \]
 and so
 \[
-       \Delta V \sim 12 \Delta s.
+       \Delta V \sim \answer{12} \Delta s.
 \]
 
 For the second problem we used limits to differentiate the function
 \[
-    s = f^{-1}(V) \, , \, V>0  .
+    s = f^{-1}(V) \, , \, V>0 ,
 \] 
-We found that
+and found that
 \[
-    \frac{dV}{ds}\Big|_{V=\answer{8}} = \answer{1/12}. 
+    \frac{ds}{dV}\Big|_{V=\answer{8}} = \answer{1/12}. 
 \]
 \begin{question}  \label{Q:Lldfb9833}
 What are the units of the above derivative? How do you know?
@@ -67,7 +69,7 @@ Then for small errors  $\Delta \answer{V}$ in our measurement of the volume,
   \Delta s \sim \answer{\frac{1}{12}} \Delta V
 \]
 
-But all this work took us back to the same approximate relation between the two errors $\Delta V$ and $\Delta s$ that we had already found in solving the first problem.
+But all this work took us back to the same approximate relation between the errors $\Delta V$ and $\Delta s$ that we had already found in solving the first problem.
 
 Expressed another way, having found that
 \[
@@ -75,25 +77,31 @@ Expressed another way, having found that
 \]
 we should have known immediately (without any computations) that
 \[
-        \frac{ds}{dV}\Big|_{V=\answer{8}} = \answer{1/22}.
+        \frac{ds}{dV}\Big|_{V=\answer{8}} = \answer{1/12}.
 \]
 
 
 
-We can use the chain rule and our knowledge of the derivative $dy/dx$ of a function $y=f(x)$ to compute the derivative $dx/dy$ of the inverse function $x = f^{-1}(y)$. The Leibniz notation proves very useful here as it suggests that
+For the same reason, this same relationship between the derivative of any function and the derivative of its inverse holds. That is, for any differentiable function $y=f(x)$, the derivative $dx/dy$ of the inverse function $x = f^{-1}(y)$ is
 \begin{align*}
 \frac{d}{dy} \left(  f^{-1}(y)  \right)  &= \frac{dx}{dy}  \\
                                                       & = \frac{1}{dy/dx} .
 \end{align*}
-This turns out to be correct as long as we take care to evaluate the above derivatives at the correct inputs.
+Well almost. We need to take some care in evaluating the above derivatives at the correct inputs.
 
-Suppose $b = f(a)$, a more precise statement of the relation between the derivative of a function and the derivative of its inverse would be
+Supposing that $b = f(a)$, a more precise statement of the relation between the derivative of a function $y=f(x)$ and the derivative $dx/dy$ of its inverse is
 \begin{align*}
-\frac{d}{dy} \left(  f^{-1}(y)  \right)\Big|_{y=b}  &= \frac{dx}{dy} \Big|_{y=b} \\
-                                                      & = \frac{1}{\frac{dy}{dx} \Big|_{x=a}} .
+\frac{d}{dy} \left(  f^{-1}(y)  \right)\Big|_{y=\answer{b}}  &= \frac{dx}{dy} \Big|_{y=\answer{b}} \\
+                                                      & = \frac{1}{\frac{dy}{dx} \Big|_{x=\answer{a}}} .
 \end{align*}
 
 That is, \emph{the derivative of the inverse (of a function) is the reciprocal of the derivative (of that function).}
+
+Well, not quite. The above relationship is true if
+\[
+  \frac{dy}{dx} \Big|_{x=\answer{a}} \neq \answer{0}.
+\]
+This condition also guarantees that the function $y=f(x)$ is one-to-one in a sufficiently small neighborhood near $x=\answer{a}$ and is therefore invertible in that neighborhood.
 
 Here are some examples.
 
