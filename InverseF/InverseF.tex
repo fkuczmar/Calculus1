@@ -312,7 +312,7 @@ expresses the gas mileage of a car (in miles/gallon) in terms of its speed (in m
 
 (a) Explain the meaning of the derivative 
 \[
-     \frac{d}{dv} \left( \frac{\ln (f(v))}{25} \right) .
+     \frac{d}{dv} \left( \ln (f(v)) \right) .
 \]
 Include units in your explanation. Also, what are the units of $25$ in the above expression? How do you know?
 
@@ -517,6 +517,7 @@ Worksheet available at \href{https://www.desmos.com/calculator/g6fuhqff02}{151: 
 \[
         y = \arcsin (\sin\theta) .
 \] 
+Explain your reasoning.
 \end{question}
 
 \begin{question} \label{QWcsdefv3e354}
@@ -526,6 +527,23 @@ Find the measure of the acute angle that the tangent line to the curve
 \]
 at the point $(\pi/7, f(\pi/7))$ makes with the $x$-axis Do \emph{not} use a calculator.
 \end{question}
+
+
+\begin{question}   \label{QDfd6mbqs}
+The function
+\[
+       q = f(p) = 0.2 \left( 2p-40 \right)^2 \, , \, 5\leq p \leq 12 ,
+\]
+expresses the average number of burgers sold per day at Five Guys in Edmonds in terms of the price (in dollars/burger).
+
+(a) Evaluate the derivative
+\[
+        \frac{d}{dp} \left(  \ln (f(p)) \right)\Big|_{p=7.5}
+\]
+
+(b) What are the units of the derivative above? Explain its meaning.
+\end{question}
+
 
 \begin{question}  \label{Q:3e4fg45534}
 The bottom end of a $25$-foot ladder lies $24$ feet from the base of a vertical wall. Use the appropriate linear approximation to estimate the angle through which the ladder rotates when the bottom end is pulled an additional $0.1$ feet away from the wall along a horizontal floor. 
@@ -554,6 +572,52 @@ Use the law of sines.
 \end{onlineOnly}
 
 Desmos activity available at \href{https://www.desmos.com/calculator/rpms2jqfpm}{151: Tree and Ladder}
+
+\end{question}
+
+\begin{question}  \label{Q:dgynnrzaq}
+(a) The animation below shows water draining from a tank. Play the animation and sketch by hand a graph of the function $V=f(t)$ that expresses the depth of the water as a function of time. Explain your reasoning.
+
+
+\pdfOnly{
+Access Desmos interactives through the online version of this text at
+ 
+\href{https://www.desmos.com/calculator/pdghky6tie}.
+}
+ 
+\begin{onlineOnly}
+    \begin{center}
+\desmos{pdghky6tie}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+
+
+
+
+
+
+
+
+
+
+While water is poured into a cylindrical tank at a constant rate, water leaks out through a small hole in the bottom of the tank.
+
+The function 
+\[
+      t = f(h) = - \frac{2\sqrt{h}}{k_2} - \frac{2k_1}{k_2} \ln\left( \frac{k_1 - \sqrt{h}}{k_1}   \right) \, , \, t\geq 0 ,
+\]
+expresses the time (in seconds) in terms of the depth of the water (in feet), where $k_1$ and $k_2$ are postive constants.
+
+(a) Find the depth of the water at time $t=0$.
+
+(b) What are the units of $k_1$, $k_2$? Explain your reasoning.
+
+(c) FInd a function 
+\[
+      r = g(h) \, , h\geq 0,
+\]
+that expresses the rate (in ft/sec) at which the water level in the tank is changing in terms of the depth of the water (in feet). Briefly explain your reasoning. Do \emph{not} use implicit differentiation. Simplify the function.
 
 \end{question}
 
