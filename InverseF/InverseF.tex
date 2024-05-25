@@ -667,18 +667,31 @@ is not a possible depth function for water draining from a cylindrical tank.
 Give a similar analysis for the depth function of part (ii).
 \end{freeResponse}
 
+\end{question}
 
-
+\begin{question}  \label{Q:435gbbrtgt}
+This is a continuation of the previous problem.
 
 While water is poured into a cylindrical tank at a constant rate, water leaks out through a small hole in the bottom of the tank.
 
 The function 
 \[
-      t = f(h) = - \frac{2\sqrt{h}}{k_2} - \frac{2k_1}{k_2} \ln\left( \frac{k_1 - \sqrt{h}}{k_1}   \right) \, , \, t\geq 0 ,
+      t = f(h) = - \frac{2}{k_2}  \left( \sqrt{h} - \sqrt{h_0} + \frac{k_1}{k_2} \ln \Bigg| \frac{k_1 - k_2 \sqrt{h}}{k_1 - k_2 \sqrt{h_0}}   \Bigg| \right)\, , \, t\geq 0 ,
 \]
 expresses the time (in seconds) in terms of the depth of the water (in feet), where $k_1$ and $k_2$ are postive constants.
 
-(a) Find the depth of the water at time $t=0$.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{el0ef9mbbu}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Worksheet available at \href{https://www.desmos.com/calculator/el0ef9mbbu}{151: Draining Cylinder 2}
+
+
+
+(a) Show that the depth of the water at time $t=0$ is $h=h_0$.
 
 (b) What are the units of $k_1$, $k_2$? Explain your reasoning.
 
