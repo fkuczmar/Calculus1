@@ -599,7 +599,7 @@ for some positive constant $k$.
 
 For a cylindrical tank of radius $r$ cm, 
 \[
-     V = f(h) = \answer{\pi r^2} h
+     V = f(h) = \answer{\pi r^2h} 
 \]
 and 
 \[
@@ -610,17 +610,17 @@ So by the chain rule
  \frac{dV}{dt} &= \frac{dV}{\answer{dh}} \cdot \frac{\answer{dh}}{\answer{dt}} \\
                      &= \answer{\pi r^2} \frac{\answer{dh}}{\answer{dt}} . \\
 \end{align*}
-And for the cylindrical tank we can write Torricelli's law as
+So for the cylindrical tank we can write Torricelli's law as
 \[
    \frac{dV}{dt} =  \answer{\pi r^2} \frac{d\answer{h}}{d\answer{t}} = - k \sqrt{h} .
 \]
 Or equivalently as
 \[
-      \frac{dh}{dt} = - \frac{k}{\answer{\pi r^2}} \sqrt{h} = -k_1 \sqrt{h} ,
+      \frac{dh}{dt} = - \frac{k}{\answer{\pi r^2}} \sqrt{h} = -k_2 \sqrt{h} ,
 \]
 where
 \[
-       k_1 = \frac{k}{\pi r^2}
+       k_2= \frac{k}{\pi r^2}
 \]
 is a positive constant.
 
@@ -672,34 +672,82 @@ Give a similar analysis for the depth function of part (ii).
 \begin{question}  \label{Q:435gbbrtgt}
 This is a continuation of the previous problem.
 
-While water is poured into a cylindrical tank at a constant rate, water leaks out through a small hole in the bottom of the tank.
+Now we pour water into a cylindrical tank at a constant rate, while at the same time water leaks out through a small hole in the bottom of the tank. We'll suppose that the tank starts with some initial volume of water.
 
-The function 
+\begin{freeResponse}
+
+(a) What do you think happens to the water level in the tank initially?
+
+(b) What do you think happens to the water level in the long run?
+
+\end{freeResponse}
+
+To model this situtation, we need to modify Torricelli's law. For this, let's suppose that we pour water into the cylindrical tank (of radius $r$) at the constant rate of $k_3 \text{ cm}^3$/sec. Then with the same notation as before,
 \[
-      t = f(h) = - \frac{2}{k_2}  \left( \sqrt{h} - \sqrt{h_0} + \frac{k_1}{k_2} \ln \Bigg| \frac{k_1 - k_2 \sqrt{h}}{k_1 - k_2 \sqrt{h_0}}   \Bigg| \right)\, , \, t\geq 0 ,
+      \frac{dV}{dt} = \answer{k_3} - k\sqrt{h} . 
+\] 
+But since 
+\begin{align*}
+        \frac{dV}{dt} &= \frac{dV}{dh} \cdot \frac{dh}{dt}   \\
+                            & = \answer{\pi r^2} \cdot \frac{dh}{dt} ,
+\end{align*}
+the above modification of Torricelli's law becomes
+\begin{align*}
+    \frac{dh}{dt} &=  \frac{k_3}{\answer{\pi r^2}} - \frac{k}{\answer{\pi r^2}}\sqrt{h} \\
+                        &= k_1 - k_2 \sqrt{h} ,
+\end{align*}
+where 
+\[
+    k_1  = \frac{k_3}{\pi r^2} 
 \]
-expresses the time (in seconds) in terms of the depth of the water (in feet), where $k_1$ and $k_2$ are postive constants.
+and
+\[
+        k_2 = \frac{k_1}{\pi r^2} 
+\]
+are positive constants. 
 
+\begin{freeResponse}
+(a) What are the units of $k_1$ and $k_2$? How do you know?
+
+(b) Explain the meaning of $k_1$.
+\end{freeResponse}
+
+The equation
+\[
+   \frac{dh}{dt} =  k_1 - k_2 \sqrt{h} 
+\]
+expresses the rate of change in the water's depth as a function of the depth. It is called a differential equation and you will learn a little about how to solve equations like this next quarter. 
+ 
+For this particular differential equation, it is not possible to express the depth of the water explicitly as a function of time. But assuming that the depth of the water is $h_0$ cm at time $t=0$, it turns out that the function 
+\[
+      t = g^{-1}(h) = - \frac{2}{k_2}  \left( \sqrt{h} - \sqrt{h_0} + \frac{k_1}{k_2} \ln \Bigg| \frac{k_1 - k_2 \sqrt{h}}{k_1 - k_2 \sqrt{h_0}}   \Bigg| \right)\, , \, t\geq 0 ,
+\]
+expresses the time (in seconds) in terms of the depth of the water (in cm). We can check that this is indeed correct as follows:
+
+(a) Show algebraically that the depth of the water at time $t=0$ is $h=h_0$.
+
+(b) Use the above expression for $t=g^{-1}(h)$ to compute and then simplify the derivative $dt/dh$. 
+
+(c) Use the result of part (b) to show that 
+\[
+   \frac{dh}{dt} =  k_1 - k_2 \sqrt{h} .
+\]
 
 \begin{onlineOnly}
     \begin{center}
-\desmos{el0ef9mbbu}{900}{600}
+\desmos{c78kv7wifv}{900}{600}
 \end{center}
 \end{onlineOnly}
 
-Worksheet available at \href{https://www.desmos.com/calculator/el0ef9mbbu}{151: Draining Cylinder 2}
+Worksheet available at \href{https://www.desmos.com/calculator/c78kv7wifv}{151: Draining Cylinder 2}
 
+\pskip
 
+(d) Experiment with the sliders above and summarize your observations about how the graph of the function $h=g(t)$ changes depending on the initial depth of the water and the constants $k_1$ and $k_2$. 
 
-(a) Show that the depth of the water at time $t=0$ is $h=h_0$.
+(e) Express the equilibrium depth in terms of $k_1$ and $k_2$. Check that your expression has the correct units. The equilibrium depth is the depth at which the water level remains constant. It is also the depth which the water level approaches (independent of the initial depth).
 
-(b) What are the units of $k_1$, $k_2$? Explain your reasoning.
-
-(c) FInd a function 
-\[
-      r = g(h) \, , h\geq 0,
-\]
-that expresses the rate (in ft/sec) at which the water level in the tank is changing in terms of the depth of the water (in feet). Briefly explain your reasoning. Do \emph{not} use implicit differentiation. Simplify the function.
+(f) What happens to the equilibrium depth when $k_1$ increases (and $k_2$) is held constant? Or when $k_2$ changes and $k_1$ is held constant?
 
 \end{question}
 
