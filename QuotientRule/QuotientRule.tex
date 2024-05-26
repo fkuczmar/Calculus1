@@ -12,27 +12,92 @@ An introduction to the quotient rule.
 
 Had we never learned about relative changes and relative rates of change, the following questions would have almost forced these ideas upon us.
 
-\begin{example} \label{Ex:Dfggt4ttggg}
+\begin{question} \label{Ex:Dfggt4ttggg}
 (a) Suppose over a six-month perioid, the national debt of a small country increases from $\$4$ billion to $\$4.16$ billion while the population increases from $20$ million to $21$ million. Does the per-capita (ie. per-person) share of the national debt increase or decrease during this period? 
 
-(b) At a certain instant the national debt of a small country with a population of $20$ million is $\$4$ billion.At that same instant the population is increasing at the rate of 1 million people/yr while the national debt is increasing at the rate of $\$0.16$ billion/yr. Is the per-capita share of the national debt increasing or decreasing at this instant? At what rate?
+(b) At noon on July 1, the national debt of a small country with a population of $20$ million is $\$4$ billion.At that same instant the population is increasing at the rate of 1 million people/yr while the national debt is increasing at the rate of $\$0.16$ billion/yr. Is the per-capita share of the national debt increasing or decreasing at this instant? At what rate?
 
 \begin{explanation}
 (a) The question is really to determine which is greater, 
 \[
-       p_1 =  \frac{4 \times 10^9}{2 \times 10^6} \frac{\text{dollars}}{\text{person}}
+       c_1 =  \frac{4 \times 10^9}{2 \times 10^6} \frac{\text{dollars}}{\text{person}}
 \]
 or
 \[
-      p_2 =   \frac{4.16 \times 10^9}{2.1 \times 10^6} \frac{\text{dollars}}{\text{person}} = \frac{4 \times 10^9 \times 1.04}{2 \times 10^6\times 1.05} \frac{\text{dollars}}{\text{person}} = \left( \frac{1.04}{1.05} \right)p_1 .
+      c_2 =   \frac{4.16 \times 10^9}{2.1 \times 10^6} \frac{\text{dollars}}{\text{person}} = \frac{4 \times 10^9 \times 1.04}{2 \times 10^6\times 1.05} \frac{\text{dollars}}{\text{person}} = \left( \frac{1.04}{1.05} \right)c_1 .
 \]
 
 And because the total debt increased by $4\%$ while the population increased by $5\%$, the per-capita share of the national debt decreased during the six-month period.
 
-But the per-capita share of the debt did \emph{not} decrease by $1\%$, but rather by about (to the nearest thousandth of a percent) $\answer[tolerance=0.01]{0.952}\%$.
+But the per-capita share of the debt did \emph{not} decrease by $1\%$, but rather by about (to the nearest thousandth of a percent) $\answer[tolerance=0.001]{0.952}\%$.
+
+(b) For the instantaneous rate, let
+\[
+         Q = f(t)
+\]
+be the total national debt in billions of dollars at time $t$ years past noon on July 1 and
+\[
+     P = g(t)
+\]
+the population in millions at time $t$. Also, let
+\[
+       C = h(t) = \frac{f(t)}{g(t)}
+\]
+be the per-capita share of the debt in thousands of dollars/person at time $t$ years past noon on July 1. We wish to find the value of the derivative
+\[
+      \frac{dC}{dt} \Big|_{t=0} .
+\]
+Part (a) suggests we express the relative instantaneous rate of change
+\[
+     \frac{1}{C} \cdot \frac{dC}{dt} \Big|_{t=0}
+\]
+in terms of the relative rates
+\[
+    \frac{1}{Q} \cdot \frac{dQ}{dt}\Big|_{t=0} = \answer{0.04} 
+\]
+and
+\[
+   \frac{1}{P} \cdot \frac{dP}{dt}\Big|_{t=0} = \answer{0.05}
+\]
+
+Perhaps the easiest way to do this, although not entirely correct, is to assume that the population and national debt each grow exponentially. In that case, the relative growth rates of each are constant and so
+\[
+    Q = f(t) = \answer{4}e^{\answer{0.04t}}
+\]
+and 
+\[
+      P = g(t) = \answer{2e^{0.05t}} .
+\]
+This tells us that
+\[
+       C = \frac{f(t)}{g(t)} = \answer{2e^{-0.01t}}
+\]
+and
+\[
+        \frac{dC}{dt} \Big|_{t=0} = \answer{-0.01} 
+\]
+So at noon on July 1, we suspect that the per-capita share of the debt is decreasing at the relative rate of $\answer{1\%}$/yr
+and at the absolute rate of $\$\answer{20}$/yr.
+
+To be sure this is true even if the relative rates of change in the population and total debt are \emph{not} constant, we can argue more generally that the relative instantaneous rate of change in the per-capita share of the national debt is
+%\[
+%     C = \frac{f(t)}{g(t)} = \frac{Q}{P} .
+%\]
+%Then
+%\[
+%   \ln C = \ln \left( \frac{Q}{P}\right)  = \ln Q  - \ln P .
+%\]
+%So the relative instantaneous rate of change in the per-capita share of the national debt is
+\begin{align*}
+        \frac{1}{C} \cdot \frac{dC}{dt} &= \frac{d}{dt}\left( \ln \left(\frac{Q}{P}\right)  \right) \\
+                                                      &= \frac{d}{dt} \left(  \answer{\ln Q} - \answer{\ln P}     \right) \\
+                                                      &= \frac{d}{dt} \left( \answer{\ln Q} \right) - \frac{d}{dt} \left(  \answer{\ln P} \right)  \\
+                                                      &= \answer{\frac{1}{Q}} \cdot \answer{\frac{dQ}{dt}} - \answer{\frac{1}{P}} \cdot \answer{\frac{dP}{dt}} .
+\end{align*}
+That is, \emph{the relative rate of change in a quotient is the difference of the relative rates.}
 
 \end{explanation}
 
-\end{example}
+\end{question}
 
 \end{document}
