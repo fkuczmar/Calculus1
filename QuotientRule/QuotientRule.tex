@@ -60,7 +60,7 @@ and
    \frac{1}{P} \cdot \frac{dP}{dt}\Big|_{t=0} = \answer{0.05}
 \]
 
-Perhaps the easiest way to do this, although not entirely correct, is to assume that the population and national debt each grow exponentially. In that case, the relative growth rates of each are constant and so
+Perhaps the easiest way to do this, although not entirely complete, is to assume that the population and national debt each grow exponentially. In that case, the relative growth rates of each are constant and 
 \[
     Q = f(t) = \answer{4}e^{\answer{0.04t}}
 \]
@@ -79,7 +79,7 @@ and
 So at noon on July 1, we suspect that the per-capita share of the debt is decreasing at the relative rate of $\answer{1\%}$/yr
 and at the absolute rate of $\$\answer{20}$/yr.
 
-To be sure this is true even if the relative rates of change in the population and total debt are \emph{not} constant, we can argue more generally that the relative instantaneous rate of change in the per-capita share of the national debt is
+To be sure this is true even if the relative rates of change in the population and total debt are \emph{not} constant, we can be more general and compute the relative instantaneous rate of change in the per-capita share of the national debt as
 %\[
 %     C = \frac{f(t)}{g(t)} = \frac{Q}{P} .
 %\]
@@ -92,11 +92,66 @@ To be sure this is true even if the relative rates of change in the population a
         \frac{1}{C} \cdot \frac{dC}{dt} &= \frac{d}{dt}\left( \ln \left(\frac{Q}{P}\right)  \right) \\
                                                       &= \frac{d}{dt} \left(  \answer{\ln Q} - \answer{\ln P}     \right) \\
                                                       &= \frac{d}{dt} \left( \answer{\ln Q} \right) - \frac{d}{dt} \left(  \answer{\ln P} \right)  \\
-                                                      &= \answer{\frac{1}{Q}} \cdot \answer{\frac{dQ}{dt}} - \answer{\frac{1}{P}} \cdot \answer{\frac{dP}{dt}} .
+                                                      &= \frac{1}{Q} \cdot \answer{\frac{dQ}{dt}} - \frac{1}{P} \cdot \answer{\frac{dP}{dt}} .
 \end{align*}
-That is, \emph{the relative rate of change in a quotient is the difference of the relative rates.}
+
 
 \end{explanation}
+\end{question}
+
+
+\begin{theorem}
+(a) (The Relative Quotient Rule)
+If $Q=f(t)$ and $P=g(t)$ are differentiable functions of $t$, then if $g(t)\neq 0$,
+\[
+     C = \frac{f(t)}{g(t)} = \frac{Q}{P}
+\]
+is a differentiable function of $t$ and
+\[
+\frac{1}{C} \cdot \frac{dC}{dt} = \frac{1}{Q} \cdot \frac{dQ}{dt} - \frac{1}{P} \cdot \frac{dP}{dt}.
+\]
+The relative rate of change in a quotient of two functions is equal to the difference in the relative rates of change in the functions.
+
+(b) (The Quotient Rule) With the same hypotheses, 
+\[
+       \frac{d}{dt}\left( \frac{Q}{P} \ \right) = \frac{1}{P} \cdot \frac{dQ}{dt} - \frac{Q}{P^2} \cdot \frac{dP}{dt} .
+\]
+\end{theorem}
+
+\begin{question}  \label{Ex:dsf9t5gg3w}
+Compute the derivative
+\[
+     \frac{d}{d\theta} \left( \tan\theta  \right) 
+\]
+
+\begin{explanation}
+We compute this derivative from scratch by letting 
+\[
+    y = \tan\theta = \frac{\sin\theta}{\answer{\cos\theta}} .
+\]
+Then
+\[
+   \ln |y| = \ln |\sin\theta| - \ln | \answer{\cos\theta}   |
+\]
+and
+\[
+      \frac{d}{d\theta} \left( \ln |y| \right) = \frac{d}{d\theta} \left( \ln |\sin\theta| - \ln | \answer{\cos\theta}| \right) .
+\]
+So
+\begin{align*}
+   \frac{1}{y} \cdot \frac{dy}{d\theta} &= \frac{1}{\answer{\sin\theta}} \cdot \frac{d}{d\theta}\left( \sin\theta \right) - \frac{1}{\answer{\cos\theta}} \cdot \frac{d}{d\theta}\left( \cos\theta \right) \\
+                &= \cot\theta + \answer{\tan\theta} .
+\end{align*}
+Then mulitplying both sides by $y=\tan\theta$ gives
+\begin{align*}
+          \frac{d}{d\theta}(\tan \theta) &= 1 + \answer{\tan^2\theta} . 
+\end{align*}
+
+
+
+\end{explanation}
+
+
 
 \end{question}
 
