@@ -224,13 +224,64 @@ Desmos activity available at \href{https://www.desmos.com/calculator/yjyghsoeog}
 
 (a) Use the demonstration above to approimate your error in computing the tree's height.  
 
-(b) Use the appropriate linear approximation to estimate your error in computing the tree's height. Compare this with your estimate from part (a). Do not use a calculator.
+(b) Use the appropriate linear approximation to estimate your error in computing the tree's height. Compare this with your estimate from part (a). Do not use a calculator. Do this as follows:
+
+\pskip 
+
+\begin{itemize}
+
+\item{Find a function
+\[
+    h = f(\theta) \, , \, 0<\theta < \pi/2 ,
+\]
+that expresses the computed height of the tree above eye level (measured in feet) in terms of the measured angle of elevation (in radians). Draw a picture to help with your explanation.
+
+This function is
+\[
+   h = f(\theta) = \answer{50\tan\theta} \, , \, 0<\theta < \pi/2 .
+\]
+}
+
+\item{Next find an expression for the derivative $dh/d\theta$ and evaluate the derivative
+\[
+     \frac{dh}{d\theta}\Big|_{h=100} .
+\]
+}
+
+\item{Now we'll take the exact height of the tree above eye level to be $100$ feet and let
+\[
+     \Delta h = h -  \answer{100}
+\]
+be the error in the computed height and 
+\[
+   \Delta \theta = \theta - \answer{\arctan(2)}
+\]
+be the error in the measured angle.
+
+Then if $\Delta\theta \sim 0$, 
+\[
+      \frac{dh}{d\theta}\Big|_{h=100} \sim \frac{\Delta \answer{h}}{\Delta \answer {\theta}}
+\]
+and so
+\[
+     \Delta h \sim \answer{250} \Delta {\answer{\theta}} .
+\]
+
+\item{I'll let you continue from here.}
+ }
+\end{itemize}
 \end{question}
 
 
 \section*{The Inverse Tangent Function}
 \begin{question}  \label{Q:KKDbret434}
-(a) Express the derivative
+(a) Explain the meaning of the function
+\[
+        \theta = f(y) = \arctan y .
+\]
+In particular, what does it take as an input and what does it return as an output? Include the domain and range of the function as part of your explanation.
+
+(b) Express the derivative
 \[
      \frac{d}{d\theta} \left( \tan\theta  \right) = 1 + \tan^2\theta
 \]
@@ -240,12 +291,12 @@ of the function
 \]
 in terms of $y$.
 
-(b) Use part (a) to find an expression for the derivative
+(c) Use part (b) to find an expression for the derivative
 \[
    \frac{d\theta}{dy} = \frac{d}{dy} \left(  \arctan y \right) =  \frac{d}{dy} \left(  \tan^{-1} y \right) .
 \]
 
-(c) Evaluate the derivatives
+(d) Evaluate the derivatives
 \[
    \frac{d}{d\theta} \left( \tan\theta  \right)\Big|_{\theta = \pi/4}
 \]
@@ -264,6 +315,12 @@ Do this by first finding an expression for a function
     \theta = f(s) \, , s>0 ,
 \]
 that expresses the angle of elevation to the top of the tree (measured in radians) in terms of your distance from the tree (measured in feet). Use the arctangent function in your expression.
+
+The function is 
+\[
+      \theta = f(s)  = \answer{\arctan(50/s)} \, , s>0 .
+\]
+Then continue in a manner similar to Question 4.
 
 \end{question}
 
@@ -322,9 +379,13 @@ The function
 \]
 expresses the price in $\$$/share of a stock in terms of the number of hours past 9am.
 
-(a) Use the graphs of the function $P=f(t)$ and the function $r=f^\prime(t)/f(t)$  to estimate when the relative rate of change in the price of the stock is increasing.
+(a) Use the graphs of the function $P=f(t)$ and the function $r=f^\prime(t)/f(t)$  to estimate when the stock price is increasing at the greatest relative rate.
 
-(b) Use algebra to find the exact time interval during which the relative rate of change in the price of the stock is increasing.
+(b) Use algebra to find the exact time when the stock price is increasing at the greatest relative rate.
+\begin{hint}
+What is the value of the derivative $dr/dt$ at this time?
+\end{hint}
+
 
 \begin{onlineOnly}
     \begin{center}
