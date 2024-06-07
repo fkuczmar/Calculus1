@@ -11,6 +11,30 @@ Some problems for review.
 
 
 \begin{question}  \label{Q:DFDbgttgt44}
+This question is about how the temperature inside a building changes in response to changes in the outdoor temperature. We assume the building has no internal heating or cooling system.
+
+We'll suppose that the function 
+\[
+   f(t) = M -B\cos \left( \frac{\pi}{12}t \right) \, , \, t\geq 0,
+\]
+expresses the outdoor temperature (in Fahrenheit degrees) in terms of the number of hours past 4am.
+
+Newton's law of cooling models the rate at which the indoor temperature is changing at any time. It says that this rate of change is proportional to the difference in the indoor and outdoor temperatures. So if the function
+\[
+    T = g(t) \, \, t\geq 0,
+\]
+expresses the outdoor temperature (in Fahrenheit degrees) in terms of the number of hours past 4am, Newton's law says that
+\begin{equation}  \label{Eq:Newton}
+    \frac{dT}{dt} = k (f(t)-g(t)) 
+\end{equation}
+for some constant $k$.
+
+(a) What are the units of $k$? How do you know?
+
+(b) Is $k$ postive or negative? How do you know?
+
+(c) Experiment with the sliders in the demonstration below. Summarize your observations.
+
 
 \begin{onlineOnly}
     \begin{center}
@@ -19,6 +43,21 @@ Some problems for review.
 \end{onlineOnly}
 
 Desmos activity available at \href{https://www.desmos.com/calculator/oag9lhvgo5}{151: Building Temperature}
+
+\pskip
+
+Next quarter you will learn how to use the above equation to determine the indoor temperature at any time given the temperature at some specific time. For now, we'll just claim that the indoor temperature is given by the function
+\begin{align*}
+   T      &= g(h)  \\
+           & = M + Ce^{-kt} - \frac{B}{1+(\frac{\pi}{12k})^2} \left(  \cos \left( \frac{\pi}{12}t \right)  + \frac{\pi}{12k}  \sin \left( \frac{\pi}{12}t \right) \right)  \\
+                   &=  M + Ce^{-kt} - \frac{B}{\sqrt{1+(\frac{\pi}{12k})^2}} \cos \left( \frac{\pi}{12}t - \phi  \right) ,
+\end{align*}
+where
+\[
+  \phi = \arctan \left( \frac{\pi}{12k}     \right) .
+\]
+
+
 
 
 \end{question}
