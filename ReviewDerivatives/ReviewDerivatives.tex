@@ -11,9 +11,114 @@ Derivative Review.
 
 \section*{Examples}
 
+\begin{example}  \label{E"MMDNBRR}
+Find an expression for the derivative 
+\[
+  \frac{d}{d\theta} \left( \theta \cos (5\theta) \right) .
+\]
+
+\begin{explanation}
+
+We use the product rule first to get
+\begin{align*}
+       \frac{d}{d\theta} \left( \theta \cos (5\theta) \right) &= \frac{d}{d\theta} \left(  \theta \right) \cos (5\theta) + \theta \frac{d}{d\theta} \left(  \cos (5\theta) \right)  \\ 
+                          &= \cos(5\theta) + \theta  \frac{d}{d\theta} \left(  \cos (5\theta) \right) .
+\end{align*}
+
+Now we use the chain rule to compute 
+\[
+     \frac{d}{d\theta} \left(  \cos (5\theta) \right) .
+\]
+For this we hide the composition by letting
+\[
+   y  = \cos (5\theta)
+\]  
+and 
+\[
+   u = 5\theta.
+\]
+Then 
+\[
+     y = \cos u
+\]
+and by the chain rule 
+\begin{align*}
+  \frac{dy}{d\theta}  &= \frac{dy}{du} \cdot \frac{du}{d\theta} \\
+                              &= \frac{d}{du}\left( \cos u \right) \cdot \frac{d}{d\theta} \left( 5\theta \right)  \\
+                              &= (-\sin u)(5) \\
+                              & = -5 \sin (5\theta) . 
+\end{align*}
+
+
+The final result is that 
+\begin{align*}
+               \frac{d}{d\theta} \left( \theta \cos (5\theta) \right) &=  \cos(5\theta) + \theta  \frac{d}{d\theta} \left( \cos (5\theta) \right) \\
+           & = \cos(5\theta) - 5\theta \sin (5\theta) .
+\end{align*}
+
+
+\pskip
+
+Here's a shorter version of the same solution.
+
+We use the product rule first to get
+\begin{align*}
+       \frac{d}{d\theta} \left( \theta \cos (5\theta) \right) &= \frac{d}{d\theta} \left(  \theta \right) \cos (5\theta) + \theta \frac{d}{d\theta} \left(  \cos (5\theta) \right)  \\ 
+                          &= \cos(5\theta) + \theta  \frac{d}{d\theta} \left(  \cos (5\theta) \right) .
+\end{align*}
+
+Then we use the chain rule to differentiate $\cos(5\theta)$, giving
+\begin{align*}
+       \frac{d}{d\theta} \left( \theta \cos (5\theta) \right) &= \frac{d}{d\theta} \left(  \theta \right) \cos (5\theta) + \theta \frac{d}{d\theta} \left(  \cos (5\theta) \right)  \\ 
+                          &= \cos(5\theta) + \theta  \frac{d}{d\theta} \left(  \cos (5\theta) \right)  \\
+                         &= \cos(5\theta) + \theta (-\sin (5\theta)) \frac{d}{d\theta} \left( 5\theta  \right)  \\
+                         &= \cos (5\theta) - 5 \theta \sin (5\theta) .
+\end{align*}
+
+
+\end{explanation}
+
+
+\end{example}
+
 
 
 \section*{Exercises}
+
+\emph{Directions:} Follow either of the two methods in Example 1 \emph{exactly} for each of the following problems.
+
+
+\begin{question}  \label{Q:MMMDNFD}
+Find expressions for each of the following derivatives. Simplify your expressions for the derivatives. Do \emph{not} simplify the function being differentiated.
+
+Part 1:
+
+(a)  $\frac{d}{dw} \left( \arctan w + \arctan (1/w) \right)$ 
+
+(b) $\frac{d}{dy} \left(  \arcsin\left(  \sqrt{1-y^2} \right) \right)$
+
+\pskip
+
+Part 2:
+
+Any comments or observations on the derivatives above?
+
+
+\end{question}
+
+
+\begin{question}  \label{Q:Dfrg4ttgg}
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{zjqsdhvz4p}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Desmos activity available at \href{https://www.desmos.com/calculator/zjqsdhvz4p}{151: Building Temperature}
+
+
+\end{question}
 
 
 \end{document}
