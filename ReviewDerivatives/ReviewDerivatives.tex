@@ -186,9 +186,35 @@ expresses the time (measured in minutes past noon) in terms of the depth (measur
 \begin{question}  \label{Q:LDKVMdecvd}
 The function
 \[
-      s = f(t) = e^{-k_1t} \cos(k_2t) \, , \, t\geq 0,
+      s = f(t) = Ae^{-k_1t} \cos(k_2t) \, , \, t\geq 0,
 \]
-expresses the 
+expresses the displacement (in meters) from equilibrium of an oscillating mass on a spring in terms of the number of seconds since the mass was released from rest.
+
+(a) What are the units of the constants $A$, $k_1$, and $k_2$? Explain how you know.
+
+(b) Find an expression for the velocity $ds/dt$ of the mass.
+
+(c) Find an expression for the acceleration
+\[
+   \frac{d}{dt} \left( \frac{ds}{dt}  \right)  = \frac{d^2s}{dt^2}
+\]
+of the mass.
+
+(d) Use algebra to show that
+\[
+     \frac{d^2s}{dt^2} = - \left( 2k_1 \frac{ds}{dt} + (k_1^2 + k_2^2) s \right) .
+\]
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{ygikqgj7af}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Desmos activity available at \href{https://www.desmos.com/calculator/ygikqgj7af}{151: Damped Harmonic Oscillator}
+
+ 
 \end{question}
 
 \end{document}
