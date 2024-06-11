@@ -230,11 +230,36 @@ Desmos activity available at \href{https://www.desmos.com/calculator/uz7w5uh0vl}
 
 
 \section*{The Sliding Ladder}
+\begin{question}  \label{Q:43543554LL}
+You walk in along a straight path, moving either directly toward or directly away from a tree at the end of the path.
+
+Let $s = f(t)$ be a function that expresses your distance to the tree in terms of the number of minutes past noon and suppose that
+\[
+     \frac{ds}{dt}\Big|_{t=5} = -240 .
+\]
+
+(a) Interpret the meaning of the above derivative.
+
+(b) What is your speed at 12:05pm?
+
+(c) Find an expression for your speed at time $t$ minutes past noon.
+\end{question}
+
 
 \begin{question}  \label{QMMnd6793}
-A tree leans precariously with its trunk making an angle of $\phi = \pi/3$ radians with the ground. One end of a ladder leans against the trunk, the other rests on the horizontal ground. You slide the bottom end of the ladder at random.
+A tree leans precariously with its trunk making an angle of $\phi$ radians with the ground. One end of a ladder with length $L$ feet leans against the trunk, the other rests on the horizontal ground. You slide the bottom end of the ladder along the ground at random.
 
-(a) Find all possible angles the ladder makes with the ground when the top end of the ladder is moving four times as fast as the bottom end. Characterize each angle in one of two ways:
+(a) Find an equation that relates the respective distances $s$ and $t$ (measured in feet) from the base of the trunk to the bottom and top ends of the ladder.Use the parameters $L$ and $\phi$, \emph{not} their particular values in the demonstration below.
+
+(b) Let $u$ be time measured in seconds and suppose that $s$ and $t$ are (unknown) functions of $u$. Express the derivative $dt/du$ in terms of the derivative $ds/du$. Interpret the meanings of the these derivatives.
+
+(c) Switch $s$ and $t$ in your equation from part (b). What do you notice? Explain why.
+
+(d) Use part (b) to express the speed of the top end of the ladder in terms of the speed of its bottom end.
+
+(e) Suppose $\phi=\pi/3$ and that at some instant the bottom end of the ladder is three times as far from the trunk's base as the top end. What can you say about the speeds of the ends of the ladder at this instant? 
+
+(f) Still supposing $\phi=\pi/3$, find all possible angles the ladder makes with the ground when the top end of the ladder is moving four times as fast as the bottom end. Characterize each angle in one of two ways:
 
 (i) One end of the ladder is moving toward the trunk's base and the other end away from the base.
 
@@ -242,16 +267,36 @@ A tree leans precariously with its trunk making an angle of $\phi = \pi/3$ radia
 
 Give exact angles. Then use a calculator to approximate their radian measures to the nearest hundredth.
 
-(b) Use the animation below to check that your answers are reasonable. Explain.
+(g) Use the animation below to check that your answers to parts (e) and (f) are reasonable. The graph is of the relation
 
 
 \begin{onlineOnly}
     \begin{center}
-\desmos{5uo8nowbr6}{900}{600}
+\desmos{58jqjo0inl}{900}{600}
 \end{center}
 \end{onlineOnly}
 
-Geogebra activity available at \href{https://www.desmos.com/calculator/5uo8nowbr6}{151: Tree and Ladder}
+Geogebra activity available at \href{https://www.desmos.com/calculator/58jqjo0inl}{151: Tree and Ladder}
+
+\end{question}
+
+
+
+\begin{question}  \label{Q:KNDMMD}
+A tree leans precariously with its trunk making an angle of $\phi$ radians with the ground. One end of a ladder with length $L$ feet leans against the trunk, the other rests on the horizontal ground. You slide the bottom end of the ladder along the ground at random.
+
+Suppose at some instant the ladder makes an angle of $\beta_0$ radians with the trunk. Suppose also that the ladder is  rotating at the rate of $\omega_0$ rad/sec at this same moment. 
+
+(a) Find an expression for rate of change in the distance from the bottom end of the ladder to the base of the trunk at this time.  
+
+(b) Find an expression for rate of change in the distance from the top end of the ladder to the base of the trunk at this time.
+
+(c) Find expressions for the speeds of the ends of the ladder at this time.
+
+\begin{hint}
+Use the law of sines in $\Delta BOT$ in the demonstration from the previous question.
+\end{hint} 
+
 
 \end{question}
 
@@ -272,7 +317,7 @@ expresses the number of hours of daylight per day at latitude $\phi$ in terms of
 Geogebra activity available at \href{https://www.geogebra.org/classic/vnhrutwu}{151: Declination of Sun 2}
 
 
-(a) Use the graph of the function $f$ below (at latitude $\phi \sim 1.1$) to skech a graph of the derivative
+(a) Use the graph of the function $f$ below (at latitude $\phi \sim 1.1$) to sketch a graph of the derivative
 \[
    \frac{dh}{d\delta} = f^\prime(\delta) .
 \]
@@ -306,11 +351,11 @@ Desmos activity available at \href{https://www.desmos.com/calculator/ifomatkcta}
 
 (g) Suppose now that each month has 30 days so that there are 360 days in one year. Suppose also that the declination of the sun varies sinusoidally as a function of time, that the maximum declination of $\delta = 23.5^\circ$ occurs on the summer solstice (say June 21st) and the minimum declination $\delta = -23.5^\circ$ occurs on the winter solstice (December 21st). 
 
-Use the cosine function to find an expression for a function
+Find an expression for a function
 \[
      \delta = k(t) \, , \, t\geq 0,
 \]
-that gives the declination of the sun (measured in radians) in terms of the number of days since the summer solstice. 
+that gives the declination of the sun (measured in radians) in terms of the number of days since the spring equinox. 
 
 (h) Find an expression for the rate (measured in (hours of daylight/day)/day)) that gives the rate of change in the number of hours of daylight per day on the spring equinox at latitude $\phi$.
 
