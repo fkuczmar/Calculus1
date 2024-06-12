@@ -214,7 +214,48 @@ of the mass.
 
 Desmos activity available at \href{https://www.desmos.com/calculator/ygikqgj7af}{151: Damped Harmonic Oscillator}
 
- 
 \end{question}
+
+\begin{question}  \label{Q:LLKDKFG}
+(a) Find a function
+\[
+     s = f(h) , h\geq 0 ,
+\]
+that expresses the distance (in miles) to the horizon in terms of your altitude (in miles). We'll suppose the earth to be a perfect sphere of radius $4000$ miles. The distance to the horizon is the arclength $AT$ below, meaured along the surface of the earth (you can think of this distance as the radius of the spherical disk visible to us). Our height is the distance $AP$. 
+ 
+The function is 
+\[
+   s = f(h) = \answer{4000 \arccos\left( \frac{4000}{4000+h} \right) } \, , \, h \geq 0 .
+\]
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{ewowig5sgk}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+(b) \emph{Without} using technology sketch by hand a graph of the function $s=f(h)$.
+
+(c) \emph{Without} using technology sketch by hand a graph of the derivative
+\[
+   y = \frac{ds}{dh} = f^\prime(h) .
+\] 
+
+(d) Evaluate the derivative 
+\[
+      \frac{ds}{dh}\Big|_{h=10} .
+\]
+
+(e) Interpret the meaning of the derivative in part (d) using the language of small changes. Be specific.
+
+(f) You take a ride on Blue Origin and in a little more than two minutes are boosted straight up to an altitude of 32 miles. Suppose that the function
+\[
+      h = g(t) = 9t^2 + t^3 \, , \, 0\leq t \leq 1.5 ,
+\]
+expresses your altitude (in miles) in terms of the number of minutes since launch.
+
+At what rate (with respect to time) is your distance to the horizon changing when you are one minute into the flight?
+\end{question}
+
 
 \end{document}
