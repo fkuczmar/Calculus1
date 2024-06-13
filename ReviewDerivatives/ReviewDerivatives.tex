@@ -221,7 +221,7 @@ Desmos activity available at \href{https://www.desmos.com/calculator/ygikqgj7af}
 \[
      s = f(h) , h\geq 0 ,
 \]
-that expresses the distance (in miles) to the horizon in terms of your altitude (in miles). We'll suppose the earth to be a perfect sphere of radius $4000$ miles. The distance to the horizon is the arclength $AT$ below, meaured along the surface of the earth (you can think of this distance as the radius of the spherical disk visible to us). Our height is the distance $AP$. 
+that expresses the distance (in miles) to the horizon in terms of your altitude (in miles). We'll suppose the earth to be a perfect sphere of radius $R=4000$ miles. The distance to the horizon is the arclength $AT$ below, meaured along the surface of the earth (you can think of this distance as the radius of the spherical disk visible to us). Our height is the distance $AP$. 
  
 The function is 
 \[
@@ -234,15 +234,28 @@ The function is
 \end{center}
 \end{onlineOnly}
 
-(b) \emph{Without} using technology sketch by hand a graph of the function $s=f(h)$.
-
-(c) \emph{Without} using technology sketch by hand a graph of the derivative
+(b) Use the graph of the function $s=f(h)$ show below to skectch a graph of the derivative
 \[
    y = \frac{ds}{dh} = f^\prime(h) .
 \] 
-What is the domain of the derivative?
+by hand. What is the domain of the derivative? Note that the curve $s=f(h)$ has a horizontal asymptote. What is an equation of this asymptote?
 
-Hint: Use the graphs of the functions $y=\arcsin x$ and $y=\arccos(x)$ below and your knowledge of the derivative $d/dx(\arcsin x)$ to find an expression for $d/dx (\arccos x)$.
+\begin{onlineOnly}
+    \begin{center}
+\desmos{nof5l3mtfy}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+
+(c) Find an expression for the derivative 
+\[
+       \frac{ds}{dh} = \frac{d}{dh} \left(  \arccos\left( \frac{R}{R+h} \right)     \right).  
+\]
+
+Hint: Use the graphs of the functions $y=\arcsin x$ and $y=\arccos(x)$ below and your knowledge of the derivative $d/dx(\arcsin x)$ to find an expression for $d/dx (\arccos x)$. Or equivalently, recognize that
+\[
+       \arcsin x + \arccos x  =\pi/2.   
+\]
 
 \begin{onlineOnly}
     \begin{center}
@@ -251,12 +264,12 @@ Hint: Use the graphs of the functions $y=\arcsin x$ and $y=\arccos(x)$ below and
 \end{onlineOnly}
 
 
-(d) Evaluate the derivative 
+(d) With $R=4000$, evaluate the derivative 
 \[
       \frac{ds}{dh}\Big|_{h=16} .
 \]
 
-(e) Interpret the meaning of the derivative in part (d) using the language of small changes. Be specific.
+(e) Interpret the meaning of the derivative in part (d) in terms of \emph{specific} small changes.
 
 (f) You take a ride on Blue Origin and in a little more than two minutes are boosted straight up to an altitude of 32 miles. Suppose that the function
 \[
