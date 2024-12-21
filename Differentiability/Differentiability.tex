@@ -112,14 +112,101 @@ Use the graph of the function $y=f(x)$ below to determine if the function is dif
 \section{Using Algebra to Compute Derivatives}
 
 \begin{exploration}   \label{Exp9039000030}
+The aim of this proble is to use algebra to evaluate the derivative
+\[
+   \frac{d}{dx}\left( x^3 \right) \Big|_{x=1}.
+\]
+
+\begin{enumerate}
+
+\item First use the graph of the function $y=f(x)=x^3$ below to approximate or guess the value of the above derivative by zooming in on the appropriate point.
+\[
+      \frac{d}{dx}\left( x^3 \right)\Big|_{x=1} = \answer{3} .
+\]
+
 
 \begin{onlineOnly}
     \begin{center}
-\desmos{4pnerbcgt3}{450}{600}  
+\desmos{6cqyorfc2f}{450}{600}  
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/calculator/4pnerbcgt3}{151: Cubing Function}
+\href{https://www.desmos.com/calculator/6cqyorfc2f}{151: Cubing Function}
+
+\item The idea to compute the derivative algebraically is this: Fix the point $P(1,1)$ on the graph of $y=f(x)=x^3$. Then choose a variable point $Q$ on the graph, different from $P$, with coordinates $(v,v^3)$. When $Q$ is sufficiently close to $P$, the line $PQ$ approximates the curve $y=x^3$ near $P(1,1)$ and the slope of this line is approximately equal to the derivative above. 
+
+\begin{enumerate}
+\item Our first step is to find an expression for the slope of line $PQ$ as a function of $v$. The slope is
+\begin{align*}
+        m(v) &= \frac{\Delta y}{\Delta v}  \\
+                & = \frac{f(v) - f(1)}{\answer{v-1}} \\
+                & = \frac{\answer{v^3-1}}{v-1} \\
+\end{align*}
+all assuming $v\neq \answer{1}$.
+
+\item Now we'll use the slope (or average rate of change) function $m(x)$ to create a table of slopes for the lines $PQ$. Reveal the contents of the Table folder in Line 1 of the worksheet above by clicking the Right Arrow just to the left of ``Table''. 
+
+\begin{enumerate}
+\item Add a few entries to the table to get \emph{better} approximations to the above derivative. 
+
+\item The slopes $m(v)$ should appear should appear to approach some number as $v$ approaches $1$. What is that number?
+
+\item This suggests that 
+\[
+   \frac{d}{dx}\left( x^3 \right)\Big|_{x=1}  = \lim_{v\to 1} \frac{v^3-1}{v-1} = \answer{3} .
+\] 
+\end{enumerate}
+
+\item Another approach to approximating the derivative is to graph the slope function
+\[
+    m(v) = \frac{\answer{v^3-1}}{v-1} \, , \, v\neq \answer{1}.
+\]
+Activate the Average Rate of Change folder on Line 11 by clicking the camera icon to the left of the line to see the graph of this function. Activate also the Table folder in Line 1.
+
+\begin{enumerate}
+\item What do you notice about the shape of the graph of $y=m(x)$? 
+
+\item There is a hole in the graph of the function $y=m(x)$. Where is it? Why is it there?
+
+\end{enumerate}
+
+\item To verify the numerical and graphical evidence that %computation we'll use algebra to compute
+\[
+     \frac{d}{dx}\left( x^3 \right)\Big|_{x=1}  = \lim_{v\to 1} \frac{v^3-1}{v-1}  =\answer{3} ,
+\]
+we'll use algebra to evaluate the above limit. 
+
+The idea is to factor the numerator $v^3-1$. Since 
+\[
+     (v^3 - 1)\Big|_{v=1} = 1^3 - 1 = 0 ,
+\]
+we know that $v-1$ is a factor of $\answer{v^3-1}$. To simplify the quotient
+\[
+  \frac{v^3-1}{v-1} \, , \, v\neq 1,
+\]
+we could use long division or factor the difference of two cubes:
+\[
+   a^3 - b^3 = (a-b)(a^2 + ab + b^2).
+\]
+This tells us that
+\[
+     v^3 - 1 = (v-1)(\answer{v^2 + v + 1}).
+\]
+So
+\[
+   \frac{v^3-1}{v-1} = \answer{v^2+v+1} \, , \, v\neq 1.
+\]
+Putting this all together, we get
+\begin{align*}
+\frac{d}{dx}\left( x^3 \right)\Big|_{x=1}  & = \lim_{v\to 1} \frac{v^3-1}{v-1} \\
+                                                              &= \lim_{v\to 1} \frac{(v-1)(v^2+v+1)}{v-1} \\
+                                                             & = \lim {v\to 1}(\answer{v^2 + v + 1}) \\
+                                                            & = 1^2 + 1 + 1 \\
+                                                            & = \answer{3} .
+\end{align*}
+\end{enumerate}
+
+\end{enumerate}
 
 \end{exploration}
 
