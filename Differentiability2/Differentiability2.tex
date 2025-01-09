@@ -1,0 +1,76 @@
+\documentclass{ximera}
+\title{Differentiable Functions, Part 2}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+A more formal approach to defining what it means for a function to be differentiable.
+\end{abstract}
+\maketitle
+
+
+\begin{exploration}   \label{Expdsfdsftttehh030}
+The aim of this problem is to use numerical methods to approximate and algebra to evaluate the derivative
+\[
+   \frac{d}{dx}\left( x^3 \right) \Big|_{x=a}.
+\]
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{rto22qzlvm}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/rto22qzlvm}{151: Cubing Function 3}
+
+
+The idea to compute the derivative algebraically is this: Fix the point $P(a,a^3)$ on the graph of $y=f(x)=x^3$. Then choose a variable point $Q$ on the graph, different from $P$, with coordinates $(v,v^3)$. When $Q$ is sufficiently close to $P$, the line $PQ$ approximates the curve $y=x^3$ near $P(a,a)$ and the slope of this line is above derivative. 
+
+\begin{enumerate}
+\item Our first step is to find an expression for the slope of line $PQ$ as a function of $v$. The slope is
+\begin{align*}
+        m(v) &= \frac{\Delta y}{\Delta v}  \\
+                & = \frac{f(v) - f(a)}{\answer{v-a}} \\
+                & = \frac{\answer{v^3-a^3}}{v-a} \\
+\end{align*}
+all assuming $v\neq \answer{a}$.
+
+
+\item The next step is to factor the numerator $v^3-a^2$. Since 
+\[
+     (v^3 - a^3)\Big|_{v=a} = a^3 - a^3 = 0 ,
+\]
+we know that $\answer{v-a}$ is a factor of $v^3-a^3$. To simplify the quotient
+\[
+  \frac{v^3-a^3}{v-a} \, , \, v\neq a,
+\]
+we could use long division or factor the difference of two cubes:
+\[
+   A^3 - B^3 = (A-B)(A^2 + AB + B^2).
+\]
+Either way, the result is that
+\[
+     v^3 - a^3 = (v-a)(\answer{v^2 + va + a^2}).
+\]
+So
+\[
+   \frac{v^3-a^3}{v-a} = \answer{v^2+va+a^2} \, , \, v\neq a.
+\]
+Putting this all together, we get
+\begin{align*}
+\frac{d}{dx}\left( x^3 \right)\Big|_{x=a}  & = \lim_{v\to a} \frac{v^3-a^3}{v-a} \\
+                                                              &= \lim_{v\to a} \frac{(v-a)(v^2+va+a^2)}{v-a} \\
+                                                             & = \lim_{v\to a}(\answer{v^2 + va + a^2}) \\
+                                                            & = a^2 + \answer{a^2} + \answer{a} \\
+                                                            & = \answer{3a^2} .
+\end{align*}
+\end{enumerate}
+
+\
+\end{exploration}
+
+
+
+
+\end{document}
