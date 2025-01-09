@@ -18,11 +18,11 @@ The aim of this problem is to use numerical methods to approximate and algebra t
 
 \begin{onlineOnly}
     \begin{center}
-\desmos{rto22qzlvm}{450}{600}  
+\desmos{8eiffwbgt5}{450}{600}  
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/calculator/rto22qzlvm}{151: Cubing Function 3}
+\href{https://www.desmos.com/calculator/8eiffwbgt5}{151: Cubing Function 3}
 
 
 The idea to compute the derivative algebraically is this: Fix the point $P(a,a^3)$ on the graph of $y=f(x)=x^3$. Then choose a variable point $Q$ on the graph, different from $P$, with coordinates $(v,v^3)$. When $Q$ is sufficiently close to $P$, the line $PQ$ approximates the curve $y=x^3$ near $P(a,a)$ and the slope of this line is above derivative. 
@@ -65,9 +65,38 @@ Putting this all together, we get
                                                             & = a^2 + \answer{a^2} + \answer{a} \\
                                                             & = \answer{3a^2} .
 \end{align*}
+
+\item More simply put, we just write the derivative
+\[
+   \frac{d}{dx}\left( x^3  \right) = \answer{3x^2}
+\]
+as a function of $x$.
+
+\item We can check our result using the desmos worksheet above. Do this as follows:
+
+\begin{enumerate}
+
+\item Input the correct expression for the derivative $d(x^3)/dx$ on Line 17.
+
+\item For a differentiable function $f(x)$, we can approximate the derivative $d/dx(f(x))$ as
+\[
+  \frac{d}{dx}\left( f(x)  \right) = \frac{f(x+h) - f(x-h)}{\answer{2h}}
+\]
+for $h\sim 0$.
+
+Now activate the folder \emph{Approximation to the derivaitve function} on Line 19. Then drag the slider $h$ on Line 21 to get a better approximation to the derivative.
+
+\begin{freeResponse}
+Describe what happens to the above approximation as $h \to 0$.
+\end{freeResponse}
+
+
+
 \end{enumerate}
 
-\
+\end{enumerate}
+
+
 \end{exploration}
 
 
