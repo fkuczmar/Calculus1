@@ -5,16 +5,27 @@
 
 \begin{document}
 \begin{abstract}
-A more formal approach to defining what it means for a function to be differentiable.
+Using limits to compute the derivative of a function at a general input.
 \end{abstract}
 \maketitle
 
+\section{Using Limits to Compute Derivatives}
 
 \begin{exploration}   \label{Expdsfdsftttehh030}
-The aim of this problem is to use numerical methods to approximate and algebra to evaluate the derivative
+In part (b) of Exploration 7 from the previous chapter where we computed
+
+\[
+   \frac{d}{dx}\left( x^3 \right) \Big|_{x=1}.
+\]
+
+Now we'll use limits to evaluate the derivative
 \[
    \frac{d}{dx}\left( x^3 \right) \Big|_{x=a}.
 \]
+
+In other words, we'll compute the derivative of the function $f(x)=x^3$ at a general input $x=a$. Think about zooming in on the graph of $y=x^3$ sufficiently close to the point $(a,a^3)$ so that the graph looks like a straight line. We'll compute the slope of that line.
+
+The algebra here is nearly identical to what we did earlier. You should compare the two computations. 
 
 \begin{onlineOnly}
     \begin{center}
@@ -78,11 +89,11 @@ as a function of $x$.
 
 \item Input the correct expression for the derivative $d(x^3)/dx$ on Line 17.
 
-\item For a differentiable function $f(x)$, we can approximate the derivative $d/dx(f(x))$ as
+\item For a differentiable function $f(x)$ and values of $h$ near zero, we can approximate the derivative $d(f(x))/dx$ as the slope
 \[
   \frac{d}{dx}\left( f(x)  \right) = \frac{f(x+h) - f(x-h)}{\answer{2h}}
 \]
-for $h\sim 0$.
+of the line through the points $(x-h, f(x-h))$ and $(x+h, f(x+h))$.
 
 Now activate the folder \emph{Approximation to the derivaitve function} on Line 19. Then drag the slider $h$ on Line 21 to get a better approximation to the derivative.
 
@@ -90,16 +101,51 @@ Now activate the folder \emph{Approximation to the derivaitve function} on Line 
 Describe what happens to the above approximation as $h \to 0$.
 \end{freeResponse}
 
-
-
 \end{enumerate}
-
 \end{enumerate}
-
-
 \end{exploration}
 
 
+\begin{exercise}  \label{Exerg4t5677878}
+\begin{enumerate}
+\item Follow the method of Exploration \ref{Expdsfdsftttehh030} for the function $f(x)=x^4$ to compute the derivative
+\[
+    \frac{d}{dx}\left( x^4 \right) \Big|_{x=a}.
+\]
 
+\item Modify the desmos worksheet below for the function $f(x)=x^4$.
+
+\href{https://www.desmos.com/calculator/8eiffwbgt5}{151: Cubing Function 3}
+
+Then work through part (d) of Exploration  \ref{Expdsfdsftttehh030} for $f(x)=x^4$. Describe also what happens to the approximation in part (d) as $h\to 0$. Include a few screenshots to help with your description.
+
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Repeat all parts of Exercise \label{Exerg4t5677878} for the function $f(x)=1/x^4$.
+\end{exercise}
+
+
+\section{Tangent Lines}
+
+\section{A Geometric Interpretation}
+
+We just saw that
+\[ 
+       \frac{d}{dx} \left( x^3 \right)\Big|_{x=a} = 4a^3.
+\]
+
+Here's a way to think about what this says geometrically.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{bwhvxlapr1}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/bwhvxlapr1}{Derivative Geometric Meaning}
+
+bwhvxlapr1
 
 \end{document}
