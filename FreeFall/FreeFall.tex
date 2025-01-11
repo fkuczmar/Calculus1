@@ -1,0 +1,62 @@
+\documentclass{ximera}
+\title{Free Fall}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Rocks in free fall.
+\end{abstract}
+\maketitle
+
+
+
+\begin{exploration}  \label{Qvbbtrg43444}
+
+Play the slider $u$ in Line 1 of the desmos worksheet below to watch a rock as it falls to the surface of Mars when dropped from a height of $190$ feet above the surface.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{gwhbaag99o}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/gwhbaag99o}{151: Free Fall 1}
+
+\begin{enumerate}
+\item Use the animation to sketch a graph of the function $s=g(t)$ that expresses the distance (in meters) of the rock from its starting point in terms of the number of seconds since the rock was released. Include the appropriate units and variable names on the axes.
+
+\item Our aim now is to compute the (instantaneous) speed of the rock (in m/s) at time $t=u$ seconds. We'll assume that the function 
+\[
+      s = g(t) = 1.9t^2 \, , \, 0\leq t \leq 10,
+\] 
+expresses the distance (in meters) of the rock from its starting point in terms of the number of seconds since the rock was released.
+
+Do this as follows.  
+
+\begin{enumerate}
+\item Find an expression that gives the rock's average speed between times $t=u$ and $t=v$.
+
+\item Evaluate the appropriate limit to find the speed of the rock at time $t=u$ seconds. Click the Hint tab for help.
+
+\begin{hint}
+
+The speed is
+\begin{align*}
+    \frac{d\answer{s}}{d\answer{t}}  &=      \lim_{\answer{v}\to \answer{u}} \frac{\answer{1.9v^2-1.9u^2}}{v-\answer{u}}   \\
+                                                       & = \lim_{\answer{v}\to \answer{u}} 1.9(\answer{v+u}) \\
+                                                       & = 2u .
+ \end{align*}
+
+
+\end{hint}
+
+\end{enumerate}
+
+
+\end{enumerate}
+
+
+\end{exploration}
+
+\end{document}
