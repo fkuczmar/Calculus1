@@ -30,26 +30,41 @@ Play the slider $u$ in Line 1 of the desmos worksheet below to watch a rock as i
 \[
       s = g(t) = 1.9t^2 \, , \, 0\leq t \leq 10,
 \] 
-expresses the distance (in meters) of the rock from its starting point in terms of the number of seconds since the rock was released.
+expresses the distance (in meters) of the rock from its starting point in terms of the number of seconds since the rock was released from a height of $190$ meters.
 
 Do this as follows.  
 
 \begin{enumerate}
 \item Find an expression that gives the rock's average speed between times $t=u$ and $t=v$.
 
-\item Evaluate the appropriate limit to find the speed of the rock at time $t=u$ seconds. Click the Hint tab for help.
+\item Evaluate the appropriate limit to find the speed of the rock at time $t=u$ seconds. Click the Hint tab above for help.
 
 \begin{hint}
 
-The speed is
+The speed at time $t=u$ is
 \begin{align*}
-    \frac{d\answer{s}}{d\answer{t}}  &=      \lim_{\answer{v}\to \answer{u}} \frac{\answer{1.9v^2-1.9u^2}}{v-\answer{u}}   \\
+    \frac{d\answer{s}}{d\answer{t}} \Big|_{\answer{t=u}} &=      \lim_{\answer{v}\to \answer{u}} \frac{\answer{1.9v^2-1.9u^2}}{v-\answer{u}}   \\
                                                        & = \lim_{\answer{v}\to \answer{u}} 1.9(\answer{v+u}) \\
-                                                       & = 2u .
+                                                       & = 3.8u .
  \end{align*}
-
-
 \end{hint}
+
+\item Use the result of part (b) to find the rock's speed as it hits the ground.
+
+\item Compare the rock's speed as it hits the ground with its average speed during the entire time of its fall.
+
+\item Through what fraction of the total distance of $190$ meters does the rock fall during the last second? Explain how this question is related to the previous one.
+
+\item Use point-slope to find an equation of the tangent line to the curve $s=1.9t^2$ at the point $(u,1.9u^2)$. Enter this equation in Line 21 of the worksheet above.
+
+The point-slope equation is
+\[
+     s = 1.9u^2 + \answer{3.8u} ( \answer{t} - \answer{u}) .
+\]
+
+\item Compare the rock's speed at time $t=u$ with its average speed during the first $u$ seconds of its fall.
+
+
 
 \end{enumerate}
 
