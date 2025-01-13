@@ -1,0 +1,51 @@
+\documentclass{ximera}
+\title{Purchasing Power}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+How a small change in price affects the quantity of an item you can buy.
+\end{abstract}
+\maketitle
+
+
+\begin{question} \label{Qdgvvbrtghgygrert}
+How would a small change in the price of apples affect the number of pounds you can buy with $\$10$?
+
+\begin{enumerate}
+
+\item Start by finding a function
+\[
+       n = f(p) \, , \, p>0 ,
+\]
+that expresses the number of pounds of apples you can buy with $\$10$ in terms of the price (measured in dollars/pound).
+
+The function is
+\[
+       n = f(p) = \answer{10/p} , , \, p>0.
+\]
+
+\item Would you expect the derivative $dn/dp$ to be postive, negative, or zero? Explain.
+
+\item Use limits to find an expression for the derivative
+\[
+    \frac{dn}{dp} \Big|_{p=a}.
+\]
+
+The derivative is
+\begin{align*}
+          \frac{dn}{dp} \Big|_{p=a} &= \lim_{\answer{p\to a}} \frac{1}{p-a} \left( f(p)-f(a) \right)  \\
+                                                 &=  \lim_{\answer{p\to a}} \frac{1}{p-a} \left(\frac{10}{p} - \frac{10}{a} \right)  \\
+                                                 &=  \lim_{\answer{p\to a}} \frac{10}{p-a} \left(\frac{\answer{a-p}}{pa} \right)  \\
+                                                  &=  \lim_{\answer{p\to a}} \frac{\answer{-10}}{pa} \\
+                                                  & = \answer{\frac{-10}{a^2}} .
+\end{align*}
+
+\end{enumerate}
+
+
+\end{question}
+
+
+\end{document}
