@@ -23,7 +23,7 @@ that expresses the number of pounds of apples you can buy with $\$10$ in terms o
 
 The function is
 \[
-       n = f(p) = \answer{10/p} , , \, p>0.
+       n = f(p) = \answer{10/p} ,\, p>0.
 \]
 
 \item Would you expect the derivative $dn/dp$ to be postive, negative, or zero? Explain.
@@ -33,7 +33,9 @@ The function is
     \frac{dn}{dp} \Big|_{p=a}.
 \]
 
-The derivative is
+The derivative is (click the Hint tab above for help)
+
+\begin{hint}
 \begin{align*}
           \frac{dn}{dp} \Big|_{p=a} &= \lim_{\answer{p\to a}} \frac{1}{p-a} \left( f(p)-f(a) \right)  \\
                                                  &=  \lim_{\answer{p\to a}} \frac{1}{p-a} \left(\frac{10}{p} - \frac{10}{a} \right)  \\
@@ -41,8 +43,43 @@ The derivative is
                                                   &=  \lim_{\answer{p\to a}} \frac{\answer{-10}}{pa} \\
                                                   & = \answer{\frac{-10}{a^2}} .
 \end{align*}
+\end{hint}
+
+\item Evaluate the derivative 
+\[
+         \frac{dn}{dp} \Big|_{p=2} . 
+\]
+
+\item What are the units of the above derivative?
+
+\item Interpret the meaning of the above derivative. Click the arrow to the lower right for help.
+
+\begin{expandable}
+
+For a way to interpret the meaning of the derivative 
+\[
+         \frac{dn}{dp} \Big|_{p=2} . 
+\]
+we can ask ourselves what happens to the number of pounds of apples we can buy with $\$10$ if the price changes by a small amount from $\$2$/lb. For this, let $\Delta p$ be a small change in price from $\$2$/lb(measured in dollars/lb) and let $\Delta n$ be the corresponding change in the number of pounds we can buy with $\$10$.
+
+For $\Delta p \sim 0$, we have
+\[
+    2.5 =  \frac{dn}{dp} \Big|_{p=2} \sim \frac{\Delta n}{\Delta p} 
+\]
+and
+\[
+     \Delta n \sim   \answer{2.5 \Delta p}.
+\]
+This tells us that if the price increases from $\$2$/lb to say $\$2.10$/lb, then
+\[
+   \Delta n \sim \answer{-0.25}.
+\]
+So if the price increases from $\$2$/lb to say $\$2.10$/lb, we can buy about $0.25$ fewer pounds of apples with ten dollars. 
+
+\end{expandable}
 
 \end{enumerate}
+
 
 
 \end{question}
