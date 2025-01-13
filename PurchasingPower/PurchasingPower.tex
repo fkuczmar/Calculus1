@@ -11,15 +11,15 @@ How a small change in price affects the quantity of an item you can buy.
 
 
 \begin{question} \label{Qdgvvbrtghgygrert}
-How would a small change in the price of apples affect the number of pounds you can buy with $\$10$?
+This problem investigates how a small change in the price of apples would affect the number of pounds we can buy with $\$10$.
 
 \begin{enumerate}
 
-\item Start by finding a function
+\item We'll start by finding a function
 \[
        n = f(p) \, , \, p>0 ,
 \]
-that expresses the number of pounds of apples you can buy with $\$10$ in terms of the price (measured in dollars/pound).
+that expresses the number of pounds of apples we can buy with $\$10$ in terms of the price (measured in dollars/pound).
 
 The function is
 \[
@@ -60,23 +60,53 @@ For a way to interpret the meaning of the derivative
 \[
          \frac{dn}{dp} \Big|_{p=2} . 
 \]
-we can ask ourselves what happens to the number of pounds of apples we can buy with $\$10$ if the price changes by a small amount from $\$2$/lb. For this, let $\Delta p$ be a small change in price from $\$2$/lb(measured in dollars/lb) and let $\Delta n$ be the corresponding change in the number of pounds we can buy with $\$10$.
+we can ask ourselves what happens to the number of pounds of apples we can buy with $\$10$ if the price changes by a small amount from $\$2$/lb. For this, let $\Delta p$ be a small change in price from $\$2$/lb (measured in dollars/lb) and let $\Delta n$ be the corresponding change in the number of pounds we can buy with $\$10$.
 
 For $\Delta p \sim 0$, we have
 \[
-    2.5 =  \frac{dn}{dp} \Big|_{p=2} \sim \frac{\Delta n}{\Delta p} 
+    \answer{-2.5} =  \frac{dn}{dp} \Big|_{p=2} \sim \frac{\Delta n}{\Delta p} 
+\]
+and (type ``Delta'' for $\Delta$)
+\[
+     \Delta n \sim   \answer{-2.5 \Delta p}.
+\]
+This tells us that if the price increases from $\$2$/lb to say $\$2.10$/lb, then 
+\[
+   \Delta n \sim \left( \answer{-2.5} \frac{\text{lb}}{\$/\text{lb}} \right) \left( \answer{0.10} \frac{\$}{\text{lb}}  \right) =                        \answer{-0.25}\text{ lbs}.
+\]
+So if the price increases from $\$2$/lb to say $\$2.10$/lb, we can buy about $\answer{0.25}$ fewer pounds of apples with ten dollars. 
+
+\end{expandable}
+
+\item We can get a better understanding of these changes by thinking about relative instead of absolute change.
+
+An increase in price from $\$2$/lb to $\$2.10$/lb is a relative change of
+\[
+    \frac{\Delta p}{p} = \frac{\$0.1/\text{lb}}{\$ 2/\text{lb}} = 0.05 = 5\% .
+\]
+This causes a relative change in the number of pounds we can buy of approximately
+\[
+    \frac{\Delta n}{n} \sim \frac{-0.25 \text{lbs}}{\answer{5}\text{lbs}} = \answer{-0.05} = \answer{-5}\%.
+\]
+ 
+\item We can get a the same result relating the two relative changes of the previous question by working in general. 
+
+Suppose we increase the price of apples by $Q\%$, where $Q\sim 0$. What can we say about the relative change in the number of apples we can buy with $\$10$?
+
+Well, if $\Delta p \sim 0$,
+\[
+    \frac{\Delta n}{\Delta p}   \sim  \frac{dn}{dp} = \answer{-10/p^2},
 \]
 and
 \[
-     \Delta n \sim   \answer{2.5 \Delta p}.
+     \Delta n \sim \left( \answer{\frac{-10}{p^2}} \right) \Delta p.
 \]
-This tells us that if the price increases from $\$2$/lb to say $\$2.10$/lb, then
+Dividing both sides by $n = 10/p$ tells us that
 \[
-   \Delta n \sim \answer{-0.25}.
+        \frac{\Delta n}{n} \sim \left( \answer{\frac{-10}{p^2}} \right)\left( \frac{\Delta p}{\frac{10}{p}} \right) = -\frac{\Delta p}{\answer{p}} = -Q\%.
 \]
-So if the price increases from $\$2$/lb to say $\$2.10$/lb, we can buy about $0.25$ fewer pounds of apples with ten dollars. 
 
-\end{expandable}
+So if we increase the price by $Q\%\sim 0$, then the number of apples we can buy decreases by approximately that same $Q\%$.
 
 \end{enumerate}
 
