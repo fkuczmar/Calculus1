@@ -245,8 +245,9 @@ Include units
 
 \item Evaluate the derivative
 \[
-      \frac{dW}{dh}\Big|_{h=4}.
+      \frac{dW}{dh}\Big|_{h=4}
 \]
+using your expression for $dW/dh$ and compare this with your estimate.
 
 \item What are the units of the derivative above? Interpret it meaning.
 
@@ -254,11 +255,72 @@ Include units
 
 \item At approximately what altitude does your weight decrease by $4$ pounds when your altitude increases by $200$ miles? Use your expression for the derivative $dW/dh$ to help. 
 
-\item Compute the exact change in your weight over the interval you found in the previous question.
+\item Compute the exact change in your weight over the interval you found in part (i).
 \end{enumerate}
 
 \end{enumerate}
 
+\end{question}
+
+\section{A Rock in Free Fall}
+
+\begin{question}  \label{Qdfgg4t66}
+A rock is dropped from a height of $100$ meters on the planet Krypton.
+
+The function
+\[
+     v = f(h) \, , \, 0\leq h \leq 100 ,
+\]
+expresses the speed (in meters/sec) of the rock in terms of its height (in meters) above the surface.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{hcqb5nxc18}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/hcqb5nxc18}{151: Free Fall Speed and Height}
+
+\begin{enumerate}
+\item Would you expect the derivative 
+\[
+  \frac{dv}{dh}\Big|_{h=36}
+\]
+to be postive or negative? Why?
+
+\item Suppose
+\[
+     v = f(h)  = 4\sqrt{100-h} \, , \, 0\leq h \leq 100
+\]
+and find an expression for the average rate of change of the rock's speed (measured in meters/sec) with respect to its height (in meters) between heights of $v$ meters and $a$ meters.
+
+\item Use your expression from part (b) to find an expression for the derivative 
+\[
+   dv/dh \Big|_{h=a}. 
+\]
+
+\item Use the graph above to approximate the derivative
+\[
+       dv/dh \Big|_{h=64} .
+\]
+Include units.
+
+\item Evaluate the derivative
+\[
+       dv/dh \Big|_{h=64} 
+\]
+and compare the exact value with your estimate.
+
+\item What are the units of the derivative above? What is its meaning?
+
+\item ``Simplify the units of the derivative". What insight does this give you into its meaning?
+
+\item Use part (e) to approximate the rocks's speed at a height of $61$ feet. Compare your estimate with the actual speed.
+
+\item Use part (c) to approximate the interval over which the rock falls two meters as its speed increases by $0.5$m/s.
+
+
+\end{enumerate}
 \end{question}
 
 \section{Distance to the Horizon}
@@ -326,49 +388,9 @@ where $r$ is the distance (in meters) from the jet.    %vacuum cleaner%  and  $k
 
 \end{question}
 
-\section{A rock in Free Fall}
-
-\begin{question}  \label{Qdfgg4t66}
-A rock is dropped from a height of $100$ meters on the planet Krypton.
-
-The function
-\[
-     v = f(h) \, , \, 0\leq h \leq 100 ,
-\]
-expresses the speed (in meters/sec) of the rock in terms of its height (in meters) above the surface.
-
-\begin{enumerate}
-\item Would you expect the derivative 
-\[
-  \frac{dv}{dh}\Big|_{h=36}
-\]
-to be postive or negative? Why?
-
-\item Suppose
-\[
-     v = f(h)  = 4\sqrt{100-h} \, , \, 0\leq h \leq 100
-\]
-and find an expression for the average rate of change of the rock's speed (measured in meters/sec) with respect to its height (in meters) between heights of $v$ meters and $a$ meters.
-
-\item Use your expression from part (b) to find an expression for the derivative 
-\[
-   dv/dh \Big|_{h=a}. 
-\]
-
-\item Evaluate the derivative
-\[
-       dv/dh \Big|_{h=64} .
-\]
-
-\item What are the units of the derivative above? What is its meaning?
-
-\item ``Simplify the units of the derivative". What insight does this give you into its meaning?
-
-\item Use part (e) to approximate the rocks's speed at a height of $61$ feet.
 
 
-\end{enumerate}
-\end{question}
+
 
 
 \end{document}
