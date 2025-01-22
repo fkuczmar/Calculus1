@@ -115,11 +115,11 @@ expresses the price (in dollars/share) of a stock in terms of the number of hour
 
 \begin{onlineOnly}
     \begin{center}
-\desmos{szrzof5ikv}{900}{600}
+\desmos{gpqicgxvk3}{900}{600}
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/calculator/szrzof5ikv}{151: Stock Price}
+\href{https://www.desmos.com/calculator/gpqicgxvk3}{151: Stock Price}
 
 \begin{enumerate}
 \item Is the price increasing or decreasing at 10am? Use the graph to estimate this rate as follows:
@@ -138,19 +138,40 @@ expresses the price (in dollars/share) of a stock in terms of the number of hour
 \item At what rate is the number of shares you can buy with $\$1000$ changing at 10am? Do \emph{not} use the quotient rule or the chain rule (we have not learned these yet). Use limits instead, but work in general (ie. not with this specific price function).
 See the Explanation below for help.
 
-\item Use the sliders $m$ and $b$ to control the line $P=b+mt$ and approximate when the price is decreasing at the rate of $(\$1.8/\text{share})/\text{hr}$. Then use algebra to compute the exact time(s).
+\item Use the sliders $m$ and $b$ to control the line $P=b+mt$ and approximate when the price is decreasing at the rate of $(\$1.8/\text{share})/\text{hr}$. Then use calculus and algebra to compute the exact time(s).
 
-\item  Use algebra and technology to find the time(s) when the price is decreasing at the relative rate of $10\%$/hour.
-
-
-\item Use the graph to approximate the minimum and maximum prices of the stock during the eight-hour period. Then use algebra to compute these exact prices.
-
-\item Use the slider $u$ (another name for the variable $t$) to approximate the time(s) when the price is decreasing at the fastest rate. Then use algebra to compute the exact time(s).
+\item  Use calculus and technology to approximate the time(s) when the price is decreasing at the relative rate of $10\%$/hour.
 
 
+\item Use the graph to approximate the minimum and maximum prices of the stock during the eight-hour period. Then use calculus and algebra to compute these exact prices. Click the arrow below for a hint.
 
-\item Use the graph to approximate the end of the time interval beginning at 9am over which the price decreases at the greatest average rate.  The use algebra to find the exact time.
-%\item Use technology (desmos or wolfram alpha) to approximate this time.
+\begin{expandable}
+What is the value of the derivative $dP/dt$ when the price is a maximum/minimum?
+\end{expandable}
+
+\item Use the slider $u$ (another name for the variable $t$) to approximate the time(s) when the price is decreasing at the fastest rate. Then use calculus to compute the exact time(s). Click the arrow below for a hint.
+
+\begin{expandable}
+It helps to graph the fuction
+\[
+  dP/dt = 0.03t^2 - 2t + 1 \, , \, 0\leq t \leq 8 ,
+\]
+Then think about how you would use \emph{calculus} to compute the exact time when the price is decreasing at the fastest rate. This is similar to the previous question. 
+\end{expandable}
+
+
+
+\item Use the graph above to approximate the end of the time interval beginning at 9am over which the price decreases at the greatest average rate.  Do this by activating the folder \emph{secant line} on Line 6 (click the circle on the left) and dragging the slider $u$.
+
+\item The use calculus and algebra to find the end of the time interval beginning at 9am over which the price decreases at the greatest average rate.  Click the arrow below for a hint.
+
+\begin{expandable}
+Think abou the function
+\[
+     m(t) = \frac{f(t)-f(0)}{t-0} \, , \, 0 < t\leq 8 ,
+\]
+that expresses the average rate of change of the price (with respect to time) over the time interval between 9am and time $t$ hours past 9am. Then use this function and the ideas of parts (g) and (h).
+\end{expandable}
 
 \end{enumerate}
 
