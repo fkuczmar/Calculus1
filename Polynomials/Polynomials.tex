@@ -122,12 +122,21 @@ expresses the price (in dollars/share) of a stock in terms of the number of hour
 \href{https://www.desmos.com/calculator/szrzof5ikv}{151: Stock Price}
 
 \begin{enumerate}
-\item Is the price increasing or decreasing at 10am? Use the graph to estimate this rate. Then use the function to compute the exact rate. Include units.
+\item Is the price increasing or decreasing at 10am? Use the graph to estimate this rate as follows:
+
+\begin{enumerate}
+\item First drag the slider $u$ (another name for $t$) on Line 5 to the appropriate value.
+
+\item Then drag the slider $m$ (the slope of the orange line) so that the orange line looks parallel to the (red) tangent line to the curve $P=f(t)$.
+\end{enumerate}
+
+
+\item Use the function to compute the exact rate at which the price is changing at 10am. Include units.
 
 \item At what relative rate is the price changing at 10am? Include units.
 
 \item At what rate is the number of shares you can buy with $\$1000$ changing at 10am? Do \emph{not} use the quotient rule or the chain rule (we have not learned these yet). Use limits instead, but work in general (ie. not with this specific price function).
-
+See the Explanation below for help.
 
 \item Use the sliders $m$ and $b$ to control the line $P=b+mt$ and approximate when the price is decreasing at the rate of $(\$1.8/\text{share})/\text{hr}$. Then use algebra to compute the exact time(s).
 
@@ -142,13 +151,83 @@ expresses the price (in dollars/share) of a stock in terms of the number of hour
 
 \item Use the graph to approximate the end of the time interval beginning at 9am over which the price decreases at the greatest average rate.  The use algebra to find the exact time.
 %\item Use technology (desmos or wolfram alpha) to approximate this time.
- 
-
-%\item At what relative rate is the price changing at 9am?
-
 
 \end{enumerate}
 
+\begin{explanation}
+(d) Here's the solution to part (d).
+
+\begin{itemize}
+\item Start by finding a function 
+\[
+   S = g(t) \, , \, 0\leq t \leq 8 ,
+\]
+that expresses the number of shares we can buy with $\$1,000$ in terms of the number of hours past 9am. Click the arrow to the lower right to check.
+
+\begin{expandable}
+This function is
+\[
+         S = g(t) = \frac{1000}{f(t)} \, , \, 0\leq t \leq 8 
+\]
+\end{expandable}
+
+\item Next we'll use limits to find an expression for the derivative
+\[
+    \frac{dS}{dt}\Big|_{t=a} 
+\]
+as follows.
+
+\begin{align*}
+   \frac{dS}{dt}\Big|_{t=a}  &= \lim_{v\to a}\frac{g(v)-g(a)}{v-a}    \\
+                                        &= \lim_{v\to a}  \left( \frac{1000}{v-a} \right) \left(   \frac{1}{f(v)} - \frac{1}{f(a)}  \right)  \\
+                                 &= \lim_{v\to a}  \left( \frac{1000}{v-a} \right) \left(   \frac{f(a)-f(v)}{f(v)f(a)} \right)  \\
+                                 &= \lim_{v\to a}  \left( \frac{-1000}{f(v)f(a)} \right) \left(   \frac{f(v)-f(a)}{v-a}  \right)  \\
+                        &= \lim_{v\to a}  \frac{-1000}{f(v)f(a)} \cdot \lim_{v\to a}  \frac{f(v)-f(a)}{v-a}  
+\end{align*}
+
+Let's pause here for a moment. The last equality above follows from the fact that both limits in the product exist. The first limit is easy enough to evaluate. The second limit exists because \emph{it is equal to the derivative}
+\[
+      \frac{dP}{dt}\Big|_{t=a}.
+\]
+That's the key point. Now we know that
+\begin{align*}
+   \frac{dS}{dt}\Big|_{t=a}  &= \lim_{v\to a}  \frac{-1000}{f(v)f(a)} \cdot \lim_{v\to a}  \frac{f(v)-f(a)}{v-a} \\
+                                       &= \left( \frac{-1000}{(f(a))^2} \right) \left( \frac{dP}{dt}\Big|_{t=a} \right)
+\end{align*}
+
+This is enough to compute the rate at which the number of shares we can buy with $\$1000$ is changing at 10am. 
+
+But we can get a better understanding of this by writing the above expression in a more meaningful way. Remember that $f(a) = P$ is the price at time $t$. So 
+\begin{align*}
+   \frac{dS}{dt}\Big|_{t=a}  &= -\left( \frac{1000}{(f(a))^2} \right) \left( \frac{dP}{dt}\Big|_{t=a} \right) \\
+                                         &= -\left( \frac{1000}{P^2} \right) \left( \frac{dP}{dt}\Big|_{t=a} \right) \\             
+                                       &= -\left( \frac{1000}{P} \right) \left(\frac{1}{P}\cdot \frac{dP}{dt}\Big|_{t=a} \right) \\
+                                         &= - S \left(\frac{1}{P}\cdot \frac{dP}{dt}\Big|_{t=a} \right) ,
+\end{align*}
+where $S=1000/P$ is the number of shares we can buy with $\$1,000$ at a price of $P$ dollars/share.
+
+Now remember that the product
+\[
+   \frac{1}{P} \cdot  \frac{dP}{dt}\Big|_{t=a}
+\]
+is the \emph{relative} rate of change in the price (with respect to time) at time $t=a$ hours past 9am.
+
+From part (c) we know at 10am this relative rate is equal to
+\[
+      \frac{1}{P} \cdot  \frac{dP}{dt}\Big|_{t=1 } = - \frac{0.7}{20.1}\text{hr}^{-1} \sim - 3.4826\%/\text{hour}
+\]
+So at 10am we can buy
+\[
+      S = \frac{\$1000}{\$20.1 /\text{share}} \sim 47.7512 \text{ shares} 
+\]
+with $\$1,000$. And the number of shares we can buy with is increasing at the rate of approximately
+\[
+   \left( 47.7512 \text{ shares} \right) \left(  - 3.4826\%/\text{hour} \right)  \sim 1.733 \text{ shares/hour}.
+\]
+at 10am.
+\end{itemize}
+
+\end{explanation}
 
 \end{question}
 
