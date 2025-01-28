@@ -49,13 +49,143 @@ Find expressions for the derivatives
 
 \end{explanation}
 
-\begin{question}  \label{Qdfbv4trttg}
-blank for now.
+\end{example}
+
+\section{Relative Rates of Change}
+
+Suppose $P=f(t)$ and $Q=g(t)$ are differentiable functions of $t$ and $g(t)\leq 0$. Then the quotient and product rules are better written in the forms
+\[
+   \frac{d}{dt} \left( \frac{P}{Q} \right) =  \frac{P}{Q} \left(   \frac{1}{P}\cdot \frac {dP}{dt} -  \frac{1}{Q}\cdot \frac {dQ}{dt}      \right)
+\]
+and
+\[
+   \frac{d}{dt} \left( PQ \right) =  PQ \left(   \frac{1}{P}\cdot \frac {dP}{dt} + \frac{1}{Q}\cdot \frac {dQ}{dt}      \right) .
+\]
+
+\begin{question} \label{Qgbhere}
+\begin{enumerate}
+\item Verify the statements above.
+
+\item What do they say about the relative rate of change in the quotient of two functions? In their product?
+\end{enumerate}
 \end{question}
 
+\section{Exercises}
+
+\begin{exercise}  \label{Qdfbv4trttg}
+Between speeds of $50$ miles/hr and $75$ miles/hr, the function
+\[
+    G = f(v) \, , \, 50 \leq v \leq 75,
+\]
+expresses the gas mileage (in miles/gal) of a car in terms of its speed (in miles/hour).
+
+Suppose $f(72)=24$ and 
+\[
+  \frac{dG}{dv}\Big|_{v=72} = -0.4 .
+\]
+
+\begin{enumerate}
+\item What are the units of the derivative above? What is the meaning? Explain in terms of small changes.
+
+\item What are the simplified units of the derivative above? What insight do these units give you about the derivative's meaning?
+
+\item Approximate gas mileage at a speed of $70$ miles/hour.
+
+\item Let 
+\[
+  r=g(v) \, , \, 50 \leq v \leq 75,
+\]
+be the function that expresses the rate (in gal/hr) at which the car burns gas in terms of its speed (in miles/hr).
+
+\begin{enumerate}  \label{EE5tghvdfsffd}
+\item Evaluate the derivative
+\[
+  \frac{dr}{dv}\Big|_{v=72} .
+\]
+
+\item What are the units of the derivative above? What is the meaning? Explain in terms of small changes.
+
+\item What are the simplified units of the derivative above? What insight do these units give you about the derivative's meaning?
+
+\item Approximate the rate (in gal/hr) at which the car burns gas at a speed of $70$ miles/hr.
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{exercise}
+
+
+\begin{exercise}  \label{EEdfbygyhnnjjhh}
+At 9:00am on February 23, 2023, the price of oil was decreasing at the relative rate of $2\%$/hour. At what relative rate was the number of gallons of oil you could buy with $\$100,000$ changing at that time? Use calculus to justify your assertion. 
+\end{exercise}
+
+\begin{exercise}  \label{EEdvbrttyer}
+The function 
+\[
+      P = f(t) = 5 -3t + t^2 \, , \, 0\leq t \leq 4 , 
+\]
+expresses the price in $\$$/share of a stock in terms of the number of hours past 9am.
+
+(a) Use the graphs of the function $P=f(t)$ and the function $r=f^\prime(t)/f(t)$  to estimate when the stock price is increasing at the greatest relative rate.
+
+(b) Use algebra to find the exact time when the stock price is increasing at the greatest relative rate.
+\begin{hint}
+What is the value of the derivative $dr/dt$ at this time? But start by finding an expression for the instantaneous relative rate of change in the stock price.
+\end{hint}
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{xuupp3srqv}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Desmos activity available at \href{https://www.desmos.com/calculator/xuupp3srqv}{151: Stock Price 4}
+
+\end{exercise}
+
+
+\begin{exercise}  \label{EEdgvbfghjjjyu}
+
+An $h$-foot tall giraffe walks directly toward a spotlight on the ground as the light casts its shadow on a vertical wall as illustrated below. The wall is $b$ feet from the light.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{2eiyjjpu9n}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Desmos activity available at \href{https://www.desmos.com/calculator/2eiyjjpu9n}{151: Spotlight}
+
+Suppose at a certain instant the giraffe is $w$ feet from the spotlight and is walking at a speed of $v$ ft/sec. 
+
+\begin{enumerate}
+
+\item Is the length of the giraffe's shadow increasing or decreasing at this instant? 
+
+\item At what rate? 
+
+\item Check that your answer in part (b) has the correct units.
+
+\end{enumerate}
+
+\end{exercise}
+
+
+\begin{exercise}  \label{Ekhkhglcbbg}
+\begin{enumerate}
+\item On January 1, 2024 the national debt of a country was decreasing at the rate of $3\%$/yr and the population was increasing at the rate of $2\%$/yr.  Was the per-captita (ie. per person) share of the national debt increasing or decreasing at this time? At what relative rate?
+
+\item During the year 2024 the national debt of a country decreased $3\%$ and the population increased $2\%$.  Did the per-captita share of the national debt increase or decrease during the year? By what percent?
+
+\item Compare the two questions above and their answers.
+
+\end{enumerate}
 
 
 
-\end{example}
+\end{exercise}
+
 
 \end{document}
