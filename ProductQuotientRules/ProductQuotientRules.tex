@@ -54,9 +54,9 @@ Find expressions for the derivatives
 \section{Relative Rates of Change}
 
 Suppose $P=f(t)$ and $Q=g(t)$ are differentiable functions of $t$ and $g(t)\leq 0$. Then the quotient and product rules are better written in the forms
-\[
+\begin{equation}  \label{Eq:Quotient}
    \frac{d}{dt} \left( \frac{P}{Q} \right) =  \frac{P}{Q} \left(   \frac{1}{P}\cdot \frac {dP}{dt} -  \frac{1}{Q}\cdot \frac {dQ}{dt}      \right)
-\]
+\end{equation}
 and
 \[
    \frac{d}{dt} \left( PQ \right) =  PQ \left(   \frac{1}{P}\cdot \frac {dP}{dt} + \frac{1}{Q}\cdot \frac {dQ}{dt}      \right) .
@@ -73,15 +73,15 @@ and
 \section{Exercises}
 
 \begin{exercise}  \label{Qdfbv4trttg}
-Between speeds of $50$ miles/hr and $75$ miles/hr, the function
+Between speeds of $45$ miles/hr and $75$ miles/hr, the function
 \[
-    G = f(v) \, , \, 50 \leq v \leq 75,
+    G = f(v) \, , \, 45 \leq v \leq 75,
 \]
 expresses the gas mileage (in miles/gal) of a car in terms of its speed (in miles/hour).
 
-Suppose $f(72)=24$ and 
+Suppose $f(50)=25$ and 
 \[
-  \frac{dG}{dv}\Big|_{v=72} = -0.4 .
+  \frac{dG}{dv}\Big|_{v=50} = 0.8.
 \]
 
 \begin{enumerate}
@@ -89,25 +89,26 @@ Suppose $f(72)=24$ and
 
 \item What are the simplified units of the derivative above? What insight do these units give you about the derivative's meaning?
 
-\item Approximate the gas mileage at a speed of $70$ miles/hour.
+\item Approximate the gas mileage at a speed of $48$ miles/hour.
 
 \item Let 
 \[
-  r=g(v) \, , \, 50 \leq v \leq 75,
+  r=g(v) \, , \, 45 \leq v \leq 75,
 \]
 be the function that expresses the rate (in gal/hr) at which the car burns gas in terms of its speed (in miles/hr).
 
 \begin{enumerate}  
-\item Evaluate the derivative
+\item Use Equation (\ref{Eq:Quotient}) above to evaluate the derivative
 \[
-  \frac{dr}{dv}\Big|_{v=72} .
+  \frac{dr}{dv}\Big|_{v=50} .
 \]
+Include units for all numbers.
 
 \item What are the units of the derivative above? What is the meaning? Explain in terms of small changes.
 
 \item What are the simplified units of the derivative above? What insight do these units give you about the derivative's meaning?
 
-\item Approximate the rate (in gal/hr) at which the car burns gas at a speed of $70$ miles/hr.
+\item Approximate the rate (in gal/hr) at which the car burns gas at a speed of $48$ miles/hr.
 
 \end{enumerate}
 
@@ -167,6 +168,8 @@ Suppose at a certain instant the giraffe is $w$ feet from the spotlight and is w
 \item At what rate? 
 
 \item Check that your answer in part (b) has the correct units.
+
+\item Assume $v$ is constant and describe what happens to the rate in part (b) as the giraffe approaches the spotlight. How is your conclusion revealed in the animation?
 
 \end{enumerate}
 
