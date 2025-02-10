@@ -535,6 +535,50 @@ Simplify the function first.
 
 (e) $\frac{d}{dt} \left( \frac{1}{5+3\cos (t/2)}   \right)$
 
+\begin{explanation}
+(d) Let 
+\[
+   y = \sec^2\theta = (\sec\theta)^2 
+\]
+and let 
+\[
+    u = \sec\theta .
+\]
+Then 
+\[
+  y  =u^2
+\]
+and
+\begin{align*}
+   \frac{dy}{d\theta}   &= \frac{dy}{du} \cdot \frac{du}{d\theta} \\
+                                &= \frac{d}{du}\left( u^2 \right) \cdot \frac{d}{d\theta} \left( \sec\theta \right) \\
+                                &= 2u ( \sec\theta \tan\theta) \\
+                                &= 2 (\sec\theta) ( \sec\theta \tan\theta) .
+\end{align*}
+
+\pskip
+
+(e) Let 
+\[
+   y = \frac{1}{5+3\cos(t/2)}% = (5+3\cos(t/2))^{-1} 
+\]
+and let 
+\[
+    u = 5+3\cos(t/2) .
+\]
+Then 
+\[
+  y  =u^{-1}
+\]
+and
+\begin{align*}
+   \frac{dy}{dt}   &= \frac{dy}{du} \cdot \frac{du}{dt} \\
+                                &= \frac{d}{du}\left( u^{-1} \right) \cdot \frac{d}{dt} \left( 5+3\cos(t/2) \right) \\
+                                &= -\frac{1}{u^2} \left( -3 \sin \left(\frac{t}{2}\right) \frac{d}{dt}\left( \frac{t}{2}\right)\right) \\
+                                &= \frac{3\sin \left(\frac{t}{2}\right)}{2(5+3\cos(t/2))^2} .
+\end{align*}
+\end{explanation}
+
 \end{exercise}
 
 

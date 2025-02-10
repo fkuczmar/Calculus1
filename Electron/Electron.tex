@@ -9,31 +9,74 @@ Electron.
 \end{abstract}
 \maketitle
 
-The force on an a charge $q$ with velocity ${\bf v}$ in a magnetic/electric field is given by
+The force on an a charge $q$ with velocity ${\bf v}$ in a crossed magnetic/electric field is given by
 \[
      {\bf F} = q ({\bf E} + {\bf v}\times {\bf B} ) .
 \]
 
-The problem is to parameterize the motion of a charged particle when the two fields are assumed uniform and orthogonal. With the magnetic field a constant multiple of ${\bf k}$ and the electric field a constant multiple of ${\bf j}$, suppose the particle either starts from rest or has velocity ${\bf v}_0$ perpendicular to ${\bf k}$ at time $t=0$.
+Our problem is to parameterize the motion of a charged particle when the fields are uniform and mutually orthogonal. We suppose the magnetic and electric fields point in the respective directions ${\bf k}$ and ${\bf j}$, and that the charge has velocity ${\bf v}_0$ perpendicular to ${\bf k}$ at time $t=0$.
 
-Not understanding any of the physics, the charge has acceleration
+Then the charge, assumed to be positve, has acceleration
 \[
     {\bf a} =  \frac{d {\bf v}}{dt} = k_1 {\bf j} + k_2 {\bf v}\times {\bf k} ,
 \]
-for some constants $k_1, k_2 \geq 0$.
+for some constants $k_1, k_2 \geq 0$, with respective units $\text{m}/\text{sec}^2$ and $\text{sec}^{-1}$..
 
-We thought first about turning off the electric field
+With the electric field turned off ($k_1=0$), the acceleration and velocity vectors are perpendicular, so the charge moves with constant speed $|{\bf v}_0| = v_0$. But then because ${\bf v}$ is perpendicular to ${\bf k}$,
+\[
+      |{\bf a}| = k_2 |v| = k_2 v_0
+\]
+is also constant.
+
+So we are looking for a plane motion having constant speed and an acceleration with constant magnitude. One choice would be uniform circular motion, where
+\[
+    |{\bf a}| = v_0 \omega ,
+\]
+where $\omega = d\theta/dt$ is the (constant) rotation rate of the pinned velocity vector. Then $k_2 = \omega$ and the trajectory has radius
+\[
+   r = \frac{v_0}{\omega} = \frac{v_0}{k_2} .
+\]
+
+To see that there are no other possible motions we could probably appeal to some uniqueness theorem of differential equations. But for a more geometric approach, consider what we know.
+
+\begin{enumerate}
+\item that the charge moves with constant speed and
+
+\item that the acceleration vector rotates at a constant rate.
+\end{enumerate}
+
+\begin{question}  \label{Qdtg4th5yg5}
+What do these conditions imply about the trajectory?
+
+\begin{explanation}
+Click the arrow to the lower right for the solution.
+
+\begin{expandable}
+Let $\theta$ be the angle from ${\bf i}$ to ${\bf v}$. Then the conditions imply that the trajectory has a constant radius of curvature 
+\[
+  r = \frac{|v|}{\Big|\frac{d\theta}{dt} \Big|} = \frac{v_0}{k_2} 
+\]
+and being a plane curve is thus a circle.
+\end{expandable}
+\end{explanation}
+
+\end{question} 
+
+
+
+\section{Newton's Law of Cooling}
+
 
 
 \begin{exploration} \label{Edgvb5rthh}
 
 \begin{onlineOnly}
     \begin{center}
-\desmos{jdgp5obovm}{900}{600}  %    pxsmo04nmg  8swp20zond
+\desmos{yebumxuwms}{900}{600}  %    pxsmo04nmg  8swp20zond
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/calculator/jdgp5obovm}{Electron 11}
+\href{https://www.desmos.com/calculator/yebumxuwms}{Electron 11}
 
 
 \end{exploration}
