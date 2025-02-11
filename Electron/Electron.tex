@@ -9,6 +9,8 @@ Electron.
 \end{abstract}
 \maketitle
 
+\section*{Crossed Fields and the Hodograph}
+
 The force on an a charge $q$ with velocity ${\bf v}$ in a crossed magnetic/electric field is given by
 \[
      {\bf F} = q ({\bf E} + {\bf v}\times {\bf B} ) .
@@ -20,9 +22,22 @@ Then the charge, assumed to be positve, has acceleration
 \[
     {\bf a} =  \frac{d {\bf v}}{dt} = k_1 {\bf j} + k_2 {\bf v}\times {\bf k} ,
 \]
-for some constants $k_1, k_2 \geq 0$, with respective units $\text{m}/\text{sec}^2$ and $\text{sec}^{-1}$..
+for some constants $k_1, k_2 \geq 0$, with respective units $\text{m}/\text{sec}^2$ and $\text{sec}^{-1}$.
 
-With the electric field turned off ($k_1=0$), the acceleration and velocity vectors are perpendicular, so the charge moves with constant speed $|{\bf v}_0| = v_0$. But then because ${\bf v}$ is perpendicular to ${\bf k}$,
+This is a differential equation that is easy enough to solve algebraically. But our aim here is to take a geoemetric approach that uses some key ideas from Calculus 3. 
+
+In sketching motion we typically draw the path and perhaps draw a few position vectors at equally-spaced time intervals. These vectors allow us to approximate a few velocity vectors, or at least their relative lengths. But instead of drawing the velocity vectors tangent to the path, it is usually more useful to draw them with their tails pinned at a common point. The curve traced by these tips of these pinned vectors is called the \emph{hodograph} of a motion. 
+
+For starters, the hodograph gives us a way to visualize the motion's acceleration as it is tangent to the hodograph. But to get some idea of the accerlation's magnitude, we need to consider not only the direction and magnitude of the velocity vector but also its rotation rate. 
+
+For a uniform circular motion that rotates around a circle of radius $r$ meters at a constant rate of $\omega$ rad/sec, for example,  we \emph{see} from the hodograph (a circle of radius $v = \omega r$ that the acceleration vector points directly toward the center of the path and rotates at the same rate as both the position and velocity vectors. So without any derivatives, we get the acceleration's magnitude to be
+\[
+    | {\bf a}| = \omega |{\bf v}| = \omega^2 r .
+\]
+
+\section*{Turning off the Electric Field}
+
+Returning to our charged particle, with the electric field turned off ($k_1=0$), the acceleration and velocity vectors are perpendicular, so the charge moves with constant speed $|{\bf v}_0| = v_0$. But then because ${\bf v}$ is perpendicular to ${\bf k}$,
 \[
       |{\bf a}| = k_2 |v| = k_2 v_0
 \]
@@ -47,16 +62,19 @@ To see that there are no other possible motions we could probably appeal to some
 
 \begin{question}  \label{Qdtg4th5yg5}
 What do these conditions imply about the trajectory?
+\begin{hint}
+Think about curvature.
+\end{hint}
 
 \begin{explanation}
 Click the arrow to the lower right for the solution.
 
 \begin{expandable}
-Let $\theta$ be the angle from ${\bf i}$ to ${\bf v}$. Then the conditions imply that the trajectory has a constant radius of curvature 
+Let $\theta$ be the angle from ${\bf i} = \langle 1, 0, 0\rangle$ to ${\bf v}$. Then because ${\bf v}$ and ${\bf a}$ are orthogonal, these vectors rotate at the same rate $\omega = d\theta/dt$. And because the speed is constant, the path's radius of curvature 
 \[
   r = \frac{|v|}{\Big|\frac{d\theta}{dt} \Big|} = \frac{v_0}{k_2} 
 \]
-and being a plane curve is thus a circle.
+is also constant. And because the path is a plane curve, it is a circle with this radius.
 \end{expandable}
 \end{explanation}
 
