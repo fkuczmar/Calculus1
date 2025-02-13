@@ -29,6 +29,7 @@ In particular, do \emph{not} use the power rule. Show all work in its mathematic
 
 
 \begin{explanation}
+\begin{enumerate}
 \item The average rate of change is
 \begin{align*}
   \frac{\Delta W}{\Delta h} &= \frac{f(c)-f(b)}{c-b}  \\
@@ -39,14 +40,48 @@ In particular, do \emph{not} use the power rule. Show all work in its mathematic
 
 \begin{align*}
  \frac{dW}{dr}\Big|_{r=b} &= \lim_{c\to b} \left(\frac{1}{c-b}\right) \left(  \frac{2000}{c^2} - \frac{2000}{b^2} \right) \\
-                         &=
+                         &= \lim_{c\to b} \frac{-2000(c+b)}{c^2b^2} \\
+                        & =  -\frac{2000(b+b)}{b^2b^2} \\
+                      &= -\frac{4000}{b^3} .
 \end{align*}
 
+\end{enumerate}
 \end{explanation}
 
 \item (5 points) At 3pm, you can buy $5$ pounds of cod with $\$100$. And at 3pm the number of pounds of cod you can buy with $\$100$ is decreasing at the rate of $0.4$ lbs/hour. 
 
 At what rate (with respect to time) is the price of cod changing at 3pm? Explain your reasoning and be sure to end with a concluding sentence.
+
+\begin{explanation}
+Let $P=f(t)$ be the function that expresses the price of cod (in dollars/pound) in terms of the number of hours since 3pm.
+
+Let $Q=g(t)$ be the function that expresses the number of pounds of cod you can buy with  $\$100$ in terms of the number of hours since 3pm.
+
+Then 
+\[
+     P = \frac{100}{Q}
+\]
+and the quotient rule gives
+\begin{align*}
+  \frac{dP}{dt}  &= \frac{1}{Q^2}\left( Q \frac{d}{dt}\left( 100 \right) - 100\frac{dQ}{dt} \right)   \\
+                       &= - \frac{100}{Q^2} \cdot \frac{dQ}{dt}
+\end{align*}
+
+Since at 3pm the number of pounds we can buy with $\$100$ is decreasing at the rate of $0.4$ lbs/hour, we know that
+\[
+     \frac{dQ}{dt}\Big|_{t=0} = -0.4 \text{ lb}/\text{hr} .
+\]
+
+And since we can buy $Q=g(0)=5$ pounds with $\$100$ at 3pm, 
+\begin{align*}
+  \frac{dP}{dt}\Big|_{t=0}     &=  -\left( \frac{100}{Q^2} \cdot \frac{dQ}{dt} \right)\Big|_{t=0} \\
+                                           &= \left(- \frac{100\text{ dollars}}{25\text{ lb}^2}\right) \left( -0.4 \frac{\text{lb}}{\text{hr}} \right) \\
+                                          &= (1.6 \text{ dollars} /\text{lb})/\text{hr}.
+\end{align*}
+
+So at 3pm the price of cod is increasing at the rate of $(1.6 \text{ dollars} /\text{lb})/\text{hr}$.
+
+\end{explanation}
 
 
 
@@ -80,6 +115,33 @@ Explain your reasoning.
 
 \item (1 point) Simplify the units of the correct derivative above. What do these simplified units tell you about the derivative's meaning?
 \end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+\item At the high speed of $72$ miles/hour it is likely that a small increase in the speed will decrease the gas mileage. So we would expect the derivative to be negative, so
+\[
+  \frac{dv}{dG}\Big|_{G=12} = -4 .
+\]
+
+\item Since $v$ has units miles/hour and $G$ has units miles/gal, the derivative $dv/dG$ has units
+\[
+   \frac{\text{miles/hr}}{\text{miles/gal}} .
+\]
+
+\item We know that
+\begin{align*}
+      \frac{dv}{dG}\Big|_{G=12} = -\frac{0.4}{0.1} \frac{\text{miles/hr}}{\text{miles/gal}} \sim \frac{\Delta v}{\Delta G}
+\end{align*}
+if $\Delta G \sim 0$. So increasing the speed by  0.4 mile/hour (from $72$ miles/hr to $72.4$ miles/hr) would decrease the gas mileage by about $0.1$ miles/gal (from 12 miles/gal to about 11.9 miles/gal).
+
+\item The units of the simplified derivative are
+\[
+   \frac{\text{miles/hr}}{\text{miles/gal}}  = \frac{\text{gal}}{\text{hr}}.
+\]
+Although this suggests the derivative is related to the rate at which the car burns gas, this is \emph{not} true. Our interpretation of the derivative had nothing to do with this rate and in fact the car burns gas at the rate of $6$ gal/hour at a speed of $72$ miles/hour. So the simplified units are misleading and tell us \emph{nothing} about the derivative's meaning. 
+
+\end{enumerate}
+\end{explanation}
 
 %\section{Part 2: Answer {\bf two} of Questions 3-5.}
 
@@ -120,7 +182,32 @@ Sensors on the car measure both the number of gallons of gas in the tank and the
 
 A computer then calculates the number of miles you have left to drive assuming the car's gas mileage remains constant for the remainder of your trip (and equal to the current gas mileage). This number is displayed on the dashboard.
 
-Detrmine the exact trip odometer reading when the dashboard reading indicates that you have $13$ miles left to drive. Explain your reasoning and be sure to end with a concluding sentence.
+Determine the exact trip odometer reading when the dashboard reading indicates that you have $13$ miles left to drive. Explain your reasoning and be sure to end with a concluding sentence.
+
+\begin{explanation}
+
+I will not solve this problem, but will give you a hint instead by solving a closely related problem.
+
+Suppose, for example, that we wish to find the dashboard reading (for the number of miles left to drive) at the odometer reading $s=5$ miles.
+
+First, we would find the number of gallons in the tank at this odometer reading. At this time, the tank has
+\[
+   f(5) = \frac{3(5)+25}{5+5} = 4
+\]
+gallons of gas.
+
+Now at $s=5$, the derivative $dG/ds$ is  (left for you to verify)
+\[
+ \frac{dG}{ds}\Big|_{s=5} = -0.10 \frac{\text{gal}}{\text{mile}} .
+\]
+ 
+This means that five  miles into our trip the car is burning gas at the rate of $0.10$ gallons/mile. So if this rate were to remain constant for the remainder of the trip, we would be able to drive an additional
+\[
+      \frac{4 \text{ gallons}}{0.10 \frac{\text{ gal}}{\text{mile}}}  =40 \text{ miles}
+\]
+before running out of gas.
+
+\end{explanation}
 
 
 
