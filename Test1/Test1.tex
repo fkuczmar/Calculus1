@@ -1,0 +1,130 @@
+\documentclass{ximera}
+\title{Test 1}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Test 1.
+\end{abstract}
+\maketitle
+
+\begin{enumerate}
+
+\item (6 points) The function
+\[
+        W = f(r) = \frac{2000}{r^2} , r\geq 4 ,
+\]
+expresses the weight of an astronaut (measured in pounds) in terms of her distance from the center of the earth (measured in thousands of miles).
+
+\begin{enumerate}
+\item (2 points) Find an expression for the average rate of change in the astronaut's weight with respect to her distance from the earth's center between distances $r=b$ and $r=c$ thousands of miles from the center. Assume $b,c\geq 4$ and that $b\neq c$.
+
+\item (4 points) Use your \emph{expression from part (a) directly and the definition of the derivative} to find an expression (fully simplified) for the derivative
+\[
+   \frac{dW}{dr}\Big|_{r=b} .
+\]
+In particular, do \emph{not} use the power rule. Show all work in its mathematically correct form. Write vertically, one equal sign per line. No need to explain algebra.
+\end{enumerate}  
+
+
+\begin{explanation}
+\item The average rate of change is
+\begin{align*}
+  \frac{\Delta W}{\Delta h} &= \frac{f(c)-f(b)}{c-b}  \\
+                      &= \left(\frac{1}{c-b}\right) \left(  \frac{2000}{c^2} - \frac{2000}{b^2} \right)
+\end{align*}
+
+\item (Some algebra omitted, left for you to fill in).
+
+\begin{align*}
+ \frac{dW}{dr}\Big|_{r=b} &= \lim_{c\to b} \left(\frac{1}{c-b}\right) \left(  \frac{2000}{c^2} - \frac{2000}{b^2} \right) \\
+                         &=
+\end{align*}
+
+\end{explanation}
+
+\item (5 points) At 3pm, you can buy $5$ pounds of cod with $\$100$. And at 3pm the number of pounds of cod you can buy with $\$100$ is decreasing at the rate of $0.4$ lbs/hour. 
+
+At what rate (with respect to time) is the price of cod changing at 3pm? Explain your reasoning and be sure to end with a concluding sentence.
+
+
+
+\item (5 points) Between speeds of $60$ miles/hour and $80$ miles/hour, the function
+\[
+   v = f(G) \, , \, 8\leq G \leq 20 ,
+\]
+expresses the speed of a car (in miles/hour) in terms of its gas mileage (in miles/gallon).
+
+Suppose $f(12)=72$. 
+
+
+\begin{enumerate}
+
+\item (1 point) Which would be more likely, that
+\[
+   \frac{dv}{dG}\Big|_{G=12} = 4 \hskip 0.4 in \text{ or that } \hskip 0.4 in  \frac{dv}{dG}\Big|_{G=12} = -4?
+\]
+Explain your reasoning.
+
+
+
+
+\item (1 point) What are the units of the correct derivative above?
+
+
+
+\item (2 points) Explain the meaning of the correct derivative above using the language of \emph{small changes}.
+
+
+
+\item (1 point) Simplify the units of the correct derivative above. What do these simplified units tell you about the derivative's meaning?
+\end{enumerate}
+
+%\section{Part 2: Answer {\bf two} of Questions 3-5.}
+
+%{\bf Directions:} Answer two of three questions in this part.
+
+
+
+%\item (5 points) The function 
+%\[
+%      P = f(t) = t^2 + t+4 \, , \, -2\leq t \leq 2 ,
+%\]
+%expresses the price (in dollars/share) of a stock in terms of the number of hours past 11am.
+
+%Use calculus and algebra to find the stock price when it is decreasing at a relative rate of $25\%$/hour.
+
+%\thispagestyle{empty}
+
+%\vfill \eject
+
+%\item (5 points) The function
+%\[
+%  h = g(t) = \frac{10t+50}{3t^{2}+7t} \, , \, 0\leq t \leq 5 ,
+%\]
+%expresses the altitude (in hundreds of feet) of a balloon in terms of the number of hours past noon.
+
+%Is the balloon is ascending or descending at 12:01pm? At what rate?
+
+
+
+
+\item (5 points) The function
+\[
+       G = f(s) = \frac{3s+25}{s+5} \, , \, 0\leq s \leq 10 ,
+\]
+expresses the number of gallons of gas in a car in terms of the trip odometer reading (measured in miles).
+
+Sensors on the car measure both the number of gallons of gas in the tank and the current (instantaneous) gas mileage (measured in miles/gallon).
+
+A computer then calculates the number of miles you have left to drive assuming the car's gas mileage remains constant for the remainder of your trip (and equal to the current gas mileage). This number is displayed on the dashboard.
+
+Detrmine the exact trip odometer reading when the dashboard reading indicates that you have $13$ miles left to drive. Explain your reasoning and be sure to end with a concluding sentence.
+
+
+
+
+\end{enumerate}
+
+\end{document}
