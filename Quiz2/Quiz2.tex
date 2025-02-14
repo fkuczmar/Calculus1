@@ -5,7 +5,7 @@
 
 \begin{document}
 \begin{abstract}
-First practice quiz, Weeks 4-6
+Practice quiz, Weeks 4-6
 \end{abstract}
 \maketitle
 
@@ -19,9 +19,128 @@ First practice quiz, Weeks 4-6
 
 \item Show all units in all computations.
 
-\item Show all steps when computing derivatives and use the Leibniz notation when doing so. Here is an example.
+\item No calculators.
+
+\item Show each step when using the chain, product, and quotient rules and use the Leibniz notation when doing so. Here is an example.
 
 \end{enumerate}
 
+\begin{example}
+Find an expression for the derivative
+\[
+    \frac{d}{d\theta}\left( 4 + 5\cos^3(2\theta) \right) .
+\]
+
+\begin{explanation}
+With $y=4 + 5\cos^3(2\theta)$, the derivative $dy/d\theta$ is 
+\begin{align*}
+\frac{dy}{d\theta} &= \frac{d}{d\theta}\left(   4 + 5\cos^3(2\theta)   \right) \\
+                          & = \frac{d}{d\theta}\left( 4 \right) + 5\frac{d}{d\theta}\left( \left( \cos(2\theta)  \right)^3  \right) \\
+                           &=  5(3) (\cos(2\theta))^2 \frac{d}{d\theta}\left(  \cos (2\theta) \right) \\
+                          &= 15(\cos(2\theta))^2 (-\sin(2\theta))\frac{d}{d\theta}(2\theta) \\
+                           &= -30(\cos(2\theta))^2\sin(2\theta) .
+\end{align*}
+
+
+\end{explanation}
+\end{example}
+
+
+
+\begin{question}  \label{Qujn5tyh6uu}
+Find expressions for each of the following derivatives.
+
+\begin{enumerate}
+\item 
+\[
+\frac{d}{dt}\left( 4 - t^4 e^{-5t})  \right)
+\]
+
+\item 
+\[
+\frac{d}{d\theta}\left(  \frac{12}{4 + 5\tan (4\theta)}   \right)
+\]
+
+\item
+\[
+   \frac{d}{dw}\left(   \sqrt{40-5w^2}   \right)
+\]
+
+\item
+\[
+   \frac{d}{dt}\left(   2^{t/8}   \right)
+\]
+
+\end{enumerate}
+
+\end{question}
+
+\begin{question}
+\begin{enumerate}
+
+\item Find an equation of the tangent line to the curve 
+\[
+  y =  4 - t^4 e^{-5t}
+\]
+at the point on the curve with $t$-coordinate $t=0$.
+
+\item Find an equation of the tangent line to the curve 
+\[
+  y =   \frac{12}{4 + 5\tan (4\theta)}
+\]
+at the point on the curve with $\theta$-coordinate $\theta=0$.
+\end{enumerate}
+\end{question}
+
+\begin{question} \label{Q000d9ggdgbgh}
+Assume for this question that each month has 30 days and that the number of hours of daylight/day in Seattle is a sinusoidal function of time. Assume also that on June 21, Seattle gets a maximum of $16$ hours of daylight/day and that on December 21, Seattle gets a minimu of $8$ hours of daylight/day.
+
+\begin{enumerate}
+\item Find a function 
+\[
+   H = f(t) \, , \, 0\leq t\leq 12,
+\]
+that expresses the number of daylight hours/day in Seattle in terms of the number of months since June 21. Use the cosine function. Start by sketching a graph. Explain your reasoning.
+
+\item Evaluate the derivative 
+\[
+   \frac{dH}{dt}\Big|_{t=2} .
+\]
+
+\item What are the units of the derivative above?
+
+\item Explain the meaning of the above derivative.
+\end{enumerate}
+
+\end{question}
+
+\begin{question}  \label{Q33eerrggg}
+The function
+\[
+   T = f(m) = 20+70e^{-m/20}\, , \, 0\leq m \leq 60 ,
+\]
+expresses the temperature (in Celsius degress) of a cup of coffee in terms of the number of minutes past noon.
+
+\begin{enumerate}
+\item At what rate is the temperature changing at 12:40pm?
+
+\item Does the temperature change at a constant relative rate? Justify your assertion.
+
+\item Find a function $r=g(T)$ that expresses the rate of change in the temperature (measured in $^\circ$C/min) in terms of the temperature (measured in Celsius degrees).
+
+\item Find the temperature when it is decreasing at the rate of $3^\circ$C/min.
+
+\item Find a function $s=h(T)$ that expresses the relative rate of change in the temperature in terms of the temperature (measured in Celsius degrees).
+
+\item Find the temperature when it is decreasing at the rate of $3\%$/min.
+\end{enumerate}
+\end{question}
+
+
+\begin{question} \label{Qggey5ghhtt}
+Assume for this problem that over the course of a 24-hour period beginning at midnight of July 21, the temperature in Shoreline is a sinusoidal function of time. Assume also that the temperature reaches its minimum of $50^\circ$F at 5am and its maximum of $80^\circ$ at 5pm.
+
+At what rate (with respect to time) is the temperature changing when it is $68^\circ$F for the second time? Start by finding a function that expresses the temperature in terms of time. Be sure to define your variables.
+\end{question}
 
 \end{document}
