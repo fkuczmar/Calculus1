@@ -9,7 +9,7 @@ Derivatives of inverse functions.
 \end{abstract}
 \maketitle
 
-\emph{The Main Idea}
+\section{The Main Idea}
 
 The main idea here is simple. That the derivative of the \emph{inverse} of a function is the \emph{reciprocal} of the function's derivative. Or expressed more succinctly, \emph{the derivative of the inverse is the reciprocal of the derivative}.
 
@@ -48,9 +48,55 @@ Explain the derivative's meaning.
 \end{enumerate}
 \end{question}
 
-dd
+
 
 
 \section{Derivatives of Inverse Trig Functions}
+
+The idea of computing the derivative of the inverse of a one-to-one function should be simple. But if we require that the derivative of a function be expressed in terms of its independent variable, the algebra can get a bit tricky.
+
+\begin{example} \label{Ecbfghnbng}
+Take for example the function
+\[
+     y = g(\theta) = \sin\theta.
+\]
+
+Now this function is \emph{not} one-to-one and so its inverse is not a function. But we can restrict the domain of $g$ to get a new function
+\begin{equation}  
+     y =f(\theta) = \sin\theta \, , \, -\pi/2 \leq \theta \leq \pi/2 , \label{Eq:ArcSine}
+\end{equation}
+that is one-to-one and that has the same range $\{y | -1 \leq y \leq 1\}$ as $g$. The inverse of this new function $f$ is the inverse sine function
+\[
+    \theta = f^{-1}(y) = \arcsin(y) = \sin^{-1}(y) .
+\]
+
+The function $\arcsin (y)$ gives the angle between $-\pi/2$ and $\pi/2$ whose sine is equal to $y$. The key to expressing its derivative
+\[
+  \frac{d\theta}{dy} = \frac{d}{dy}\left(  \arcsin y \right)
+\]
+in terms of $y$, is to express the derivative of the original function $y=f(\theta)$ in terms of its output $y=\sin\theta$.
+
+We know that
+\[
+     \frac{dy}{d\theta} = \frac{d}{d\theta} \left( \sin\theta \right) = \cos\theta .
+\]
+To express this derivative in terms of $y=\sin\theta$, we use the fact that 
+\[
+ \cos^2\theta + \sin^2\theta = 1 .
+\]
+So 
+\[
+      \frac{dy}{d\theta} = \cos\theta = \pm \sqrt{1-\sin^2\theta} = \pm \sqrt{1-y^2}.
+\]
+
+To choose between $\pm$, we must remember that by the definition of the arcsine function (see equation (\ref{Eq:ArcSine})), 
+\[
+   \pi/2 \leq \theta \leq \pi/2 .
+\]
+This tells us that $\cos\theta \geq 0$. So we conclude that
+\[
+\frac{dy}{d\theta} = \cos\theta = \sqrt{1-y^2}.
+\]
+\end{example}
 
 \end{document}
