@@ -48,12 +48,46 @@ Explain the derivative's meaning.
 \end{enumerate}
 \end{question}
 
+\begin{question}  \label{Qttynmmbbb}
+This question is a continuation of Question \ref{Qtyhhdhfdgfd}. Now we are given an expression
+\[
+   G = f(s)  = \frac{s^2}{2000} + \frac{23s}{1000} + \frac{1}{10} \, , \, 0\leq s\leq 20, 
+\]
+for the function $f$.
+
+\begin{enumerate}
+\item Use calculus to find an expression for the derivative $dG/ds$ and to compute the exact value of the derivative
+\[
+        \frac{dG}{ds}\Big|_{s=2} .
+\]
+
+\item Use the idea of Question \ref{Qtyhhdhfdgfd} to find an expression for the derivative $ds/dG$ and the exact value of the derivative
+\[
+   \frac{ds}{dG}\Big|_{G=f(2)} .
+\]
+
+\item For a more algebraic way to find an expression for the derivative $ds/dG$, we'll differentiate both sides of the equation
+\[
+    G =  \frac{s^2}{2000} + \frac{23s}{1000} + \frac{1}{10}
+\]
+with respect to $G$. Keeping in mind that this equation, for values of $s$ between $0$ and $20$, defines $s$ implicitly as a function of $G$ (why?). Then using the chain rule tells us that
+\[
+     \frac{dG}{dG} = \left( \frac{s+23}{1000} \right)  \left( \answer{\frac{ds}{dG}}  \right) .
+\]
+And solving for the derivative $ds/dG$ gives
+\[
+     \frac{ds}{dG} = \answer{\frac{1000}{s+23}} .
+\]
+
+\end{enumerate}
+\end{question}
+
 
 
 
 \section{Derivatives of Inverse Trig Functions}
 
-The idea of computing the derivative of the inverse of a one-to-one function should be simple. But if we require that the derivative of a function be expressed in terms of its independent variable, the algebra can get a bit tricky.
+The idea of computing the derivative of the inverse of a one-to-one function as illustrated above is simple. But if we require that the derivative of the inverse be expressed in terms of \emph{its independent variable}, the algebra can get a bit tricky.
 
 \begin{example} \label{Ecbfghnbng}
 Take for example the function
@@ -76,7 +110,7 @@ The function $\arcsin (y)$ gives the angle between $-\pi/2$ and $\pi/2$ whose si
 \]
 in terms of $y$, is to express the derivative of the original function $y=f(\theta)$ in terms of its output $y=\sin\theta$.
 
-We know that
+Now
 \[
      \frac{dy}{d\theta} = \frac{d}{d\theta} \left( \sin\theta \right) = \cos\theta .
 \]
@@ -89,14 +123,97 @@ So
       \frac{dy}{d\theta} = \cos\theta = \pm \sqrt{1-\sin^2\theta} = \pm \sqrt{1-y^2}.
 \]
 
-To choose between $\pm$, we must remember that by the definition of the arcsine function (see equation (\ref{Eq:ArcSine})), 
+To choose between $\pm$, we must remember that by the definition of the arcsine function (see equation (1)), 
 \[
    \pi/2 \leq \theta \leq \pi/2 .
 \]
 This tells us that $\cos\theta \geq 0$. So we conclude that
 \[
-\frac{dy}{d\theta} = \cos\theta = \sqrt{1-y^2}.
+\frac{d}{dy}\left(  \arcsin y \right)  =\cos\theta = \sqrt{1-y^2}.
 \]
 \end{example}
+
+\section{Exercises}
+
+\begin{exercise}  \label{Eggghhybvbxzzz}
+Express the derivative of each of the following functions in terms of its \emph{output}.
+\begin{enumerate}
+\item 
+\[
+       x = \cos\theta \, , \, 0\leq \theta \leq \pi
+\]
+
+
+\item 
+\[
+       x = \cos\theta \, , \, \pi\leq \theta \leq 2\pi
+\]
+
+\item 
+\[
+       y = \tan\theta \, , \, -\pi/2 < \theta < \pi/2
+\]
+
+\item
+\[
+     P = e^{t/5} \, , \, t\in \mathbb{R} 
+\]
+
+\item 
+\[
+  y = \sinh x \, , \, x\in \mathbb{R} 
+\]
+
+\item
+\[
+   G = \frac{s^2}{2000} + \frac{23s}{1000} + \frac{1}{10} \, , \, 0\leq s\leq 20, 
+\]
+
+\end{enumerate}
+
+\end{exercise}
+
+\begin{exercise} \label{E898gbfgg}
+Use the results of Exercise \ref{Eggghhybvbxzzz} to express the derivative of the inverse of each of the functions in that exercise in terms of its independent variable.
+\end{exercise}
+
+\begin{exercise}  \label{Ehglkhfgjsdafn}
+\begin{itemize}
+\item Find simplified expressions for each of the following derivatives. 
+
+\item Do \emph{not} simplify a function before taking its derivative. 
+
+\item Show all steps in using the chain rule. Use the Leibniz notation. 
+
+\item Use Desmos to graph each function (before taking the derivative).
+
+\item Explain how you could have found an expression for each derivative directly from the graph of the (original) function. 
+
+\end{itemize}
+
+\begin{enumerate}
+\item
+\[
+       \frac{d}{dx}\left( \sin(\arcsin x ) \right)
+\]
+
+\item 
+\[
+       \frac{d}{d\theta}\left( \arcsin(\sin \theta ) \right)
+\]
+
+\item 
+\[
+  \frac{d}{dx}\left( \arctan x + \arctan(1/x)  \right)
+\]
+
+\item
+\[
+    \frac{d}{dx}\left( \arccos x + \arccos\left(\sqrt{1-x^2}\right)  \right)
+\] 
+\end{enumerate}
+
+\end{exercise}
+
 
 \end{document}
