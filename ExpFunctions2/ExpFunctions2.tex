@@ -170,14 +170,25 @@ This means that every two hours the population gets multiplied by 1.25.
        P = 20(1.25^{1/2})^t = 20(1.25)^{\frac{t}{2}} \, , \, 0\leq t \leq 12.
 \]
  
-\item The growth rate (in millions of bacteria/hour) is 
+\item The key to computing the derivative $dP/dt$ is to write the population function using base $e$. Since
+\[
+       1.25 = e^{\ln 1.25},
+\]
+\begin{align*}
+      P &= 20(1.25)^{\frac{t}{2}}  \\
+         &= 20 \left( e^{\ln 1.25} \right)^{\frac{t}{2}} \\
+         &=  20 e^{t (\ln 1.25)/2}
+\end{align*}
+
+
+So the growth rate (in millions of bacteria/hour) is 
 \begin{align*}
   \frac{dP}{dt} &= \frac{d}{dt} \left(  20(1.25)^{\frac{t}{2}} \right) \\
                      &= 20 \frac{d}{dt}\left( e^{t (\ln 1.25)/2}\right) \\
                      &= \left( 20 e^{t (\ln 1.25)/2}\right) \frac{d}{dt} \left(  t (\ln 1.25)/2 \right) \\
                      &= P (\ln 1.25)/2 .
 \end{align*}
-So the relative growth rate (units are $\text{hr}^{-1}$) is
+And the relative growth rate (units are $\text{hr}^{-1}$) is
 \[
   \frac{1}{P} \cdot   \frac{dP}{dt} = \frac{1}{2}\ln 1.25.
 \]
