@@ -98,6 +98,36 @@ Use the chain rule and your knowledge of the derivative $d(e^x)/dx$ to compute e
    \frac{d}{dt}\left( 100 \cdot 2^{t/5} \right)
 \]
 
+\begin{explanation}
+
+\item The key is to realize that 
+\[
+    2 = e^{\ln 2} .
+\]
+So we can write the function to differentiate as
+\[
+    P = 100 \cdot 2^t = 100 \left( e^{\ln 2} \right)^t = 100e^{t\ln 2} .
+\]
+Now we can make a $u$-substitution and use the chain rule. We let
+\[
+       u =t \ln 2 .
+\]
+Then
+\[
+      P = 100e^{t\ln 2} = 100e^u
+\]
+and
+\begin{align*}
+   \frac{dP}{dt} &= \frac{dP}{du} \cdot \frac{du}{dt} \\
+                       &= \frac{d}{du} \left(100e^u\right) \cdot  \frac{d}{dt} \left(  t\ln 2 \right) \\
+                        &= 100e^u (\ln 2) \\
+                        &= P \ln 2 \\
+                     &= (100 \cdot 2^t) \ln 2\\
+                        &= (100 \ln 2)(2^t)
+\end{align*}
+
+\end{explanation}
+
 \end{enumerate}
 \end{question}
 
@@ -114,7 +144,54 @@ A colony of bacteria has a population of $20$ million at noon and a population o
 that expresses the population (in millions) in terms of the number of hours past noon. Do \emph{not} use $e$.
 
 \item Find the relative instantaneous growth rate of the population.
+
+\item Find a function $r=g(P)$ that expresses the (absolute) growth rate in terms of the population.
+
+\item At what rate is the population changing when there are $30$ million bacteria?
 \end{enumerate}
+
+\begin{explanation}
+\item The population increases by 
+\[
+  \frac{25\text{ million} - 20\text{ million}}{20\text{ million}} = 25\%
+\]
+every two hours. 
+
+Better yet, at least for determining the function, is to say  that the two-hour growth factor is
+\[
+\frac{25\text{ million}}{20\text{ million}} = 1.25 .
+\]
+This means that every two hours the population gets multiplied by 1.25.
+
+\item Since the two-hour growth factor is 1.25, the one-hour growth factor is $1.25^{1/2}$. So 
+\[
+       P = 20(1.25^{1/2})^t = 20(1.25)^{\frac{t}{2}} \, , \, 0\leq t \leq 12.
+\]
+ 
+\item The growth rate (in millions of bacteria/hour) is 
+\begin{align*}
+  \frac{dP}{dt} &= \frac{d}{dt} \left(  20(1.25)^{\frac{t}{2}} \right) \\
+                     &= 20 \frac{d}{dt}\left( e^{t (\ln 1.25)/2}\right) \\
+                     &= \left( 20 e^{t (\ln 1.25)/2}\right) \frac{d}{dt} \left(  t (\ln 1.25)/2 \right) \\
+                     &= P (\ln 1.25)/2 .
+\end{align*}
+So the relative growth rate (units are $\text{hr}^{-1}$) is
+\[
+  \frac{1}{P} \cdot   \frac{dP}{dt} = \frac{1}{2}\ln 2.
+\]
+
+\item From the previous part, the function
+\[
+   g(P) = \frac{dP}{dt} = P (\ln 1.25)/2 
+\]
+expresses the growth rate (in millions of bacteria/hour) in terms of the population.
+
+\item When there are 30 million bacteria, the population is increasing at the rate of 
+\[
+       g(30) = (30 \text{ million bacteria}) \left(\frac{1}{2}\ln 1.25 /\text{hr}\right) = 15 \ln 1.25 \text{ million bacteria/hr}.
+\]
+\end{explanation}
+
 \end{question}
 
 
