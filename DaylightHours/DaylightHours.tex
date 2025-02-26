@@ -10,6 +10,45 @@ Modeling the number of hours of daylight.
 \maketitle
 
 
+\begin{question}  \label{Qdf4ppp3455}
+The function
+\[
+    h = f(\delta) = \frac{24}{\pi} \arccos(-\tan\phi \tan\delta) \, , \, -\pi/2+\phi < \delta < \pi/2-\phi ,
+\]
+expresses the number of hours of daylight per day at latitude $\phi$ in terms of the declination of the sun. The declination of the sun ($\delta$) is the angle the sun's rays make with the plane of the equator, taken to be positive between the spring and fall equinoxes in the northern hemisphere. The latitude $\phi$, $-\pi/2 \leq \phi \leq \pi/2$, is positive at points in the northern hemipshere. The graph of the function $h=f(\delta)$ for latitude $\phi\sim 1.1$ is shown below.
+
+Don't be confused by the angle $\delta$ (delta). It's just the lower case Greek letter for $\Delta$.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{ifomatkcta}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Desmos activity available at \href{https://www.desmos.com/calculator/ifomatkcta}{151: Length of Day 1}
+
+\begin{enumerate}
+\item Use the graph to approximate the number of hours of daylight/day at a latitude of $\phi=1.1$ radians on February 26, when the sun is $9^\circ$ below the plane of the equator. What about at our latitude? At the equator?
+
+\item Find the value of the derivative
+\[
+  \frac{dh}{d\delta} \Big|_{\delta = -9^\circ}
+\]
+at our latitude.
+
+\item What are the units of the derivative above? Interpret its meaning.
+\end{enumerate}
+
+
+\end{question}
+
+
+
+
+
+
+
+
 \begin{question}  \label{Q:er43455}
 The function
 \[
@@ -33,7 +72,7 @@ Geogebra activity available at \href{https://www.geogebra.org/classic/vnhrutwu}{
 
 \item Suppose the latitude $\phi$ is held constant and find an expression for the derivative 
 \[
-   \frac{dh}{d\delta} = \frac{d}{d\delta} \left(  -\tan\phi \tan \delta    \right).
+   \frac{dh}{d\delta} %= \frac{d}{d\delta} \left(  -\tan\phi \tan \delta    \right).
 \]
 
 \item What are the units of the derivative in part (b)?
@@ -42,7 +81,7 @@ Geogebra activity available at \href{https://www.geogebra.org/classic/vnhrutwu}{
 
 \item Find an expression for the derivative 
 \[
-   \frac{dh}{d\delta}\Big|_{\delta = 0} =  \frac{d}{d\delta} \left(  -\tan\phi \tan \delta    \right)\Big|_{\delta =0}
+   \frac{dh}{d\delta}\Big|_{\delta = 0} %=  \frac{d}{d\delta} \left(  -\tan\phi \tan \delta    \right)\Big|_{\delta =0}
 \]
 in terms of the latitude $\phi$. 
 
