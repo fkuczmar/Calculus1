@@ -10,9 +10,11 @@ Shortest paths on the earth.
 \maketitle
 
 
-\section{Comparing Distances}
+\section{Along a Circle of Latitude}
 
 \begin{question} \label{Q34dgbnhhtrg}
+
+Pick points $A$ and $B$ at the same latiitude $\phi$ on the earth's surface and let $\theta$ (measured in radians) be the difference in their longitudes, with $0<\theta \leq \pi$.
 
 \begin{onlineOnly}
    \begin{center}
@@ -21,6 +23,31 @@ Shortest paths on the earth.
 \end{onlineOnly}
 
 \href{https://www.desmos.com/3d/ajoeay29il}{151: Distances on Earth}
+
+The purpose of this problem is to compare two distances in traveling from $A$ to $B$, one along their common circle of latitude, the other along the great circle through $A$ and $B$. We'll assume the earth is a sphere of radius $R$ miles.
+
+To compute each distance, we need to see inside the earth. You can do this by deactivating the \emph{Sphere} folder in Line 3.
+
+\begin{enumerate}
+\item First the distance along the circle of latitude.
+
+\begin{enumerate}
+\item Start by expressing the radius of the circle of latitude in terms of the latitude $\phi$ and the radius of earth $R$. Work in general, not with the specific values in the worksheet above.
+
+\item Then express the distance between $A$ and $B$ along the circle of latitude in terms of $\phi$, $R$, and $\theta$.
+\end{enumerate}
+
+\item Next we'll compute the distance along the great circle through $A$ and $B$. The center of this circle coincides with the center of the sphere.
+
+\begin{enumerate}
+\item Try to do this on your own.
+\end{enumerate}
+
+\item Compare these two distances betweeen San Francisco (latitude $38^\circ$N, longtitude $122^\circ$W) and Washington DC  (latitude $38^\circ$N, longtitude $77^\circ$W). Take the radius of the earth to be $3960$ miles.
+
+\item Find two other locations at approximately the same latitude and compare the two distances.
+
+\end{enumerate}
 
 \end{question}
 
