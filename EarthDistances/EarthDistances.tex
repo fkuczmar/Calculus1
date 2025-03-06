@@ -10,7 +10,7 @@ Shortest paths on the earth.
 \maketitle
 
 
-\section{Along a Circle of Latitude}
+\section{Trigonometry: Along a Circle of Latitude}
 
 \begin{question} \label{Q34dgbnhhtrg}
 
@@ -44,16 +44,16 @@ To compute each distance, we need to see inside the earth. You can do this by de
 
 \begin{onlineOnly}
    \begin{center}
-\desmos{3q0ocjq76j}{900}{600}
+\desmos{wkdhhbojii}{900}{600}
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/calculator/3q0ocjq76j}{151: Distances Earth 2D}
+\href{https://www.desmos.com/calculator/wkdhhbojii}{151: Distances Earth 2D}
 
 
 \end{enumerate}
 
-\item Compare these two distances betweeen San Francisco (latitude $38^\circ$N, longtitude $122^\circ$W) and Washington DC  (latitude $38^\circ$N, longtitude $77^\circ$W). Take the radius of the earth to be $3960$ miles.
+\item Use the results of parts (a) and (b) to compare these two distances betweeen San Francisco (latitude $38^\circ$N, longtitude $122^\circ$W) and Washington DC  (latitude $38^\circ$N, longtitude $77^\circ$W). Take the radius of the earth to be $3960$ miles.
 
 \item Find two other locations at approximately the same latitude and compare the two distances.
 
@@ -61,6 +61,23 @@ To compute each distance, we need to see inside the earth. You can do this by de
 
 \end{question}
 
+\section{Calculus: Along a Circle of Latitude}
+This is a continuation of the previous problem.
+
+The question is this: Fix the difference in longitude $\theta$ between two points at the same latitude and determine an expression for the latitude at which the postive difference in the two distances (one along the circle of latitude, the other along the great circle through the points) is a maximum.
+
+\begin{onlineOnly}
+   \begin{center}
+\desmos{muhahdawza}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/muhahdawza}{151: Distances Earth 2D Part 2}
+
+The difference in the two distances is a maximum at latitude
+\[
+   \phi = \answer{\arccos\left( \sqrt{\csc^2 \left(\frac{\theta}{2}\right) - \frac{4}{\theta^2}} \right)} .
+\]
 
 \end{document}
 
