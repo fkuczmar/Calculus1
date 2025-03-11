@@ -1,0 +1,95 @@
+\documentclass{ximera}
+\title{Clock Hands}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+A twist on a familiar problem.
+\end{abstract}
+\maketitle
+
+\section*{Introduction}
+A problem in Stewart asks to find the rate of change in the distance between the tips of the minute and hour hands of a clock. But a more interesting question is to ask when this distance is increasing at the fastest rate. 
+
+
+\begin{exploration}
+(a) Experiment with the animation below, perhaps changing the lengths of the hands. Any conjectures?
+
+(b) The distance function looks sinusoidal, but opening the folder in Line 26 to see the graph of the derivative dispels that notion. 
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{pnpf5uhbre}{450}{600}  %qvk0mzy26u
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/pnpf5uhbre}{151: Hands of a Clock 2}
+
+
+\end{exploration}
+
+\section*{A Computational Solution}
+%It simplifies things if we ignore time and work in the reference frame of one of the hands
+
+\begin{question} \label{Q9dgDDGHGMMMB}
+Determine the angle between the hour and minute hands of a clock when the distance between the tips of these hands is increasing at the fastest rate. Suppose the hour and minute hands have respective lengths $a$ and $b$ inches, with $a<b$. 
+
+\begin{explanation}
+We'll let $a$ and $b$ denote the respective lengths of the hour and minute hands, $\theta$ the angle (in radians) between the hands, and $c$ the distance. Since the hands each turn at a constant rate, our aim is to maximize the derivative
+\[
+        \frac{dc}{d\theta} = \frac{ab\sin \theta}{c} = \frac{ab \sin \theta}{\sqrt{a^2+b^2-2ab\cos\theta}}.
+\]
+Differentiating again and doing some algebra gives
+\[
+       \frac{d^2c}{d\theta^2} = \frac{ab}{c^3} \left( c^2\cos\theta - ab\sin^2\theta  \right).
+\]
+Then setting the second derivative equal to zero and substituting 
+\[
+      c^2 = a^2+b^2-2ab\cos\theta
+\]
+leads to the equation (symmetric in $a$ and $b$)
+\[
+     ab \cos^2\theta - (a^2 + b^2)\cos\theta + ab = 0
+\]
+or
+\[
+              (a \cos \theta - b) (b \cos \theta - a) = 0 .
+\]
+Assuming the minute hand is longer than the hour hand ($b>a$) and $0\leq \theta \leq 2\pi$, we conclude that the distance is increasing at the fastest rate when $\theta = \arccos(a/b)$ and decreasing at the fastest rate when $\theta  = 2\pi - \arccos(a/b)$.
+
+\end{explanation}
+\end{question}
+
+
+\begin{question} \label{Qdgbhhtnnngnb}
+\begin{enumerate}
+\item What can you say if $a<b$? If $a=b$?
+
+\item Supposing $a\neq b$, find an expression for the maximum rate at which the distance between the tips of the hands is increasing.
+\end{enumerate}
+\end{question}
+
+
+\section*{A More Geometrical Solution}
+We could have saved ourselves the trouble of taking the second derivative by using the law of sines in $\Delta ABC$. Then %to write the rate of change $dc/d\theta$ as
+\[
+    \Big| \frac{dc}{d\theta}  \Big| =   \frac{ab\sin C}{c}  = \frac{ab \sin B}{B} = a\sin B
+\]
+so that the rate of change is maximized when $B = \pi/2$ or when $\theta = \arccos(a/b)$ as above.
+
+%To do this, note that when $0<\theta < \pi$, $ab\sin\theta = 2K$ is twice the area of $\Delta ABC$. So
+%\[
+%     \Big| \frac{dc}{d\theta} \Big| = \frac{2K}{c}  = h,
+%\]
+%where $h$ is the altitude from from $C$ to side $\overline{AB}$ in $\Delta ABC$ above. This distance is maximized when $\overline{CA}$ is perpendicular to $\overline{AB}$, giving the same result as before. 
+
+%Or we could use the law of sines in $\Delta ABC$ to get
+%\[
+%   \frac{dc}{d\theta} = \frac{ab\sin \theta}{c} = ab\frac{sin B}{b} = a\sin B .
+%\]
+%So the rate is maximized when angle $B$ is as close to $\pi/2$ as possible.
+
+\section*{A Solution with Vectors}
+
+\end{document}
