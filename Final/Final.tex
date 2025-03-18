@@ -1,0 +1,108 @@
+\documentclass{ximera}
+\title{Final, Math 151}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Directions for our final.
+\end{abstract}
+\maketitle
+
+\section{Directions}
+
+Here are the directions for our final.
+
+\begin{itemize}
+\item Use only the material of our class. In particular, \emph{do not use vectors or other ideas that were not part of our class.}
+
+\item Use the Leibniz differential notation for derivatives and their evaluations. Do \emph{not} use the prime notation.
+
+\item Use the Leibniz notation to show \emph{all} steps when using the the chain, product, and quotient rules. See the next section \emph{Examples of How to Show Work} for more details.
+
+\item Define, in complete sentences and with units any variables or unknowns you introduce.
+
+\item Include a domain for each function you introduce.
+
+\item Include units for \emph{each} number in \emph{each} numerical computation.
+
+\item Give explanations of your reasoning along with your solutions to each problem.
+
+\item Show all your work.
+
+\item Simplify each of your answers as much as possible.
+
+\item Answer each word problem with a concluding sentence.
+
+%\item Write on one side of the paper. Leave the back side blank.
+
+\item Write LARGE and neatly.
+
+\item Leave plenty of space.  %every other line blank. 
+
+\item Work vertically. Do \emph{not} split a page into multiple columns.
+
+\item No technology permitted. Put away all cell phones and calculators. An open cell phone will result in an automatic score of $0$ for the exam.
+
+\item A few derivatives:
+
+\[
+ \frac{d}{dx}\left( \arctan x \right) = \frac{1}{1+x^2} 
+\]
+
+\[
+ \frac{d}{dx}\left( \arcsin x \right) = \frac{1}{\sqrt{1-x^2}} 
+\]
+
+\[
+ \frac{d}{dx}\left( \arccos x \right) = -\frac{1}{\sqrt{1-x^2}} 
+\]
+
+\end{itemize}
+
+\section{Examples of How to Show Work}
+
+Here are some examples of how to show your work when taking derivatives. These examples will \emph{not} be included with the exam.
+
+\begin{example} \label{Ex:POPOPODDD}
+The chain rule (do \emph{not} use the quotient rule for a derivative like this one):
+
+\begin{align*}
+ \frac{d}{d\theta} \left(  \frac{4}{1+\tan\theta}   \right) &= 4 \cdot\frac{d}{d\theta} \left( ({1+\tan\theta} )^{-1}  \right) \\
+               &= -4 (1+\tan\theta)^{-2} \cdot \frac{d}{d\theta} \left( \tan\theta \right) \\
+                &= -4 (1+\tan\theta)^{-2} (\sec^2\theta) .
+\end{align*}
+
+Or, if you prefer, you could make the $u$-substitution explicit by letting
+\[
+ y = 4(1+\tan\theta)^{-1}
+\]
+and 
+\[
+   u = 1+\tan\theta .
+\]
+Then
+\[
+ y = u^{-1}
+\]
+and by the chain rule
+\begin{align*}
+\frac{dy}{d\theta} &= \frac{dy}{du} \cdot \frac{du}{d\theta} \\
+                           &= \frac{d}{du}(u^{-1})\cdot \frac{d}{d\theta}(\tan\theta)  \\
+                           &= (-u^{-2})(\sec^2\theta) \\
+                            &= -4 (1+\tan\theta)^{-2} (\sec^2\theta) .
+    \end{align*}
+
+\end{example}
+
+\begin{example} \label{E8787dfg4t4tre}
+The quotient rule with the chain rule:
+
+\begin{align*}
+\frac{d}{dw}\left( \frac{w^2}{1+ e^{3w}} \right) &= \frac{(1+e^{3w})\frac{d}{dw}(w^2) - w^2\frac{d}{dw}(1+e^{3w})}{(1+e^{3w})^2}  \\
+                 &= \frac{(1+e^{3w})(2w) - w^2 e^{3w}\frac{d}{dw}(3w)}{(1+e^{3w})^2}  \\
+                 &= \frac{(1+e^{3w})(2w) - 3w^2 e^{3w}}{(1+e^{3w})^2} .
+\end{align*}
+\end{example}
+
+\end{document}
