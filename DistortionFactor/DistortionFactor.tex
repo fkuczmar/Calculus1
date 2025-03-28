@@ -1,15 +1,26 @@
 \documentclass{ximera}
-\title{The Derivative as a Distortion Factor}
+\title{Stretching Factors}
 
 \newcommand{\pskip}{\vskip 0.1 in}
 
 \begin{document}
 \begin{abstract}
-Interpreting the derivative as a distortion factor.
+Interpreting the derivative as a local stretching factor.
 \end{abstract}
 \maketitle
 
 \section{Rubber Band Calculus}
+
+Think of the $x$-axis as an elastic band that can be stretched or compressed, and a function $f : \mathbb{R}\to\mathbb{R}$ as a deformation of this band. %For example, the function $f(x)= 2x$ stretches the band about the origin by a factor of two. As illustrated in Figure1, the stretching transforms a set of uniformly spaced marks to a set of marks spaced twice as far apart. Reversing the arrows gives a representation of the inverse function
+
+For example, imagine a thin elastic band of length $4$ meters running along the horizontal $L$-axis from $L=0$ meters to $L=4$ meters.  Now hold the left end fixed and $L=0$ and stretch the right end to $L=8$. Then the function
+\[
+      H = g(L) = 2L \, , \, 0\leq L \leq 4 ,
+\]
+describes that stretching action. It takes as an input the distance (in meters) of a point on the band from the oring and returns as an output the distance from the origin to the corresponding point on the stretched band. The exploration below shows the action of this stretching action.
+
+\begin{exploration} \label{Ex:98f3rgafgbb}
+Drag the slider $k$ in Line 2 below to illustrate the stretching action.
 
 \begin{onlineOnly}
     \begin{center}
@@ -19,15 +30,39 @@ Interpreting the derivative as a distortion factor.
 
 \href{https://www.desmos.com/calculator/qejivz36ui}{151: Rubber Band 1}
 
+\end{exploration}
+
 
 \section{A Hanging Slinky}
 
 \begin{onlineOnly}
     \begin{center}
-\desmos{x4prb8mvuj}{450}{600}  %qvk0mzy26u
+\desmos{zqjjgael5j}{450}{600}  %qvk0mzy26u
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/calculator/x4prb8mvuj}{151: Slinky 3}
+\href{https://www.desmos.com/calculator/zqjjgael5j}{151: Slinky Photo}
+
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{ew24lplwqf}{450}{600}  %qvk0mzy26u
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/ew24lplwqf}{151: Slinky 3}
+
+
+
+\section{A Falling Slinky}
+
+\href{https://www.youtube.com/watch?v=eCMmmEEyOO0}{Falling Slinky}
+
+
+\section{Atmospheric Pressure}
+
+\href{https://projects.iq.harvard.edu/files/acmg/files/intro_atmo_chem_bookchap2.pdf}{Atmospheric Pressure} 
+
 
 \end{document}
