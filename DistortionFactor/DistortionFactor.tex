@@ -36,7 +36,7 @@ The \emph{global stretching factor} for a linear function like %The average rate
 \[
       H = g(L) = 2L \, , \, 0\leq L \leq 4 ,
 \]
-is the slope of the graph. We can caclulate this factor as an average stretching factor (ie. average rate of change) between the points $L=a$  meters and $L=b$ meters from the origin,
+is the slope of its graph. We can calculate this factor as an average stretching factor (ie. an average rate of change) between the points $L=a$  meters and $L=b$ meters from the origin. For $H=2L$, the stretching factor is
 \begin{align*}
   \frac{\Delta H}{\Delta L} &= \frac{f(b) - f(a)}{b-a} \\
                                        &= \frac{\answer{2(b-a)}}{b-a} \\
@@ -67,29 +67,60 @@ Include a domain.
 \section{Non-Linear Stretching Functions}
 
 \begin{example} \label{Ex:JDJFHDtet434t}
-Here's an example of a non-linear stretching function. But like most functions in this class, it acts like a linear function near each point in its domain. So if we zoom in close enough to a point in the stretched band, the band looks like it's stretched by a constant factor. 
+Here's an example
+\[
+      H = f(L) = 10 - \sqrt{100-L^2} \, , \, 0\leq L \leq 10,
+\] 
+of a non-linear stretching function (where $L$ and $H$ are measured in meters as before). Like most functions in this class, it acts like a linear function near most points in its domain. So for example, if we zoom in close enough to the point $H=f(2)$ in the stretched band below, the stretching function looks linear. %the band looks like it's stretched by a constant factor. 
 
-%\begin{exploration} \label{ExLdfdfthyhhhf}
-Drag the slider $u$ in Line 2 below from $u=0$ to $u=1$ to illustrate the stretching action.
+
 \begin{onlineOnly}
     \begin{center}
-\desmos{uelamyuigg}{450}{600}  %qvk0mzy26u
+\desmos{8cotpdqhzi}{450}{600}  %qvk0mzy26u
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/calculator/uelamyuigg}{151: Rubber Band Ladder 5}
+\href{https://www.desmos.com/calculator/8cotpdqhzi}{151: Rubber Band Ladder 5}
 %\end{exploration}
 
 \begin{question} \label{Q:KMndrergvgbg}
 
 \end{question}
 \begin{enumerate}
+
+\item Zoom in close enough to the stretched band near the highlighted output (in black, for the input $L=2$) to make the stretching factor look constant. Then approximate this factor
+
+\item Drag the slider $m$ in Line 4 to $m=95$ and repeat part (a) to approximate the stretching factor at the input $L=9.5$ meters.
+
 \item Parts of the elastic band get stretched, others compressed. Identify these.
-
-\item Zoom in sufficiently close to the stretched band near the highlighted output (in black, for the input $L=2$) so that the stretching factor looks constant. Then approximate this stretching factor.
-
-\item Drag the slider $m$ in Line 4 to $m=9$ and repeat the previous question to approximate the stretching factor at the input $L=9.5$.
 \end{enumerate}
+
+We can also approximate the stretching factors at different inputs by zooming in near enough to the graph of the function $H=f(L)$ to make the graph look like a line. To see the graph of the function activate the folder in Line 22 above.
+
+\begin{enumerate}
+\item Zoom in close enough to the point $P(2,f(2))$ above to make the graph look like a straight line. Then click on the graph to get the coordinates of $P$ and a point close to $P$. Use these to approximate the stretching factor at $L=2$.
+
+\item Drag the slider $m$ in Line 4 to $m=95$ and repeat part (a) to approximate the stretching factor at $L=9.5$.
+
+\item Zoom back out and use the graph of the function $H=f(L)$ to determine the stretching factors at $L=0$ and $L=10$.
+\end{enumerate}
+
+We can also approximate the stretching factors numerically using the expression
+\[
+      H = f(L) = 10- \sqrt{100-L^2} \, , \, 0\leq L \leq 10,
+\] 
+for the stretching function.
+
+For example, at the input $L=2$, we'll to first compute the \emph{average stretching factors} 
+\begin{align*}
+ g(v) &= \frac{\Delta H}{\Delta L} \\
+              &= \frac{f(v) - f(2)}{v-2} \\
+              &=\frac{10 - \sqrt{100-L^2} - (10 - \sqrt{\answer{96}})}{v-2}   \\
+              &= \frac{\sqrt{100-L^2} - \answer{\sqrt{96}}}{v-2} \, , \, v \neq 2,
+\end{align*}
+over the interval $v\leq L \leq 2$ (when $v<L$) or the interval $2 \leq L \leq v$ (when $v>2$). Then we'll check to see if these average stretching factors appear to approach some value as $v\to 2$ (ie. as $v$ approaches $2$).
+
+The quickest way to do this is  
 \end{example}
 
 
