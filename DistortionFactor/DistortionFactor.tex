@@ -11,13 +11,13 @@ Interpreting the derivative as a local stretching factor.
 
 \section{Rubber Band Calculus}
 
-Think of the horizontal axis in a rectangular coordinate system as an elastic band that can be stretched or compressed, and a function $f : \mathbb{R}\to\mathbb{R}$ as a deformation of this band. %For example, the function $f(x)= 2x$ stretches the band about the origin by a factor of two. As illustrated in Figure1, the stretching transforms a set of uniformly spaced marks to a set of marks spaced twice as far apart. Reversing the arrows gives a representation of the inverse function
+Think of a function and the first thing that might come to mind is its graph. But there are other interpretations, and one that will prove particularly useful for us is to think of a function's domain as an elastic band and the function as stretching or compressing that band. %For example, the function $f(x)= 2x$ stretches the band about the origin by a factor of two. As illustrated in Figure1, the stretching transforms a set of uniformly spaced marks to a set of marks spaced twice as far apart. Reversing the arrows gives a representation of the inverse function
 
-For example, imagine a thin elastic band of length $4$ meters running along the horizontal $L$-axis from $L=0$ meters to $L=4$ meters.  Now hold the left end fixed and $L=0$ and stretch the right end to $L=8$. Then the function
+For example, imagine a thin elastic band of length $4$ meters running along the horizontal $L$-axis from $L=0$ meters to $L=4$ meters.  Now hold the left end fixed at $L=0$ and stretch the band by moving right end an additional four meters to the right . Then the function
 \[
       H = g(L) = 2L \, , \, 0\leq L \leq 4 ,
 \]
-describes that stretching action. It takes as an input the distance (in meters) of a point on the band from the origin and returns as an output the distance between the origin and the corresponding point on the stretched band. The exploration below shows this stretching action.
+describes this stretching action. It takes as an input the distance (in meters) of a point on the band from the origin ($L=0$) and returns as an output the distance between the origin and the corresponding point on the stretched band. The exploration below shows this stretching action.
 
 \begin{exploration} \label{Ex:98f3rgafgbb}
 Drag the slider $k$ in Line 2 below to illustrate the stretching action.
@@ -32,11 +32,11 @@ Drag the slider $k$ in Line 2 below to illustrate the stretching action.
 
 \end{exploration}
 
-The \emph{global stretching factor} for a linear function like %The average rate of change of the function,
+The \emph{global stretching factor} for a linear function like the one above, %The average rate of change of the function,
 \[
       H = g(L) = 2L \, , \, 0\leq L \leq 4 ,
 \]
-is the slope of its graph. We can calculate this factor as an average stretching factor (ie. an average rate of change) between the points $L=a$  meters and $L=b$ meters from the origin. For $H=2L$, the stretching factor is
+is the slope of its graph. We can calculate this factor as an average stretching factor (ie. an average rate of change) between the points $L=a$  meters and $L=b$ meters from the origin. For the function $H=f(L) = 2L$, the stretching factor is
 \begin{align*}
   \frac{\Delta H}{\Delta L} &= \frac{f(b) - f(a)}{b-a} \\
                                        &= \frac{\answer{2(b-a)}}{b-a} \\
@@ -71,34 +71,34 @@ Here's an example
 \[
       H = f(L) = 10 - \sqrt{100-L^2} \, , \, 0\leq L \leq 10,
 \] 
-of a non-linear stretching function (where $L$ and $H$ are measured in meters as before). Like most functions in this class, it acts like a linear function near most points in its domain. So for example, if we zoom in close enough to the point $H=f(2)$ in the stretched band below, the stretching function looks linear. %the band looks like it's stretched by a constant factor. 
+of a non-linear stretching function (where $L$ and $H$ are measured in meters as before). Like most functions in this class, it acts like a linear function near most points in its domain. 
+
+To stretch the elastic band in the demonstration below, drag the slider $u$ in Line 2 from $u=0$ to $u=1$. Then zoom in close enough to the point $H=f(2)$ in the stretched band (highlighted in black) to make the stretching function look linear. %the band looks like it's stretched by a constant factor. 
 
 
 \begin{onlineOnly}
     \begin{center}
-\desmos{8cotpdqhzi}{450}{600}  %qvk0mzy26u
+\desmos{nyd60dbezj}{450}{600}  %qvk0mzy26u
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/calculator/8cotpdqhzi}{151: Rubber Band Ladder 5}
+\href{https://www.desmos.com/calculator/nyd60dbezj}{151: Rubber Band Ladder 5}
 %\end{exploration}
 
-\begin{question} \label{Q:KMndrergvgbg}
 
-\end{question}
 \begin{enumerate}
 
-\item Zoom in close enough to the stretched band near the highlighted output (in black, for the input $L=2$) to make the stretching function. Use this to approximate the stretching factor at the input $L=2$.
+\item Use the close-up view of the stretched band to approximate the stretching factor at the input $L=2$.
 
 \item Drag the slider $m$ in Line 4 to $m=95$ and repeat part (a) to approximate the stretching factor at the input $L=9.5$ meters.
 
 \item Parts of the elastic band get stretched, others compressed. Identify these.
 \end{enumerate}
 
-We can also approximate the stretching factors at different inputs by zooming in near enough to the graph of the function $H=f(L)$ to make the graph look like a line. To see the graph of the function activate the folder in Line 22 above.
+We can also approximate the stretching factors at different inputs by zooming in near enough to the graph of the function $H=f(L)$ to make the graph look like a line. To see the graph of the function, zoom back out and then activate the folder in Line 22 of the worksheet above.
 
 \begin{enumerate}
-\item Zoom in close enough to the point $P(2,f(2))$ above to make the graph look like a straight line. Then click on the graph to get the coordinates of $P$ and a point close to $P$. Use these to approximate the stretching factor at $L=2$.
+\item Now zoom in close enough to the point $P(2,f(2))$ to make the graph look like a straight line. Then click on the graph to get the coordinates of $P$ and a point close to $P$. Use these to approximate the stretching factor at $L=2$.
 
 \item Drag the slider $m$ in Line 4 to $m=95$ and repeat part (a) to approximate the stretching factor at $L=9.5$.
 
