@@ -88,7 +88,7 @@ of a non-linear stretching function (where $L$ and $H$ are measured in meters as
 \end{question}
 \begin{enumerate}
 
-\item Zoom in close enough to the stretched band near the highlighted output (in black, for the input $L=2$) to make the stretching factor look constant. Then approximate this factor
+\item Zoom in close enough to the stretched band near the highlighted output (in black, for the input $L=2$) to make the stretching function. Use this to approximate the stretching factor at the input $L=2$.
 
 \item Drag the slider $m$ in Line 4 to $m=95$ and repeat part (a) to approximate the stretching factor at the input $L=9.5$ meters.
 
@@ -111,14 +111,15 @@ We can also approximate the stretching factors numerically using the expression
 \] 
 for the stretching function.
 
-For example, at the input $L=2$, we'll to first compute the \emph{average stretching factors} 
+For example, at the input $L=2$, we'll to first compute the \emph{average stretching factor} over the interval $v\leq L \leq 2$ (when $v<L$) or the interval $2 \leq L \leq v$ (when $v>2$). This average rate of change is 
 \begin{align*}
  g(v) &= \frac{\Delta H}{\Delta L} \\
               &= \frac{f(v) - f(2)}{v-2} \\
               &=\frac{10 - \sqrt{100-L^2} - (10 - \sqrt{\answer{96}})}{v-2}   \\
-              &= \frac{\sqrt{100-L^2} - \answer{\sqrt{96}}}{v-2} \, , \, v \neq 2,
+              &= \frac{\sqrt{100-L^2} - \answer{\sqrt{96}}}{v-2} \, , \, v \neq 2.
 \end{align*}
-over the interval $v\leq L \leq 2$ (when $v<L$) or the interval $2 \leq L \leq v$ (when $v>2$). Then we'll check to see if these average stretching factors appear to approach some value as $v\to 2$ (ie. as $v$ approaches $2$).
+
+Next we'll check to see if these average stretching factors appear to approach some value as $v\to 2$ (ie. as $v$ approaches $2$).
 
 The quickest way to do this is  
 \end{example}
