@@ -123,8 +123,8 @@ For example, at the input $L=2$, we'll to first compute the \emph{average stretc
 \begin{align*}
  k(v) &= \frac{\Delta H}{\Delta L} \\
               &= \frac{f(v) - f(2)}{v-2} \\
-              &=\frac{10 - \sqrt{100-L^2} - (10 - \sqrt{\answer{96}})}{v-2}   \\
-              &= \frac{\sqrt{100-L^2} - \answer{\sqrt{96}}}{v-2} \, , \, v \neq 2.
+              &=\frac{10 - \sqrt{100-v^2} - (10 - \sqrt{\answer{96}})}{v-2}   \\
+              &= \frac{\sqrt{100-v^2} - \answer{\sqrt{96}}}{v-2} \, , \, v \neq 2.
 \end{align*}
 
 \begin{enumerate}
@@ -202,7 +202,7 @@ dragging the slider $u$ in Line 2 below from $u=0$ to $u=1$ to illustrate the st
 
 \section{A Hanging Slinky}
 \begin{example} \label{Ex:MDH4955gfg}
-A slinky stretched under its own weight gives a example of a stretching function. 
+A hanging slinky stretched under its own weight gives a example of a stretching function. 
 
 
 \begin{onlineOnly}
@@ -213,7 +213,7 @@ A slinky stretched under its own weight gives a example of a stretching function
 
 \href{https://www.desmos.com/calculator/zqjjgael5j}{151: Slinky Photo}
 
-We can model the stretching function for an ideal spring stretched under its own weight with the function
+We can model the stretching of an ideal spring stretched under its own weight with the function
 \[
  H = f(L) = L + \frac{g\rho}{2kL_0}L^2 \, , \, 0\leq L \leq L_0 ,
 \]
@@ -227,9 +227,9 @@ where
 
 \item $k$ (measured in Netwons/meter) is the spring constant,
 
-\item the input $L$ is the distance of a point on the relaxed spring from the spring's bottom end, and
+\item $L$ is the distance of a point on the relaxed spring from the spring's bottom end, and
 
-\item the output $H=f(L)$ is the distance from the corresponding point on the stretched spring to the spring's bottom end.
+\item $H=f(L)$ is the distance from the corresponding point on the stretched spring to the spring's bottom end.
 
 \end{itemize}
 
@@ -239,17 +239,17 @@ Use the above information to check that the above expression for $H=f(L)$ has th
 
 
 
-Drag the slider $g$ in Line 5 of the worksheet below from $g=0$ to $g=g_0 = 0.5 \text{m/sec}^2$ to turn on the gravitational field. 
+Drag the slider $g$ in Line 5 of the worksheet below from $g=0$ to $g=g_0 = 0.5 \text{m/sec}^2$ to turn on the gravitational field and stretch the slinky. 
 
 \begin{onlineOnly}
     \begin{center}
-\desmos{euapqewpoo}{450}{600}  %qvk0mzy26u
+\desmos{vjjibjkdrz}{450}{600}  %qvk0mzy26u
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/calculator/euapqewpoo}{151: Slinky 3}
+\href{https://www.desmos.com/calculator/vjjibjkdrz}{151: Slinky 3}
 
-We'll now work with the stretching function in the workhseet,
+We'll now work with the stretching function in the workhseet above,
 \[
       H = f(L) = L + \frac{1}{4}L^2 \, , \, 0\leq L \leq 4.
 \]
@@ -257,18 +257,67 @@ We'll now work with the stretching function in the workhseet,
 \begin{enumerate}
 \item Use the pictures of the springs at the left of the graph to estimate the local stretching factor
 \[
-  \frac{dH}{dL}\Big|_{L=2}
+  \frac{dH}{dL}\Big|_{L=3}
 \]
 at the point in the relaxed spring $L=3$ meters from its bottom end.
 
-\item Find an expression for the average stretching factor between inputs $L=3$ and $L=v$ meters. This expression is
+\item Find an expression for the average stretching factor between inputs $L=3$ and $L=v$ meters. This factor is
 \begin{align*}
-   k(v) &= \frac{\Delta H}{\Delta L} \\
+  a= m(v) &= \frac{\Delta H}{\Delta L} \\
               &= \frac{f(v) - f(\answer{3})}{\answer{v-3}} \\
-              &=\frac{\answer{v^2}-9}{4\answer{(v-3)}}   \\
-              &= \frac{(\answer{v-3})(v+3)}{4\answer{(v-3)}} \\
-              &=   \frac{\answer{v+3}}{4} \, , \, v \neq \answer{3}.
+              &=\frac{v^2-9}{\answer{4(v-3)}}  
 \end{align*}
+             
+\item Enter this expression in Line 1 of the worksheet below. Then
+\begin{enumerate}
+\item Use the table in Line 2 to guess the exact value of the local stretching factor at $L=3$. Compare this with your estimate.
+
+\item Drag the slider $v$ in Line 11 and use the output in Line 12 ($m(v))$ to guess the exact value of the stretching factor at $L=3$.
+
+\item Describe how the line $PQ$ is related to the average stretching factor $a=m(v)$. 
+\end{enumerate}
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{zsbupxubm6}{450}{600}  %qvk0mzy26u
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/zsbupxubm6}{151: Slinky 4}
+
+
+\item Now we'll compute the local stretching factor at $L=3$ algebraically. This factor is the derivative
+\[
+  \frac{dH}{dL}\Big|_{L=3} 
+\]
+of $H$ with respect to $L$ evaluated at $L=3$. It is equal to the limit, as $v$ approaches $3$, of the average stretching factor $m(v)$ between lengths $L=3$ and $L=v$. Here's the computation with some algebra left for you near the end:
+
+\begin{align*}
+  \frac{dH}{dL}\Big|_{L=3} &= \lim_{\Delta L \to 0} \frac{\Delta H}{\Delta L} \\
+              &= \lim_{v\to 3}\frac{f(v) - f(3)}{v-3} \\
+              &= \lim_{v\to 3}\frac{v^2-9}{4(v-3)}   \\
+              &= \lim_{v\to 3} \frac{(\answer{v-3})(v+3)}{4(v-3)} \\
+              &=  \lim_{v\to 3} \frac{\answer{v+3}}{4} \\
+              &= \frac{\answer{3}+3}{4}  \\
+              &= \answer{1.5} .
+\end{align*}
+
+\item So our conclusion is that the local stretching factor of the stretching function
+\[
+      H = f(L) = L + \frac{1}{4}L^2 \, , \, 0\leq L \leq 4,
+\]
+at $L=3$ is equal to $1.5$ meters/meter. This is a dimensionless scaling factor. It means that a small interval of length $\Delta L\sim 0$ meters around the point $L=3$ on the relaxed band gets stretched to a small interval approximately $1.5$ times as long. Symbolically, we can write this as
+\[
+          \Delta H \sim 1.5\Delta L,
+\]
+where
+\[
+   \Delta H = f(L) - f(3)
+\]
+and 
+\[
+    \Delta L = L - 3 \sim 0 .
+\]
 \end{enumerate}
 
 
