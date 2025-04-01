@@ -51,7 +51,7 @@ You should have found that
 \[
     \frac{dT}{dm} \Big|_{T=40} = -2^\circ\text{C}/\text{min}.
 \]
-This means that at the moment the clock strikes 12:04pm the temperature of the coffee is decreasing at the rate of $2^\circ$C/min. As long as we do not think too carefully about what exactly we mean by a moment in time, the meaning of the derivative here is pretty clear.
+This means that at the moment the temperature of the coffee is $40^\circ$C, the temperature is decreasing at the rate of $2^\circ$C/min. As long as we do not think too carefully about what exactly we mean by a moment in time, the meaning of the derivative is pretty clear.
 
 But while this interpretation of the derivative as an instantaneous rate of change is often useful, it is fairly limited in scope. Perhaps the biggest problem is that the idea of slope does not extend to higher dimensions. %I, we really should think about small changes.
 
@@ -59,7 +59,7 @@ But while this interpretation of the derivative as an instantaneous rate of chan
 
 A function $f:\mathbb{R}^2\to \mathbb{R}^2$, like the function
 \[
-  (u,v) = f(x,y) = (0.2(x^2-y^2) , 0.4xy) 
+  (u,v) = f(x,y) = (0.2(x^2-y^2) , 0.4xy) ,
 \]
 maps the two-dimensional plane to itself. You can get a feel for the gobal action of this function by dragging the slider $u$ in Line 2 from $u=0$ to $u=1$. This transforms the checkerboard of horizontal and vertical lines into two families of intersecting parabolas and gives a global perspective of the function.
 
@@ -73,11 +73,11 @@ maps the two-dimensional plane to itself. You can get a feel for the gobal actio
 
 By focusing on the shaded square you can get a feeling for the local action of the function near point $P$. Here $f$ maps this square to a square-like region with a different size and orientation. The image becomes more square-like by shrinking the side length $s$ of the original square (do this by dradding Slider $s$ in Line 4 toward $s=0.1$.
 
-The derivative of this function at the point $P$ describes how the function acts near $P$. It can be described by just two numbers. One is a scaling (stretching) factor $k$ that measures the ratio of the sides lengths of the original small square and its square-like image, 
+The derivative of this function at the point $P$ describes how the function acts near $P$. It can be described by just two numbers. One is a scaling (stretching) factor $k$ that measures the ratio of the sides lengths of the original very small square and its square-like image, 
 \[
          k = \lim_{s\to 0}\frac{\text{side length of square-like image}}{s} .
 \]
-The other number is an angle. It is the angle through which we would rotate the orginal square to make its sides parallel to its square-like image. 
+The other number is an angle. It is the angle through which we would rotate the orginal very small square to make its sides parallel to its square-like image. 
 
 \begin{question} \label{Q:LDFDFDF}
 \begin{enumerate}
