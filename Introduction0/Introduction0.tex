@@ -9,10 +9,9 @@ An introduction to what it means for a function to be differentiable.
 \end{abstract}
 \maketitle
 
+Your precalculus classes were about functions, exponential, logarithmic, rational, trigonometric ... , all from a global perspective. Differential calculus is about these same functions, but from a \emph{local} perspective. In one sense, the main idea of this class is to describe how \emph{small} changes to the input of a function change the output. After all, \emph{differential} has the same root as \emph{difference} and \emph{calculus} the same root as \emph{calculate}. So \emph{differential calculus} really means to calculate differences. Put more simply, this course is about subtraction.
 
-
-
-Zoom in closer and closer near a point $(a,f(a))$ on the graph of a common function $f$ and you'll most likely notice that the graph looks more and more like the graph of a linear function (ie. like a non-vertical line). If so, we say the function $y=f(x)$ is \emph{differentiable} at $x=a$. And the \emph{derivative} of the function, evaluated at $x=a$, written as
+One way to understand how small changes in the input of a function affect thes output is to zom in close to a point $(a,f(a))$ on the graph of a function $y=f(x)$. Do this and you'll most likely notice that the graph looks more and more like the graph of a linear function (ie. like a non-vertical line). If so, we say the function $y=f(x)$ is \emph{differentiable} at $x=a$. And the \emph{derivative} of the function, evaluated at $x=a$, written as
 \[
      \frac{dy}{dx}\Big|_{x=a},
 \]
@@ -47,6 +46,50 @@ expressing the temperature (in $^\circ$C) of a cup of coffee in terms of the num
 \item Repeat parts (a) and (b) for other temperatures by draggind the slider $T_0$ in Line 2 of the worksheet above. Then see if you can find a relationship between the temperature $T$ and the rate $dT/dm$ at which the temperature of the coffee is changing. 
 
 \end{enumerate}
+
+You should have found that 
+\[
+    \frac{dT}{dm} \Big|_{T=40} = -2^\circ\text{C}/\text{min}.
+\]
+This means that at the moment the clock strikes 12:04pm the temperature of the coffee is decreasing at the rate of $2^\circ$C/min. As long as we do not think too carefully about what exactly we mean by a moment in time, the meaning of the derivative here is pretty clear.
+
+But while this interpretation of the derivative as an instantaneous rate of change is often useful, it is fairly limited in scope. Perhaps the biggest problem is that the idea of slope does not extend to higher dimensions. %I, we really should think about small changes.
+
 \end{example}
+
+A function $f:\mathbb{R}^2\to \mathbb{R}^2$, like the function
+\[
+  (u,v) = f(x,y) = (0.2(x^2-y^2) , 0.4xy) 
+\]
+maps the two-dimensional plane to itself. You can get a feel for the gobal action of this function by dragging the slider $u$ in Line 2 from $u=0$ to $u=1$. This transforms the checkerboard of horizontal and vertical lines into two families of intersecting parabolas and gives a global perspective of the function.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{h4sslgjjyx}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/h4sslgjjyx}{151: Complex Squaring Function}
+
+By focusing on the shaded square you can get a feeling for the local action of the function near point $P$. Here $f$ maps this square to a square-like region with a different size and orientation. The image becomes more square-like by shrinking the side length $s$ of the original square (do this by dradding Slider $s$ in Line 4 toward $s=0.1$.
+
+The derivative of this function at the point $P$ describes how the function acts near $P$. It can be described by just two numbers. One is a scaling (stretching) factor $k$ that measures the ratio of the sides lengths of the original small square and its square-like image, 
+\[
+         k = \lim_{s\to 0}\frac{\text{side length of square-like image}}{s} .
+\]
+The other number is an angle. It is the angle through which we would rotate the orginal square to make its sides parallel to its square-like image. 
+
+\begin{question} \label{Q:LDFDFDF}
+\begin{enumerate}
+\item Use the animation above to approximate the scaling factor $k$.
+
+\item Use the animation above to approximate the rotation angle $\theta$.
+\end{enumerate}
+\end{question} 
+
+Fortuntately for us, because our class is about functions $f:\mathbb{R}\to \mathbb{R}$ that map the real line (or a subset thereof) to itself, rotations do not come into play. So the local behavior of such functions, at least where they are differentiable, can be described by just one number. This number, the derivative, measures the local stretching (or scaling) factor. 
+
+
+
 
 \end{document}
