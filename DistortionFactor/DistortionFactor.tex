@@ -133,6 +133,8 @@ For example, at the input $L=2$, we'll to first compute the \emph{average stretc
 \item Repeat part (a) to approximate the stretching factor at the input $L=9.5$ and compare this with your earlier estimate.
 
 \item Repeat part (a) to approximate the stretching factor at the right end where $L=10$. Anything different here?
+
+\item Use the geometry of the graph of the function $H=f(L)$ to compute the \emph{exact} stretching factors at $L=2, 9.5, 10$.
 \end{enumerate}
  
 \end{example}
@@ -332,8 +334,53 @@ of the inverse at $L=3$? Explain your reasoning.
 of this same function at the point $L=b$ meters from the bottom end of the relaxed spring by evaluating the limit (as $v\to b$) of the average stretching factor between $L=v$ and $L=b$. Then check your result by substituting $b=3$. Check also with the above worksheets at a few other values of $b$.
 \end{enumerate}
 
+\end{example}
+
+\section{Gas Consumption}
+Most of our applications will not be about springs or elastic bands. Nevertheless, we can still think of the derivative as a local stretching factor. But iit might be better to talk about a local \emph{scaling factor} instead. The derivative scales (ie. multiplies) a small change in the input to give an approximate corresponding change in the output. Here's an example.
+
+\begin{example} \label{Ex:987GHEjerf}
+The function
+\[
+    G = f(s) = \frac{1}{2000}(s-100)^2 \, , \, 0\leq s \leq 80,
+\]
+expresses the number of gallons of gas in a car in terms of the trip odometer reading in miles. Its graph is shown below.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{wdnmaszvgbr}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/wdnmaszvgb}{151: Gas Consumption A}
+
+\begin{enumerate}
+\item What are the units of the factor $1/2000$ in the function $f$? How do you know?
+
+\item Find the average rate (in gal/mile) at which the car burned gas during the trip. Then find the average gas mileage (in miles/gal) over the entire trip.
+
+\item Use the graph above to approximate the rate (in gal/mile) at which the car burns gas when the odometer reads $60$ miles. Then approximate the gas mileage (in miles/gal) at this odometer reading.
+
+\item Enter the correct expression in Line 5 of the worksheet for the average rate at which the car burns gas between odometer readings $s=v$ and $s=60$ miles. Then use the table to guess the exact rate at which the car burns gas at the odometer reading $s=60$ miles. %Find also the exact gas mileage at this odometer reading.
+
+\item Use the algebra of limits to compute the exact rate (in gal/mile) at which the car burns gas when the odometer reads $60$ miles.
+
+\item Approximate the change 
+\[
+  \Delta G = f(v) - f(60)
+\]
+in the number of gallons of gas in the tank from odometer reading $s=60$ miles to odometer reading $s=v$ miles in terms of the change
+\[
+     \Delta v = v - 60
+\] 
+in the odometer reading. Assume $\Delta v \sim 0$.
+
+\item Use the algebra of limits as above to compute the exact rate (in gal/mile) at which the car burns gas at the odometer reading $s=u$ miles.
+
+\end{enumerate}
 
 \end{example}
+
 
 \section{A Falling Slinky}
 
