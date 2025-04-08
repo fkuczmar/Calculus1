@@ -61,13 +61,75 @@ Be sure to include units. Note that because of the different  scale on the verti
 \item Now suppose between 9am and 5pm the price of apples increases at a constant rate. Suppose also that the price is $\$2$/lb at 9am and $\$4$/lb at 2pm. 
 
 \begin{enumerate}
-\item Find an expression for the function $N=f(t)$.
+\item Find an expression for the function $N=f(t)$. Click the arrow to the lower right for a hint.
 
-\item Find an expression for the function $r=m(v)$. Include the appropriate domain.
+\begin{expandable}
+First find a function 
+\[
+     P = g(t), 0\leq t \leq 8,
+\]
+that expresses the price (in dollars/pound) in terms of the number of hours past 9am.
+\end{expandable}
 
-\item Use your expression for $m(v)$ and the algebra of limits to compute the rate of change at 2pm in the number of pounds of apples you can buy with $\$36$.
+\item Find an expression for the function $r=m(v)$. Include the appropriate domain. Click the arrow at the lower right for the solution.
 
-\item Compare at 2pm the relative rate of change in the number of pounds of apples you can buy with $\$36$ and the relative rate of change in the price.
+\begin{expandable}
+Working with the function
+\begin{align*}
+         N  &= f(t)  \\
+             &= \frac{36}{2+\frac{2}{5}t}  \\
+             &= \frac{90}{5+t} \, , \, 0\leq t \leq 8,
+\end{align*}
+we have
+\begin{align*}
+ m(v) &= \frac{f(v)-f(5)}{v-5} \\
+         &= \frac{1}{v-5} \left(   \frac{90}{5+v} - 9   \right) \\
+         &= \frac{1}{v-5} \left(   \frac{45-9v}{v+5}  \right) \\
+         &= \frac{-9}{v+5} \text{ if } v\neq 5 .
+\end{align*}
+
+\end{expandable}
+
+\item Use your expression for $m(v)$ and the algebra of limits to compute the rate of change (with respect to time) at 2pm in the number of pounds of apples you can buy with $\$36$. Click on the arrow at the lower right for the solution.
+
+\begin{expandable}
+The question is asking us to compute the derivative
+\[
+  \frac{dN}{dt}\Big|_{t=5} = \lim_{v\to 5} \frac{f(v)-f(5)}{v-5} .
+\]
+
+Using the previous part, we get
+\begin{align*}
+\frac{dN}{dt}\Big|_{t=5} &= \lim_{v\to 5} \frac{f(v)-f(5)}{v-5} \\
+                                    &= \lim_{v\to 5} \frac{-9}{v+5} \\
+                                    &= \frac{-9}{5+5} \\
+                                   &= -0.9 .
+\end{align*}
+
+\emph{Conclusion:} At 2pm we can buy 5 pounds of apples with $\$36$. And at 2pm the number of pounds of apples we can buy with $\$36$ is decreasing at the rate of $0.9$ lb/hour.
+\end{expandable}
+
+\item Compare at 2pm the relative rate of change in the number of pounds of apples you can buy with $\$36$ and the relative rate of change in the price. Click on the arrow for a solution.
+
+\begin{expandable}
+To compute the \emph{relative} rate of change in the price at 2pm, we divide the absolute rate of change, $0.40(\$/\text{lb})/hr$, by the price $P=f(5) = \$4$/lb at that time. This tells us the price is increasing at the relative rate of 
+\[
+   \frac{1}{P} \cdot \frac{dP}{dt} \Big|_{t=5} = \frac{0.40(\$/\text{lb})/\text{hr}}{4(\$/\text{lb})} = 10\%/\text{hr}
+\]
+at 2pm.
+
+At the same time, the number of pounds of apples we can buy with $\$36$ is changing at the relative rate of 
+\[
+  \frac{1}{N} \cdot \frac{dN}{dt} \Big|_{t=5} = \frac{-0.9 \text{ lb/hr}}{9\text{ lb}} = -10\%/\text{hr} .
+\]
+So at 2pm the number of pounds of apples we can buy with $\$36$ is decreasing at the relative rate of $10\%$/hr.
+\end{expandable}
+
+\begin{freeResponse}
+Notice anything?
+\end{freeResponse}
+
+
 \end{enumerate}
 
 \end{enumerate}
