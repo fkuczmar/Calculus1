@@ -10,6 +10,72 @@ Practice with limits and derivatives.
 \maketitle
 
 
+\section{More Practice with Rational Functions}
+
+\begin{question} \label{QPODFDgdfgfg}
+The function
+\[
+        W = f(r) = \frac{2000}{r^2} , r\geq 4 ,
+\]
+expresses the weight of an astronaut (measured in pounds) in terms of her distance from the center of the earth (measured in thousands of miles).
+
+\begin{enumerate}
+\item  Find an expression for the average rate of change in the astronaut's weight with respect to her distance from the earth's center between distances $r=b$ and $r=c$ thousands of miles from the center. Assume $b,c\geq 4$ and that $b\neq c$.
+
+\item Use your \emph{expression from part (a) directly and the definition of the derivative} to find an expression (fully simplified) for the derivative
+\[
+   \frac{dW}{dr}\Big|_{r=b} .
+\]
+
+\item Use part (b) to evaluate the derivative
+\[
+   \frac{dW}{dr}\Big|_{r=25} .
+\]
+
+\item What are the units of the derivative above?
+
+\item Explain the meaning of the derivative in part (c) using the language of small changes.
+\end{enumerate}
+
+\end{question}
+
+\begin{question} \label{QOidIdtgt4n}
+The function
+\[
+   g = f(v) = \frac{1}{2}v + 10 \, , \, 10\leq v \leq 55 ,
+\]
+expresses the gas mileage (in miles/gal) of a car in terms of its speed.
+
+\begin{enumerate}
+\item At what rate (in gal/hr) does the car burn gas at a speed of $40$ miles/hour?
+
+\item Find a function
+\[
+    r =g(v)\, , \, 10\leq v \leq 55 ,
+\]
+that expresses the rate (in gal/hr) at which the car burns gas in terms of its speed.
+
+Answer: The function is 
+\[
+     r = g(v) = \answer{\frac{v}{\frac{1}{2}v + 15}} \, , \, 10\leq v \leq 55 .
+\]
+
+\item Find an expression for the average rate of change in the rate at which the car burns gas with respect to its speed between speeds of $v=w$ and $v=b$ miles/hour. Then use this expression and the algebra of limits to find an expression for the derivative
+\[
+   \frac{dr}{dv}\Big|_{v=b} .
+\]
+
+\item Evaluate the derivative
+\[
+   \frac{dr}{dv}\Big|_{v=40} .
+\]
+
+\item What are the units of the derivative above. Explain its meaning in terms of small changes.
+
+
+\end{enumerate}
+\end{question}
+
 \section{The Squaring Function and Its Inverse}
 
 \begin{question}  \label{QPodfoitte43}
@@ -17,10 +83,10 @@ The function
 \[
          A = f(s) \, , \, s\geq 0 ,
 \]
-expresses the area of a square (measured in meters) in terms of its side length (in meters).
+expresses the area of a square (measured in square feet) in terms of its side length (in feet).
 
 \begin{enumerate}
-\item Find an expression for the average rate of change in the area of a square with respect to its side length between side lengths $s=b$ and $s=w$ meters.
+\item Find an expression for the average rate of change in the area of a square with respect to its side length between side lengths $s=b$ and $s=w$ feet.
 
 \item Use your expression from part (a) and the algebra of limits to find an expression for the derivative
 \[
@@ -41,14 +107,132 @@ You should have found that
 \[
     \frac{dA}{ds}\Big|_{s=5} = 10 \text{ ft}^2/\text{ft} .
 \]
+This means that if the change
+\[
+    \Delta s = s-5 \sim 0,
+\]
+in the side length is small, and  
+\[
+   \Delta A = f(s) - f(5) = f(s)-25
+\]
+is the resulting change in the area, the derivative is a good approximation to the average rate of change. That is,
+\[
+  \frac{\Delta A}{\Delta s} \sim \frac{dA}{ds}\Big|_{s=5} = 10 \text{ ft}^2/\text{ft},
+\]
+and
+\[
+   \Delta A \sim 10 \Delta s. 
+\]
 
+For example, if 
+\[
+ \Delta s = 0.1 ,
+\]
+then 
+\[
+    \Delta A \sim (10 \text{ ft} ) (0.1 \text{ ft}) = 1 \text{ ft}^2.
+\]
+Compare this approximation with the actual change
+\[
+   \Delta A = f(5.1) - f(5) = 1.01 \text{ ft}^2
+\]
+in the area. Pretty good.
 \end{explanation}
 
 \end{enumerate}
 
 \end{question}
 
+\begin{question} \label{QDfg5rtghbcvdf}
+The function 
+\[
+   s = g(A) =\sqrt{A} \, , \, A\geq 0 ,
+\]
+expresses the side length (in feet) of a square in terms of its area (in square feet).
 
+\begin{enumerate}
+%\item Find an expression for the average rate of change in the side length with respect to area between areas $A=a$ and $A=w$ square feet.
+
+\item Use the algebra of limits to find an expression for the derivative
+\[
+      \frac{ds}{dA}\Big|_{A=a}.
+\]
+
+\item Evaluate the derivative
+\[
+     \frac{ds}{dA}\Big|_{A=25}.
+\]
+What are its units? Explain its meaning in terms of small changes.
+
+\begin{explanation}
+The standard approach goes something like this.
+\begin{align*}
+    \frac{ds}{dA}\Big|_{A=a} &= \lim_{w\to a} \frac{g(w)-g(a)}{w-a} \\
+                                             &= \lim_{w\to a} \frac{\sqrt{w}-\sqrt{a}}{w-a} \\
+                                            &= \lim_{w\to a} \frac{\sqrt{w}-\sqrt{a}}{(\sqrt{w}-\sqrt{a})(\sqrt{w}+\sqrt{a})} \\
+                                           &= \lim_{w\to a} \frac{1}{\sqrt{w}+\sqrt{a}} \\
+                                            &= \frac{1}{2\sqrt{a}} .
+\end{align*}
+
+This approach obscures a key point. Namely, that the function $g$ is the \emph{inverse} of the function $f$ in Question 1. We can exploit this by instead rewriting the equation
+\[
+       s = \sqrt{A} = g(A)
+\]
+as 
+\[
+    A = s^2 = f(s).
+\]
+Now we'll find an expression for the derivative
+\[
+     \frac{ds}{dA}\Big|_{s=b}
+\]
+in terms of the side length $s=b$. This gives
+\begin{align*}
+        \frac{ds}{dA}\Big|_{s=b} &= \lim_{w\to b}\frac{w-b}{f(w) - f(b)} \\
+                                              &=\lim_{w\to b}\frac{w-b}{w^2 - b^2)}\\
+                                              &=\lim_{w\to b}\frac{1}{w+b)} \\
+                                               &= \frac{1}{2b} .
+\end{align*}
+
+Letting $a = b^2$ be the area, we have $b=\sqrt{a}$, and
+\[
+  \frac{ds}{dA}\Big|_{A=a} = \frac{1}{2\sqrt{A}}.
+\]
+
+This makes it clear that the derivative of the inverse of a function is the \emph{reciprocal} of the function's derivative.
+
+\end{explanation}
+
+
+\item Use the result of part (b) to evaluate the derivative
+\[
+   \frac{dA}{ds}\Big|_{s=5}.
+\]
+
+\item What are the units of the derivative in part (c).
+
+\item Explain the meaning of the derivative (c) in terms of small changes.
+
+
+\end{enumerate}
+\end{question}
+
+\section{The Cubing Function and its Inverse}
+
+\begin{question} \label{QRDFGGERE}
+Repeat the two questions of the previous section with the function
+\[
+    V = f(s) = s^3 \, , \, s\geq 0 ,
+\]
+that expresses the volume of a cube in terms of its side length.
+\end{question}
+
+
+
+
+\section{More on the Squaring Function}
+
+Check back later.
 
 
 \end{document}
