@@ -10,19 +10,39 @@ Rocks in free fall.
 \maketitle
 
 
+\section{Speed vs. Velocity}
+
+In colloquial English, speed and velocity are typically used interchangeably. A baseball announcer might say, for example, that a pitcher has good velocity, when he really means the pitcher is throwing hard (ie. fast).
+
+But we need to be precise and for us \emph{velocity} is a vector. It is the rate of change of position (also a vector) with respect to time. As such, we can talk about \emph{average velocity} over a time interval and \emph{instantaneous velocity} at a moment in time. For example, at some intstant we might be driving due south at a speed of $50$ miles/hour and this would be a description of our instantaneous velocity. Or over a three-hour period we might have driven $120$ miles and ended up at a point due south of our starting point. Then we could describe our average velocity over this three-hour period as a displacement due south at an average speed of $40$ miles/hour.
+
+In colloquial English \emph{acceleration} is also used incorrectly. An advertisment might claim a car can accelerate from rest to a speed of $60$ miles/hour in $4$ seconds. But acceleration, being the rate of change of veloicty with respect to time, is also a vector, and we will rarely speak of acceleration. So instead, we might say that a car is speeding up at a constant rate of $22$ (ft/sec)/sec. This implies, for example, that every second the speed of the car increases by $22$ ft/sec. It would \emph{not} be correct to say that the car's acceleration is $22$ ft/sec. Acceleration, like velocity, needs a direction.
+
+It also obscures meaning if we say that the speed of a car is increasing at the rate of $22\text{ ft/sec}^2$ when we really mean at the rate of $22$ (ft/sec)/sec.
+
+Velocity plays only a very small part in our class, and this activity is all about speed.
+
+It's a consequence of Newton's second law and his law of univeral graviation, that the speed of a rock dropped near the surface of a planet in the absence of air resistance and other external forces increases at a constant rate. On the earth, this rate is about $32$ (ft/sec)/sec (or about $9.8$ (m/s)/s. On the moon, the rate is about one-sixth these values. On mars, the \emph{magnitude} of the gravitational acceleration is approximately $3.73$ (m/s)/s.
+
+
+\section{A Dropped Rock}
+Suppose we drop a rock from rest near the surface of a planet without an atmosphere (or very near the surface of the earth). Our focus here will be in addressing two questions.
+
 \begin{question} \label{Q54rghgeyghhg}
 
-Part (a) of the following question is an important takeaway from this chapter. It is not necessary to answer this question now.
-
-A rock is dropped near the surface of a planet without an atmosphere. 
-
 \begin{enumerate}
-\item Through what fraction of its initial height does the rock fall during the last $1/10$ of the time it takes to hit the surface? Give a quick estimate.
+\item How does the speed at which the rock hits the surface compare with its average speed during the time it takes to hit the surface?
 
+\item Through approximately what fraction of its initial height does the rock fall during the last $1/20$ of the time it takes to hit the surface? Or during the  last similarly \emph{small} fraction of the time it falls? 
 \item What is the exact fraction? 
 \end{enumerate}
 \end{question}
 
+
+
+\iffalse
+
+*********************************************************************************************************
 
 \begin{exploration}  \label{Qvbbtrg43444}
 
@@ -95,6 +115,9 @@ The coordinates are
 
 \end{exploration}
 
+**********************************************************************************************
+\fi
+
 \begin{question} \label{Qd90t90ette}
 Play the slider $u$ in Line 2 of the desmos worksheet below to watch two motions. One shows a rock falling to the surface of a planet when it is dropped from rest near the surface. The other is a constant-speed motion.
 
@@ -114,7 +137,7 @@ Play the slider $u$ in Line 2 of the desmos worksheet below to watch two motions
 
 \item Now suppose the rock is dropped from a height of $H$ meters and that it takes $T$ seconds to hit the surface. Assume also that the planet has no atmosphere so that the function expressing the rock's distance from its starting point (in meters) in terms of the number of seconds since it was dropped is of the form
 \[
-      s = f(t) = at^2
+      s = f(t) = at^2 \
 \]  
 for some constant $a$.
 
@@ -124,13 +147,19 @@ for some constant $a$.
 
 \item What are the units of the constant $a$?
 
-\item Explain the meaning of the constant $a$. Do \emph{not} use the word \emph{acceleration}.
+%\item Explain the meaning of the constant $a$. Do \emph{not} use the word \emph{acceleration}.
 
-\item Find the domain of the function $f$.
+%\item Find the domain of the function $f$.
 
-\item Use calculus to express the speed of the rock (in metes/sec) in terms of $H$ and $T$. Check that your expression has the correct units.
+\item Find a fully-simplified expression for the average speed of the rock over the time interval $b\leq t \leq w$. Assume $b<w$.
+
+\item Use the alegra of limits to find an expression for the (instantaneous) speed of the rock $b$ seconds after being dropped. Check that your expression has the correct units.
+
+\item Use the result of part (iv) to express in terms of $H$ and $T$ the speed of the rock (in metes/sec) as it hits the surface. Check that your expression has the correct units.
 
 \item Compare the speed of the rock as it hits the ground with its average speed during the time it falls.
+
+\item Use the result of part (vi) to approximate the fraction of its initial height through which the rock fall during the last $1/20$ of the time it takes to hit the surface
 
 \item Through what \emph{exact} fraction of its initial height the rock fall through during the last $1/20$ of the time it takes to hit the surface? Compare this with your earlier estimate.
 
