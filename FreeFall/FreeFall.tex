@@ -25,7 +25,7 @@ Velocity plays only a very small part in our class, and this activity is all abo
 It's a consequence of Newton's second law and his law of univeral graviation, that in the absence of air restistance the speed of a rock dropped near the surface of a planet increases at a constant rate. On the earth, this rate is about $32$ (ft/sec)/sec (or about $9.8$ (m/s)/s). On the moon, the rate is about one-sixth these values. On Mars, the \emph{magnitude} of the gravitational acceleration is approximately $3.73$ (m/s)/s.
 
 
-\section{A Dropped Rock}
+\section{A Rock in Freefall}
 Suppose we drop a rock from rest near the surface of a planet without an atmosphere (or very near the surface of the earth). Our focus here will be in addressing two questions.
 
 \begin{question} \label{Q54rghgeyghhg}
@@ -154,7 +154,7 @@ for some positive constant $k$.
 
 \item Find a fully-simplified expression for the average speed of the rock over the time interval $b\leq t \leq w$. Assume $b<w$.
 
-\item Use the alegra of limits to find an expression for the (instantaneous) speed of the rock $b$ seconds after being dropped. Check that your expression has the correct units.
+\item Use the algebra of limits to find an expression for the (instantaneous) speed of the rock $b$ seconds after being dropped. Check that your expression has the correct units.
 
 \item Use the result of part (iv) to express in terms of $H$ and $T$ the speed of the rock (in metes/sec) as it hits the surface. Check that your expression has the correct units.
 
@@ -172,6 +172,59 @@ for some positive constant $k$.
 \end{question}
 
 
+\section{Takeaways}
+
+What we've really shown here is that the slope of the tangent line to the parabola
+\[
+     y=f(x) = kx^2 , k\neq 0,
+\]
+at the point $P(a,ka^2)$ is \emph{twice} the slope of the line $OP$ through the origin and $P$.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{aamjtxiqgi}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/aamjtxiqgi}{151: Squaring Function}
+
+
+In the context of a rock dropped from rest, this means that the rock's speed at any time is twice its average speed during the time interval from release until that time. We can see this by writing the derivative
+\[
+  \frac{d}{dx}\left(kx^2 \right) = 2kx
+\] 
+of the function $y=kx^2$ as
+\[
+    \frac{dy}{dx} = 2 \left(   \frac{y}{x}  \right) .
+\]
+
+This way of writing the derivative has other implications as well. 
+
+For example, in the context of the function 
+\[
+    A = s^2 , s>0,
+\]
+that returns the area of a square of side length $s$, we have for $\Delta s\sim 0$,
+\[
+        \frac{\Delta A}{\Delta s} \sim \frac{dA}{ds} = \frac{2A}{s} .
+\]
+
+This tells us that for $\Delta s \sim 0$,
+\[
+    \frac{\Delta A}{A} \sim 2 \left( \frac{\Delta s}{s}  \right) .
+\]
+
+In other words, the relative change  in the area of a square (or the relative error in computing the area) is approximately twice the relative change in its side length  (or twice the relative error in meausring its side length), at least for \emph{small} changes in (or errors in measuring) the side length. 
+
+We don't really need calculus to understand this. A picture does just as well.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{h2fm6mm8ua}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/h2fm6mm8ua}{151: Square Error}
 
 
 \end{document}
