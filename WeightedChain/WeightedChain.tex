@@ -11,7 +11,7 @@ Lifting a suspended weight.
 
 
 \begin{question}  \label{Q:LMMN89}
-You attach a small weight to the center of a twenty-inch string, hold the ends of the string together and then pull your hands apart. Play the slide $a$ in Line 2 of the animation below to watch the motion. 
+Attach a small weight to the center of a twenty-inch string, hold the ends of the string together and then pull your hands apart. Play the slide $a$ in Line 2 of the animation below to watch the motion. 
 \begin{onlineOnly}
     \begin{center}
 \desmos{jmqscra2if}{900}{600}
@@ -20,16 +20,42 @@ You attach a small weight to the center of a twenty-inch string, hold the ends o
 
 Desmos activity available at \href{https://www.desmos.com/calculator/jmqscra2if}{151: Weighted Chain 22} 
 
+What we're most interested in here is how moving your hands a bit farther apart changes the height of the weight. You might, for example, move each hand 1 cm outward. What happens to the weight? Perhaps it moves upward about half as far, only $0.5$ cm. Or perhaps about twice as far. The ratio of these two small distances depends upon the distance between your hands to begin with. And while we're not literally stretching an elastic band here, the effect is the same. We can talk about the local \emph{scaling factor}, the one that converts a small outward movement of your hands to an approximate change in height. This local scaling factor, in some configurations less than one, in others greater than one, is the \emph{derivative}. Our aim here is to see how this factor depends on the between your hands, or really half that distance.
+
+
 \begin{enumerate}
-\item Use the animation to sketch by hand a graph of the function
+\item Play the animation. Then sketch by hand a graph of the function
 \[
  h = f(s) \, , \, 0\leq s \leq 10
 \]
-that expresses the distance (in inches) of the weight from its starting point in term of half the distance (in inches) between your hands (ie. the distance $MR$ above). Then activate the folder in Line 15 to see how you did.
+that expresses the distance (in inches) of the weight from its starting point in term of half the distance (in inches) between your hands (ie. the distance $MR$ above). Activate the folder in Line 15 to see how you did.
 
-\item Use the graph of the height function $h=f(s)$ to sketch by hand a rough graph of its derivative $r = dh/ds = f'(s)$. Be sure to label the axes with the appropriate variable names and units. Then activate the folder in Line 20 to see how you did.
+\item Use the graph of the height function $h=f(s)$ to sketch by hand a rough graph of its derivative $r = dh/ds = f'(s)$. Be sure to label the axes with the appropriate variable names and units. Keep in mind the following when drawing your graph:
+\begin{enumerate}
+\item For what values of $s$ is the scaling factor less than one?
+
+\item For what value(s) of $s$ is the scaling factor equal to one?
+
+\item Greater than one?
+
+\item Equal to zero?
+\end{enumerate}
+
+
+Then activate the folder in Line 20 to see how you did.
+
+
 
 \item Find an expression for the function $h=f(s)$.
+
+\item Use the \emph{geometry} of the curve $h=f(s)$ to evaluate the local scaling factor
+\[
+   \frac{dh}{ds}\Big|_{s=b} .
+\]
+
+\item Now we'll go about computing this scaling factor algebraically:
+
+\begin{enumerate}
 
 \item Find an expression for the average rate of change of $h$ with respect to $s$ between $s=b$ and $s=w$.
 
@@ -37,6 +63,8 @@ that expresses the distance (in inches) of the weight from its starting point in
 \[
    \frac{dh}{ds}\Big|_{s=b} .
 \]
+
+\end{enumerate}
 
 \item Drag the slider $a$ in Line 2 to $a=9.5$ and use the animation to approximate the derivative
 \[

@@ -174,11 +174,27 @@ for some positive constant $k$.
 
 \section{Takeaways}
 
-What we've really shown here is that the slope of the tangent line to the parabola
+In the last problem you really showed that the derivative of the function
+\[
+     y = f(x) = kx^2
+\]
+is
+\[
+  \frac{dy}{dx} = \frac{d}{dx}\left(x^2 \right) = 2kx.
+\]
+But in some contexts, like for the falling rock, it is more insightful to write to write this derivative as
+\begin{align*}
+     \frac{dy}{dx} &= 2kx  \\
+                          &= 2 \left( \frac{2kx^2}{x} \right) \, , \, x\neq 0, \\
+                          &= 2 \left( \frac{y}{x} \right) \, , \, x\neq 0 .
+\end{align*}
+You calculated
+
+Geometrically, this says that the slope ($2ka$) of the tangent line to the parabola
 \[
      y=f(x) = kx^2 , k\neq 0,
 \]
-at the point $P(a,ka^2)$ is \emph{twice} the slope of the line $OP$ through the origin and $P$.
+at the point $P(a,ka^2)$ is \emph{twice} the slope ($ka$) of the line $OP$ through the origin and $P$.
 
 \begin{onlineOnly}
     \begin{center}
@@ -189,14 +205,14 @@ at the point $P(a,ka^2)$ is \emph{twice} the slope of the line $OP$ through the 
 \href{https://www.desmos.com/calculator/aamjtxiqgi}{151: Squaring Function}
 
 
-In the context of a rock dropped from rest, this means that the rock's speed at any time is twice its average speed during the time interval from release until that time. We can see this by writing the derivative
-\[
-  \frac{d}{dx}\left(kx^2 \right) = 2kx
-\] 
-of the function $y=kx^2$ as
-\[
-    \frac{dy}{dx} = 2 \left(   \frac{y}{x}  \right) .
-\]
+In the context of a rock dropped from rest, this means that the rock's speed at any time is twice its average speed during the time interval from the moment of release until that time. %We can see this by writing the derivative
+%\[
+%  \frac{d}{dx}\left(kx^2 \right) = 2kx
+%\] 
+%of the function $y=kx^2$ as
+%\[
+%    \frac{dy}{dx} = 2 \left(   \frac{y}{x}  \right) .
+%\]
 
 This way of writing the derivative has other implications as well. 
 
@@ -204,12 +220,12 @@ For example, in the context of the function
 \[
     A = s^2 , s>0,
 \]
-that returns the area of a square of side length $s$, we have for $\Delta s\sim 0$,
+that expresses the area of a square of its side length, we have for $\Delta s\sim 0$,
 \[
         \frac{\Delta A}{\Delta s} \sim \frac{dA}{ds} = \frac{2A}{s} .
 \]
 
-This tells us that for $\Delta s \sim 0$,
+So that for $\Delta s \sim 0$,
 \[
     \frac{\Delta A}{A} \sim 2 \left( \frac{\Delta s}{s}  \right) .
 \]
@@ -225,6 +241,8 @@ We don't really need calculus to understand this. A picture does just as well.
 \end{onlineOnly}
 
 \href{https://www.desmos.com/calculator/h2fm6mm8ua}{151: Square Error}
+
+For more on this idea, see the chapter about \emph{Elasticity}.
 
 
 \end{document}
