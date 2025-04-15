@@ -18,15 +18,17 @@ But we need to be precise and for us \emph{velocity} is a vector. It is the rate
 
 In colloquial English \emph{acceleration} is also used incorrectly. An advertisment might claim a car can accelerate from rest to a speed of $60$ miles/hour in $4$ seconds. But acceleration, being the rate of change of veloicty with respect to time, is also a vector. So instead, we might say that a car is speeding up at a constant rate of $22$ (ft/sec)/sec. This implies, for example, that every second the speed of the car increases by $22$ ft/sec. It would \emph{not} be correct to say that the car's acceleration is $22$ (ft/sec)/sec. Acceleration, like velocity, needs a direction.
 
-It also obscures meaning if we say that the speed of a car is increasing at the rate of $22\text{ ft/sec}^2$ when we really mean at the rate of $22$ (ft/sec)/sec.
+It also obscures meaning if we say that the speed of a car is increasing at the rate of $22\text{ ft/sec}^2$. What exactly do we mean by a square second. Better to say what we really mean, that the speed is increasing at the rate of $22$ (ft/sec)/sec.
 
-Velocity plays only a very small part in our class, and this activity is all about speed.
+Velocity plays only a very small part in our class, and this activity is all about speed. Velocity is defined as a rate of change (of position with respect to time), but what about speed? To think of speed this way we need a \emph{cumulative distance function}. The odometer of your car is one such function. It records the total number of miles the car has been driven since its birth. The trip odometer also keeps track of cumulative distance. In either case, the average rate of change of the odometer reading with respect to time measures average speed (distance travelled / time) over an interval of time. The limit of these average rates of change, as the time interval shrinks to zero, measures the (instantaneous) speed at any moment. This is the reading on the speedometer.
+
+For this class, motion is generally restricted to a line, and the cumulative distance function measures distance along this line from some select point. Later on, you'll learn about \emph{arclength}, distance meaured along a curve. Typically the parameters $s$ is used for this distance function. Don't confuse this with speed. In this activity we drop a rock and measure the cumulative distance function $s=f(t)$ straight down, from the rock's initial position.
 
 It's a consequence of Newton's second law and his law of univeral graviation, that in the absence of air restistance the speed of a rock dropped near the surface of a planet increases at a constant rate. On the earth, this rate is about $32$ (ft/sec)/sec (or about $9.8$ (m/s)/s). On the moon, the rate is about one-sixth these values. On Mars, the \emph{magnitude} of the gravitational acceleration is approximately $3.73$ (m/s)/s.
 
 
 \section{A Rock in Freefall}
-Suppose we drop a rock from rest near the surface of a planet without an atmosphere (or very near the surface of the earth). Our focus here will be in addressing two questions.
+Suppose we drop a rock from rest near the surface of a planet without an atmosphere (or very near the surface of the earth). Our focus here will be in addressing two questions. Don't try to answer these now. Wait until the end of the activity.
 
 \begin{question} \label{Q54rghgeyghhg}
 
@@ -131,6 +133,8 @@ Play the slider $u$ in Line 2 of the desmos worksheet below to watch two motions
 
 \begin{enumerate}
 
+\item Which motion is which?
+
 \item What does the animation suggest about the speed of the rock as it hits the surface compared with its average speed during the time it takes to hit the ground?
 
 \item What does the animation suggest about the fraction of its initial height the rock falls through during the last $1/20$ of the time it takes to hit the surface? Give a quick estimate.
@@ -156,7 +160,7 @@ for some positive constant $k$.
 
 \item Use the algebra of limits to find an expression for the (instantaneous) speed of the rock $b$ seconds after being dropped. Check that your expression has the correct units.
 
-\item Use the result of part (iv) to express in terms of $H$ and $T$ the speed of the rock (in metes/sec) as it hits the surface. Check that your expression has the correct units.
+\item Use the result of part (iv) to express in terms of $H$ and $T$ the speed of the rock (in metes/sec) as it hits the surface. Check that your expression has the correct units. \emph{Hint:} Evaluate the derivative above at the appropriate time $t=b$.
 
 \item Compare the speed of the rock as it hits the ground with its average speed during the time it falls.
 
@@ -174,7 +178,7 @@ for some positive constant $k$.
 
 \section{Takeaways}
 
-In the last problem you really showed that the derivative of the function
+In the last problem you showed that the derivative of the function
 \[
      y = f(x) = kx^2
 \]
@@ -188,7 +192,6 @@ But in some contexts, like for the falling rock, it is more insightful to write 
                           &= 2 \left( \frac{2kx^2}{x} \right) \, , \, x\neq 0, \\
                           &= 2 \left( \frac{y}{x} \right) \, , \, x\neq 0 .
 \end{align*}
-You calculated
 
 Geometrically, this says that the slope ($2ka$) of the tangent line to the parabola
 \[
@@ -205,7 +208,7 @@ at the point $P(a,ka^2)$ is \emph{twice} the slope ($ka$) of the line $OP$ throu
 \href{https://www.desmos.com/calculator/aamjtxiqgi}{151: Squaring Function}
 
 
-In the context of a rock dropped from rest, this means that the rock's speed at any time is twice its average speed during the time interval from the moment of release until that time. %We can see this by writing the derivative
+In the context of a rock dropped from rest, this means that the rock's speed at any time $t$ is twice its average speed during the time interval from the moment of release to time $t$. %We can see this by writing the derivative
 %\[
 %  \frac{d}{dx}\left(kx^2 \right) = 2kx
 %\] 
@@ -241,6 +244,12 @@ We don't really need calculus to understand this. A picture does just as well.
 \end{onlineOnly}
 
 \href{https://www.desmos.com/calculator/h2fm6mm8ua}{151: Square Error}
+
+\begin{question} \label{QLFmrerfd}
+Explain exactly what the picutre suggests and how it does so.
+\begin{freeResponse}
+\end{freeResponse}
+\end{question}
 
 For more on this idea, see the chapter about \emph{Elasticity}.
 
