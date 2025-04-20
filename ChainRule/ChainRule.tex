@@ -33,18 +33,18 @@ that expresses the temperature (in Celsius degrees) in terms of altitude (in fee
 \[
     C = f(g(t))
 \]
-expresses the temperature in terms of altitude. Since the height and temperature functions have respective constant rates of change $\Delta h/\Delta t$ and $\Delta C/\Delta h$, the compostion has the constant rate of change
+expresses the temperature in terms of time. Since the height and temperature functions $h$ and $f$ have respective constant rates of change $\Delta h/\Delta t$ and $\Delta C/\Delta h$, the compostion has constant rate of change
 \[
     \frac{\Delta C}{\Delta t} = \frac{\Delta C}{\Delta h} \cdot \frac{\Delta h}{\Delta t} .
 \]
 
-And this is what the chain rule says, that the derivative of the composition of functions is the product of the derivatives of the functions.
+And this is what the chain rule says, that the derivative of the composition of functions is the product of their derivatives.
 
-Well, not quite. We need to be more precise because things are more subtle when the rates of change are not constant. Suppose for example, we know only that at precisely 2pm our balloon is rising at the rate of $200$ ft/min. Suppose also at 2pm we are $2500$ feet above the ground and at this altitude the temperature decreases at the rate of $0.003^\circ$C/ft. What can we say about the rate, with respect to time, at which the temperature of our surrounding environment is changing at this moment?
+Well, not quite. We need to be more precise because things are more subtle when the rates of change are not constant. Suppose for example, we know only that at precisely 2pm our balloon is rising at the rate of $200$ ft/min. Suppose also at 2pm we are $2500$ feet above the ground and that at this altitude the temperature decreases at the rate of $0.003^\circ$C/ft. What can we say about the rate, with respect to time, at which the temperature of our surrounding environment is changing at 2pm?
 
-Well, there's nothing else we can really do expcept multiply the two rates and end up with the same conclusion, that at 2pm the temperature of our surrounding environment is decreasing at the constant rate of $0.6^\circ$C/min. But this reasoning rests on the subtle assumption that the temperature ($C=f(h)$) and altitude ($h=g(t)$) functions are \emph{differentiable} at their respective inputs $h=2500$ and $t=60$. What this means intuitively is that these functions act sufficiently like linear functions near their respective inputs to make the above computation remain valid. 
+Well, there's nothing else we can really do expcept multiply the two rates and end up with almost the same conclusion, that at 2pm the temperature of our surrounding environment is decreasing at the rate of $0.6^\circ$C/min. But this reasoning rests on the subtle assumption that the temperature ($C=f(h)$) and altitude ($h=g(t)$) functions are \emph{differentiable} at their respective inputs $h=2500$ and $t=60$. What this means intuitively is that these functions act sufficiently like linear functions near their respective inputs to make the above computation remain valid. 
 
-It all boils down to what we mean by these rates of change. The idea that at 2pm our balloon is ascending at the rate of $200$ ft/min seems intuitive, but is it? What do we really mean by a moment in time anyway? Instead of addressing this question directly, we can  think of the ascent rate as a \emph{scaling factor} that converts a small interval of time  
+It all boils down to what we mean by these rates of change. The idea that at 2pm our balloon is ascending at the rate of $200$ ft/min seems intuitive, but is it? What do we really mean by a moment in time? Instead of addressing this question directly, we can  think of the ascent rate as a \emph{scaling factor} that converts a small interval of time  
 
 %More formally, the rate of ascent being $200$ ft/min at 2pm, means that over small interval of time
 \[
@@ -54,7 +54,7 @@ to an approximation of the actual change in height
 \[
   \Delta h = f(t) - f(6) = f(t) - 2500 
 \]
-during that interval. We might say, for example, that our altitude increases by about $200$ feet from 2:00pm to 2:01pm. But because our rate of ascent might change considerably during this one minute, our approximation might not be very accurate. It would be better to say that in the $1/100$th of a minute following 2pm, our altitude increases by about two feet. 
+during that interval. We might say, for example, that our altitude increases by about $200$ feet from 2:00pm to 2:01pm. But because our rate of ascent might change considerably during time interval, this approximation might not be very accurate. It would be better to say that in the $1/100$th of a minute following 2pm, our altitude increases by about two feet. 
 
 More generally, we could approximate the change in height (in feet) over the time interval $\Delta t$ minutes beginning at 2pm by the product
 %is well-approximated by the product
@@ -78,15 +78,15 @@ Similarly, the rate of change of temperature with respect to altitude,
 \[
   \frac{dC}{dh}\Big|_{h=2500} = -0.003^\circ \text{C/ft} ,
 \]
-means that over a small change in altitude of $\Delta h = h - 2500$ feet, the change in temperature
+is best understood in terms of small changes. Over a small change in altitude of $\Delta h = h - 2500$ feet, the change in temperature
 \[
          \Delta C = g(h) - g(2500)
 \]
 is well-approximated by the product
 \[
-       \Delta C \sim \left( \frac{dC}{dh}\Big|_{h=2500}\right) \Delta h = -0.003 \Delta h ,  
+       \Delta C \sim \left( \frac{dC}{dh}\Big|_{h=2500}\right) \Delta h = -0.003 \Delta h . 
 \]
-or equivalently that
+By this we mean that
 \[
     \frac{dC}{dh}\Big|_{h=2500} = \lim_{\Delta h\to 0} \frac{\Delta C}{\Delta h} = -0.003^\circ \text{C/ft}.
 \]
@@ -119,7 +119,7 @@ The function
 \[
      h = g(t) = -4t^2 + 16t + 100 \, , \, -2\leq t \leq 5
 \]
-expresses the height (in feet) of a balloon in terms of the number of seconds past 2pm. 
+expresses the altitude (in feet) of a balloon in terms of the number of seconds past 2pm. 
 
 The function
 \[
@@ -130,7 +130,7 @@ expresses the distance to the horizon (in miles) in terms of altitude (in feet).
 Our problem is to determine the rate at which the distance to the horizon (limited by the curvature of the earth) is changing (with respect to time) for the occupants of the ballon at 2pm.
 
 \begin{explanation}
-To determine this rate, just as in the previous two questions, we need only multiply two other rates of change:
+To determine this rate, just as in the previous question, we need only multiply two rates of change:
 
 \begin{enumerate}
 \item the balloon's rate of ascent at 2pm and
@@ -189,6 +189,31 @@ exressing the distance to the horizon in terms of time, at time $t=0$.
 
 \section{Visualizing the Chain Rule}
 
+The image of stretching an elastic band gives us a way to visualize the chain rule.
+
+Suppose we have two stretching functions
+\[
+     H = g(L) \, , \, 0\leq L \leq 10
+\]
+and
+\[
+     s = f(H),
+\]
+where the inputs and outputs are all measured in meters. 
+
+We wish to compute the local stretching factor of the composition 
+\[
+      s = f(g(L)) \, , \, 0\leq L \leq 10 .
+\]
+
+Let's think first about what this means. Imagine a thin elastic band running along the $x$-axis, here between $L=0$ and $L=10$ meters. First we stretch the band with function $g$. This actions sends the points $L$ meters from the origin on the relaxed band to the point $H=g(L)$ meters on the stretched band.
+
+\begin{enumerate}
+
+\item Watch this stretching action by sliding the Slider $u$ in Line 2 of the worksheet below from $u=0$ to $u=1$.
+
+ 
+
 \begin{onlineOnly}
     \begin{center}
 \desmos{8whlpa61hn}{900}{600}
@@ -199,11 +224,42 @@ Worksheet available at \href{https://www.desmos.com/calculator/8whlpa61hn}{151: 
 
 
 
- 
+We then stretch the stretched band with function $f$. This action takes the points $H=g(L)$ meters from the origin on the stretched band to the points $s=f(g(L))$ meters from the origin. 
+
+\item Watch the second stretch by sliding the Slider $u_2$ on LIne 4 from $u_2=0$ to $u_2=1$.
+
+\item Our goal now is to approximate the local stretching factor
+\[
+ \frac{ds}{dL} \Big|_{L=9.5}
+\]
+of the compostion $f\circ g$ at the points $L=9.5$ meters from the origin in the relaxed band.
+
+Here are two approaches:
+
+\begin{enumerate}
+\item Use the animation to approximate the local stretching factors
+\[
+      \frac{dH}{dL}\Big|_{L=9.5} \hskip 0.2 in  \text{and} \hskip 0.2 in \frac{ds}{dH}\Big|_{H=g(9.5)}.
+\]
+Then use these factors to approximate the local stretching factor of the composition $f\circ g$ at the points $L=9.5$ meters from the origin in the relaxed band. Explain your reasoning in detail. Include screen shots to help with your explanation. Include units in all computations.
+\begin{freeResponse}
+\end{freeResponse}
+
+\item Use the animation to approximate the local stretching factor
+\[
+  \frac{ds}{dL} \Big|_{L=9.5}
+\]
+\emph{directly}. Explain your reasoning in detail. Include screen shots to help with your explanation. Include units in all computations.
+\begin{freeResponse}
+\end{freeResponse}
+
+\end{enumerate}
+
+ \end{enumerate}
 
 \section{Computing with the Chain Rule}
 
-The chain rule tells us how to differentiate the composition of two functions. It say that the derivative of the composition is the product of the derivatives of the two functions.
+The chain rule tells us how to differentiate the composition of functions. It say that the derivative of the composition is the product of the derivatives.
 
 Here is a more formal statement.
 
