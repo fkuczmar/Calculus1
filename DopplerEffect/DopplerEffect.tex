@@ -1,5 +1,5 @@
 \documentclass{ximera}
-\title{The Doppler Effect}
+\title{The Doppler Effect: Stretching Time}
 
 \newcommand{\pskip}{\vskip 0.1 in}
 
@@ -9,16 +9,43 @@ The Doppler effect.
 \end{abstract}
 \maketitle
 
+The doppler effect, in its simplest form, describes how the pitch of a sound emitted from a moving source changes frequency as heard by a stationary observer. It's difficult for me to think about frequency and pitch, so we'll follow Hermann Bondi (\emph{Relativity and Common Sense}, 1962, pp. 41-49) and imagine instead a moving source that emits pings at frequent, regularly spaced intervals, say at the rate of $12$ pings/second. Then we'll compute the frequency (measured in 1/sec) at which these pings are heard by a stationary observor.
 
+
+\begin{example} \label{Exkdfksadfsdt4e4}
+
+In this the simplest case, we'll suppose that the source is heading directly toward the observor at the constant speed of $v$ meters/sec. We'll take the speed of sound to be $w$ meters/sec. What determines the frequency heard by the observor is the ratio $\lambda = w/v$ and we'll assume $w<v$. 
+
+We assume the source emits pings at the rate of $f$ pings/second (perhaps $f=12$). Our problem is to determine the frequency heard by the observor.
+
+Drag the slider $t_1$ below to start the motion of the source $P$. The observor is at the origin $O$. We assume the source passes harmlessly through the observor and then begins to move directly away.
 
 
 \begin{onlineOnly}
     \begin{center}
-\desmos{mygzufvdgk}{800}{600}         %zk06s3k6q4
+\desmos{h2rw1sr8li}{800}{600}         %zk06s3k6q4
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/calculator/zk06s3k6q4}{Doppler Stationary Observer 1}
+\href{https://www.desmos.com/calculator/h2rw1sr8li}{Doppler Stationary Observer 1}
+
+We don't need calculus to analyze this problem. Nevertheless, we'll take an approach that will work in the next variation when the source does not move either directly toward or away from the observor.
+
+We'll suppose the source collides with the observor at noon. The idea is to find a function $T=f(t)$ that takes as an input the time (measured in the number of seconds past noon, possibly negative) when a ping was emitted and returns as an ouput the time (measured in the same manner) that the observor hears that ping.
+
+\begin{enumerate}
+\item Find an expression for the function 
+\[
+    T = f(t) \, , \, t \in \mathbb{R}.
+\]
+Work in general with speeds $v$ m/sec for the source and $w$ m/sec for the speed of sound. Note the important point that the speed of sound is constant (at a given air temperature) and independent of the motion of the source.
+
+\item Compute the derivative $dT/dt$. There are two cases to consider, when $t<0$ and when $t>0$.
+
+\item Interpret the meanings of these derivatives. Then write an equation expressing the frequence $F$ of the pings heard by the observor in terms of the frequency $f$ of the pings emitted by the source. There are two cases to consider as above. 
+\end{enumerate}
+
+\end{example}
 
 
 The problem here should be to relate the frequencies at time $t=-0.5$ when $v=1$, $w=2$, and $h=4$. The result should be that 
