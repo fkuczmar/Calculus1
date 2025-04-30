@@ -12,6 +12,10 @@ Working with trigonometric functions and their derivatives.
 
 \section{Velocity}
 
+Velocity is the rate of change of position with respect to time. Since position is a vector, so is velocity. The instantaneous velocity vector is the derivative (with respect to time) of the position vector. It (the velocity vector)  points in the direction of motion and is therefore tangent to the path. The length of the velocity vector is the speed.
+
+Play the slider $u$ (time) below to watch a projectile motion in a uniform gravitational field.
+
 \begin{onlineOnly}
     \begin{center}
 \desmos{vdtsb2fc8j}{900}{600}  %    pxsmo04nmg  8swp20zond
@@ -20,6 +24,63 @@ Working with trigonometric functions and their derivatives.
 
 \href{https://www.desmos.com/calculator/vdtsb2fc8j}{151: Projectile Motion}
 
+
+\begin {enumerate}
+\item When is the object speeding up? Slowing down? How can you tell from looking at its velocity vector?
+
+\item Suppose the position vector (measured in meters) at time $t$ seconds past launch is
+\[
+    \langle x,y \rangle  = \langle (v_0\cos\phi) t, (v_0\sin\phi)t - \frac{1}{2}gt^2 \rangle  \, , \, 0 \leq t \leq 2v_0 \sin \phi / g .
+\]
+Here $v_0$ is the initial speed (in m/sec), $\phi$ is the launch angle relative to the horizontal, and $g$ is the magnitude of the gravitational acceleration (in $\text{m/sec}^2$). 
+
+Find an expression for the velocity vector.
+
+\end{enumerate}
+
+
+\section{Derivatives of the Sine and Cosine Functions}
+
+We just saw we can differentiate the position vector of a motion to find the velocity vector, at least if we know how to differentiate the component functions. There is one case where we can reverse this process. The next example shows how and gives a way to find the derivatives of the sine and cosine functions.
+ 
+
+\begin{example} \label{ExPODfdsfLMV}
+ 
+The idea is to look at the motion with position vector (in meters)
+\[
+   \overrightarrow{OP} = \langle \textcolor{blue}{1} \cos (\textcolor{red}{1} t) , \textcolor{blue}{1} \sin (\textcolor{red}{1} t) \rangle,
+\]
+expressed in terms of the number of seconds past noon. Play the slider $u$ (another name for $t$) in the worksheet below to watch the motion.
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{ov0azsjucq}{900}{600}  %    pxsmo04nmg  8swp20zond
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/ov0azsjucq}{151: Circular Motion}
+
+\begin{enumerate}
+\item What are the units of the blue \textcolor{blue}{1} and the red \textcolor{red}{1} in the parameterization.
+
+\item What is the speed of the motion?
+
+\item Use the geometry of the circle to find the components of the velocity vector.
+
+\item What does this tell us about the derivatives 
+\[
+     \frac{d}{dt} \left( \cos t \right)  \hskip 0.4 in \text{and}  \hskip 0.4 in \frac{d}{dt} \left( \sin t \right) .
+\]
+
+\item Use the same idea to compute the derivatives
+\[
+     \frac{d}{dt} \left( \cos (3t) \right)  \hskip 0.4 in \text{and}  \hskip 0.4 in \frac{d}{dt} \left( \sin(3t) \right) ?
+\]
+Then use the chain rule to compute the derivatives again.
+
+\end{enumerate}
+\end{example}
 
 
 \section{Exercises}
@@ -48,6 +109,36 @@ expresses the altitude (in feet) of a balloon in terms of the number of hours pa
 \end{enumerate}
 
 \end{question}
+
+
+\begin{question}  \label{Qd5t6dsfre6yuu}
+The center of a ferris wheel with a radius of 50 feet is 60 feet above the ground. You ride the wheel for one revolution and get off.
+
+\begin{enumerate}
+
+\item Use the figure below to find a function 
+\[
+ h = f(\theta) \, , \, 0\leq \theta \leq 2\pi ,
+\] 
+that expresses your height above the ground in terms of the rotation angle of the wheel (measured in radians since the time you boarded). Use the \emph{cosine} function, \emph{not} the sine function.
+
+
+\begin{onlineOnly}
+    \begin{center}
+\geogebra{tn75cq93}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+
+
+\end{enumerate}
+\end{question}
+
+
+
+
+
+
 
 \begin{question}  \label{Q:LKJMFJUFegvt4}
 The function
