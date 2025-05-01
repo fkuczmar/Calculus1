@@ -30,7 +30,7 @@ Play the slider $u$ (time) below to watch a projectile motion in a uniform gravi
 
 \item Suppose the position vector (measured in meters) at time $t$ seconds past launch is
 \[
-    \langle x,y \rangle  = \langle (v_0\cos\phi) t, (v_0\sin\phi)t - \frac{1}{2}gt^2 \rangle  \, , \, 0 \leq t \leq 2v_0 \sin \phi / g .
+    \langle x,y \rangle  = \langle (v_0\cos\phi) t, (v_0\sin\phi)t - \frac{1}{2}gt^2 \rangle  \, , \, 0 \leq t \leq \frac{2v_0 \sin \phi}{g} .
 \]
 Here $v_0$ is the initial speed (in m/sec), $\phi$ is the launch angle relative to the horizontal, and $g$ is the magnitude of the gravitational acceleration (in $\text{m/sec}^2$). 
 
@@ -83,7 +83,42 @@ Then use the chain rule to compute the derivatives again.
 \end{example}
 
 
-\section{Exercises}
+\section{Simple Harmonic Motion}
+
+
+\begin{question}  \label{QKLKLggggghg}
+Suppose for this problem that the earth is a ball with uniform density of radius 4000 miles. Now imagine drilling a straight tunnel through the earth from the North Pole to the South Pole. 
+
+A subway car dropped from rest at the north pole falling through the tunnel would then oscillate in simple harmonic motion between the poles and return to the north pole every $84$ minutes. This means we can think of the car as being dragged along by a point moving around the earth at constant speed as illustrated below. 
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{ij8dqowgza}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Desmos activity available at \href{https://www.desmos.com/calculator/ij8dqowgza}{142: Simple Harmonic Motion}
+
+\begin{enumerate}
+
+\item Find a function 
+\[
+      s = f(t) \, , \, t\geq 0,
+\]
+that expresses the distance of the rock (measured in thousands of miles) form the South Pole in terms of the number of minutes since the rock was released. Assume the rock was dropped at noon on July 1, 2085.
+
+\item Use your function and calculus to determine the car's speed as it passes the center of the earth. Then find the speed without calcululs.
+
+\item Compare the average speed of the car during the time for one oscillation with its maximum speed.
+
+\item Find the car's speed when it is $1/3$ of the way from the earth's center to the South Pole.
+
+
+\end{enumerate}
+
+\end{question}
+
+\section{An Optimization Problem}
 
 \begin{question}  \label{Qdfethnnjjjuu}
 The function
@@ -111,6 +146,8 @@ expresses the altitude (in feet) of a balloon in terms of the number of hours pa
 \end{question}
 
 
+\section{Riding a Ferris Wheel}
+
 \begin{question}  \label{Qd5t6dsfre6yuu}
 The center of a ferris wheel with a radius of 50 feet is 60 feet above the ground. You ride the wheel for one revolution and get off.
 
@@ -130,13 +167,25 @@ that expresses your height above the ground in terms of the rotation angle of th
 \end{onlineOnly}
 
 
+\item The function 
+\[
+    \theta = a(t) \, , \, 0\leq t \leq 120 ,
+\]
+expresses the rotation angle (in radians, measured since you boarded the wheel) in terms of the number of seconds since  you got on. Use the graph of this function to approximate the your rate of ascent at time $t=40$ seconds. 
 
 \end{enumerate}
+
+
+\item Now suppose
+\[
+    \theta = a(t) = \frac{\pi}{2}\left(1- \cos \left( \frac{\pi}{120}t \right)    \right) \, , \, 0\leq t \leq 120 ,
+\]
+and compute your exact rate of ascent at time $t=40$ seconds. Compare this with your estimate.
 \end{question}
 
 
 
-
+\section{Exercises}
 
 
 
