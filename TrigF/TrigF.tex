@@ -10,6 +10,50 @@ Working with trigonometric functions and their derivatives.
 \maketitle
 
 
+
+\section{Introduction}
+
+\begin{question}  \label{QodfdfisOO}
+You ride a ferris wheel of radius $50$ feet at a constant speed of $5$ ft/sec. The wheel's center is $60$ feet above the ground.
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{yvsapeyysi}{900}{600}  %    pxsmo04nmg  8swp20zond
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/yvsapeyysi}{151: Vector Ferris Wheel}
+
+\begin{enumerate}
+\item Use precalculus and common sense to find your rate of ascent when you are 
+
+\begin{enumerate}
+\item $60$ feet above the ground for the first time
+
+\item $60$ feet above the ground for the second time
+
+\item $110$ feet above the ground
+
+\item $80$ feet above the ground for the first time
+
+\item $80$ feet above the ground for the second time
+
+\end{enumerate}
+
+\item Express your rate of ascent in terms of the angle $\theta$ your position vector relative to the wheel's center makes with the rightward horizontal. Assume $\theta$ is measured in the same sense as the rotation of the wheel.
+
+\item Express your rate of ascent in terms of the angle $\phi$ your position vector relative to the wheel's center makes with the upward vertical. Assume  $\phi$ is measured in the same sense as the rotation of the wheel.
+
+
+\end{enumerate}
+
+
+
+
+\end{question}
+
+
 \section{Velocity}
 
 Velocity is the rate of change of position with respect to time. Since position is a vector, so is velocity. The instantaneous velocity vector is the derivative (with respect to time) of the position vector. It (the velocity vector)  points in the direction of motion and is therefore tangent to the path. The length of the velocity vector is the speed.
@@ -82,6 +126,53 @@ Then use the chain rule to compute the derivatives again.
 \end{enumerate}
 \end{example}
 
+\section{Riding a Ferris Wheel}
+
+\begin{question}  \label{Qd5t6dsfre6yuu}
+The center of a ferris wheel with a radius of 50 feet is 60 feet above the ground. You ride the wheel for one revolution and get off.
+
+\begin{enumerate}
+
+\item Use the figure below to find a function 
+\[
+ h = f(\theta) \, , \, 0\leq \theta \leq 2\pi ,
+\] 
+that expresses your height above the ground in terms of the rotation angle of the wheel (measured in radians since the time you boarded). Use the \emph{cosine} function, \emph{not} the sine function.
+
+
+\begin{onlineOnly}
+    \begin{center}
+\geogebra{tn75cq93}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+
+\item The function 
+\[
+    \theta = a(t) \, , \, 0\leq t \leq 120 ,
+\]
+expresses the rotation angle (in radians, measured since you boarded the wheel) in terms of the number of seconds since  you got on. Use the graph of this function below to approximate the your rate of ascent at time $t=40$ seconds. 
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{kijv21gots}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/kijv21gots}{151: Ferris Wheel Angle}
+
+
+
+\item Now suppose
+\[
+    \theta = a(t) = \frac{\pi}{2}\left(1- \cos \left( \frac{\pi}{120}t \right)    \right) \, , \, 0\leq t \leq 120 ,
+\]
+and compute your exact rate of ascent at time $t=40$ seconds. Compare this with your estimate.
+
+\end{enumerate}
+\end{question}
+
+
 
 \section{Simple Harmonic Motion}
 
@@ -107,11 +198,11 @@ Desmos activity available at \href{https://www.desmos.com/calculator/ij8dqowgza}
 \]
 that expresses the distance of the rock (measured in thousands of miles) form the South Pole in terms of the number of minutes since the rock was released. Assume the rock was dropped at noon on July 1, 2085.
 
-\item Use your function and calculus to determine the car's speed as it passes the center of the earth. Then find the speed without calcululs.
+\item Use your function and calculus to determine the car's speed as it passes the center of the earth. Then find the speed without calculus.
 
-\item Compare the average speed of the car during the time for one oscillation with its maximum speed.
+\item Express the average speed of the car during the time for one oscillation in terms of its maximum speed.
 
-\item Find the car's speed when it is $1/3$ of the way from the earth's center to the South Pole.
+\item Express the car's speed when it is $2/3$ of the way from the earth's center to the South Pole in terms of its maximum speed.
 
 
 \end{enumerate}
@@ -146,51 +237,6 @@ expresses the altitude (in feet) of a balloon in terms of the number of hours pa
 \end{question}
 
 
-\section{Riding a Ferris Wheel}
-
-\begin{question}  \label{Qd5t6dsfre6yuu}
-The center of a ferris wheel with a radius of 50 feet is 60 feet above the ground. You ride the wheel for one revolution and get off.
-
-\begin{enumerate}
-
-\item Use the figure below to find a function 
-\[
- h = f(\theta) \, , \, 0\leq \theta \leq 2\pi ,
-\] 
-that expresses your height above the ground in terms of the rotation angle of the wheel (measured in radians since the time you boarded). Use the \emph{cosine} function, \emph{not} the sine function.
-
-
-\begin{onlineOnly}
-    \begin{center}
-\geogebra{tn75cq93}{900}{600}
-\end{center}
-\end{onlineOnly}
-
-
-\item The function 
-\[
-    \theta = a(t) \, , \, 0\leq t \leq 120 ,
-\]
-expresses the rotation angle (in radians, measured since you boarded the wheel) in terms of the number of seconds since  you got on. Use the graph of this function below to approximate the your rate of ascent at time $t=40$ seconds. 
-
-\begin{onlineOnly}
-    \begin{center}
-\desmos{dbc9bdzeqm}{900}{600}
-\end{center}
-\end{onlineOnly}
-
-\href{https://www.desmos.com/calculator/dbc9bdzeqm}{151: Ferris Wheel Angle}
-
-
-
-\item Now suppose
-\[
-    \theta = a(t) = \frac{\pi}{2}\left(1- \cos \left( \frac{\pi}{120}t \right)    \right) \, , \, 0\leq t \leq 120 ,
-\]
-and compute your exact rate of ascent at time $t=40$ seconds. Compare this with your estimate.
-
-\end{enumerate}
-\end{question}
 
 
 
