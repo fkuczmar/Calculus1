@@ -10,6 +10,42 @@ Some problems.
 \maketitle
 
 
+\section{Derivatives}
+
+\begin{question} \label{QPodRERE}
+
+Follow the method of Example 2 in the chapter \href{https://ximera.osu.edu/calcone2025master/Calculus1/ChainRule/ChainRule}{The Chain Rule} of these notes \emph{exactly} to find expressions for each of the following derivatives.
+
+\begin{enumerate}
+\item  $\frac{d}{d\theta}\left(  \sec^2\theta \right)$
+
+\item $\sqrt{12 + 3\sin\theta}$
+
+\item $\frac{d}{d\theta} \left( \cos^2\theta + \sin^2\theta  \right)$
+
+\end{enumerate}
+
+\end{question}
+
+
+\begin{question} \label{QKDFL43rr4r}
+Divide each side of the identity
+\[
+  \cos^2\theta + \sin^2\theta = 1
+\]
+by $\cos^2\theta$ to get
+\[
+  1 + \tan^2\theta = \sec^2\theta.
+\]
+Now use the result of Question \ref{QPodRERE} (a) and the chain rule to find an expression for the derivative
+\[
+    \frac{d}{d\theta} \left(  \tan\theta \right) .
+\]
+\end{question}
+
+
+
+
 \section{Transformations}
 
 \begin{question}  \label{QPODFerRE}
@@ -31,12 +67,12 @@ in terms of the derivative
 
 \item Compute the slopes of the tangent lines to the curves $y=\sin\theta$ and $y=\sin(\theta/2)$ at the origin. Drag the slider $k$ in the worksheet below to visualize the transformation.
 
-\href{https://www.desmos.com/calculator/2ws2wqg5hv}{151: Tranform Sine}.
+\href{https://www.desmos.com/calculator/2tvlkyi1sj}{151: Tranform Sine}.
 
  
 \begin{onlineOnly}
     \begin{center}
-\desmos{2ws2wqg5hv}{900}{600}
+\desmos{2tvlkyi1sj}{900}{600}
 \end{center}
 \end{onlineOnly}
 
@@ -147,7 +183,9 @@ The graph below shows your height (in feet) as a function of the number of secon
 
 \begin{question} \label{QPEErmE}
 
-You run around a circular track of radius $50$ feet at a constant speed of $v$ ft/sec, passing point $A$ at time $t=0$ seconds psat noon (see the animation below). A flagpole is located at point $F$, $80$ feet from the track's center and $30$ feet from $A$ as shown.
+Let $r$ and $a$ be constants, with $a>r>0$. 
+
+You run around a circular track of radius $r$ feet, passing point $A$ at time $t=0$ seconds past noon (see the animation below where $r=50$). A flagpole is located at point $F$, $a$ feet from the track's center and $a-r$ feet from $A$ as shown below (where $a=80$). 
 
 
 \href{https://www.desmos.com/calculator/xymelsnabl}{151: Track and Flagpole}.
@@ -159,18 +197,37 @@ You run around a circular track of radius $50$ feet at a constant speed of $v$ f
 \end{center}
 \end{onlineOnly}
 
+Answer the following questions for general parameters $a$ and $r$. Do \emph{not} use the specific values in the worksheet.
+
 \begin{enumerate}
+
 \item Find a function
 \[
-  s =g(t) \, , \, t\geq 0 ,
+  s =f(\theta) \, , \, \theta \geq 0 ,
 \]
-that expresses your distance to the flagpole (in feet) in terms of the number of seconds past noon.
+that expresses your distance to the flagpole (in feet) in terms of the angle $\theta = \angle AOP$.
 
-\item Find an expression for the rate of change (with respect to time) in your distance to the flagpole at time $t$ seconds past noon.
+\item Find an expression for derivative $ds/d\theta$.
 
-\item Express this rate of change in terms of your speed $v$ and the angle $\phi = \angle OPF$ above as you run around the ``top'' half of the track.
+\item With $r=50$ and $a=80$, evaluate the derivative
+\[
+   \frac{ds}{d\theta}\Big|_{\theta=\pi/2} .
+\]
+Include units. Then interpret the meaning of this derivative in terms of small changes.
 
+\item Now le'ts return to working with the general parameters $a$ and $r$. Suppose you run around the track at the constant speed of $v$ ft/sec.
 
+\begin{enumerate}
+
+\item Find an expression for the derivative $ds/dt$, where $t$ is the number of seconds past noon.
+
+\item Express the derivative $ds/dt$ in terms of $v$ and the angle $\phi = \angle OPF$ above as you run around the ``top'' half of the track.
+
+\item Use the result of part (ii) to describe your position on the track when your distance from the flagpole is increasing at the greatest rate. What is this maximum rate?
+
+\item How would your answer to part (iii) change if $0<a<r$ (ie. if the flagpole were inside the track)?
+
+\end{enumerate}
 \end{enumerate}
 
 \end{question}
