@@ -1,0 +1,83 @@
+\documentclass{ximera}
+\title{Quiz Solutions}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Circular Interpolation
+\end{abstract}
+\maketitle
+
+
+\section{Quiz 5A}
+
+\begin{question} \label{QQuiz5A}
+
+The function $G=f(s)$, $0\leq s \leq 80$, expresses the number of gallons of gas in a car in terms of the trip odometer reading (measured in miles). 
+
+\begin{enumerate}
+\item Use the Leibniz evaluation notation to write an expression for the derivative of $G$ with respect to $s$ evaluated at an odometer reading of $10$ miles.
+
+\item Now suppose
+\[
+    G = f(s) = \frac{1}{2000}\left( s^2 - 200s + 10000  \right) \, , \, 0\leq s \leq 80.
+\]
+
+\begin{enumerate}
+\item Evaluate the derivative in part (a). Include units. Interpret the meaning of the derivative in a way that someone without any knowledge of caclulus would understand. In particular, do \emph{not} use the phrasing \emph{rate of change of ... with respect to ...}.
+
+\item At what odometer reading(s), if any, is the (instantaneous) gas mileage $17$ miles/gal? Explain your reasoning in a few complete sentences. End with a concluding sentence.
+\end{enumerate}
+\end{enumerate}
+
+\begin{explanation}
+
+\begin{enumerate}
+\item The derivative is
+\[
+      \frac{dG}{ds}\Big|_{s=10} .
+\]
+
+\item Differentiating, we get
+\begin{align*}
+ \frac{dG}{ds}  &= \frac{d}{ds}\left( \frac{1}{2000}\left( s^2 - 200s + 10000  \right) \right) \\
+                        &= \frac{1}{2000} \left( \frac{d}{ds}  \left( s^2 - 200s + 10000  \right)  \right) \\
+                        &=\frac{2s-200}{2000} \\
+                       &=\frac{s-100}{1000} .
+\end{align*}
+
+So
+\begin{align*}
+ \frac{dG}{ds}\Big|_{s=10} &= \frac{s-100}{1000} \Big|_{s=10} \\
+                                        &=\frac{10-100}{1000} \\
+                                        &= -0.09 \frac{\text{gal}}{\text{mile}}
+\end{align*}
+
+This means that at an odometer reading of $10$ miles, the car is burning gas at the rate of $0.09$ gal/mile. The derivative is negative because as the odometer reading increases the volume of gas decreases. 
+
+Alternatively, we could say that as you drive one mile, between odoemeter readings $s=10$ and $s=11$, the car burns \emph{approximately} 0.09 gallons of gas.
+
+
+\item When the car is getting $17$ miles/gal, it is buring gas at the rate of $(1/17)$ gal/mile and 
+\[
+       \frac{dG}{ds} = \frac{s-100}{1000} = - \frac{1}{17} .
+\]
+Solving this equation for $s$ gives
+\[
+   17s - 1700 = -1000
+\]
+and
+\[
+    s = \frac{700}{17} .
+\]
+
+So when the car is getting $17$ miles/gal, the odometer reads $s=700/17$ miles.
+\end{enumerate}
+
+\end{explanation}
+
+\end{question}
+
+
+\end{document}
