@@ -83,6 +83,85 @@ And solving for the derivative $ds/dG$ gives
 \end{question}
 
 
+\section{Derivatives of Inverse Power Functions}
+Let's use what we just learned to verify something we already know, but in a more meaningful context.
+
+\begin{example}  \label{ExLDKr3eDFRER}
+
+The function
+\[
+         A = f(s) = s^2\, , \, s\geq 0 ,
+\]
+expresses the area of a square (measured in square feet) in terms of its side length (in feet).
+
+Since
+\[
+   \frac{dA}{ds} = 2s ,
+\]
+we know that the derivative of the inverse function
+\[
+    s = f^{-1}(A)  = \sqrt{A}\, , \, A\geq 0,
+\]
+expressing the side length of a square in terms of its area is
+\begin{align*}
+ \frac{ds}{dA} &= \frac{1}{dA/ds} \\   
+                      &= \frac{1}{2s} \\
+                      &= \frac{1}{2\sqrt{A}} .
+\end{align*}
+
+We could verify this using the power rule:
+\begin{align*}
+ \frac{ds}{dA} &= \frac{d}{dA} \left( \sqrt{A} \right) \\   
+                        &= \frac{1}{2\sqrt{A}} .
+\end{align*}
+
+To make this more meaningful, let's look at the derivative 
+\begin{align*}
+     \frac{dA}{ds}\Big|_{s=5} &= (2s)\Big|_{s=5} \\
+                                           &= 10 \frac{\text{ft}^2}{\text{ft}} \\
+                                           &= 10 \text{ ft}.
+\end{align*}
+Although it's almost never a good idea to simplify the units of the derivative, it is here. The derivative is $10$ feet and is equal to \emph{half} the perimeter of our square with side length $s=5$ feet. To get an idea why this is so, we'll interpret the derivative in terms of small changes.
+
+Suppose we make a small change (measured in feet) 
+\[
+  \Delta s = s - 5 \sim 0 
+\]
+in the side length of the square. What can we say about the change 
+\[
+ \Delta A = f(s) - f(5) = A-25
+\] 
+in its area?
+ 
+Well since $\Delta s \sim 0$,
+\[
+      \frac{\Delta A}{\Delta s} \sim   \frac{dA}{ds}\Big|_{s=5} = 10,
+\]
+we know that
+\[
+     \Delta A \sim  \left( \frac{dA}{ds}\Big|_{s=5}\right)\Delta s = 10 \Delta s .
+\]
+
+The picture below should suggest why this is a good approximation. Explain how
+\begin{freeResponse}
+\end{freeResponse}
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{h2fm6mm8ua}{900}{600}     % ruysb5sjsy
+\end{center}
+\end{onlineOnly}
+
+
+\href{https://www.desmos.com/calculator/h2fm6mm8ua}{151: Square Error}
+
+\end{example}
+
+
+
+
+
+
 
 
 \section{Derivatives of Inverse Trig Functions}
