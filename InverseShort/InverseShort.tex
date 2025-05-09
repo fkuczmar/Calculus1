@@ -123,7 +123,7 @@ To make this more meaningful, let's look at the derivative
 \end{align*}
 Although it's almost never a good idea to simplify the units of the derivative, it is here. The derivative is $10$ feet and is equal to \emph{half} the perimeter of our square with side length $s=5$ feet. To get an idea why this is so, we'll interpret the derivative in terms of small changes.
 
-Suppose we make a small change (measured in feet) 
+Suppose we make a small change
 \[
   \Delta s = s - 5 \sim 0 
 \]
@@ -137,11 +137,11 @@ Well since $\Delta s \sim 0$,
 \[
       \frac{\Delta A}{\Delta s} \sim   \frac{dA}{ds}\Big|_{s=5} = 10,
 \]
-we know that
 \[
      \Delta A \sim  \left( \frac{dA}{ds}\Big|_{s=5}\right)\Delta s = 10 \Delta s .
 \]
-\emph{To approximate the change in the area we multiply the change in the side length by $10$ feet}.
+
+This tells us that \emph{to approximate the change in the area we multiply the change in the side length by $10$ feet}.
 
 \begin{enumerate}
 \item The picture below suggests why this is a good approximation. Explain how. 
@@ -166,19 +166,20 @@ in the area with the approximate change. Reconcile the difference with the pictu
 \href{https://www.desmos.com/calculator/h2fm6mm8ua}{151: Square Error}
 
 
-To interpret the derivative 
+We can interpret the derivative 
 \[
-    \frac{ds}{dA}\Big|_{A=25} = \frac{1}{10} text{ ft}^{-1}
+    \frac{ds}{dA}\Big|_{A=25} = \frac{1}{10} {\text ft}^{-1}
 \]
 in much the same way by rewriting the above approximation as
 \[
     \Delta s \sim \left( \frac{ds}{dA}\Big|_{A=25}\right)\Delta A = \left(\frac{1}{10}\right) \Delta A.
 \]
-\emph{To approximate the change in the side length we divide the change in the area by $10$ feet}.
 
-This interpretation of the derivative is useful in starting to approximate square roots. For example,  thes ide length of a square with an area of $25.2 \text{ ft}^2$ is 
+This tells us \emph{to approximate the change in the side length we divide the change in the area by $10$ feet}.
+
+This interpretation of the derivative is useful in approximating square roots. For example,  the side length of a square with an area of $25.2 \text{ ft}^2$ is 
 \begin{align*}
-              \sqrt{25.2} &=      5 \text{ ft} + \Delta s  \text{ ft}  \\
+              \sqrt{25.2\text{ ft}^2} &=      5 \text{ ft} + \Delta s  \text{ ft}  \\
                                & \sim 5 \text{ ft} +   \left(\frac{1}{10 \text{ ft}}\right)(0.2 \text{ ft}^2) \\
                                       &= 5.02 \text{ ft},
 \end{align*}
@@ -207,10 +208,12 @@ Our goal here is to find an expression for the derivative
 \]
 of the inverse sine function
 \[
-       \theta = \arcsin y = \sin^{-1}(y) .
+       \theta = \arcsin y = \sin^{-1}(y) \, , \, -1 \leq y \leq 1.
 \]
 
-The first step is to recognize that the inverse sine function is \emph{not} the inverse of the sine function. Because the sine function is not one-to-one, its inverse is not a function. But the inverse sine function $\theta = \arcsin y$ is the inverse of the function
+The first step is to recognize that the inverse sine function is \emph{not} the inverse of the sine function. Because the sine function is not one-to-one, its inverse is not a function.
+
+Rather, the inverse sine function $\theta = \arcsin y$ is the inverse of the function
 \[
   y = f(\theta) = \sin\theta \, , \, -\pi/2 \leq \theta \leq \pi.
 \]
@@ -280,7 +283,7 @@ Next we'll compute the derivative of the arcsine function for a general input.
 \begin{example} \label{Ecbfghnbng}
 The inverse sine function
 \[
-    \theta = f^{-1}(y) = \arcsin(y) = \sin^{-1}(y) .
+    \theta = \arcsin(y) = \sin^{-1}(y) \, -1\leq y \leq 1 ,
 \]
 gives the angle between $-\pi/2$ and $\pi/2$ whose sine is equal to $y$. The key to expressing its derivative
 \[
@@ -290,7 +293,7 @@ in terms of $y$, is to express the derivative of its inverse
 \[
  y=f(\theta) = \sin\theta \, , \, -\pi/2 \leq \theta \leq \pi/2, 
 \]
-in terms of its output $y=\sin\theta$.
+in terms of $y=\sin\theta$.
 
 Now
 \[
