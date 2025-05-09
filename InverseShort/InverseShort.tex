@@ -199,7 +199,7 @@ expressing the volume of a cube (in $m^3$) in terms of its edge length (in meter
 
 
 
-\section{Derivatives of Inverse Trig Functions}
+\section{Derivative of the Arc Sine Function}
 
 Our goal here is to find an expression for the derivative
 \[
@@ -229,7 +229,7 @@ Before computing the derivative of the inverse sine function in general, we'll l
 
 \href{https://www.desmos.com/calculator/alp2mnxqhc}{151: Inverse Sine Function}
 
-The idea to computing the above derivative is to first find the slope of the the tangent line to the curve $y=\sin\theta$, $-\pi/2 \leq \theta \leq \pi/2$, at the point $P$ on the graph above. Since $d(\sin\theta)/d\theta = \cos\theta$, the slope is the derivative
+The idea to computing the above derivative is to first find the slope of the tangent line to the curve $y=\sin\theta$, $-\pi/2 \leq \theta \leq \pi/2$, at the point $P$ on the graph above. Since $d(\sin\theta)/d\theta = \cos\theta$, the slope is the derivative
 \begin{align*}
     \frac{d}{d\theta} \left(\sin\theta \right) \Big|_{\sin\theta = 4/5} &=  \frac{d}{d\theta} \left(\sin\theta \right) \Big|_{\theta = \arcsin(4/5)}  \\
                          &= \cos\theta        \Big|_{\theta = \arcsin(4/5)}  \\                                                       
@@ -250,11 +250,11 @@ between $-\pi/2$ and $\pi/2$ whose sine is $4/5$. But since
                       &= \pm 3/5 .
 \end{align*}
 
-To choose the correct sine, we use the fact that $-\pi/2 \leq \theta_0 \leq \pi/2$. This tells us $\cos\theta_0 \geq 0$, so $\cos\theta_0 = 3/5$.
+To choose the correct sign, we use the fact that $-\pi/2 \leq \theta_0 \leq \pi/2$. This tells us $\cos\theta_0 \geq 0$, so $\cos\theta_0 = 3/5$.
 
 We now know that for the function
 \[
-  y = f(\theta) = \sin\theta \, , \, -\pi/2 \leq \theta \leq \pi
+  y = f(\theta) = \sin\theta \, , \, -\pi/2 \leq \theta \leq \pi/2 , 
 \]
 \[
     \frac{dy}{d\theta}\Big|_{y=4/5} = 3/5.
@@ -278,25 +278,19 @@ Next we'll compute the derivative of the arcsine function for a general input.
 %The idea of computing the derivative of the inverse of a one-to-one function as illustrated above is simple. But if we require that the derivative of the inverse be expressed in terms of \emph{its independent variable}, the algebra can get a bit tricky.
 
 \begin{example} \label{Ecbfghnbng}
-Take for example the function
-\[
-     y = g(\theta) = \sin\theta.
-\]
-
-Now this function is \emph{not} one-to-one and so its inverse is not a function. But we can restrict the domain of $g$ to get a new function
-\begin{equation}  
-     y =f(\theta) = \sin\theta \, , \, -\pi/2 \leq \theta \leq \pi/2 , \label{Eq:ArcSine}
-\end{equation}
-that is one-to-one and that has the same range $\{y | -1 \leq y \leq 1\}$ as $g$. The inverse of this new function $f$ is the inverse sine function
+The inverse sine function
 \[
     \theta = f^{-1}(y) = \arcsin(y) = \sin^{-1}(y) .
 \]
-
-The function $\arcsin (y)$ gives the angle between $-\pi/2$ and $\pi/2$ whose sine is equal to $y$. The key to expressing its derivative
+gives the angle between $-\pi/2$ and $\pi/2$ whose sine is equal to $y$. The key to expressing its derivative
 \[
   \frac{d\theta}{dy} = \frac{d}{dy}\left(  \arcsin y \right)
 \]
-in terms of $y$, is to express the derivative of the original function $y=f(\theta)$ in terms of its output $y=\sin\theta$.
+in terms of $y$, is to express the derivative of its inverse
+\[
+ y=f(\theta) = \sin\theta \, , \, -\pi/2 \leq \theta \leq \pi/2, 
+\]
+in terms of its output $y=\sin\theta$.
 
 Now
 \[
@@ -313,13 +307,62 @@ So
 
 To choose between $\pm$, we must remember that by the definition of the arcsine function (see equation (1)), 
 \[
-   \pi/2 \leq \theta \leq \pi/2 .
+   \pi/2 \leq \theta = \arcsin y \leq \pi/2 .
 \]
-This tells us that $\cos\theta \geq 0$. So we conclude that
+This tells us that $\cos\theta \geq 0$ and so $\cos\theta = \sqrt{1-y^2}$. So the derivative of the function 
 \[
-\frac{d}{dy}\left(  \arcsin y \right)  =\cos\theta = \sqrt{1-y^2}.
+     y = \sin\theta \, , \, -\pi/2 \leq \theta \leq \pi/2, 
 \]
+is
+\[
+       \frac{dy}{d\theta} = \cos\theta = \sqrt{1-y^2} .
+\]
+And the derivative of its inverse
+\[
+   \theta = \arcsin y
+\]
+is
+\begin{align*}
+ \frac{d}{dy}\left(  \arcsin y \right)   &= \frac{d\theta}{dy}\\
+                                                      &= \left( \frac{dy}{d\theta} \right)^{-1}\\                      
+                                                       &= \frac{1}{\sqrt{1-y^2}}.
+\end{align*}
 \end{example}
+
+\section{Derivative of the Arc Cosine Function}
+The inverse of the function
+\[
+   x = \cos \theta \, , \, 0\leq \theta \leq \pi ,
+\]
+is the arccosine function
+\[
+ \theta = \arccos x , -1\leq x \leq 1 .
+\]
+It returns the angle between $0$ and $\pi$ whose cosine is $x$.
+
+\begin{exercise} \label{EODFerDFghg}
+\begin{enumerate}
+
+\item Follow the method of Example 5 above to evaluate the derivative 
+\[
+        \frac{d}{dx} \left( \arccos x  \right)\Big|_{x=-3/4}
+\]
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{hgxqjixv4n}{900}{600}     % ruysb5sjsy
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/hgxqjixv4n}{151: Inverse Cosine Function}
+
+\item Follow the method of Example 7 above to find an expression for the derivative
+\[
+   \frac{d}{dx} \left( \arccos x  \right) .
+\]
+\end{enumerate}
+
+\end{exercise}
 
 \section{Exercises}
 
@@ -409,6 +452,11 @@ Use the results of Exercise 5 to express the derivative of the inverse of each o
 \item
 \[
     \frac{d}{dx}\left( \arccos x + \arccos\left(\sqrt{1-x^2}\right)  \right)
+\] 
+
+\item
+\[
+    \frac{d}{dx}\left( \arcsin x + \arcsin\left(\sqrt{1-x^2}\right)  \right)
 \] 
 \end{enumerate}
 
