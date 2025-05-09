@@ -141,8 +141,18 @@ we know that
 \[
      \Delta A \sim  \left( \frac{dA}{ds}\Big|_{s=5}\right)\Delta s = 10 \Delta s .
 \]
+\emph{To approximate the change in the area we multiply the change in the side length by $10$ feet}.
 
-The picture below should suggest why this is a good approximation. Explain how
+\begin{enumerate}
+\item The picture below suggests why this is a good approximation. Explain how. 
+
+\item Do some algebra and compare the actual change 
+\[
+    \Delta A = f(5+s) - f(5) = (5+\Delta s)^2 - 25
+\]
+in the area with the approximate change. Reconcile the difference with the picture.
+
+\end{enumerate}
 \begin{freeResponse}
 \end{freeResponse}
 
@@ -155,18 +165,117 @@ The picture below should suggest why this is a good approximation. Explain how
 
 \href{https://www.desmos.com/calculator/h2fm6mm8ua}{151: Square Error}
 
+
+To interpret the derivative 
+\[
+    \frac{ds}{dA}\Big|_{A=25} = \frac{1}{10} text{ ft}^{-1}
+\]
+in much the same way by rewriting the above approximation as
+\[
+    \Delta s \sim \left( \frac{ds}{dA}\Big|_{A=25}\right)\Delta A = \left(\frac{1}{10}\right) \Delta A.
+\]
+\emph{To approximate the change in the side length we divide the change in the area by $10$ feet}.
+
+This interpretation of the derivative is useful in starting to approximate square roots. For example,  thes ide length of a square with an area of $25.2 \text{ ft}^2$ is 
+\begin{align*}
+              \sqrt{25.2} &=      5 \text{ ft} + \Delta s  \text{ ft}  \\
+                               & \sim 5 \text{ ft} +   \left(\frac{1}{10 \text{ ft}}\right)(0.2 \text{ ft}^2) \\
+                                      &= 5.02 \text{ ft},
+\end{align*}
+giving us a pretty good approximation to 
+\[
+    \sqrt{25.2} \sim 5.01996 .
+\]
 \end{example}
 
 
-
-
-
+\begin{exercise}  \label{ExLDFDFDdare}
+Carry out a similar analysis with the function
+\[
+    V = s^3 \, , \, s\geq 0,
+\]
+expressing the volume of a cube (in $m^3$) in terms of its edge length (in meters). Try to include a picture as well.
+\end{exercise}
 
 
 
 \section{Derivatives of Inverse Trig Functions}
 
-The idea of computing the derivative of the inverse of a one-to-one function as illustrated above is simple. But if we require that the derivative of the inverse be expressed in terms of \emph{its independent variable}, the algebra can get a bit tricky.
+Our goal here is to find an expression for the derivative
+\[
+       \frac{d\theta}{dy} = \frac{d}{dy} \left(   \arcsin y \right)
+\]
+of the inverse sine function
+\[
+       \theta = \arcsin y = \sin^{-1}(y) .
+\]
+
+The first step is to recognize that the inverse sine function is \emph{not} the inverse of the sine function. Because the sine function is not one-to-one, its inverse is not a function. But the inverse sine function $\theta = \arcsin y$ is the inverse of the function
+\[
+  y = f(\theta) = \sin\theta \, , \, -\pi/2 \leq \theta \leq \pi.
+\]
+
+\begin{example} \label{ExLKDFrsfD}
+Before computing the derivative of the inverse sine function in general, we'll look at a specific example and evaluate the derivative
+\[
+   \frac{d}{dy} \left(  \arcsin y \right) \Big|_{y=4/5} .
+\]
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{alp2mnxqhc}{900}{600}     % ruysb5sjsy
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/alp2mnxqhc}{151: Inverse Sine Function}
+
+The idea to computing the above derivative is to first find the slope of the the tangent line to the curve $y=\sin\theta$, $-\pi/2 \leq \theta \leq \pi/2$, at the point $P$ on the graph above. Since $d(\sin\theta)/d\theta = \cos\theta$, the slope is the derivative
+\begin{align*}
+    \frac{d}{d\theta} \left(\sin\theta \right) \Big|_{\sin\theta = 4/5} &=  \frac{d}{d\theta} \left(\sin\theta \right) \Big|_{\theta = \arcsin(4/5)}  \\
+                         &= \cos\theta        \Big|_{\theta = \arcsin(4/5)}  \\                                                       
+ & = \cos (\arcsin(4/5).
+\end{align*}
+
+To evaluate this composition, we need to find the cosine of the angle 
+\[
+    \theta_0 = \arcsin(4/5)
+\]
+between $-\pi/2$ and $\pi/2$ whose sine is $4/5$. But since 
+\[
+  \cos^2\theta_0 + \sin^2\theta_0 = 1 ,
+\] 
+\begin{align*}
+  \cos\theta_0 &= \pm \sqrt{1-\sin^2\theta_0} \\
+                      &= \pm \sqrt{1-\left(\frac{4}{5}\right)^2} \\
+                      &= \pm 3/5 .
+\end{align*}
+
+To choose the correct sine, we use the fact that $-\pi/2 \leq \theta_0 \leq \pi/2$. This tells us $\cos\theta_0 \geq 0$, so $\cos\theta_0 = 3/5$.
+
+We now know that for the function
+\[
+  y = f(\theta) = \sin\theta \, , \, -\pi/2 \leq \theta \leq \pi
+\]
+\[
+    \frac{dy}{d\theta}\Big|_{y=4/5} = 3/5.
+\]
+So for the inverse function
+\[
+     \theta = \arcsin y ,
+\]
+\begin{align*}
+ \frac{d\theta}{dy}\Big|_{y=4/5} &= \left( \frac{dy}{d\theta}\Big|_{y=4/5} \right)^{-1} \\
+                                                & =\frac{1}{\sqrt{1-(4/5)^2}}  \\
+                                                & = 5/3 .
+\end{align*}
+
+\end{example}
+
+Next we'll compute the derivative of the arcsine function for a general input.
+
+
+
+%The idea of computing the derivative of the inverse of a one-to-one function as illustrated above is simple. But if we require that the derivative of the inverse be expressed in terms of \emph{its independent variable}, the algebra can get a bit tricky.
 
 \begin{example} \label{Ecbfghnbng}
 Take for example the function
