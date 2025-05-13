@@ -610,4 +610,60 @@ For $a\in \mathbb{R}$ let point $P$ with coordinates $(a, f(a))$ be a curve on t
 \end{question}
 
 
+\section{Exercises}
+
+\begin{exercise} \label{EdDFERT}
+Find an expression for the derivative
+\[
+  \frac{d}{dt}\left(  e^{\cos t} \right) .
+\] 
+
+\begin{explanation}
+We need to use the chain rule because we are differentiating the composition of functions. So let
+\[
+    y = e^{\cos t}
+\]
+and 
+\[
+   u = \cos t.
+\]
+Then 
+\[
+  y = e^u
+\]
+and
+\begin{align*}
+   \frac{dy}{dt}  &= \frac{dy}{du }\cdot \frac{du}{dt}  \\
+                        &= \left( \frac{d}{du}\left( e^u \right) \right) \left(  \frac{d}{dt} (\cos t) \right)  \\
+                        &= e^u \, (-\sin t)  \\
+                         &= (-\sin t)e^{\cos t} .
+ \end{align*}
+\end{explanation}
+
+\end{exercise}
+
+\begin{exercise}  \label{EKDFLedsadf}
+Find expressions for each of the following derivatives. Follow the previous exercise exactly in using the chain rule.
+
+\begin{enumerate}
+\item $\frac{d}{dt} \left( 1000 e^{\frac{t}{5}}  \right)$
+
+\item $\frac{d}{dt}\left(  \frac{10}{3+ 5e^t}    \right)$
+
+\item $\frac{d}{dx} \left(  \sin (e^{4x})  \right)$
+
+\item $\frac{d}{dt} \left( 1000 (2^t)  \right)$  
+
+\emph{Hint:} Write $2^t$ as
+\[
+ 2^t = \left( e^{\ln 2} \right)^t = e^{t \ln 2}
+\]
+and use the chain rule.
+\end{enumerate}
+
+\end{exercise}
+
+
+
+
 \end{document}
