@@ -105,7 +105,7 @@ Is the helicopter ascending or descending at this instant? At what rate?
 \section{Distance to the Horizon}
 
 \begin{question}  \label{Qthhvhrdfgbyt}
-On a clear day with an unobstructed view (like you might have at the beach or in a hot air balloon), the distance to the horizon is limited by the curvature of the earth as illustrated in the demonstration below. This distance is the length of the (red) arc $AT$ on the earth's surface. 
+The distance to the horizon is limited by the curvature of the earth as illustrated in the demonstration below. This distance is the length of the (red) arc $AT$ on the earth's surface. 
 
 
 \pdfOnly{
@@ -116,17 +116,41 @@ Access Desmos interactives through the online version of this text at
  
 \begin{onlineOnly}
     \begin{center}
-\desmos{ewowig5sgk}{900}{600}
+\desmos{8qwt6mfirt}{900}{600}
 \end{center}
 \end{onlineOnly}
 
 Desmos activity available at
 
-\href{https://www.desmos.com/calculator/ewowig5sgk}{151:Distance to Horizon 1}
+\href{https://www.desmos.com/calculator/8qwt6mfirt}{151:Distance to Horizon 11}
 
-Now suppose at some instant you are $h$ miles above the earth and descending at the rate of $v$ miles/hour. 
 
-Find an expression for the rate (in miles/hour) at which your distance to the horizon (the length of the red arc $AT$ above) is changing at this instant. Your expression should be in terms of $h$, $v$, and the radius $R$ of the earth (measured in miles). Do \emph{not} assume $v$ is constant.
+Let 
+\[
+    s = f(h)
+\]
+be the function that expresses the distance to the horizon (in thousands of miles) in terms of your altitude above the surface (in thousands of miles).
+
+\begin{enumerate}
+
+\item Sketch by hand a graph of the function $f$. Drag the slider $h$ in the worksheet above to help with your sketch. Then activate the Graph folder in Line 17 to see how you did.
+
+\item Find an expression for the function $f$.
+
+\item Use the graph of the function $f$ to approximate the derivative
+\[
+       \frac{ds}{dh}\Big|_{h=1} .
+\]
+Include units.
+
+\item Use your expression for the function $s = f(h)$ to find the exact value of the derivative above.
+
+\item Interpret the meaning of the derivative in terms of small changes.
+
+\item Suppose at some instant you are in a rocket $1000$ miles above the earth and descending at the rate of $v$ miles/hour.
+Find an expression (in terms of $v$) for the rate (in miles/hour) at which your distance to the horizon (the length of the red arc $AT$ above) is changing at this instant.  Do \emph{not} assume $v$ is constant.
+
+\end{enumerate}
 
 \end{question}
 
