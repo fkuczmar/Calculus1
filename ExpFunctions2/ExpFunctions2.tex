@@ -51,10 +51,9 @@ is exponential. Like the first it expresses the population (in millions) of a co
 
 We could say that the population doubles every hour. Equivalently, we could say that the population increases by $100\%$ every hour. But these descriptions would be incomplete. They don't tell us, nor do they imply, anything about what happens to the population over a half-hour period for example. The function $P=h(t)$ graphed below shows an example of a non-exponential function that doubles every hour. Drag the slider $u$ in Line 1 and keep your eye on Line 2 (where $h=1$, and $P=f_7(t) = h(t)$) to convince yourself of this.
 
+\begin{question} \label{WEWMRNERer}
 Describe what you see in the animation and how this suggests the function doubles over \emph{every} one-hour interval.
-
-\begin{freeResponse}
-\end{freeResponse}
+\end{question}
 
 \href{https://www.desmos.com/calculator/zapwlt6qju}{151: Not Constant Rate 3} 
 
@@ -80,11 +79,11 @@ millions of bacteria. To get the relative change over this time interval, we div
                               &= 2^{\Delta t} - 1.
 \end{align*}
 
+\begin{question} \label{QODFERerre}
 What are the units of this relative rate of change?
-\begin{freeResponse}
-\end{freeResponse}
+\end{question}
 
-For example, if the relative rate of change in the population over a one hour period is
+For example, the relative rate of change in the population over a one hour period is
 \[ 
         2^1 - 1 = 1 = 100\%,
 \]
@@ -93,21 +92,71 @@ and over a half-hour period is
     \sqrt{2} - 1 \sim 0.414 \sim 41.4\%.
 \]
 
+\begin{question} \label{QERdftrre}
 Explain why this rate is less than $50\%$.
-\begin{freeResponse}
-\end{freeResponse}
+\end{question}
 
+\begin{exploration} \label{EKDFeredfM}
+The worksheet below shows the graph of the function $P=3(2^t)$. 
 
-
-
-\href{https://www.desmos.com/calculator/ri5r9suauk}{151: Exp Growth Subtangent}
+\href{https://www.desmos.com/calculator/zu0f4jnh4a}{151: Exp Growth Subtangent}
 
  
 \begin{onlineOnly}
     \begin{center}
-\desmos{ri5r9suauk}{900}{600}
+\desmos{zu0f4jnh4a}{900}{600}
 \end{center}
 \end{onlineOnly}
+
+
+\begin{enumerate}
+\item Experiment with the worksheet below first dragging the slider $u$ (another name for $t$) in Line 2. Watch how Lines 6, 8, 10 change, as well as how the length of segment $AB$ changes. Describe what you see.
+
+Notes:
+
+\begin{enumerate}
+\item Line 6
+\[
+\frac{f(u+h)}{f(u)}
+\]
+
+This is the growth factor over the inteval $t=u$ to $t=u+h$ hours.
+
+\item Line 8: 
+\[
+    \frac{1}{f(u)}\cdot \frac{f(u+h)-f(u)}{h}
+\]
+
+This is the relative average rate of change over the inteval $t=u$ to $t=u+h$ hours.
+
+\item Line 10:
+\[
+    f(u) \cdot \frac{h}{f(u+h)-f(u)}
+\]
+
+This is the reciprocal of Line 8.
+\end{enumerate}
+
+
+\item Now Drag $h=\Delta t$ in Line 4 to $h=0.5$ and repeat part (a). Describe what you see.
+
+\item Drag $h$ closer to zero and describe how Lines 6, 8, and 10 change. Include units for these three quantities
+
+\item What are the units of Line 10? What is its meaning?
+
+\item Summarize your observations.
+
+\end{enumerate}
+\end{exploration}
+
+
+\section{The Number $e$}
+We still have not answered the question about how to describe exponential growth \emph{without} a formula. What we know so far is that over a time interval of fixed duration an exponential function increaseses by a fixed percentage.   
+
+
+
+
+
 
 \begin{enumerate}
 \item Describe how the population grows.
