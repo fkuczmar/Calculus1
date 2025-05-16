@@ -11,12 +11,48 @@ More on exponential functions and their derivatives.
 
 
 \section{The Main Ideas}
-\begin{question}
-The function 
+
+Consider two models for the population of a bacteria colony. The first,
+\[
+      P = g(t) =3 +\frac{1}{2}t \, , \, 0\leq t \leq 6,
+\]
+is linear and expresses the population (in millions of bacteria) in terms of the number of hours past noon. The growth rate is easy to describe. The population increases at the contant rate of $0.5$ million bacteria/hour. While we could use calculus and compute the growth rate as
+\[
+    \frac{dP}{dt} = \frac{d}{dt}\left(  3 +\frac{1}{2}t   \right) = \frac{1}{2} \frac{\text{ bac}}{\text{hr}},
+\]
+this is not necessary. 
+
+We could get around talking about an instantaneous rate of change by saying that the average growth rate over \emph{any} time interval is $0.5$ million bacteria/hour. This statement implies that the growth rate is constant. 
+
+But saying that the population increases by $0.5$ million bacteria every hour would not describe how the population grows. It would \emph{not} imply a constant growth rate because it does not tell us anything about what happens to the popluation over, for example, a half-hour period. The function graphed below shows an example. The function is defnitely not linear, yet it increases by $0.5$ million over \emph{every} one-hour interval. Drag the slider $u$ in Line 1 to convince yourself of this.
+
+\href{https://www.desmos.com/calculator/ehtzdzckmy}{151: Not Constant Rate}
+
+ 
+\begin{onlineOnly}
+    \begin{center}
+\desmos{ehtzdzckmy}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+
+
+%\begin{question}
+
+The second model,
 \[
    P =f(t) =3 (2^t) \, , \, 0\leq t \leq 6 ,
 \]
-expresses the population (in millions) of a colony of bacteria in terms of the number of hours past noon. Its graph is shown below.
+is exponential. Like the first it expresses the population (in millions) of a colony of bacteria in terms of the number of hours past noon. How can we desribe how this population grows?
+
+One possible description would be to say that the population doubles every hour. Equivalently, we could say that the population increases by $100\%$ every hour. But either of these descriptions would be incomplete. They don't tell us, nor do they imply, anything about what happens to the population over a half-hour period for example.
+
+
+
+
+
+
+
 
 \href{https://www.desmos.com/calculator/ri5r9suauk}{151: Exp Growth Subtangent}
 
@@ -45,7 +81,7 @@ expresses the population (in millions) of a colony of bacteria in terms of the n
 
 \end{enumerate}
 
-\end{question}
+%\end{question}
 
 
 
