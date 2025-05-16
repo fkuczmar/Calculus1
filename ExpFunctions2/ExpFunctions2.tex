@@ -110,7 +110,7 @@ The worksheet below shows the graph of the function $P=3(2^t)$.
 
 
 \begin{enumerate}
-\item Experiment with the worksheet below first dragging the slider $u$ (another name for $t$) in Line 2. Watch how Lines 6, 8, 10 change, as well as how the length of segment $AB$ changes. Describe what you see.
+\item Experiment with the worksheet by first dragging the slider $u$ (another name for $t$) in Line 2. Watch how Lines 6, 8, 10 change, as well as how the length of segment $AB$ changes. Describe what you see.
 
 Notes:
 
@@ -140,7 +140,7 @@ This is the reciprocal of Line 8.
 
 \item Now Drag $h=\Delta t$ in Line 4 to $h=0.5$ and repeat part (a). Describe what you see.
 
-\item Drag $h$ closer to zero and describe how Lines 6, 8, and 10 change. Include units for these three quantities
+\item Drag $h$ closer to zero and describe how Lines 6, 8, and 10 change. Include units for these three expressions.
 
 \item What are the units of Line 10? What is its meaning?
 
@@ -150,60 +150,145 @@ This is the reciprocal of Line 8.
 \end{exploration}
 
 
+\section{Relative Growth Rates}
+We still have not answered the question about how to describe exponential growth \emph{without} a formula. What we know so far is that over a time interval of fixed duration an exponential function increaseses by a fixed percentage.  And Exploration 4 might have suggested that the relative instantaneous growth rate 
+\[
+  \frac{1}{P}\cdot \frac{dP}{dt}
+\]
+is constant for an exponential function. We can show this is true for our function $f(t)=3(2^t)$ using our prior work where we showed 
+\[
+  \frac{\Delta P}{P} = 2^{\Delta t} - 1 .
+\]
+So the relative instantaneous growth rate of the function $f(t)=3(2^t)$ is 
+\begin{align*}
+      \frac{1}{P}\cdot \frac{dP}{dt} &= \lim_{\Delta t\to  0} \frac{1}{P} \cdot \frac{\Delta P}{\Delta t} \\
+                                                   &= \lim_{\Delta t\to  0} \frac{1}{\Delta t} \cdot \frac{\Delta P}{P} \\
+                                                   &=  \lim_{\Delta t\to  0}  \frac{2^{\Delta t} - 1}{\Delta t} .
+\end{align*}
+
+Now we have no way to evaluate this limit algebraically (at least as of yet), but we can recognize it as the derivative
+\[
+     \frac{d}{dt}\left ( 2^ t \right) \Big|_{t=0} = \lim_{\Delta t\to  0}  \frac{2^{\Delta t} - 2^0}{\Delta t} .
+\]
+
+From Exploration 4 we know the approximate value of this limit, and hence the relative rate of change of our population function $P = f(t) = 3(2^t)$, 
+\[
+        \frac{1}{P}\cdot \frac{dP}{dt} ~\sim 0.693 = 69.3\% / {\text hr}.
+\]
+
+So our population increases at the constant relative rate of approximately $69.3\%$/hr. The exact relative rate turns out to be
+\[
+  \frac{1}{P}\cdot \frac{dP}{dt} = \ln 2 / {\text hr}.
+\]
+But to understand why, we first need to come to terms with the number $e\sim 2.71828$.
+
+
 \section{The Number $e$}
-We still have not answered the question about how to describe exponential growth \emph{without} a formula. What we know so far is that over a time interval of fixed duration an exponential function increaseses by a fixed percentage.   
+
+For our purposes, the best definition definition of the number $e$ is this: It is the number for which the exponential function ($t$ in hours)
+\[
+     P = g(t) = e^t 
+\]
+increases at the constant relative rate of $100\%$/hr. Put another way, the number $e$ is the one-hour growth factor for a population that increases at the relative rate of $100\%$/hr. But to make sense of this, we need to understand what it means to say that at any instant a population is increasing at the rate of  $100\%$/hr.
+
+It does \emph{not} mean that the population increases $100\%$ every hour (the function $f(t)=P_0(2^t)$ does that). Rather, like every derivative the meaning is best understood in terms of small changes.
+
+For example, in $1/100$ of an hour the population would increase by about
+\[
+     \left( \frac{1}{100} \right) (100\%) = 1\%.
+\]
+So the $1/100$-hour growth factor is about $1.01$. And the one-hour growth factor is about 
+\[
+  \left( 1 + \frac{1}{100} \right)^{100} \sim 2.705 .
+\]
+This tells us that $e\sim 2.705$ and that every hour a population increasing at the relative instantaneous rate of $100\%$/hr increases by about $170.5\%$.
+
+We can get a better approximation to $e$ by taking a smaller time interval. For example, a better approximation is 
+\[
+  e \sim \left( 1 + \frac{1}{1000} \right)^{1000} \sim 2.717 .
+\]
+
+And as you might have guessed,
+\[
+     e = \lim_{n\to infty}\left( 1  + \frac{1}{n} \right)^n \sim 2.718 .
+\]
 
 
+\section{An Example}
 
+When we learned about derivatives of inverse functions, we saw that it was helpful to express the derivative of a one-to-one function in terms of its \emph{output}. For the function
+\[
+ y = f(\theta) = \sin\theta \, , \, -\pi/2 \leq \theta \leq \pi/2,
+\]
+for example, 
+\[
+    \frac{dy}{d\theta} = \cos\theta = \sqrt{1-y^2}.
+\]
 
+When working with exponential functions, or simple transformations of these, it is almost always best to do the same. Here's an example.
 
+\begin{example}  \label{Ex:KDFDFL}
+The function
+\[
+       P = 3e^{\frac{1}{5}t} \, , \, 0\leq t \leq 20 ,
+\]
+expresses the population (in millions) of a colony of bacteria in terms of the number of hours past noon.
 
-\begin{enumerate}
-\item Describe how the population grows.
+Find the population when it is increasing at the rate of $2$ million bacteria/hour.
 
-\item Does the converse hold? That is, does your description imply the population function has the form given above?
+\begin{explanation}
+There's a hard way and an easy way to solve this problem. The hard way would be to first find the time when the population is increasing at the given rate. Then we could use this time to find the population.
 
-\item If not, how can we describe precisely how the population grows?
+The easy way is to ignore time altogether and express the growth rate of the population in terms of the population.
 
-\begin{enumerate}
-\item Drag the slider $u$ in Line 2 and watch how the length of segment $AB$ changes. Watch also the values of the expressions in Lines 5 and 6. How are these values related to the length $AB$?
-
-\item Drag the slider $h$ to $h=2$ and repeat part (i).
-
-\item Drag the slider $h$ to be closer and closer to zero, each time repeating part (i). What do you notice? 
-
-\end{enumerate}
-
-\end{enumerate}
-
-%\end{question}
-
-
-
-
-\begin{question}  \label{Qlgkfglbnbn}
-What type of functions change at 
-\begin{enumerate}
-\item a constant rate?
-
-\item a constant relative rate?
-\end{enumerate}
+Before we do this, let's think first about the units of the factor $1/5$ in the exponent. Since any exponential function takes only dimensionless inputs and $t$ is measured in hours, the units of $1/5$ are 
+\begin{question} \label{EROERERER}
+\begin{multipleChoice}
+\choice{hours}
+\choice{dimensionless}
+\choice{millions of bacteria}
+\choice[correct]{$\text{hours}^{-1}$}
+\end{multipleChoice}
 \end{question}
 
+The units of $1/5$ give a clue to its meaning. It is in fact the relative growth rate of the population. So at any instant this population is increasing at the relative rate of 
+\begin{question} \label{QERERERERER}
+ $\answer{20}\%$/hour .
+\end{question}
 
-\begin{exploration} \label{EdfERERE}
+\begin{question}  \label{QODEERER}
+\begin{enumerate}
+\item Use the chain rule to compute the absolute growth rate
+\[
+\frac{dP}{dt} = \frac{d}{dt} \left(   3e^{\frac{1}{5}t}\right) .
+\]
+Make the explicity $u$-substitution. Do not skip any steps.
 
-\href{https://www.desmos.com/calculator/zlfka62ec0}{151: Exp Growth Subtangent 2}
+\item Use part (a) to compute the relative growth rate 
+\[
+  \frac{1}{P} \cdot \frac{dP}{dt} .
+\]
+\end{enumerate}
 
- 
-\begin{onlineOnly}
-    \begin{center}
-\desmos{zlfka62ec0}{900}{600}
-\end{center}
-\end{onlineOnly}
+\end{question}
 
+You should have found the relative growth rate to be
+\[
+   \frac{1}{P} \cdot \frac{dP}{dt} = \frac{1}{5}\text{ hr}^{-1} ,
+\]
+so that the absolute growth rate is
+\[
+ \frac{dP}{dt} = \frac{1}{5}P .
+\]
 
-\end{exploration}
+\begin{question} \label{QERdfsdf}
+Use this to find the population when it is increasing at the rate of $2$ million bacteria/hour.
+\end{question}
+
+\end{explanation}
+
+\end{example}
+
 
 \section{Exercises}
 
