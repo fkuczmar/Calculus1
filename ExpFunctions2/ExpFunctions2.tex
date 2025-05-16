@@ -10,21 +10,25 @@ More on exponential functions and their derivatives.
 \maketitle
 
 
-\section{The Main Ideas}
+\section{Introduction}
 
 Consider two models for the population of a bacteria colony. The first,
 \[
       P = g(t) =3 +\frac{1}{2}t \, , \, 0\leq t \leq 6,
 \]
-is linear and expresses the population (in millions of bacteria) in terms of the number of hours past noon. The growth rate is easy to describe. The population increases at the contant rate of $0.5$ million bacteria/hour. While we could use calculus and compute the growth rate as
+is linear and expresses the population (in millions of bacteria) in terms of the number of hours past noon. The growth rate is easy to describe. The population increases at the contant rate of $0.5$ million bacteria/hour. We know this from precalculus. We could also use calculus to compute the growth rate as
 \[
-    \frac{dP}{dt} = \frac{d}{dt}\left(  3 +\frac{1}{2}t   \right) = \frac{1}{2} \frac{\text{ bac}}{\text{hr}},
+    \frac{dP}{dt} = \frac{d}{dt}\left(  3 +\frac{1}{2}t   \right) = \frac{1}{2} \frac{\text{ bac}}{\text{hr}}.
 \]
-this is not necessary. 
 
-We could get around talking about an instantaneous growth rate by saying that the average growth rate over \emph{any} time interval is $0.5$ million bacteria/hour. This statement implies that the growth rate is constant. 
+We could avoid thinking about an instantaneous growth rate by saying that the average growth rate over \emph{any} time interval is $0.5$ million bacteria/hour. This statement implies that the (instantaneous) growth rate is constant. 
 
 But saying that the population increases by $0.5$ million bacteria every hour would not completely describe how the population grows. It does \emph{not} imply a constant growth rate because it does not tell us anything about what happens to the popluation over, for example, a half-hour period. The function graphed below shows an example of a non-linear function that increases by $0.5$ million over \emph{every} one-hour interval. Drag the slider $u$ in Line 1 to convince yourself of this.
+
+Describe what you see in the animation and how this suggests the function increases by $0.5$ million over \emph{every} one-hour interval.
+
+\begin{freeResponse}
+\end{freeResponse}
 
 \href{https://www.desmos.com/calculator/ehtzdzckmy}{151: Not Constant Rate}
 
@@ -45,8 +49,12 @@ The second model,
 \]
 is exponential. Like the first it expresses the population (in millions) of a colony of bacteria in terms of the number of hours past noon. How can we desribe how this population grows?
 
-We could say that the population doubles every hour. Equivalently, we could say that the population increases by $100\%$ every hour. But neither of these descriptions would be complete. They don't tell us, nor do they imply, anything about what happens to the population over a half-hour period for example. The function $P=h(t)$ graphed below shows an example of a non-exponential function that doubles every hour. Drag the slider $u$ in Line 1 and keep your eye on Line 2 (where $h=1$, and $P=f_7(t)$) to convince yourself of this.
+We could say that the population doubles every hour. Equivalently, we could say that the population increases by $100\%$ every hour. But these descriptions would be incomplete. They don't tell us, nor do they imply, anything about what happens to the population over a half-hour period for example. The function $P=h(t)$ graphed below shows an example of a non-exponential function that doubles every hour. Drag the slider $u$ in Line 1 and keep your eye on Line 2 (where $h=1$, and $P=f_7(t) = h(t)$) to convince yourself of this.
 
+Describe what you see in the animation and how this suggests the function doubles over \emph{every} one-hour interval.
+
+\begin{freeResponse}
+\end{freeResponse}
 
 \href{https://www.desmos.com/calculator/zapwlt6qju}{151: Not Constant Rate 3} 
 
@@ -58,20 +66,36 @@ We could say that the population doubles every hour. Equivalently, we could say 
 \end{onlineOnly}
 
 
+We might try describing what happens to the population over a shorter time interval, say $\Delta t$ hours. Over the time interval from time $t$ hours past noon to time $t+\Delta t$ hours past noon the population increases by 
+\begin{align*}
+  \Delta P &=  f(t + \Delta t) - f(t)  \\ 
+                               &=  3 (2^{t+\Delta t} - 2^t) \\
+                               &=  3 (2^t \cdot 2^{\Delta t} - 2^t) \\
+                               &=  3 (2^t) (2^{\Delta t} - 1) 
+\end{align*}
+millions of bacteria. To get the relative change over this time interval, we divide this absolute change by the population at the start of the time interval. This gives the relative rate of change as
+\begin{align*}
+   \frac{\Delta P}{P} &=  \frac{f(t + \Delta t) - f(t)}{f(t)}  \\ 
+                              &= \frac{3 (2^t) (2^{\Delta t} - 1)}{3 (2^t)} \\
+                              &= 2^{\Delta t} - 1.
+\end{align*}
 
+What are the units of this relative rate of change?
+\begin{freeResponse}
+\end{freeResponse}
 
+For example, if the relative rate of change in the population over a one hour period is
+\[ 
+        2^1 - 1 = 1 = 100\%,
+\]
+and over a half-hour period is
+\[
+    \sqrt{2} - 1 \sim 0.414 \sim 41.4\%.
+\]
 
-
-
-\href{https://www.desmos.com/calculator/ehtzdzckmy}{151: Not Constant Rate}
-
- 
-\begin{onlineOnly}
-    \begin{center}
-\desmos{ehtzdzckmy}{900}{600}
-\end{center}
-\end{onlineOnly}
-
+Explain why this rate is less than $50\%$.
+\begin{freeResponse}
+\end{freeResponse}
 
 
 
