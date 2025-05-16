@@ -151,11 +151,11 @@ This is the reciprocal of Line 8.
 
 
 \section{Relative Growth Rates}
-We still have not answered the question about how to describe exponential growth \emph{without} a formula. What we know so far is that over a time interval of fixed duration an exponential function increaseses by a fixed percentage.  And Exploration 4 might have suggested that the relative instantaneous growth rate 
+We still have not answered the question about how to describe exponential growth \emph{without} a formula. What we know so far is that over time intervals of fixed duration an exponential function increaseses by a fixed percentage.  And Exploration 4 might have suggested that the relative instantaneous growth rate 
 \[
   \frac{1}{P}\cdot \frac{dP}{dt}
 \]
-is constant for an exponential function. We can show this is true for our function $f(t)=3(2^t)$ using our prior work where we showed 
+is constant for an exponential function. We can show this is true for our function $f(t)=3(2^t)$ using our prior work where we found that 
 \[
   \frac{\Delta P}{P} = 2^{\Delta t} - 1 .
 \]
@@ -171,7 +171,7 @@ Now we have no way to evaluate this limit algebraically (at least as of yet), bu
      \frac{d}{dt}\left ( 2^ t \right) \Big|_{t=0} = \lim_{\Delta t\to  0}  \frac{2^{\Delta t} - 2^0}{\Delta t} .
 \]
 
-From Exploration 4 we know the approximate value of this limit, and hence the relative rate of change of our population function $P = f(t) = 3(2^t)$, 
+From Exploration 4 we know the approximate value of this limit, and hence the relative rate of change of our population function $P = f(t) = 3(2^t)$. It is
 \[
         \frac{1}{P}\cdot \frac{dP}{dt} ~\sim 0.693 = 69.3\% / {\text hr}.
 \]
@@ -189,7 +189,7 @@ For our purposes, the best definition definition of the number $e$ is this: It i
 \[
      P = g(t) = e^t 
 \]
-increases at the constant relative rate of $100\%$/hr. Put another way, the number $e$ is the one-hour growth factor for a population that increases at the relative rate of $100\%$/hr. But to make sense of this, we need to understand what it means to say that at any instant a population is increasing at the rate of  $100\%$/hr.
+increases at the constant relative rate of $100\%$/hr. Put another way, the number $e$ is the one-hour growth factor for a population that increases at the relative rate of $100\%$/hr. But to make sense of this, we need to understand what it means to say that at any instant a population is increasing at the relative rate of $100\%$/hr.
 
 It does \emph{not} mean that the population increases $100\%$ every hour (the function $f(t)=P_0(2^t)$ does that). Rather, like every derivative the meaning is best understood in terms of small changes.
 
@@ -264,10 +264,11 @@ The units of $1/5$ give a clue to its meaning. It is in fact the relative growth
 \]
 Make the explicity $u$-substitution. Do not skip any steps.
 
-\item Use part (a) to compute the relative growth rate 
+\item Use part (a) to verify that the relative growth rate 
 \[
-  \frac{1}{P} \cdot \frac{dP}{dt} .
+  \frac{1}{P} \cdot \frac{dP}{dt} 
 \]
+is $20\%$/hour.
 \end{enumerate}
 
 \end{question}
@@ -276,7 +277,7 @@ You should have found the relative growth rate to be
 \[
    \frac{1}{P} \cdot \frac{dP}{dt} = \frac{1}{5}\text{ hr}^{-1} ,
 \]
-so that the absolute growth rate is
+so that the absolute growth rate (in millions of bacteria/hour) is
 \[
  \frac{dP}{dt} = \frac{1}{5}P .
 \]
