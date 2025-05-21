@@ -1,0 +1,559 @@
+\documentclass{ximera}
+\title{Exponential Functions, Short Version}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+More on exponential functions and their derivatives. 
+\end{abstract}
+\maketitle
+
+
+
+\section{Introduction}
+
+To claim a population that increases by $0.5$ million bacteria every hour grows at a constant rate would be a falsehood. The reason is the statement does not imply anything about what the population does over a shorter period. The graph below shows a example of a non-linear function that increases by $0.5$ million over \emph{every} one-hour interval. Drag the slider $u$ in Line 1 to convince yourself of this.
+
+\href{https://www.desmos.com/calculator/ehtzdzckmy}{151: Not Constant Rate}
+
+ 
+\begin{onlineOnly}
+    \begin{center}
+\desmos{ehtzdzckmy}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+We would make a similar error in asserting a population that doubles every hour grows exponentially.  The function $P=h(t)$ graphed below shows an example of a non-exponential function that doubles every hour. Drag the slider $u$ in Line 1 and keep your eye on Line 2 (where $h=1$, and $P=f_7(t) = h(t)$) to convince yourself of this.
+
+\href{https://www.desmos.com/calculator/zapwlt6qju}{151: Not Constant Rate 3} 
+ 
+\begin{onlineOnly}
+    \begin{center}
+\desmos{zapwlt6qju}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+We can correct the first error by saying a population grows at a constant rate of $0.5$ million bacteria/hour. Or we could  avoid the idea of an instantaneous growth rate by saying that the population increases at the average rate of $0.5$ million bacteria/hour over \emph{every} time interval.
+
+But to correct the second error and describe exponential growth, we are almost forced into thinking about the instantaneous growth rate. What characterizes exponential growth is that this rate is proportional to the population. So for example, when the population is eight times the current population, its growth rate would be eight times the current growth rate.
+
+To understand why, consider the graph of the function
+\[
+     P = f(t)  = P_0 (2^t) 
+\]
+shown below. The key point is that because
+\[
+ 2^{t-3} = (2^t)(2^{-3}) , 
+\]
+\[
+      8 f(t-3) = f(t).
+\]
+So translating the graph of $f$ three hours to the right and then multiplying the outputs by $8$ sends the graph of $P=f(t)$ to itself and the point $(0,f(0) = (0,P_0)$ to the point $(3,f(3)) = (3,8P_0)$. The translation leaves the slope of the tangent line at $(0,P_0)$ unchanged and the dilation multiplies the slope by $8$. So
+\[
+  \frac{dP}{dt}\Big|_{t=3} = 8 \left( \frac{dP}{dt}\Big|_{t=0} \right).
+\]
+
+
+Now replace $t$ with $t-3$ to translate the graph right $3$ hours to get the function
+\[
+  P = g(t) = f(t-3) .
+\]
+The key point is that because
+\[
+     f(t-3) = P_0 (2^{t-3}) = 2^{-3} f(t), 
+\]
+
+
+
+We might try describing what happens to the population over a shorter time interval, say $\Delta t$ hours. Over the time interval from time $t$ hours past noon to time $t+\Delta t$ hours past noon the population increases by 
+\begin{align*}
+  \Delta P &=  f(t + \Delta t) - f(t)  \\ 
+                               &=  3 (2^{t+\Delta t} - 2^t) \\
+                               &=  3 (2^t \cdot 2^{\Delta t} - 2^t) \\
+                               &=  3 (2^t) (2^{\Delta t} - 1) 
+\end{align*}
+millions of bacteria. To get the relative change over this time interval, we divide this absolute change by the population at the start of the time interval. This gives the relative rate of change as
+\begin{align*}
+   \frac{\Delta P}{P} &=  \frac{f(t + \Delta t) - f(t)}{f(t)}  \\ 
+                              &= \frac{3 (2^t) (2^{\Delta t} - 1)}{3 (2^t)} \\
+                              &= 2^{\Delta t} - 1.
+\end{align*}
+
+\begin{question} \label{QODFERerre}
+What are the units of this rate of change?
+\end{question}
+
+For example, the relative rate of change in the population over a one hour period is
+\[ 
+        2^1 - 1 = 1 = 100\%,
+\]
+and over a half-hour period is
+\[
+    \sqrt{2} - 1 \sim 0.414 \sim 41.4\%.
+\]
+
+\begin{question} \label{QERdftrre}
+Explain why this rate is less than $50\%$.
+\end{question}
+
+\begin{exploration} \label{EKDFeredfM}
+The worksheet below shows the graph of the function $P=3(2^t)$. 
+
+\href{https://www.desmos.com/calculator/zu0f4jnh4a}{151: Exp Growth Subtangent}
+
+ 
+\begin{onlineOnly}
+    \begin{center}
+\desmos{zu0f4jnh4a}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+
+\begin{enumerate}
+\item Experiment with the worksheet by first dragging the slider $u$ (another name for $t$) in Line 2. Watch how Lines 6, 8, 10 change, as well as how the length of segment $AB$ changes. Describe what you see.
+
+Notes:
+
+\begin{enumerate}
+\item Line 6
+\[
+\frac{f(u+h)}{f(u)}
+\]
+
+This is the growth factor over the inteval $t=u$ to $t=u+h$ hours.
+
+\item Line 8: 
+\[
+    \frac{1}{f(u)}\cdot \frac{f(u+h)-f(u)}{h}
+\]
+
+This is the relative average rate of change over the inteval $t=u$ to $t=u+h$ hours.
+
+\item Line 10:
+\[
+    f(u) \cdot \frac{h}{f(u+h)-f(u)}
+\]
+
+This is the reciprocal of Line 8.
+\end{enumerate}
+
+
+\item Now Drag $h=\Delta t$ in Line 4 to $h=0.5$ and repeat part (a). Describe what you see.
+
+\item Drag $h$ closer to zero and describe how Lines 6, 8, and 10 change. Include units for these three expressions.
+
+\item What are the units of Line 10? What is its meaning?
+
+\item Summarize your observations.
+
+\end{enumerate}
+\end{exploration}
+
+
+\section{Relative Growth Rates}
+We still have not answered the question about how to describe exponential growth \emph{without} a formula. What we know so far is that over time intervals of fixed duration an exponential function increaseses by a fixed percentage.  And Exploration 4 might have suggested that the relative instantaneous growth rate 
+\[
+  \frac{1}{P}\cdot \frac{dP}{dt}
+\]
+is constant for an exponential function. We can show this is true for our function $f(t)=3(2^t)$ using our prior work where we found that 
+\[
+  \frac{\Delta P}{P} = 2^{\Delta t} - 1 .
+\]
+So the relative instantaneous growth rate of the function $f(t)=3(2^t)$ is 
+\begin{align*}
+      \frac{1}{P}\cdot \frac{dP}{dt} &= \lim_{\Delta t\to  0} \frac{1}{P} \cdot \frac{\Delta P}{\Delta t} \\
+                                                   &= \lim_{\Delta t\to  0} \frac{1}{\Delta t} \cdot \frac{\Delta P}{P} \\
+                                                   &=  \lim_{\Delta t\to  0}  \frac{2^{\Delta t} - 1}{\Delta t} .
+\end{align*}
+
+Now we have no way to evaluate this limit algebraically (at least as of yet), but we can recognize it as the derivative
+\[
+     \frac{d}{dt}\left ( 2^ t \right) \Big|_{t=0} = \lim_{\Delta t\to  0}  \frac{2^{\Delta t} - 2^0}{\Delta t} .
+\]
+
+From Exploration 4 we know the approximate value of this limit, and hence the relative rate of change of our population function $P = f(t) = 3(2^t)$. It is
+\[
+        \frac{1}{P}\cdot \frac{dP}{dt} ~\sim 0.693 = 69.3\% / {\text hr}.
+\]
+
+So our population increases at the constant relative rate of approximately $69.3\%$/hr. The exact relative rate turns out to be
+\[
+  \frac{1}{P}\cdot \frac{dP}{dt} = \ln 2 / {\text hr}.
+\]
+But to understand why, we first need to come to terms with the number $e\sim 2.71828$.
+
+
+\section{The Number $e$}
+
+For our purposes, the best definition definition of the number $e$ is this: It is the number for which the exponential function ($t$ in hours)
+\[
+     P = g(t) = e^t 
+\]
+increases at the constant relative rate of $100\%$/hr. Put another way, the number $e$ is the one-hour growth factor for a population that increases at the relative rate of $100\%$/hr. But to make sense of this, we need to understand what it means to say that at any instant a population is increasing at the relative rate of $100\%$/hr.
+
+It does \emph{not} mean that the population increases $100\%$ every hour (the function $f(t)=P_0(2^t)$ does that). Rather, like every derivative the meaning is best understood in terms of small changes.
+
+For example, in $1/100$ of an hour the population would increase by about
+\[
+     \left( \frac{1}{100} \right) (100\%) = 1\%.
+\]
+So the $1/100$-hour growth factor is about $1.01$. And the one-hour growth factor is about 
+\[
+  \left( 1 + \frac{1}{100} \right)^{100} \sim 2.705 .
+\]
+This tells us that $e\sim 2.705$ and that every hour a population increasing at the relative instantaneous rate of $100\%$/hr increases by about $170.5\%$.
+
+We can get a better approximation to $e$ by taking a smaller time interval. For example, a better approximation is 
+\[
+  e \sim \left( 1 + \frac{1}{1000} \right)^{1000} \sim 2.717 .
+\]
+
+And as you might have guessed,
+\[
+     e = \lim_{n\to infty}\left( 1  + \frac{1}{n} \right)^n \sim 2.718 .
+\]
+
+
+\section{An Example}
+
+When we learned about derivatives of inverse functions, we saw that it was helpful to express the derivative of a one-to-one function in terms of its \emph{output}. For the function
+\[
+ y = f(\theta) = \sin\theta \, , \, -\pi/2 \leq \theta \leq \pi/2,
+\]
+for example, 
+\[
+    \frac{dy}{d\theta} = \cos\theta = \sqrt{1-y^2}.
+\]
+
+When working with exponential functions, or simple transformations of these, it is almost always best to do the same. Here's an example.
+
+\begin{example}  \label{Ex:KDFDFL}
+The function
+\[
+       P = 3e^{\frac{1}{5}t} \, , \, 0\leq t \leq 20 ,
+\]
+expresses the population (in millions) of a colony of bacteria in terms of the number of hours past noon.
+
+Find the population when it is increasing at the rate of $2$ million bacteria/hour.
+
+\begin{explanation}
+There's a hard way and an easy way to solve this problem. The hard way would be to first find the time when the population is increasing at the given rate. Then we could use this time to find the population.
+
+The easy way is to ignore time altogether and express the growth rate of the population in terms of the population.
+
+Before we do this, let's think first about the units of the factor $1/5$ in the exponent. Since any exponential function takes only dimensionless inputs and $t$ is measured in hours, the units of $1/5$ are 
+\begin{question} \label{EROERERER}
+\begin{multipleChoice}
+\choice{hours}
+\choice{dimensionless}
+\choice{millions of bacteria}
+\choice[correct]{$\text{hours}^{-1}$}
+\end{multipleChoice}
+\end{question}
+
+The units of $1/5$ give a clue to its meaning. It is in fact the relative growth rate of the population. So at any instant this population is increasing at the relative rate of 
+\begin{question} \label{QERERERERER}
+ $\answer{20}\%$/hour .
+\end{question}
+
+\begin{question}  \label{QODEERER}
+\begin{enumerate}
+\item Use the chain rule to compute the absolute growth rate
+\[
+\frac{dP}{dt} = \frac{d}{dt} \left(   3e^{\frac{1}{5}t}\right) .
+\]
+Make the explicity $u$-substitution. Do not skip any steps.
+
+\item Use part (a) to verify that the relative growth rate 
+\[
+  \frac{1}{P} \cdot \frac{dP}{dt} 
+\]
+is $20\%$/hour.
+\end{enumerate}
+
+\end{question}
+
+You should have found the relative growth rate to be
+\[
+   \frac{1}{P} \cdot \frac{dP}{dt} = \frac{1}{5}\text{ hr}^{-1} ,
+\]
+so that the absolute growth rate (in millions of bacteria/hour) is
+\[
+ \frac{dP}{dt} = \frac{1}{5}P .
+\]
+
+\begin{question} \label{QERdfsdf}
+Use this to find the population when it is increasing at the rate of $2$ million bacteria/hour.
+\end{question}
+
+\end{explanation}
+
+\end{example}
+
+
+\section{Exercises}
+
+\begin{question} \label{Q677543345}
+The function 
+\[
+     P = f(t) = 50 e^{\frac{t}{10}} \, , \, 0\leq t \leq 20 ,
+\]
+expresses the population (in millions) of a colony of bacteria in terms of the number of hours past  midnight. Graph shown below.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{kffjsoepmo}{900}{600}  %    pxsmo04nmg  8swp20zond
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/kffjsoepmo}{151: Exp Function 5}
+
+
+\begin{enumerate}
+
+\item Use the graph of the function $P=f(t)$ above to approximate the growth rate when there are $200$ million bacteria.
+
+\item Find a function $r=g(P)$ that expresses the growth rate (measured in millions of bacteria/hour) in terms of the popuation (measured in millions). Include a domain.
+
+\item Find the \emph{exact} growth rate when there are $200$ million bacteria. No calculator.
+
+\item What is the population when it is increasing at the rate of $8$ million bacteria/hour?
+
+\item Use the ideas of this question to describe how the population grows. \emph{Hint:} Think about the relative instantaneous growth rate.
+
+\end{enumerate}
+\end{question}
+
+
+\begin{question}  \label{Q9deLFLDF}
+Between noon and 6pm, a population of bacteria grows exponenially, increasing by $20\%$ every hour. There are 5 million bacteria at noon.
+
+\begin{enumerate}
+\item Find a function that expresses the population (in millions of bacteria) in terms of the number of hours past noon.
+
+\item Find a function that expresses the growth rate (in millions of bacteria/hour) in terms of the population (in millions).
+
+\item Find the population when it is increasing at the rate of $2$ million bacteria/hour.
+
+\item What is the relative growth rate of the population?
+
+\item Consider a second population that grow exponentially, increasing by $20\%$ every four hours. 
+
+\begin{enumerate}
+\item Use common sense to find its relative growth rate.
+\item Use calculus to verify your answer from part (i) with a computation.
+\end{enumerate}
+\end{enumerate}
+
+\end{question}
+
+\begin{question}  \label{Qhhfhnnnhtytt543}
+The function
+\[
+       N = f(t) = \frac{20}{1+5e^{-t/5}} \, , \, 0\leq t\leq 30,
+\]
+models the spread of a virus throughout a population. It takes as an input the number of months since January 1st and returns as an output the number of infected individuals (measured in millions). Graph shown below.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{ikis451wxu}{900}{600} 
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/ikis451wxu}{151: Logistic Model}
+
+\begin{enumerate}
+\item Use the sliders in the worksheet above to approximate the number of infected individuals when the virus is spreading at the rate of $800,000$ people/month.
+
+\item Find a function 
+\[
+       r = g(N) 
+\]
+that expresses the infection rate (in millions of people/month) in terms of the population.
+
+\item Use calculus and algebra to determine the number of infected individuals when the virus is spreading at the rate of $750,000$ people/month.
+
+\item Use the sliders in the worksheet above to approximate the number of infected individuals when the virus is spreading at its fastest rate. Also approximate this rate.
+
+\item Use calculus and algebra to determine the number of infected individuals when the virus is spreading at its fastest rate. Then find this exact rate.
+\end{enumerate}
+
+
+\end{question}
+
+
+\begin{question}  \label{Qdghnntnmnmnmn}
+Use the chain rule and your knowledge of the derivative $d(e^x)/dx$ to compute each of the following derivatives.
+
+\begin{enumerate}
+\item 
+\[
+   \frac{d}{dt}\left( 100 \cdot 2^t \right)
+\]
+
+\item 
+\[
+   \frac{d}{dt}\left( 100 \cdot 2^{t/5} \right)
+\]
+\end{enumerate}
+\begin{explanation}
+
+\begin{enumerate}
+\item The key is to realize that 
+\[
+    2 = e^{\ln 2} .
+\]
+So we can write the function to differentiate as
+\[
+    P = 100 \cdot 2^t = 100 \left( e^{\ln 2} \right)^t = 100e^{t\ln 2} .
+\]
+Now we can make a $u$-substitution and use the chain rule. We let
+\[
+       u =t \ln 2 .
+\]
+Then
+\[
+      P = 100e^{t\ln 2} = 100e^u
+\]
+and
+\begin{align*}
+   \frac{dP}{dt} &= \frac{dP}{du} \cdot \frac{du}{dt} \\
+                       &= \frac{d}{du} \left(100e^u\right) \cdot  \frac{d}{dt} \left(  t\ln 2 \right) \\
+                        &= 100e^u (\ln 2) \\
+                        &= P \ln 2 \\
+                     &= (100 \cdot 2^t) \ln 2\\
+                        &= (100 \ln 2)(2^t)
+\end{align*}
+
+\end{enumerate}
+\end{explanation}
+
+\end{question}
+
+\begin{question}  \label{Qfyhyhgrrrreee}
+A colony of bacteria has a population of $20$ million at noon and a population of $25$ million at 2pm. The population grows exponentially between noon and midnight.
+
+\begin{enumerate}
+\item Describe precisely how the population grows.
+
+\item Use your description from part (a) to find a function 
+\[
+   P=f(t) \, , \, 0\leq t \leq 12,
+\]
+that expresses the population (in millions) in terms of the number of hours past noon. Do \emph{not} use $e$.
+
+\item Find the relative instantaneous growth rate of the population.
+
+\item Find a function $r=g(P)$ that expresses the (absolute) growth rate in terms of the population.
+
+\item At what rate is the population changing when there are $30$ million bacteria?
+\end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+\item The population increases by 
+\[
+  \frac{25\text{ million} - 20\text{ million}}{20\text{ million}} = 25\%
+\]
+every two hours. 
+
+Better yet, at least for determining the function, is to say  that the two-hour growth factor is
+\[
+\frac{25\text{ million}}{20\text{ million}} = 1.25 .
+\]
+This means that every two hours the population gets multiplied by 1.25.
+
+\item Since the two-hour growth factor is 1.25, the one-hour growth factor is $1.25^{1/2}$. So 
+\[
+       P = 20(1.25^{1/2})^t = 20(1.25)^{\frac{t}{2}} \, , \, 0\leq t \leq 12.
+\]
+ 
+\item The key to computing the derivative $dP/dt$ is to write the population function using base $e$. Since
+\[
+       1.25 = e^{\ln 1.25},
+\]
+\begin{align*}
+      P &= 20(1.25)^{\frac{t}{2}}  \\
+         &= 20 \left( e^{\ln 1.25} \right)^{\frac{t}{2}} \\
+         &=  20 e^{t (\ln 1.25)/2}
+\end{align*}
+
+
+So the growth rate (in millions of bacteria/hour) is 
+\begin{align*}
+  \frac{dP}{dt} &= \frac{d}{dt} \left(  20(1.25)^{\frac{t}{2}} \right) \\
+                     &= 20 \frac{d}{dt}\left( e^{t (\ln 1.25)/2}\right) \\
+                     &= \left( 20 e^{t (\ln 1.25)/2}\right) \frac{d}{dt} \left(  t (\ln 1.25)/2 \right) \\
+                     &= P (\ln 1.25)/2 .
+\end{align*}
+And the relative growth rate (units are $\text{hr}^{-1}$) is
+\[
+  \frac{1}{P} \cdot   \frac{dP}{dt} = \frac{1}{2}\ln 1.25.
+\]
+
+\item From part (c), the function
+\[
+   g(P) = \frac{dP}{dt} = P (\ln 1.25)/2 
+\]
+expresses the growth rate (in millions of bacteria/hour) in terms of the population.
+
+\item When there are 30 million bacteria, the population is increasing at the rate of 
+\[
+       g(30) = (30 \text{ million bacteria}) \left(\frac{1}{2}\ln 1.25 /\text{hr}\right) = 15 \ln 1.25 \text{ million bacteria/hr}.
+\]
+\end{enumerate}
+\end{explanation}
+
+\end{question}
+
+
+\begin{question}  \label{Qgfhhfhdffv}
+Between ground level and an altitude of $10$ km, atmospheric pressure on the planet Krypton is an exponential function of altitude. The pressure is 100 kPa at ground level and 80 kPa at an altitude of $0.75$ km.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{j5h8kaj8xs}{900}{600}  %    pxsmo04nmg  8swp20zond
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/j5h8kaj8xs}{151: Atomspheric Pressure}
+
+\begin{enumerate}
+\item Describe exactly how the pressure decreases.
+
+\item Use your description from part (a) to find a function
+\[
+         P = f(h) \, , \, 0\leq h \leq 10 ,
+\]
+that expresses the atmospheric pressure (in kPa) in terms of the altitude (in kilometers). Do \emph{not} use the number $e$.
+
+\item Input your expression for $f$ in Line 2 of the worksheet above.
+
+\item Evaluate the derivative 
+\[
+       \frac{dP}{dh}\Big|_{h=5}
+\]
+and interpret its meaning.
+
+\item Find a function $r=g(P)$ that expresses the derivative $dP/dh$ in terms of $P$.
+
+\item Use calculus to approximate the altitude at which the pressure is $0.2$ kPa less at an altitude $0.1$ km higher.
+
+\end{enumerate}
+  
+\end{question}
+
+
+\section{Conceptual Questions}
+
+\begin{question} \label{QdfadREGLER}
+ A population of bacteria grows exponentially. If the growth rate is $4$ million bacteria/hour when the population is $20$ million, determine the growth rate when the population is $30$ million.
+
+\end{question}
+
+\begin{question} \label{QPKdkefERF}
+A cup of coffee at a temperature of $90^\circ$C is brought into a room held at a constant temperature of $20^\circ$C. Suppose that the difference in temperature between the coffee and the room decreases exponentially. Suppose also that the temperature of the coffee initially decreases at the rate of $5^\circ$C/min. What is the temperature of the coffee when its temperature is decreasing at the rate of $2^\circ$C/min?
+\end{question}
+
+\end{document}
