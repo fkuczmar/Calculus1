@@ -11,27 +11,73 @@ An introduction to the quotient rule.
 
 \section*{Discussion Questions}
 
-\emph{Question A:} (a) At 9am on May 29, the balance in an account is increasing at the relative rate of $8\%$/yr. At the same time, the price of a stock in increasing at the rate of $5\%$/yr. Is the number of shares you can buy with the balance in the account increasing or decreasing at this time? At what relative rate? No computations. Just explain what you think.
+\begin{question}  \label{QKDFmdeffef}
+Consider the following two questions.
 
-(b) How would your answer to part (a) change if instead the stock price were decreasing at the rate of $5\%$/yr?
+\begin{enumerate}
+\item During the course of one year, the national debt of a country increases by $20\%$ and its population increases by $5\%$. Find the relative change in the per-capita (ie. per-person) share of the national debt over the one-year period.
 
-\pskip \pskip
+\item At some instant the national debt of a country is increasing at the rate of $20\%$/yr and its population is increasing at the rate of $5\%$/yr. At what relative rate is the per-capita share of the national debt changing at this instant?
+\end{enumerate}
 
-\emph{Question B:} Let $B = f(t)$ and $P=g(t)$ be functions that respectively express the balance (in dollars) in an account and the price (in dollars/share) of a stock in terms of the number of years past 9am on May 29. Let $S= h(t)$ be the number of shares of the stock you can buy with the balance in the account at time $t$ years past 9am on May 29.
+\begin{enumerate}
+\item Are these questions identical?
 
-(a) Interpret the meanings of the following derivatives. Include units.
+\item Answer the first question.
 
-(i) $\frac{d}{dt} \left( \ln (f(t)) \right) = \frac{d}{dt} \left( \ln B) \right)$
+\item Use numerical methods to approximate the answer to the second question. \emph{Hint:} Approximate the relative changes in the national debt and population over a small time interval. Then use these to approximate the relative change and the relative average rate of change in the per-capita share of the debt over this time interval. Use the worksheet below to help.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{rk4aocmccz}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Desmos activity available at \href{https://www.desmos.com/calculator/rk4aocmccz}{151: Relative Quotient Rule 1}
+
+\item For another way to approach the second question, assume the debt and population functions increase at constant relative rates. Then find expressions for these functions and use these to answer the question.
+
+\item What is your guess about the relative (instantaneous) rate of change in the quotient of two functions? How is it related to the relative rates of change of the functions?
+\end{enumerate}
+\end{question}
+
+\begin{question}  \label{QPeferreson}
+Use your guess for the relative rate of change in the quotient of two functions to find an expression for the derivative of the quotient of two functions.
+\end{question}
+
+
+
+\begin{question} \label{QODFoferREG}
+
+\begin{enumerate}
+
+\item At 9am on May 29, the balance in an account is increasing at the relative rate of $8\%$/yr. At the same time, the price of a stock in increasing at the rate of $5\%$/yr. Is the number of shares you can buy with the balance in the account increasing or decreasing at this time? At what relative rate? No computations. Just explain what you think.
+
+\item How would your answer to part (a) change if instead the stock price were decreasing at the rate of $5\%$/yr?
+
+\end{enumerate}
+\end{question}
+
+
+\begin{question} \label{QPFVmefER}
+ Let $B = f(t)$ and $P=g(t)$ be functions that respectively express the balance (in dollars) in an account and the price (in dollars/share) of a stock in terms of the number of years past 9am on May 29. Let $S= h(t)$ be the number of shares of the stock you can buy with the balance in the account at time $t$ years past 9am on May 29.
+
+\begin{enumerate}
+
+\item Interpret the meanings of the following derivatives. Include units.
+
+\begin{enumerate}
+\item $\frac{d}{dt} \left( \ln (f(t)) \right) = \frac{d}{dt} \left( \ln B) \right)$
  
-(ii) $\frac{d}{dt} \left( \ln (g(t)) \right) = \frac{d}{dt} \left( \ln P) \right)$
+\item $\frac{d}{dt} \left( \ln (g(t)) \right) = \frac{d}{dt} \left( \ln P) \right)$
 
-(iii) $\frac{d}{dt} \left( \ln (h(t)) \right) = \frac{d}{dt} \left( \ln S) \right)$
+\item $\frac{d}{dt} \left( \ln (h(t)) \right) = \frac{d}{dt} \left( \ln S) \right)$
 
-\pskip
+\end{enumerate}
 
-(b) Express the derivative
+item Express the derivative
 \[
- \frac{d}{dt} \left( \ln S) \right) =  \frac{d}{dt} \left( \ln  \left( \frac{B}{S}\right) \right)
+ \frac{d}{dt} \left( \ln S) \right) =  \frac{d}{dt} \left( \ln  \left( \frac{B}{P}\right) \right)
 \]
 in terms of the derivatives
 \[
@@ -42,6 +88,8 @@ and
    \frac{d}{dt} \left( \ln P) \right) .
 \]
 
+\end{enumerate}
+\end{question}
 
 \section*{The Relative Quotient Rule}
 Had we never learned about relative changes and relative rates of change, the following questions would have almost forced these ideas upon us.
