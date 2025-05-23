@@ -34,7 +34,7 @@ We would make a similar error in asserting a population that doubles every hour 
 \end{center}
 \end{onlineOnly}
 
-We can correct the first error by saying a population grows at a constant rate of $0.5$ million bacteria/hour. Or we could  avoid the idea of an instantaneous growth rate by saying that the population increases at the average rate of $0.5$ million bacteria/hour over \emph{every} time interval.
+We can describe linear growth by saying a population grows at a constant rate of $0.5$ million bacteria/hour. Or we could  avoid the idea of an instantaneous growth rate by saying that the population increases at the average rate of $0.5$ million bacteria/hour over \emph{every} time interval.
 
 But to correct the second error and describe exponential growth, we are almost forced into thinking about the instantaneous growth rate. What characterizes exponential growth is that this rate is proportional to the population. So for example, when the population is eight times the current population, its growth rate would be eight times the current growth rate.
 
@@ -56,7 +56,7 @@ shown below.
 
 The key point is that because
 \[
- 2^{t-3} = (2^t)(2^{-3}) , 
+ f(t-3) =  2^{t-3} = (2^t)(2^{-3}) = \frac{1}{8} f(t) , 
 \]
 \[
       8 f(t-3) = f(t).
@@ -66,93 +66,43 @@ Geometrically, this means that translating the graph of $f$ three hours to the r
   \frac{dP}{dt}\Big|_{t=3} = 8 \left( \frac{dP}{dt}\Big|_{t=0} \right).
 \]
 
+The same kind of reasoning shows that for any for any exponential function, the growth rate is proportional to the population. Here's a more computational proof of this fact for the function $f(t)=P_0 2^t$.
 
 
-
-We might try describing what happens to the population over a shorter time interval, say $\Delta t$ hours. Over the time interval from time $t$ hours past noon to time $t+\Delta t$ hours past noon the population increases by 
+Over the time interval from time $t$ hours past noon to time $t+\Delta t$ hours past noon the population increases by 
 \begin{align*}
   \Delta P &=  f(t + \Delta t) - f(t)  \\ 
                                &=  3 (2^{t+\Delta t} - 2^t) \\
                                &=  3 (2^t \cdot 2^{\Delta t} - 2^t) \\
-                               &=  3 (2^t) (2^{\Delta t} - 1) 
+                               &=  3 (2^t) (2^{\Delta t} - 1)  \\
+                               &= P (2^{\Delta t} - 1) .
 \end{align*}
-millions of bacteria. To get the relative change over this time interval, we divide this absolute change by the population at the start of the time interval. This gives the relative rate of change as
+millions of bacteria. Here $P=f(t)$ is the population at the start of the time interval.
+
+So over the period from $t$ hours past noon to $t+\Delta t$ hours past noon the average growth rate is 
+\[
+    \frac{\Delta P}{\Delta t} = P \left( \frac{2^{\Delta t} - 1}{\Delta t}  \right) ,
+\]
+measured in millions of bacteria/hour.
+
+Then at time $t$ hours past noon, the instantaneous growth rate (in millions of bacteria/hour) is
 \begin{align*}
-   \frac{\Delta P}{P} &=  \frac{f(t + \Delta t) - f(t)}{f(t)}  \\ 
-                              &= \frac{3 (2^t) (2^{\Delta t} - 1)}{3 (2^t)} \\
-                              &= 2^{\Delta t} - 1.
+ \frac{dP}{dt} &= \lim_{\Delta t\to 0} \frac{\Delta P}{\Delta t} \\
+                     &=  \lim_{\Delta t\to 0} P \left( \frac{2^{\Delta t} - 1}{\Delta t}  \right) \\
+                     &= P \lim_{\Delta t\to 0}\frac{2^{\Delta t} - 1}{\Delta t} .
 \end{align*}
 
-\begin{question} \label{QODFERerre}
-What are the units of this rate of change?
-\end{question}
-
-For example, the relative rate of change in the population over a one hour period is
-\[ 
-        2^1 - 1 = 1 = 100\%,
-\]
-and over a half-hour period is
+ This shows what we wanted, that at any instant the growth rate is proportional to the poluation. Expressed differently, this says that the relative growth rate (measured in $\text{hr}^{-1}$) is constant and equal to
 \[
-    \sqrt{2} - 1 \sim 0.414 \sim 41.4\%.
+        \frac{1}{P} \cdot \frac{dP}{dt} = \lim_{\Delta t\to 0}\frac{2^{\Delta t} - 1}{\Delta t} .
 \]
 
-\begin{question} \label{QERdftrre}
-Explain why this rate is less than $50\%$.
-\end{question}
-
-\begin{exploration} \label{EKDFeredfM}
-The worksheet below shows the graph of the function $P=3(2^t)$. 
-
-\href{https://www.desmos.com/calculator/zu0f4jnh4a}{151: Exp Growth Subtangent}
-
- 
-\begin{onlineOnly}
-    \begin{center}
-\desmos{zu0f4jnh4a}{900}{600}
-\end{center}
-\end{onlineOnly}
-
-
-\begin{enumerate}
-\item Experiment with the worksheet by first dragging the slider $u$ (another name for $t$) in Line 2. Watch how Lines 6, 8, 10 change, as well as how the length of segment $AB$ changes. Describe what you see.
-
-Notes:
-
-\begin{enumerate}
-\item Line 6
+The best we can do here is to approximate the above limit numerically, to get the relative growth rate as
 \[
-\frac{f(u+h)}{f(u)}
+  \frac{1}{P} \cdot \frac{dP}{dt} \sim 0.6931 \text{ hr}^{-1} \sim 69.31\%/\text{hr}.
 \]
 
-This is the growth factor over the inteval $t=u$ to $t=u+h$ hours.
-
-\item Line 8: 
-\[
-    \frac{1}{f(u)}\cdot \frac{f(u+h)-f(u)}{h}
-\]
-
-This is the relative average rate of change over the inteval $t=u$ to $t=u+h$ hours.
-
-\item Line 10:
-\[
-    f(u) \cdot \frac{h}{f(u+h)-f(u)}
-\]
-
-This is the reciprocal of Line 8.
-\end{enumerate}
-
-
-\item Now Drag $h=\Delta t$ in Line 4 to $h=0.5$ and repeat part (a). Describe what you see.
-
-\item Drag $h$ closer to zero and describe how Lines 6, 8, and 10 change. Include units for these three expressions.
-
-\item What are the units of Line 10? What is its meaning?
-
-\item Summarize your observations.
-
-\end{enumerate}
-\end{exploration}
-
+{\bf Key Point:} Over a one-hour period, the population doubles. So over a one-hour period the population increases at a relative average rate of $100\%$/hour. This is greater than the relative instantaneous growth rate of $69.31\%$/hr because of compounding.
 
 \section{Relative Growth Rates}
 We still have not answered the question about how to describe exponential growth \emph{without} a formula. What we know so far is that over time intervals of fixed duration an exponential function increaseses by a fixed percentage.  And Exploration 4 might have suggested that the relative instantaneous growth rate 
