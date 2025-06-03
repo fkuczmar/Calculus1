@@ -37,7 +37,7 @@ What are these frequencies?
 
 We don't need calculus to analyze this problem. Nevertheless, we'll take an approach that will work in the next variation when the source does not move either directly toward or away from the observor.
 
-We'll suppose the source collides with the observor at noon. The idea is to find a function $T=f(t)$ that takes as an input the time (measured in the number of seconds past noon, possibly negative) when a ping was emitted and returns as an ouput the time (measured in the same manner) that the observor hears that ping.
+Suppose the source collides with the observor at noon. The idea is to find a function $T=f(t)$ that takes as an input the time (measured in the number of seconds past noon, possibly negative) when a ping was emitted and returns as an ouput the time (measured in the same manner) that the observor hears that ping.
 
 \begin{enumerate}
 \item Find an expression for the function 
@@ -51,7 +51,41 @@ Work in general with speeds $v$ m/sec for the source and $w$ m/sec for the speed
 \item Interpret the meanings of these derivatives. Then write an equation expressing the frequence $F$ of the pings heard by the observor in terms of the frequency $f$ of the pings emitted by the source. There are two cases to consider as above. 
 \end{enumerate}
 
+\item Check your results with the demonstration above where $v=w/2$.
+
 \end{example}
+
+
+
+\begin{example} \label{ExLKDmdfRE}
+This is a continuation of the previous example, where we now suppose the source (suppose it's an airplane) flies at a constant altitude $h$ km and passes directly over the observor at noon. 
+
+In the demonstration below, the pings are emitted once/second and the light at $A$ flashes each second. The light at $B$ flashes each time the obersvor (still at the origin $O$) hears a ping.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{ow5li8h6o6}{800}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/ow5li8h6o6}{Doppler Stationary Observer 2}
+
+\begin{enumerate}
+\item Use the demonstration to approximate the frequency of the pings recieved by the observor when the plane is 
+\begin{enumerate}
+\item $10$ km west (to the left) of $O$
+
+\item directly above $O$
+
+\item $10$ km east of $O$
+\end{enumerate} 
+
+\item Now find a function
+\[
+    T = g(t) \, , \, t \in \mathbb{R}.
+\]
+as in the first example. This function takes as an input the time (measured in the number of seconds since noon) when a ping was emitted and returns as an output the time (measured the same way) when the observor hears this ping. Work in general, with $v$ km/sec the speed of the source, $w$ km/hour the speed of sound, and $h$ (in km) the altitude of the plane.
+\end{enumerate}
 
 
 The problem here should be to relate the frequencies at time $t=-0.5$ when $v=1$, $w=2$, and $h=4$. The result should be that 
@@ -60,13 +94,7 @@ The problem here should be to relate the frequencies at time $t=-0.5$ when $v=1$
 \]
 
 
-\begin{onlineOnly}
-    \begin{center}
-\desmos{celviaogz7}{800}{600}  
-\end{center}
-\end{onlineOnly}
 
-\href{https://www.desmos.com/calculator/celviaogz7}{Doppler Stationary Observer 2}
 
 Doppler Effect with Sound:
 
@@ -79,7 +107,7 @@ Doppler Effect with Sound:
 \href{https://www.desmos.com/calculator/gxzmjpgkrr}{Doppler Effect Stationary Observer 2 With Sound}
 
 
-
+\end{example}
 
 
 
