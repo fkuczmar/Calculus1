@@ -12,4 +12,53 @@ The derivative as a scaling factor.
 
 \section{The Derivative as a Scaling Factor}
 
+We started this class by interpreting the derivative as a dimensionless, local stretching factor of a rubber band. Perhaps stretching factor was not the right description because a rubber band might get stretched in some regions but compressed in others. 
+
+As we saw many times, a better, more universal description would be to think of the derivative as a \emph{local scaling factor}. Multiply a small change in the input to a function by the derivative (at that input) and the result is a good approximation to the change in the function's output. Good in the sense that the error in the approximation approaches zero faster than the change in the input.
+
+This interpretation of the derivative is often more useful than interpreting the derivative as the slope of a tangent line or an instantaneous rate of change. For one, the idea of a slope does not generalize to higher dimensions. And if you pause to really think about things, you might find it hard to make precise sense of what exactly anyone means by an instanteous rate of change. 
+
+The idea of this section, linear approximation, is not new. We've been talking about it all quarter. There's no need to learn anything new, or to use a special formula. It's really just common sense. We'll start by making sure we can intepret the meaning of the derivative in different scenarios.%What follows are several examples.
+
+
+\section{Interpreting the Derivative}
+
+\subsection{Speed}
+
+A key idea in this class has been to interpret \emph{speed} as a derivative. This has been a bit difficult, especially if you have the mindset that the derivative is always a rate of change. We typically don't think about speed this way.
+
+But speed is a rate of change. 
+
+\emph{Speed is the rate of change, with respect to time, of the cumulative distance function.}
+
+The image of a cumulative distance function for me to understand is the odometer reading on a car. It records the distance the car has traveled since it came off the lot. The rate of change of this function, with respect to time measured in hours, gives your speed (ie. the reading on the speedometer).
+
+Here's an example. Don't be confused by the variable $s$. It does not stand for speed. It's commonly used, as it is here, to measure distance. Or as you'll in integral calculus and in your physics classes,  for \emph{signed distance}.
+
+\begin{example}  \label{ExLKDremdmm}
+The function
+\[
+    s = f(t) = 2t+10t^{2}-t^{3} \, , \, 0\leq t\leq 6 ,
+\]
+expresses the mileage on the trip odometer reading in terms of the number of hours since the start of a car trip.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{t1ruocrgm4}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/t1ruocrgm4}{151: Odometer Reading 34}
+
+
+
+
+
+\end{example}
+
+
+\section{The Squaring Function}
+
+
+
 \end{document}
