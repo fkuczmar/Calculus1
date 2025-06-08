@@ -18,22 +18,26 @@ As we saw many times, a better, more universal description would be to think of 
 
 This interpretation of the derivative is often more useful than interpreting the derivative as the slope of a tangent line or an instantaneous rate of change. For one, the idea of a slope does not generalize to higher dimensions. And if you pause to really think about things, you might find it hard to make precise sense of what exactly anyone means by an instanteous rate of change. 
 
-The idea of this section, linear approximation, is not new. We've been talking about it all quarter. There's no need to learn anything new, or to use a special formula. It's really just common sense. We'll start by making sure we can intepret the meaning of the derivative in different scenarios.%What follows are several examples.
+The idea of this section, linear approximation, is not new. We've been talking about it all quarter. There's no need to learn anything more, or to use a special formula. It's really just common sense. 
+
+We'll start by making sure we can intepret the meaning of the derivative in different scenarios.%What follows are several examples.
 
 
 \section{Interpreting the Derivative}
 
 \subsection{Speed}
 
-A key idea in this class has been to interpret \emph{speed} as a derivative. This has been a bit difficult, especially if you have the mindset that the derivative is always a rate of change. We typically don't think about speed this way.
+A key idea in this class has been to interpret \emph{speed} as a derivative. This has been a bit difficult, especially with the mindset that the derivative is always a rate of change. We typically don't think about speed this way.
 
 But speed is a rate of change. 
 
-\emph{Speed is the rate of change, with respect to time, of the cumulative distance function.}
+\emph{Speed is the rate of change, with respect to time, of the the function that records the cumulative distance traveled.}
 
-The image of a cumulative distance function for me to understand is the odometer reading on a car. It records the distance the car has traveled since it came off the lot. The rate of change of this function, with respect to time measured in hours, gives your speed (ie. the reading on the speedometer).
+The image of a cumulative distance function easiest for me to understand is the odometer reading on a car. It records the distance the car has traveled since it came off the lot. The speedometer records the derivative of this function with respect to time (measured in hours). %The rate of change of this function, with respect to time measured in hours, gives your speed (ie. the reading on the speedometer).
 
-Here's an example. Don't be confused by the variable $s$. It does not stand for speed. It's commonly used, as it is here, to measure distance. Or as you'll in integral calculus and in your physics classes,  for \emph{signed distance}.
+Here's an example. Don't be confused by the variable $s$. It does not stand for speed. It's commonly used, as it is here, to measure distance. Or as we'll see later, and as you'll see in integral calculus and in your physics classes,  for \emph{signed distance}.
+
+Don't be confused either by the variable $v=ds/dt$. It is \emph{not} velocity, but rather speed. Speed is a scalar, velocity is a vector. Speed is the lenght of the velocity vector.
 
 \begin{example}  \label{ExLKDremdmm}
 The function
@@ -50,10 +54,91 @@ expresses the mileage on the trip odometer reading in terms of the number of hou
 
 \href{https://www.desmos.com/calculator/t1ruocrgm4}{151: Odometer Reading 34}
 
+\begin{enumerate}
+\item Evaluate the derivative
+\[
+    \frac{ds}{dt}\Big|_{t=2}
+\]
+and interpret its meaning. Include units.
+
+\item Interpet the meaning of the above derivative in terms a scaling factor and small changes.
+
+\item Use the result of part (b) to approximate the reading on the odometer at 2:01pm.
+
+\item Use the result of part (b) to approximate when the odometer reads 35 miles.
+
+\item When is the speed of the car a maximum? Use the graphs above to approximate the time. Then find the exact time and  maximum speed.
+\end{enumerate}
+
+\end{example}
 
 
+\section{Weight and Distance}
+\begin{example} \label{E8dfRPEFe}
+The function 
+\[
+        W = f(h) = \frac{2000}{(h+4)^2} \, , \, h \geq 4,
+\]
+expresses the weight of an astronaut (in pounds) in terms of her distance above the earth's surface (meausred in thousands of miles).
+
+\begin{enumerate}
+\item Evaluate the derivative
+\[
+   \frac{dW}{dh}\Big|_{h=1}.
+\]
+Include units.
+
+\item Interpet the meaning of the above derivative in terms a scaling factor and small changes.
+
+\item Approximate the astronaut's weight at an altitude of $1010$ miles.
+
+\item At what approximate altitude does the astronaut weigh $126$ pounds?
+
+\end{enumerate}
+\end{example}
 
 
+\section{Speed and Height}
+
+\begin{example} \label{Ex8df8334df}
+The function
+\[
+   v= f(h) \, , \, 0\leq h \leq 100 ,
+\]
+expresses the speed of a rock (measured in meters/sec) dropped from rest on the planet Krypton in terms of its height above the surface (measured in meters).
+
+\begin{enumerate}
+\item Which of the following is more likey?
+
+\begin{enumerate}
+\item 
+\[
+  \frac{dv}{dh}\Big|_{h=60} = 0.5
+\]
+or 
+\item 
+\[
+  \frac{dv}{dh}\Big|_{h=60} = -0.5 ?
+\]
+\pskip
+
+Explain your reasoning. Include units for the derivative.
+
+\end{enumerate}
+
+\item Intepret the meaning of the more likely derivative in terms of a scaling factor and small changes.
+
+\item Suppose that $f(60) = 40$.
+
+\begin{enumerate}
+\item Interpret the meaning of this statement.
+
+\item Assume the more likely derivative from part (a) and approximate the rock's speed at a height of $59.9$ meters.
+
+\item Suppose the speed of the rock increases at the constant rate of $20$ (m/sec)/sec as it falls and find the rock's exact speed when it is $59.9$ meters above the surface. Compare this with your estimate.
+\end{enumerate}
+
+\end{enumerate}
 \end{example}
 
 
