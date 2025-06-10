@@ -18,9 +18,47 @@ As we saw many times, a better, more universal description would be to think of 
 
 This interpretation of the derivative is often more useful than interpreting the derivative as the slope of a tangent line or an instantaneous rate of change. For one, the idea of a slope does not generalize to higher dimensions. And if you pause to really think about things, you might find it hard to make precise sense of what exactly anyone means by an instanteous rate of change. 
 
-The idea of this section, linear approximation, is not new. We've been talking about it all quarter. There's no need to learn anything more, or to use a special formula. It's really just common sense. 
+The idea of linear approximation is not new. We've been talking about it all quarter. And you knew about linear approximation well before you took this class. There's no need to learn anything more, or to use a special formula. It's really just common sense. 
 
-We'll start by making sure we can intepret the meaning of the derivative in different scenarios.%What follows are several examples.
+Here's a simple example.
+
+\begin{example}
+The function
+\[
+   h = f(t) \, , \, 0\leq t \leq 60,
+\]
+expresses the altitude of the balloon (measured in feet) in terms of the number of minutes past noon.
+
+Suppose
+\begin{enumerate}
+\item $f(10)=1500$ and
+
+\item $ \frac{dh}{dt}\Big|_{t=10} = -50$.
+\end{enumerate}
+
+Approximate the height of the balloon at 12:08pm.
+
+\begin{explanation}
+We know at 12:10pm the balloon is descending at the rate of $50$ ft/min. So during the time interval (backward in time) from 12:10pm to 12:08pm of
+\[
+ \Delta t = (8 - 10) \text{ min} = -2\text{ min},
+\]
+the change in the balloon's altitude is approximately
+\begin{align*}
+ \Delta h &= f(8)-f(10) \\
+             &\sim \left( \frac{dh}{dt}\Big|_{t=10} \right) (\Delta t)    \\
+             &= \left( -50 \frac{\text{ ft}}{\text{min}} \right)  (-2 \text{ min}) \\
+              &= 100 \text{ ft} .
+\end{align*}
+
+Since the balloon's altitude is $1500$ feet at 12:10pm, its altitude at 12:08pm was approximately
+\begin{align*}
+     f(8) &= f(10) + \Delta h \\ 
+           &\sim (1500 + 100) \text{ ft} \\
+           &= 1600 \text{ ft}.
+\end{align*}
+\end{explanation}
+\end{example}
 
 
 \section{Interpreting the Derivative}
