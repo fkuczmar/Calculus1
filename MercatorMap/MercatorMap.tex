@@ -12,8 +12,38 @@ The Mercator map and its relation to Lambert's equal-area map.
 \href{https://www.nytimes.com/2025/08/19/world/africa/africa-map-mercator.html}{Equal Earth Projection}
 
 
-TEST TEST MERCATOR MAP
+\section{Loxodromes}
 
+For a curve on a sphere of radius $a$ that cuts the meridians at a fixed angle $\alpha$,
+\[
+  d\theta = \frac{\tan \alpha \, d\phi}{\cos\phi} ,
+\]
+where $\phi$ is the latitude and $\theta the longitude. Taking \theta = 0$ at the equator where $\phi=0$,
+\begin{align*}
+ \theta     &= \tan \alpha \int_0^{\phi^*} \sec \phi^* \, d\phi^*\\
+               &= \tan \alpha \operatorname{arctanh}(\sin\phi) .
+\end{align*}
+
+So
+\[
+   \sin\phi = \operatorname{tanh}(k \theta),
+\]
+where $k=\cot\alpha$.
+
+Because $-\pi/2 < \phi < \pi/2$,
+\[
+  \cos\phi =  \frac{1}{\cosh (k \theta)},
+\]
+a parameterization of the rhumb line by longitude is
+\[
+  (x,y,z) = \left( \frac{a\cos\theta}{\cosh(k\theta)} , \frac{a\sin\theta}{\cosh(k\theta)}  , a \tanh(k\theta)  \right) .
+\]
+
+
+And a parameterization of the rhumb line by latitude is
+\[
+   (x,y,z) = \left(  a    \cos\phi  ,   a    \cos\phi    ,   a \sin \phi   \right)
+\]
 
 \begin{onlineOnly}
     \begin{center}
