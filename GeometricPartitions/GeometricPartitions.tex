@@ -15,10 +15,33 @@ Using Riemann sums with geometric partitions to evaluate definite integrals.
 
 Before using Riemann sums and limits to find an expression for the integral
 \[
-     \int_1^x f(u)\, du ,
+    g(u) = \int_1^u \frac{1}{x}\, dx ,
 \]
-let's first think geometrically. We'll assume $x>1$ and interpret the integral as an area.
+let's first compare the integrals %think geometrically. We'll assume $x>1$ and interpret the integral as an area.
+\[
+      \int_1^2 \frac{1}{x}\, dx
+\]
+and 
+\[
+      \int_3^6 \frac{1}{x}\, dx.
+\]
+We'll do this geometrially, without a computation.
 
+The idea is to first describe a compositions of transformations that takes the curve $y=1/x$ to itself and the interval $[1,2]$ to the interval $[3,6]$. Then we'll look at how this composition affects are
+
+\begin{exploration}  \label{Ex:LdkDERer4}
+
+\begin{enumerate}
+\item Drag the slider $v$ in Line 2 of the worksheet below from $v=1$ to $v=3$ and describe what happens to the graph of $y=1/x$.
+
+\begin{freeResponse}
+\end{freeResponse}
+
+\item What does the transformation do the area of the shaded rectangle (or any rectangle)?
+
+It mutiplies the area by a factor of $\answer{3}$.
+
+\end{enumerate}
 
 \begin{onlineOnly}
     \begin{center}
@@ -30,6 +53,9 @@ let's first think geometrically. We'll assume $x>1$ and interpret the integral a
 
 
 https://www.desmos.com/calculator/al95rowj4h
+
+
+\end{exploration}
 
 
 
