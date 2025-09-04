@@ -11,14 +11,12 @@ Introduction to integral calculus.
 
 The \emph{differential} in Differential Calculus has the same root as \emph{difference}, and \emph{calculus} the same root as \emph{compute}. Differential calculus is all about \emph{computing differences}. Expressed more simply, it is about \emph{subtraction}.
 
-%On the other hand, \emph{Integral Calculus} is about addition. \emph{Integral} shares the same root as \emph{integer} and comes from the Latin \emph{integratus}, the past participle of \emph{integrare}, to make whole. 
-
 \emph{Integral Calculus}, on the other hand, is about addition. \emph{Integral} shares the same root as \emph{integer} and comes from the Latin \emph{integrare}, to make whole. 
 
 Addition and subtraction are inverse operations. They undo each other. And in some sense (to be made precise later) integration
-undoes differentiation. But it would be a mistake to think integral calculus is about finding anti-derivatives. While anti-differentiation plays a role, this class is much more about recongizing \emph{when} to integrate rather than \emph{how} to integrate. Many of your STEM classes will use definite integrals. The emphasis there will be on setting up and interpreting integrals, not computation. 
+undoes differentiation. But it would be a mistake to think integral calculus is about finding anti-derivatives. While anti-differentiation plays a role, this class is more about recongizing \emph{when} to integrate rather than \emph{how} to integrate. Many of your STEM classes use definite integrals. The emphasis there is on setting up and interpreting integrals, not computing their values. 
 
-It would also be a mistake to think this class is about using definite integrals to compute \emph{numbers}, like the distance travelled over a certain time interval or the period of a pendulum. Rather, the emphasis here will be on using definite integrals to create \emph{functions}. It's more informative to describe, for example , the position of a pendulum as a function of time instead of computing only its period.
+It would also be a mistake to think this class is about using definite integrals to compute \emph{numbers}, like the distance travelled over a certain time interval or the period of a pendulum. Rather, the emphasis here will be on using definite integrals to create \emph{functions}. Expressing the position of a pendulum as a function of time, for example, gives a lot more information that just computing its period. 
 
 Using definite integrals to write functions generalizes the point-slope equation of a line. You used this equation in differential calculus is to approximate a function in the neighborhood of a point. To capture the local nature of the approximation (ie. the approximation is usually accurate in just a small neighborhood of the point of tangency), it's the point-slope equation, \emph{not} slope-intercept, that works best. The next two examples illustrate this idea.   % the main idea of differential calculus.
 
@@ -73,11 +71,11 @@ expresses a balloon's rate of ascent (measured in ft/min) in terms of the number
 \end{enumerate}
 \end{example}
 
-We can turn the previous question of differential calculus into an addition problem of integral calculus by estimating the change in the balloon's height over a longer time interval.
+We can turn the previous question of differential calculus into an addition problem of integral calculus by estimating the balloon's height at a time farther removed from 12:34. 
 
 \begin{example} \label{ExLKDrDEfRE9}
 
-We'll assume as before that the balloon is $2500$ feet above the ground at 12:34pm, big this time we'll approximate its height at 1:00pm.
+We'll assume as before that the balloon is $2500$ feet above the ground at 12:34pm, but now we'll approximate its height at 1:00pm.
 
 \begin{onlineOnly}
     \begin{center}
@@ -87,18 +85,31 @@ We'll assume as before that the balloon is $2500$ feet above the ground at 12:34
 
 \href{https://www.desmos.com/calculator/h6cworakdw}{152:Balloon Introduction 2}
 
-To get a rough approximation of the change in height between 12:34pm and 1:00pm , we'll start by dividing the $26$ minute interval into five equal subintervals of length 
+We'll start by computing a rough approximation of the change in height between 12:34pm and 1:00pm. For this, we'll partition the $26$-minute interval into five equal subintervals of length 
 \[
   \Delta t = \frac{26\text{ min}}{5} = 5.2 \text{ min}.
 \]
  
-Now we'll suppose that during each subintervals the balloon ascends at a constant rate. While this is not true, the rate certainly varies less over a $5.2$-minute interval than it does over the entire $26$-minute interval. So we should get a better appoximation this way than if we assumed just one constant rate of ascent between 12:34pm and 1:00pm.
+Now we'll suppose that during each subinterval the balloon ascends at a constant rate. While this is not true, the rate certainly varies less over a $5.2$-minute interval than it does over the entire $26$-minute interval. So we should get a better appoximation this way than if we assumed just one constant rate of ascent between 12:34pm and 1:00pm.
 
 What rate we choose for each $5.2$-minute interval doesn't really matter as long as we choose the actual rate of ascent at some time during that interval. To make things simple, we'll choose the rate at the start of each subinterval as illustrated in the worksheet above. Then the signed area of a shaded retangle measures the approximate change in height during that subintevral. And the approximate change in height from 12:34pm to 1:00pm is just the sum of these areas.
 
-Use the graph above to appoximate the change in height.
-\begin{freeResponse}
-\end{freeResponse}
+\begin{enumerate}
+\item Use the graph above to appoximate the change in height. Then approximate the height at 1:00pm.
+
+\item Write an expression for change in height from 12:34pm to 1:00pm in terms of the unknown function $f$.
+
+\item Use summation notation to express the change in part (b). Type this expression in Line 37 of the worksheet above. Start by typing \emph{sum}. Compare this value with your estimate from part (a).
+
+\item Repeat parts (a)-(c) using the rate of ascent at the \emph{end} of each subinterval instead. Turn off the folder in Line 11 and activate the folder in Line 18 above.
+
+\item Repeat parts (a)-(c) using the rate of ascent at the \emph{middle} of each subinterval instead. Turn off the folder in Line 18 and activate the folder in Line 24 above.
+
+\item Compare your three estimates for the change in height. Which do you think is most accurate? Explain why.
+
+\end{enumerate}
+
+
 
 
 
