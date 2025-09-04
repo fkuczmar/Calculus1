@@ -9,13 +9,35 @@ Introduction to integral calculus.
 \end{abstract}
 \maketitle
 
-The \emph{differential} in Differential Calculus shares the same root as \emph{difference}, and \emph{calculus} the same root as \emph{compute}. Differential calculus is all about \emph{computing differences}. Expressed more simply, it is about \emph{subtraction}.
+The \emph{differential} in Differential Calculus has the same root as \emph{difference}, and \emph{calculus} the same root as \emph{compute}. Differential calculus is all about \emph{computing differences}. Expressed more simply, it is about \emph{subtraction}.
 
 %On the other hand, \emph{Integral Calculus} is about addition. \emph{Integral} shares the same root as \emph{integer} and comes from the Latin \emph{integratus}, the past participle of \emph{integrare}, to make whole. 
 
-On the other hand, \emph{Integral Calculus} is about addition. \emph{Integral} shares the same root as \emph{integer} and comes from the Latin \emph{integrare}, to make whole. 
+\emph{Integral Calculus}, on the other hand, is about addition. \emph{Integral} shares the same root as \emph{integer} and comes from the Latin \emph{integrare}, to make whole. 
 
-The following example illustrates the main idea of differential calculus.
+Addition and subtraction are inverse operations. They undo each other. And in some sense (to be made precise later) integration
+undoes differentiation. But it would be a mistake to think integral calculus is about finding anti-derivatives. While anti-differentiation plays a role, this class is much more about recongizing \emph{when} to integrate rather than \emph{how} to integrate. Many of your STEM classes will use definite integrals. The emphasis there will be on setting up and interpreting integrals, not computation. 
+
+It would also be a mistake to think this class is about using definite integrals to compute \emph{numbers}, like the distance travelled over a certain time interval or the period of a pendulum. Rather, the emphasis here will be on using definite integrals to create \emph{functions}. It's more informative to describe, for example , the position of a pendulum as a function of time instead of computing only its period.
+
+Using definite integrals to write functions generalizes the point-slope equation of a line. You used this equation in differential calculus is to approximate a function in the neighborhood of a point. To capture the local nature of the approximation (ie. the approximation is usually accurate in just a small neighborhood of the point of tangency), it's the point-slope equation, \emph{not} slope-intercept, that works best. The next two examples illustrate this idea.   % the main idea of differential calculus.
+
+\begin{example}  \label{Ex:IUDFr3f3fgl}
+Between 12:14pm and 1:00pm the temperature of a beaker of water increases at a constant rate of $33/13^\circ$C/sec. The temperature is $23^\circ$C at 12:23pm.
+
+\begin{enumerate}
+\item Find an expression for the function 
+\[
+       C=f(t)\; , \; 14\leq t \leq 60, 
+\]
+that expresses the temperature of the water (in Celsius degrees) in terms of the number of minutes past noon.
+
+\item Explain the logic behind your expression.
+
+\end{enumerate}
+\end{example}
+
+
 
 \begin{example}  \label{Ex:98dfrghha}
 
@@ -33,20 +55,29 @@ expresses a balloon's rate of ascent (measured in ft/min) in terms of the number
 
 \href{https://www.desmos.com/calculator/tgi5yiuzab}{152:Balloon Introduction}
 
-Suppose the balloon is $2500$ feet above the ground at 12:34pm. 
+\begin{enumerate}
+
+\item When is the balloon ascending? Descending? Give all times for each and explain your reasoning.
+
+\item Do you think the balloon is higher at noon or at 1:00pm? Explain your reasoning. Try to prove your assertion using only arithmetic and simple reasoning.
+
+\item Now suppose the balloon is $2500$ feet above the ground at 12:34pm. 
 
 \begin{enumerate}
 
-\item Use the graph (and nothing else) to approximate the balloon's height $30$ seconds later. Explain your reasoning.
+\item Use the graph to approximate the balloon's height $30$ seconds later. Explain your reasoning.
 
 \item Is your estimate greater or less than the actual height? Explain your reasoning.
 
 \end{enumerate}
+\end{enumerate}
 \end{example}
 
-We can turn the previous question into an addition problem of integral calculus by trying to estimate the change in the balloon's height over a longer time interval.
+We can turn the previous question of differential calculus into an addition problem of integral calculus by estimating the change in the balloon's height over a longer time interval.
 
 \begin{example} \label{ExLKDrDEfRE9}
+
+We'll assume as before that the balloon is $2500$ feet above the ground at 12:34pm, big this time we'll approximate its height at 1:00pm.
 
 \begin{onlineOnly}
     \begin{center}
@@ -56,8 +87,22 @@ We can turn the previous question into an addition problem of integral calculus 
 
 \href{https://www.desmos.com/calculator/h6cworakdw}{152:Balloon Introduction 2}
 
+To get a rough approximation of the change in height between 12:34pm and 1:00pm , we'll start by dividing the $26$ minute interval into five equal subintervals of length 
+\[
+  \Delta t = \frac{26\text{ min}}{5} = 5.2 \text{ min}.
+\]
+ 
+Now we'll suppose that during each subintervals the balloon ascends at a constant rate. While this is not true, the rate certainly varies less over a $5.2$-minute interval than it does over the entire $26$-minute interval. So we should get a better appoximation this way than if we assumed just one constant rate of ascent between 12:34pm and 1:00pm.
+
+What rate we choose for each $5.2$-minute interval doesn't really matter as long as we choose the actual rate of ascent at some time during that interval. To make things simple, we'll choose the rate at the start of each subinterval as illustrated in the worksheet above. Then the signed area of a shaded retangle measures the approximate change in height during that subintevral. And the approximate change in height from 12:34pm to 1:00pm is just the sum of these areas.
+
+Use the graph above to appoximate the change in height.
+\begin{freeResponse}
+\end{freeResponse}
+
+
+
 \end{example} 
 
-sdfdsf
 
 \end{document}
