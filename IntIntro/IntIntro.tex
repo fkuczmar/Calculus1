@@ -14,7 +14,7 @@ The \emph{differential} in Differential Calculus has the same root as \emph{diff
 \emph{Integral Calculus}, on the other hand, is about addition. \emph{Integral} shares the same root as \emph{integer} and comes from the Latin \emph{integrare}, to make whole. 
 
 Addition and subtraction are inverse operations. They undo each other. And in some sense (to be made precise later) integration
-undoes differentiation. But it would be a mistake to think integral calculus is about finding anti-derivatives. While anti-differentiation plays a role, this class is more about recongizing \emph{when} to integrate rather than \emph{how} to integrate. Many of your STEM classes use definite integrals. The emphasis there is on setting up and interpreting integrals, not computing their values. 
+undoes differentiation. But it would be a mistake to think integral calculus is about finding anti-derivatives. While anti-differentiation plays a role, this class is more about recongizing \emph{when} to integrate rather than \emph{how} to integrate. Many of your STEM classes use definite integrals, with an emphasis on setting up and interpreting integrals, not computing their values. 
 
 It would also be a mistake to think this class is about using definite integrals to compute \emph{numbers}, like the distance travelled over a certain time interval or the period of a pendulum. Rather, the emphasis here will be on using definite integrals to create \emph{functions}. Expressing the position of a pendulum as a function of time, for example, gives a lot more information that just computing its period. 
 
@@ -142,6 +142,20 @@ and the approximate height at 1:00pm is
 \item  Drag the slider in Line 4 of Example 3 to $n=20$ and repeat parts (c) - (e) of Example 3 with $n=20$ equal subintervals. 
 
 \item Try parts (c) - (e) of Example 3 in general, with $n$-equal subintervals.
+
+Using left endpoints, the approximate height at 1:00pm is
+\[
+        f(60) \sim   \answer{2500} +  \answer{\frac{26}{n}} \sum_{i=0}^{\answer{n-1}} f\left(\answer{34+ \frac{26}{n}i}\right)  .
+\]
+With right endpoints,
+\[
+        f(60) \sim   \answer{2500} +  \answer{\frac{26}{n}} \sum_{i=1}^{\answer{n}} f\left(\answer{34+ \frac{26}{n}i}\right)  .
+\]
+And with midpoints,
+\[
+        f(60) \sim   \answer{2500} +  \answer{\frac{26}{n}} \sum_{i=0}^{\answer{n-1}} f\left(\answer{34.6+ \frac{26}{n}i}\right)  .
+\]
+
 \end{enumerate}
 \end{example}
 
