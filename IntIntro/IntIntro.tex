@@ -21,7 +21,7 @@ It would also be a mistake to think this class is about using definite integrals
 Using definite integrals to write functions generalizes the point-slope equation of a line. You used this equation in differential calculus is to approximate a function in the neighborhood of a point. To capture the local nature of the approximation (ie. the approximation is usually accurate in just a small neighborhood of the point of tangency), it's the point-slope equation, \emph{not} slope-intercept, that works best. The next two examples illustrate this idea.   % the main idea of differential calculus.
 
 \begin{example}  \label{Ex:IUDFr3f3fgl}
-Between 12:14pm and 1:00pm the temperature of a beaker of water increases at a constant rate of $33/13^\circ$C/sec. The temperature is $23^\circ$C at 12:23pm.
+Between 12:14pm and 1:00pm the temperature of a beaker of water increases at a constant rate of $\frac{33}{13}^\circ$C/sec. The temperature is $23^\circ$C at 12:23pm.
 
 \begin{enumerate}
 \item Find an expression for the function 
@@ -90,30 +90,60 @@ We'll start by computing a rough approximation of the change in height between 1
   \Delta t = \frac{26\text{ min}}{5} = 5.2 \text{ min}.
 \]
  
-Now we'll suppose that during each subinterval the balloon ascends at a constant rate. While this is not true, the rate certainly varies less over a $5.2$-minute interval than it does over the entire $26$-minute interval. So we should get a better appoximation this way than if we assumed just one constant rate of ascent between 12:34pm and 1:00pm.
+Now we'll suppose that during each subinterval the balloon ascends at a constant rate. While this is not true, the rate certainly varies less over a $5.2$-minute interval than it does over the entire $26$-minute interval. So we should get a better appoximation  than if we assumed just one constant rate of ascent between 12:34pm and 1:00pm.
 
 What rate we choose for each $5.2$-minute interval doesn't really matter as long as we choose the actual rate of ascent at some time during that interval. To make things simple, we'll choose the rate at the start of each subinterval as illustrated in the worksheet above. Then the signed area of a shaded retangle measures the approximate change in height during that subintevral. And the approximate change in height from 12:34pm to 1:00pm is just the sum of these areas.
 
 \begin{enumerate}
 \item Use the graph above to appoximate the change in height. Then approximate the height at 1:00pm.
 
-\item Write an expression for change in height from 12:34pm to 1:00pm in terms of the unknown function $f$.
+\item Write an expression for the approximate change in height from 12:34pm to 1:00pm in terms of the unknown function $f$, and then an expression for the approximate height at 1:00pm.
 
 \item Use summation notation to express the change in part (b). Type this expression in Line 37 of the worksheet above. Start by typing \emph{sum}. Compare this value with your estimate from part (a).
 
+The approximate change in height from 12:34pm to 1:00pm is
+\[
+  1.2 \sum_{i=0}^{\answer{4}} f(\answer{34 + 1.2i})  
+\]
+and the approximate height at 1:00pm is
+\[
+     \answer{2500} + 1.2 \sum_{i=0}^{\answer{4}} f(\answer{34 + 1.2i})  .
+\]
+
 \item Repeat parts (a)-(c) using the rate of ascent at the \emph{end} of each subinterval instead. Turn off the folder in Line 11 and activate the folder in Line 18 above.
 
+The approximate change in height from 12:34pm to 1:00pm is
+\[
+  1.2 \sum_{i=1}^{\answer{5}} f(\answer{34 + 1.2i})  
+\]
+and the approximate height at 1:00pm is
+\[
+     \answer{2500} + 1.2 \sum_{i=1}^{\answer{5}} f(\answer{34 + 1.2i})  .
+\]
+
 \item Repeat parts (a)-(c) using the rate of ascent at the \emph{middle} of each subinterval instead. Turn off the folder in Line 18 and activate the folder in Line 24 above.
+
+The approximate change in height from 12:34pm to 1:00pm is
+\[
+  1.2 \sum_{i=0}^{\answer{4}} f(\answer{34.6+ 1.2i})  
+\]
+and the approximate height at 1:00pm is
+\[
+     \answer{2500} + 1.2 \sum_{i=0}^{\answer{4}} f(\answer{34.6 + 1.2i})  .
+\]
 
 \item Compare your three estimates for the change in height. Which do you think is most accurate? Explain why.
 
 \end{enumerate}
-
-
-
-
-
 \end{example} 
+
+\begin{example}  \label{Ex:IjdRJrehreDF}
+\begin{enumerate}
+\item  Drag the slider in Line 4 of Example 3 to $n=20$ and repeat parts (c) - (e) of Example 3 with $n=20$ equal subintervals. 
+
+\item Try parts (c) - (e) of Example 3 in general, with $n$-equal subintervals.
+\end{enumerate}
+\end{example}
 
 
 \end{document}
