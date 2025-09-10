@@ -10,9 +10,9 @@ The Mercator map and its relation to Lambert's equal-area map.
 \maketitle
 
 \section{Scaling Factors and Elastic Bands}
-While the interpretation of the derivative as a rate of change is useful for functions with time as the independent variable, there are many instances when this is not the best viewpoint. A more universal description of the derivative, and one that generalizes to higher dimensions, is as a scaling factor. Multiplying the derivative by a sufficiently small change in the input to a function gives a good approximation to the change in the output. Of all possible scaling factors the derivative is the best in the sense that the error in the approximation approaches zero faster than the change in the output.
+The interpretation of the derivative as a rate of change is limited. A more universal description of the derivative, and one that generalizes to higher dimensions, is as a scaling factor. Multiplying the derivative by a sufficiently small change in the input to a function gives a good approximation to the change in the output. Of all possible scaling factors the derivative is the best in the sense that the error in the approximation approaches zero faster than the change in the output.
 
-A useful way of interpreting the derivative is to think of a function's domain as an elastic band and the function as acting on that band by stretching or compressing it.
+We can visualize the derivative as a scaling factor by regarding a function's domain as an elastic band and the function as acting on that band by stretching or compressing it.
 
 For example, imagine a thin elastic band of length $4$ meters running along the horizontal $L$-axis from $L=0$ meters to $L=4$ meters.  Now hold the left end fixed at $L=0$ and stretch the band by moving right end an additional four meters to the right . Then the function
 \[
@@ -21,7 +21,7 @@ For example, imagine a thin elastic band of length $4$ meters running along the 
 describes this stretching action. It takes as an input the distance (in meters) of a point on the band from the origin ($L=0$) and returns as an output the distance between the origin and the corresponding point on the stretched band. The exploration below shows this stretching action.
 
 \begin{exploration} \label{Ex:98f3rgafgbb}
-Drag the slider $k$ in Line 2 below to illustrate the stretching action.
+Drag the slider $k$ in Line 2 below from $k=1$ to $k=2$ to illustrate the stretching action for the function $g$.
 
 \begin{onlineOnly}
     \begin{center}
@@ -70,7 +70,7 @@ Here's an example
 \[
       H = f(L) = 10 - \sqrt{100-L^2} \, , \, 0\leq L \leq 10,
 \] 
-of a non-linear stretching function (where $L$ and $H$ are measured in meters as before). Like most functions in this class, it acts like a linear function near most points in its domain. 
+of a non-linear stretching function (where $L$ and $H$ are measured in meters as before). Like most functions in this class, it acts like a linear function near almost all points in its domain. 
 
 To stretch the elastic band in the demonstration below, drag the slider $u$ in Line 2 from $u=0$ to $u=1$. Then zoom in close enough to the point $H=f(9.5)$ in the stretched band (highlighted in black) to make the stretching function look linear. %the band looks like it's stretched by a constant factor. 
 
@@ -113,10 +113,12 @@ To stretch the elastic band in the demonstration below, drag the slider $u$ in L
 \section{Lambert's Equal-Area Map}
 
 
-You saw the idea of a stretching (scaling) factor long before taking calculus. Look at a map of Seattle and you'll see a scale, probably near the bottom. It might be 2 miles/inch, or something like that. But you will not see such a scale on a map of the earth for the simple reason that one does not exist. The factor varies from place to place and is usually a function of latitude. Even at a specific location, there is often not one but infinitely many scaling factors that depend on the direction in which you head. 
+You probably saw the idea of a stretching (scaling) factor long before taking calculus. Look at a map of Seattle and you'll see a scale, probably near the bottom. It might be 2 miles/inch, or something like that. But you will not see such a scale on a map of the earth for the simple reason that one does not exist. The scale varies from place to place and is usually a function of latitude. Even at a specific location, there is often not one but infinitely many scaling factors that depend on the direction in which you head. 
 
-The worksheet below shows a way to create a map of the earth by wrapping a cylinder around its equator. The map sends each point of the earth to its nearest point on the cylinder (ie. straight out, directly away from the earth's axis of rotation).
+The worksheet below shows a way to create a map of the earth by wrapping a cylinder around its equator. The map sends each point of the earth to its nearest point on the cylinder (ie. straight out, directly away from the earth's axis of rotation). Unwrapping the cylinder gives Lambert's equal-area map, from the earth to the points in a rectangle.
 
+\begin{exploration}  \label{EXPDkjkeFERerRd8}
+Drag the slider in Line 6  from $r_1=0$ to $r_1=1$ to uwrap the cylinder. Drag sliders $theta_1$, $\phi_1$ in LInes 2 and 4 to vary the longitude and latitude of the point on the sphere.
 \begin{onlineOnly}
     \begin{center}
 \desmosThreeD{ehyvvttdeo}{800}{600}  
@@ -124,6 +126,24 @@ The worksheet below shows a way to create a map of the earth by wrapping a cylin
 \end{onlineOnly}
 
 \href{https://www.desmos.com/3d/ehyvvttdeo}{152: Mercator 0}
+
+\end{exploration}
+
+Suppose the earth has radius one. Lambert's map sends the circle of latitude $\phi$ (the angle between the plane of the equator and the segments from the sphere's center to points on the circle) to a circle on the cylinder with unit radius. So the map stretches the circle of latitude $\phi$, with radius $\cos\phi$, by the factor
+\[
+ \lambda_p = \frac{1}{\cos\phi}.
+\]
+This is the scaling factor along the circle in the east-west direction at latitude $\phi$.
+
+In the north-south direction the scaling factor is also a function of latitude.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{kbryuogdaj}{450}{600}  %qvk0mzy26u
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/kbryuogdaj}{151: Lambert Map Cosine Function}
 
 
 
