@@ -10,6 +10,8 @@ When do we need to add?
 \maketitle
 
 
+\section{Time, Distance, and Mileage Problems}
+
 \begin{exercise}  \label{EXKDmFMERE}
 The table below shows your speed at several times as you drive north on I-5. 
 
@@ -92,6 +94,109 @@ The upper bound is
 \end{exercise}
 
 
+\begin{exercise}  \label{EX:JJndre344adf}
+The table below shows your speed and gas mileage at several times during the course of a two-hour trip.
+
+\begin{tabular}{|c|c|c|}
+\hline
+Time & Speed (miles/hr) & Mileage (miles/gal) \\
+\hline
+1:00pm & 40 & 30 \\  \hline
+1:45pm & 48 & 36 \\  \hline
+2:15pm & 60 & 40 \\ \hline
+3:00pm & 70 & 28 \\
+\hline
+\end{tabular}
+
+\begin{enumerate}
+
+\item Give two estimates for the distance travelled during the trip. Explain your reasoning.
+
+\item Give two estimates for the number of gallons of gas your car burned during the trip. Explain your reasoning.
+
+\end{enumerate}
+\end{exercise}
+
+
+\section{On Trails}
+
+\begin{exercise}  \label{EX:MnVWeDF3x}
+The table below shows the inclination angle of the Mt. Washington Cog Railway at several distances from Waumbek Station (the departure point, elevation 4000 feet) on its way to the summit (elevation 6288 feet).
+
+\begin{tabular}{|c|c|}
+\hline
+Distance (miles) & Inclination Angle (radians) \\
+\hline
+0.5 & 0.25 \\  \hline
+1.0 & 0.30 \\ \hline
+1.5 & 0.32 \\ \hline
+2.0 & 0.38  \\ \hline
+%2.5 & 0.22 \\ \hline
+\hline
+\end{tabular}
+
+Use the data to find two estimates for the elevation change from mile marker $0.5$ to mile marker $2.0$. Explain your reasoning.
+\end{exercise}
+
+
+
+\begin{exercise}  \label{EX:MnV443fgDF3x}
+The table below shows the slope along a section of a trail at several altitudes.
+
+
+\begin{tabular}{|c|c|}
+\hline
+Altitude (feet) & Slope (ft/ft) \\
+\hline
+1000 & 0.05 \\  \hline
+1200 & 0.10 \\ \hline
+1350 & 0.12 \\ \hline
+1500 & 0.15  \\ \hline
+\hline
+\end{tabular}
+
+
+\begin{enumerate}
+\item Use the data to find two estimates for the length of the trail between altitudes $1000$ ft and $1500$ feet. Explain your reasoning.
+
+\item Let $h_i$ and $m_i$, $i=1,2,3,4$ denote the respective altitudes and slopes in the table above. Use summation notation to write your estimates in part (b) above.
+
+Assuming the steepness of the trail increases between altitudes $1000$ feet and $1500$ feet, a lower bound for the trail's length is
+\[
+    s_1 = \sum_{i=1}^4 (h_{i+1}-h_{i}) \left( \answer{\sqrt{1+1/m_{i+1}^2}} \right)  .
+\]
+An upper bound is
+\[
+    s_1 = \sum_{i=1}^4 (h_{i+1}-h_{i}) \left( \answer{\sqrt{1+1/m_{i}^2}} \right)  .
+\]
+
+\item Input your expressions for the lower and upper bounds in the worksheet below.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{mmi4rx2rqp}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/mmi4rx2rqp}{152: Length of Trail}
+
+ 
+
+\end{enumerate}
+
+\end{exercise}
+
+
+
+
+
+
+
+
+
+\section{A Rollercoaster Problem}
+
+
 \begin{exercise}  \label{EXKjdDMFne3}
 
 The table below shows several speeds of a roller coaster as it slides down a cicular loop-the-loop with a radius of 80 feet. The bottom of the loop is 20 feet above the ground. 
@@ -120,46 +225,7 @@ Explain your reasoning throughly in the form of a letter to a friend with no kno
 
 \end{exercise}
 
-\begin{exercise}  \label{EX:JJndre344adf}
-The table below shows your speed and gas mileage at several times during the course of a two-hour trip.
 
-\begin{tabular}{|c|c|c|}
-\hline
-Time & Speed (miles/hr) & Mileage (miles/gal) \\
-\hline
-1:00pm & 40 & 30 \\  \hline
-1:45pm & 48 & 36 \\  \hline
-2:15pm & 60 & 40 \\ \hline
-3:00pm & 70 & 28 \\
-\hline
-\end{tabular}
-
-\begin{enumerate}
-
-\item Give two estimates for the distance travelled during the trip. Explain your reasoning.
-
-\item Give two estimates for the number of gallons of gas your car burned during the trip. Explain your reasoning.
-
-\end{enumerate}
-\end{exercise}
-
-\begin{exercise}  \label{EX:MnVWeDF3x}
-The table below shows the inclination angle of the Mt. Washington Cog Railway at several distances from Waumbek Station (the departure point, elevation 4000 feet) on its way to the summit (elevation 6288 feet).
-
-\begin{tabular}{|c|c|}
-\hline
-Distance (miles) & Inclination Angle (radians) \\
-\hline
-0.5 & 0.25 \\  \hline
-1.0 & 0.30 \\ \hline
-1.5 & 0.32 \\ \hline
-2.0 & 0.38  \\ \hline
-%2.5 & 0.22 \\ \hline
-\hline
-\end{tabular}
-
-Use the data to find two estimates for the elevation change from mile marker $0.5$ to mile marker $2.0$. Explain your reasoning.
-\end{exercise}
 
 
 \begin{exercise} \label{EXIIU4349se9}

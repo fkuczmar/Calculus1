@@ -135,7 +135,15 @@ Suppose the earth has radius one. Lambert's map sends the circle of latitude $\p
 \]
 This is the scaling factor along the circle in the east-west direction at latitude $\phi$.
 
-In the north-south direction the scaling factor is also a function of latitude.
+In the north-south direction the scaling factor is also a function of latitude. The key point is that the map sends a point on the circle of latitude $\phi$ to signed height
+\[
+    h = f(\phi) = \sin\phi 
+\]
+above the plane of the equator. So the scaling factor at latitude $\phi$ in the north-south direction is
+\[
+ \lambda_m = \frac{dh}{d\phi} = \cos \phi.
+ \]
+Drag the slider $m$ in Line 2 of the worksheet below to visualize the scaling factor.
 
 \begin{onlineOnly}
     \begin{center}
