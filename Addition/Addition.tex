@@ -66,7 +66,8 @@ Exit Number & Mileage (miles/gallon) \\
 \hline
 176 & 40 \\  \hline
 200 & 32 \\ \hline
-248 & 30 \\
+210 & 30 \\ \hline
+248 & 25 \\
 \hline
 \end{tabular}
 
@@ -78,13 +79,13 @@ Exit Number & Mileage (miles/gallon) \\
 
 \item Let $e_i$ and $g_i$, $i=1,2,3$ denote the respective exit numbers and gas mileages in the table above. Use summation notation to write your estimates in part (b) above.
 
-The lower bound for the number of gallons of gas is
-\[
-  \sum_{i=1}^3 \left( e_{i+1} - e_{i}  \right)\left( \answer{\frac{1}{g_i}}  \right) .
-\]
-The upper bound is
+Assuming the gas mileage is a decreasing function, the best possible lower bound for the number of gallons of gas is
 \[
   \sum_{i=1}^3 \left( e_{i+1} - e_{i}  \right)\left( \answer{\frac{1}{g_{i+1}}}  \right) .
+\]
+The best possible upper bound is
+\[
+  \sum_{i=1}^3 \left( e_{i+1} - e_{i}  \right)\left( \answer{\frac{1}{g_{i}}}  \right) .
 \]
 
 
@@ -135,7 +136,37 @@ Distance (miles) & Inclination Angle (radians) \\
 \hline
 \end{tabular}
 
-Use the data to find two estimates for the elevation change from mile marker $0.5$ to mile marker $2.0$. Explain your reasoning.
+
+\begin{enumerate}
+\item Use the data to find two estimates for the elevation change from mile marker $0.5$ to mile marker $2.0$. Explain your reasoning.
+
+\item Let $s_i$ and $\phi_i$ denote the respective diestances and angles in the table above. Use summation notation to write the steimate in part (a)
+
+
+Assuming the steepness of the track increases, a lower bound for the change in height (in miles) is
+\[
+    h_1 = \sum_{i=1}^3 (s_{i+1}-h_{i}) \left( \answer{\sin \phi_i} \right)  .
+\]
+An upper bound is
+\[
+    s_1 = \sum_{i=1}^3(h_{i+1}-h_{i}) \left( \answer{\sin \phi_{i+1}} \right)  .
+\]
+
+\item Input your expressions for the lower and upper bounds in the worksheet below.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{ehnbprdu6q}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/ehnbprdu6q}{152: Cog Railroad}
+
+
+
+ehnbprdu6q
+
+\end{enumerate}
 \end{exercise}
 
 
@@ -159,15 +190,15 @@ Altitude (feet) & Slope (ft/ft) \\
 \begin{enumerate}
 \item Use the data to find two estimates for the length of the trail between altitudes $1000$ ft and $1500$ feet. Explain your reasoning.
 
-\item Let $h_i$ and $m_i$, $i=1,2,3,4$ denote the respective altitudes and slopes in the table above. Use summation notation to write your estimates in part (b) above.
+\item Let $h_i$ and $m_i$, $i=1,2,3,4$ denote the respective altitudes and slopes in the table above. Use summation notation to write your estimates in part (a).
 
-Assuming the steepness of the trail increases between altitudes $1000$ feet and $1500$ feet, a lower bound for the trail's length is
+Assuming the steepness of the trail increases between altitudes $1000$ feet and $1500$ feet, a lower bound for the trail's length (in feet) is
 \[
-    s_1 = \sum_{i=1}^4 (h_{i+1}-h_{i}) \left( \answer{\sqrt{1+1/m_{i+1}^2}} \right)  .
+    s_1 = \sum_{i=1}^3 (h_{i+1}-h_{i}) \left( \answer{\sqrt{1+(1/m_{i+1})^2}} \right)  .
 \]
 An upper bound is
 \[
-    s_1 = \sum_{i=1}^4 (h_{i+1}-h_{i}) \left( \answer{\sqrt{1+1/m_{i}^2}} \right)  .
+    s_1 = \sum_{i=1}^3(h_{i+1}-h_{i}) \left( \answer{\sqrt{1+(1/m_{i})^2}} \right)  .
 \]
 
 \item Input your expressions for the lower and upper bounds in the worksheet below.
