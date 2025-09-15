@@ -10,19 +10,100 @@ Derivative review.
 \maketitle
 
 
-\begin{question}  \label{Q9edRersfrre}
+\section{Example}
+
+Here's an example of how to use $u$-substitution with the chain rule. Just as importantly, it's an example of how to show your work clearly and precisely.
+
+\begin{example}  \label{Ex:GdfeerDFGff}
+\begin{enumerate}
+\item Ues the chain rule to find an expression for the derivative
+\[
+  \frac{d}{dx} \left(   (2x^3+1)^2 \right).
+\]
+
+\item Use part (a) to find an equation of the tangent line to the curve
+\[
+        y = (2x^3+1)^2
+\]
+at the point $(1,9)$.
+
+\item Answer part (a) without the chain rule.
+
+\end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+\item Let 
+\[
+       y = \left( 2x^3 +1  \right)^2
+\]
+and 
+\[
+      u = 2x^3 + 1 .
+\]
+Then
+\[
+     y = u^2
+\]
+and from the chain rule,
+\begin{align*}
+\frac{dy}{dx} &= \frac{dy}{du} \cdot \frac{du}{dx}  \\
+                     &= \frac{d}{du} \left( u^2 \right)  \cdot \frac{d}{dx}\left(  2x^3 + 1 \right)  \\
+                     &= 2u (6x^2)  \\
+                     &= 2(2x^3+1)(6x^2) .
+\end{align*}
+
+\item The slope of the tangent line to the curve $y=(2x^3+1)^2$ at the point $(1,9)$ is 
+\[
+              \frac{dy}{dx}\Big|_{x=1} = 2(3)(6) = 36 ,
+\]
+and an equation of the tangent line is
+\[
+   y - 9 = 36(x-1) .
+\]
+
+\pskip 
+
+\item We can get the same result without the chain rule, by rewriting the original function as
+\[
+     y = f(x) = (2x^3+1)^2 = 4x^6 + 4x^3 + 1.
+\] 
+Then
+\begin{align*}
+      \frac{dy}{dx} &= \frac{d}{dx} \left(  4x^6 + 4x^3 + 1  \right) \\
+                         &= 4\frac{d}{dx}\left( x^6 \right) + 4 \frac{d}{dx}\left( x^3 \right) + \frac{d}{dx}\left(1 \right) \\
+                        &=   24x^5 + 12x^2 .
+\end{align*}
+
+Then the slope of the tangent line to the curve $y=(2x^3+1)^2$ at the point $(1,9)$ is 
+\[
+              \frac{dy}{dx}\Big|_{x=1} =14 + 12 = 36 ,
+\]
+as before.
+
+\end{enumerate}
+
+\end{explanation}
+\end{example}
+
+
+\section{Exercises}
+
+\emph{Directions:} Follow all the steps of \emph{Example 1}(a) exactly for each of the following. Show all work as above. Do not skip steps.
+
+\begin{exercise}  \label{Q9edRersfrre}
 Find simplified expressions for each of the following derivatives.
 
 \begin{enumerate}
 
 \item
 \[
-\frac{d}{d\theta}\left( \ln (\cot (\theta/2)) \right)
+\frac{d}{d\theta}\left( \ln \left| \cot (\theta/2)\right| \right)
 \]
 
 \item 
 \[
-\frac{d}{d\theta}\left( \ln (\sec\theta + \tan\theta) \right)
+\frac{d}{d\theta}\left( \ln \left| \sec\theta + \tan\theta \right| \right)
 \]
 
 \item 
@@ -35,9 +116,61 @@ Find simplified expressions for each of the following derivatives.
 \frac{d}{d\theta}\left( \operatorname{arcsinh}(\tan(\theta)) \right)
 \]
 
+\item 
+\[
+\frac{d}{dt} \left(   \tan \left( k \arctan(t/2)  \right)       \right),
+\]
+where $k$ is a constant.
 \end{enumerate}
 
-\end{question}
+\end{exercise}
+
+\begin{exercise}  \label{EX:JDHFeMERE34}
+Find the acute angle the tangent line to the curve
+\[
+      y = \ln \left|  \sec\theta \right|
+\]
+at the point $P(\pi/7, \ln (\sec(\pi/7))$ makes with the $x$-axis. 
+\end{exercise}
+
+\begin{exercise} \label{EX:Her4r3erf}
+Find simplified expressions for each of the following derivatives. Follow all steps of \emph{Example 1(a)}.
+
+\begin{enumerate}
+\item 
+\[
+      \frac{d}{dx}\left(  x \arctan x - \ln \sqrt{1+x^2} \right)
+\]
+
+\item 
+\[
+  \frac{d}{dt}\left(  t \ln |t| - t \right)
+\]
+
+\item 
+\[
+\frac{d}{dx} \left(    \ln (x + \sqrt{x^2-1})   \right)
+\]
+
+\item 
+\[
+\frac{d}{dx} \left(    \ln (x + \sqrt{x^2+1})   \right)
+\]
+
+\item 
+\[
+\frac{d}{dx} \left(    \ln (x + \sqrt{x^2-1})   \right)
+\]
+
+\item 
+\[
+\frac{d}{dt} \left(    \ln \sqrt{\frac{1+t}{1-t}}   \right)
+\]
+
+
+\end{enumerate}
+
+\end{exercise}
 
 
 \end{document}
