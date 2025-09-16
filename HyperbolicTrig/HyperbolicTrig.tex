@@ -5,15 +5,19 @@
 
 \begin{document}
 \begin{abstract}
-When do we need to add?
+An introduction to the hyperbolic trigonometric functions.
 \end{abstract}
 \maketitle
 
 
-\section{The Hyperbolic Cosine Function}
+\section{The Hyperbolic Cosine and Sine Functions}
 
+The function \emph{hyperbolic cosine} is defined as
+\[
+    \cosh(x) = 0.5(e^x + e^{-x}  ).
+\]
 
-
+Its graph is shown below.
 
 \begin{onlineOnly}
     \begin{center}
@@ -22,6 +26,60 @@ When do we need to add?
 \end{onlineOnly}
 
 \href{https://www.desmos.com/calculator/nubdwzgsa9}{152: Hyp Cosine}
+
+\begin{enumerate}
+\item Drag the slider $u$ in Line 2 of the worksheet above. Explain how to get the graph of the function $y=\cosh x$ from the graphs of the functions $y=e^x$ and $y=e^{-x}$.
+
+\begin{freeResponse}
+\end{freeResponse}
+
+\item What is the range of the function $f(x)=\cosh x$?
+
+\item Activate the folder \emph{Hyperbolic Sine Function} in Line 15 above to see the graph of the hyperbolic sine function
+\[
+   \sinh(x) = 0.5(e^x - e^{-x}  ).
+\]
+\item Drag the slider $u$ in Line 2 of the worksheet above. Explain how to get the graph of the function $y=\cosh x$ from the graphs of the functions $y=e^x$ and $y=e^{-x}$.
+\begin{freeResponse}
+\end{freeResponse}
+
+\item What is the range of the function $g(x)=\sinh x$?
+
+\item Prove the identity 
+\[
+      \cosh^2x - \sinh^2x = 1.
+\]
+
+\emph{Hint: For a quick way, factor the above expression.}
+
+\item Show that 
+\[
+   \frac{d}{dx} \left( \cosh x  \right) = \sinh x
+\]
+and
+\[
+   \frac{d}{dx} \left( \sinh x  \right) = \cosh x
+\]
+
+\end{enumerate}
+
+
+\section{Hanging Chains}
+The graph of the hyperbolic cosine function models a chain with uniform density hanging in a uniform graviatational field. We'll learn why later in the class.
+
+Drag the slider $a$ in Line 2 to adjust the graph of the function
+\[
+     f(x) = -a + a\cosh(x/a)
+\]
+to match the highlighted (orange) chain below.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{tj3dz2cnf0}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/tj3dz2cnf0}{152: Hanging Chain 1}
 
 
 \end{document}
