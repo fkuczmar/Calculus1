@@ -45,12 +45,12 @@ Its graph is shown below.
 
 \item What is the range of the function $g(x)=\sinh x$?
 
-\item Prove the identity 
+\item Prove that 
 \[
       \cosh^2x - \sinh^2x = 1.
 \]
 
-\emph{Hint: For a quick way, factor the above expression.}
+\emph{Hint: For a quick way, first factor the above expression.}
 
 \item Show that 
 \[
@@ -65,13 +65,8 @@ and
 
 
 \section{Hanging Chains}
-The graph of the hyperbolic cosine function models a chain with uniform density hanging in a uniform graviatational field. We'll learn why later in the class.
+Hold the ends of a chain and let the chain sag under its own weight. The resulting curve looks like a parabola, and so it was thought. But it turns out that this is not correct. 
 
-Drag the slider $a$ in Line 2 to adjust the graph of the function
-\[
-     f(x) = -a + a\cosh(x/a)
-\]
-to match the highlighted (orange) chain below.
 
 \begin{onlineOnly}
     \begin{center}
@@ -80,6 +75,86 @@ to match the highlighted (orange) chain below.
 \end{onlineOnly}
 
 \href{https://www.desmos.com/calculator/tj3dz2cnf0}{152: Hanging Chain 1}
+
+
+\begin{enumerate} 
+
+\item To see that the dashed (orange) chain in the worksheet above is \emph{not a parabola} drag the slider $c$ in Line 2.
+
+\item It turns out that a chain with uniform density hanging in a uniform graviatational field assumes the shape of the hyperbolic cosine function $y=\cosh x$ (we'll see why later in the course). All that's needed to describe a particular chain is to scale the size of the graph by some factor. Test this by dragging the slider $a$ in Line 6 to make the graph of the function
+\[
+     f(x) = -a + a\cosh(x/a)
+\]
+match the highlighted (orange) chain below.
+\end{enumerate}
+
+\section{The Hyperbolic Tangent Function}
+The hyperbolic tangent function is defined as
+\begin{align*}
+ \tanh x &= \frac{\sinh x}{\cosh x}  \\
+             &= \frac{e^x - e^{-x}}{e^x + e^{-x}}.
+\end{align*}
+
+\begin{enumerate}
+\item Find the domain and range of the function $y=\tanh x$.
+
+\item Sketch by hand a graph of the function $y=\tanh x$.
+
+\item Use your graph from part (b) to sketch a graph of the derivative
+\[
+    y = \frac{d}{dx} \left( \tanh x \right) .
+\]
+
+\item Find an expression for the derivative in part (c) in terms of $\cosh x$ and/or  $\sinh x$. 
+
+\end{enumerate}
+
+\section{Inverse Functions}
+The key idea here is that \emph{the derivative of the inverse of a function is the reciprocal of the function's derivative}. This should be intuitive.
+
+So to find the derivative of the inverse of a one-to-one function $y=f(x)$, we should first express $dy/dx$ in terms of $y$. Then take the reciprocal.
+
+
+\begin{enumerate}
+\item Express the derivaive of each function below in terms of its output.
+\begin{enumerate}
+\item
+\[
+   y = \sinh x 
+\]
+
+\item
+\[
+   y = \cosh x \, , \, x\geq 0
+\]
+
+\item 
+\[
+    y = \tanh x 
+\]
+\end{enumerate}
+
+\item Use the results of part (a) to find expressions for the derivatives
+\begin{enumerate}
+\item 
+\[
+    \frac{d}{dy} (\sinh^{-1} y)
+\]
+
+\item 
+\[
+    \frac{d}{dy} (\cosh^{-1} y)
+\]
+
+\item 
+\[
+    \frac{d}{dy} (\tanh^{-1} y)
+\]
+
+\end{enumerate}
+
+\end{enumerate}
+
 
 
 \end{document}
