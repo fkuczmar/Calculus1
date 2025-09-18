@@ -10,10 +10,56 @@ When do we need to add?
 \maketitle
 
 
+\section{Two Balloon Problems}
+
+\begin{exercise} \label{EX:JERVER3ef}
+\begin{enumerate}
+
+\item The table below shows the height of a balloon at several times.
+
+\begin{tabular}{|c|c|c|}
+\hline
+Time & Height (feet) & Average Rate of Ascent (ft/min) \\
+\hline
+12:30 & 420 & ------- \\ \hline
+12:40 & 500 & \\ \hline
+12:44 & 550 & \\ \hline
+12:50 & 400 & \\
+\hline
+\end{tabular}
+
+
+Find the balloon's average rate of ascent over each of the three time intervals between consecutive times.
+
+\item The table below shows the rate of ascent (in ft/min) of another balloon at several times.
+
+\begin{tabular}{|c|c|c|}
+\hline
+Time & Rate of ascent (ft/min) & Approximate height (ft) \\
+\hline
+12:30 & 40 &  \\ \hline
+12:40 & 25 & 1800\\ \hline
+12:44 & -30 & \\ \hline
+12:50 & -50 & \\
+\hline
+\end{tabular}
+
+The balloon is $1800$ feet high at 12:40pm.
+
+Estimate the heights of the balloon at 12:30pm, 12:44pm, and 12:50pm. Do this three times. First assume the balloon ascends at a constant rate over each time inerval equal to the rate of ascent at the start of each interval. Then at a constant rate equal to the rate at the end of each interval. And finally at a constant rate equal to the average of the rates at the endpoints of each interval.
+
+\item Compare your computations in parts (a) and (b). How are they related?
+
+
+\end{enumerate}
+
+\end{exercise}
+
+
 \section{Time, Distance, and Mileage Problems}
 
 \begin{exercise}  \label{EXKDmFMERE}
-The table below shows your speed at several times as you drive north on I-5. 
+The table below shows your speed at several times as you drive north on I-5 on part of a two-hour trip. 
 
 \begin{tabular}{|c|c|}
 \hline
@@ -26,19 +72,21 @@ Time & Speed (miles/hour) \\
 \hline
 \end{tabular}
 
+The trip odometer reading is $110$ miles at 12:30pm.
+
 
 \begin{enumerate}
-\item Use the data to give two approximations to the distance travelled between 12:30pm and 12:50pm. Once assuming a constant speed over each subinterval equal to the speed at the start of the interval. And again assuming a constant speed over each subinterval equal to the speed at the end of the interval. Explain your reasoning.
+\item Use the data to give two approximations to the trip odometer reading at 12:50pm. Once assuming a constant speed over each subinterval equal to the speed at the start of the interval. And again assuming a constant speed over each subinterval equal to the speed at the end of the interval. Explain your reasoning.
 
 \item Activate the folder in Line 5 of the worksheet below and explain how what you see is related to part (a). Then turn the folder off and activate the folder in Line 11. Explain. 
 
-\item To practice summation notation, let $t_i$, $i=1,2,3,4$ be the times, in order, in the above table measured in hours past 12:30pm and let $v_i$ be the correponding speeds. Then using the speed at start of each subinterval , the distance travelled is approximately 
+\item To practice summation notation, let $t_i$, $i=1,2,3,4$ be the times, in order, in the above table measured in hours past 12:30pm and let $v_i$ be the correponding speeds. Then using the speed at start of each subinterval , the trip odometer reading at 12:50pm is approximately 
 \[
-   \sum_{i=1}^{\answer{4}}(t_{\answer{i+1}} - t_{\answer{i}})v_{\answer{i}}. 
+         \answer{110} +    \sum_{i=1}^{\answer{4}}(t_{\answer{i+1}} - t_{\answer{i}})v_{\answer{i}}. 
 \]
-Using the speed at the end of each subinterval, the distance is approximately
+Using the speed at the end of each subinterval, the odometer reading is approximately
 \[
-    \sum_{i=1}^{\answer{4}}(t_{\answer{i+1}} - t_{\answer{i}})v_{\answer{i+1}}.
+   \answer{110} +     \sum_{i=1}^{\answer{4}}(t_{\answer{i+1}} - t_{\answer{i}})v_{\answer{i+1}}.
 \]
 
 \item Input the sums from part (c) in Lines 16 and 18 of the worksheet below to check your arithmetic. You'll need to write $t[i]$ in place of $t_i$ and so on.
@@ -293,10 +341,20 @@ The total number of hours of daylight during the summer is
 \item Is the number of hours of daylight/day in Seattle increasing or decreasing on March 21st? At what rate?
 
 \item Does the previous question make sense? Explain.
-
-
 \end{enumerate}
+\end{exercise}
 
+\section{The Mercator Map}
+
+\begin{exercise} \label{EXYYYergbfg}
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{vyuyc5hp4g}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/vyuyc5hp4g}{152: Mercator Map Riemann Sum 1}
 
 \end{exercise}
 
