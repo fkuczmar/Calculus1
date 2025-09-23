@@ -64,7 +64,7 @@ Suppose we know the balloon is $1900$ feet high at 12:10pm and that we're given 
 \[
     r = f(t) \, , \, 0\leq t \leq  60 , 
 \]
-that expresses its rate of ascent (measured in ft/min) in terms of the number of minutes past noon. This graph is shown below.
+(assumed continuous) that expresses its rate of ascent (measured in ft/min) in terms of the number of minutes past noon. This graph is shown below.
 
 \begin{onlineOnly}
     \begin{center}
@@ -75,15 +75,6 @@ that expresses its rate of ascent (measured in ft/min) in terms of the number of
 \href{https://www.desmos.com/calculator/h6cworakdw}{152:Balloon Introduction 2}
 
 Our problem is to approximate the balloon's height at 12:50pm.
-
-
-\begin{onlineOnly}
-    \begin{center}
-\desmos{h6cworakdw}{450}{600}  
-\end{center}
-\end{onlineOnly}
-
-\href{https://www.desmos.com/calculator/h6cworakdw}{152:Balloon Introduction 2}
 
 We'll start by computing a rough approximation of the change in height from 12:10pm and 12:50pm. For this, we'll partition the $40$-minute interval into five equal subintervals of length 
 \[
@@ -105,13 +96,13 @@ Between 12:18pm and 12:26pm, the approximate change in height (measured in feet)
 And we continue similarly to approximate the changes in height (this time negative) over the remaining three 8-minute intervals. So from 12:10pm to 12:50pm the approximate change in height (in feet) is
 \begin{align*}
   \Delta h_5 &= h - 1900  \\
-               &= (f(10) + f(18) + f(26)+ f(34) + f(42))(8) \\
+               &\sim (f(10) + f(18) + f(26)+ f(34) + f(42))(8) \\
                &\sim -448 .
 \end{align*}
 
 \emph{Verify this computation by typing this expression in Line 38 of the worksheet above.}
 
-\emph{You can see this sum on Line 7 of the worksheet.}
+\emph{This sum is on Line 7 of the worksheet.}
 
 To see the previous computation geometrically, move the slider $a$ (the start of our time interval) in Line 2 above to $a=10$ and the slider $b$ (the end of our time interval) in Line 3 to $b=50$. Then the signed area of a shaded retangle measures the approximate change in height during that subintevral. And the approximate change in height from 12:10pm to 12:50pm is just the sum of these signed areas. The sign of the area and the rate of ascent are the same. So rectangles below the horizontal axis contribute a negative signed area (ie. a decrease in height), while those above make a positive contribution (ie. an increase in height).
 
@@ -120,37 +111,48 @@ Our first approximation to the balloon's height at 12:50pm is then
     (1900  - 448 )\text{ ft} \sim 1452 \text{ ft}.
 \]
 
-To get a better approximation, we partition the $40$-minute interval from 12:10pm to 12:50pm into more subintervals. Drag the slider $n$ on Line 5 (the number of equal subintervals) to the right and describe what happens to the approximate change in height ($s_1$ in Line 5) and how the picture changes. Use this to approximate the exact change in height and to interpret that change geometrically. 
+To get a better approximation, we partition the $40$-minute interval from 12:10pm to 12:50pm into more subintervals of equal length. To do this, drag the slider $n$ on Line 5 (the number of equal subintervals) to the right.
 
+\begin{enumerate}
+\item Describe what happens to the approximate change in height ($s_1$ in Line 5) and how the picture changes as $n$ grows without bound. 
+
+\item Then approximate the exact change in height and interpret that change geometrically. 
+
+\end{enumerate}
 \begin{freeResponse}
 \end{freeResponse}
 
- 
-
-
 \end{example} 
 
-\begin{example}  \label{Ex:IjdRJrehreDF}
-\begin{enumerate}
-\item  Drag the slider in Line 4 of Example 3 to $n=20$ and repeat parts (c) - (e) of Example 3 with $n=20$ equal subintervals. 
+\noindent {\bf Takeaways:}
 
-\item Try parts (c) - (e) of Example 3 in general, with $n$-equal subintervals.
-
-Using left endpoints, the approximate height at 1:00pm is
+Here's some notation along with a summary of the main idea for the last example.
+ 
+The exact height of the balloon at 12:50pm is 
 \[
-        f(60) \sim   \answer{2500} +  \answer{\frac{26}{n}} \sum_{i=0}^{\answer{n-1}} f\left(\answer{34+ \frac{26}{n}i}\right)  .
+     1900 + \int_{10}^{50} f(t)\, dt .
 \]
-With right endpoints,
+This expression starts with the height at 12:10pm (1900 feet) and adds to it the change in height
 \[
-        f(60) \sim   \answer{2500} +  \answer{\frac{26}{n}} \sum_{i=1}^{\answer{n}} f\left(\answer{34+ \frac{26}{n}i}\right)  .
+   \int_{10}^{50} f(t)\, dt 
 \]
-And with midpoints,
+from 12:10pm to 12:50pm. The integral sign $\int$ stands for the letter \emph{S} and means \emph{sum}. You can think of the product
 \[
-        f(60) \sim   \answer{2500} +  \answer{\frac{26}{n}} \sum_{i=0}^{\answer{n-1}} f\left(\answer{34.6+ \frac{26}{n}i}\right)  .
+   f(t) \, dt
 \]
+as a small change in height. It multiplies the rate of ascent $f(t)$ and a small (differential) time interval $dt$ to give a small (differential) change in height. The integral then sums these changes to get the exact change in height.
 
-\end{enumerate}
-\end{example}
+More generally, the height of the balloon as a function of time (measured in minutes past noon) is
+\[
+  h = f(t) = 1900 + \int_{10}^{t} f(u)\, du
+\]
+and the logic is the same. 
 
+Compare this with the expression (point-slope) from Example 1 for the height
+\[
+  h = 1900 + 73(t-10).
+\]
+\begin{freeResponse}
+\end{freeResponse}
 
 \end{document}
