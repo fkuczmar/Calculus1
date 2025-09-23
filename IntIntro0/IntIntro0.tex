@@ -22,12 +22,12 @@ It would also be a mistake to think this class is about using definite integrals
 Using definite integrals to write functions generalizes the point-slope equation of a line. You used this equation in differential calculus is to approximate a function in the neighborhood of a point. To capture the local nature of the approximation (ie. the approximation is usually accurate in just a small neighborhood of the point of tangency), it's the point-slope equation, \emph{not} slope-intercept, that works best. Here's an example that illustrates this idea.   % the main idea of differential calculus.
 
 \begin{example}  \label{Ex:IUDFr3f3fgl}
-Between 12:14pm and 1:00pm a balloon ascends at a constant rate of $73$ ft/min. The balloon is $1900$ feet high at 12:23pm.
+Between 12:03pm and 1:00pm a balloon ascends at a constant rate of $73$ ft/min. The balloon is $1900$ feet high at 12:10pm.
 
 \begin{enumerate}
 \item Find an expression for the function 
 \[
-       h=g(t)\; , \; 14\leq t \leq 60, 
+       h=g(t)\; , \; 0\leq t \leq 60, 
 \]
 that expresses the balloon's height (measured in feet) in terms of the number of minutes past noon.
 
@@ -36,17 +36,17 @@ that expresses the balloon's height (measured in feet) in terms of the number of
 \begin{explanation}
 The function is
 \[
-    h = g(t) = 1900 + 73(t-23) \, , \, 14\leq t \leq 60.
+    h = g(t) = 1900 + 73(t-10) \, , \, 0\leq t \leq 60.
 \]
-The logic behind the expression is this. To find the height at time $t$ minutes past noon, we start with the height ($1900$ feet) at 12:23pm and add the change in height from 12:23pm to time $t$ minutes past noon. The change in height,
+The logic behind the expression is this. To find the height at time $t$ minutes past noon, we start with the height ($1900$ feet) at 12:10pm and add the change in height from 12:10pm to time $t$ minutes past noon. The change in height,
 \[
-   \Delta h = 73(t-23)
+   \Delta h = 73(t-10)
 \]
 is the product of the rate of ascent ($73$ ft/min) and the number of minutes
 \[
-  \Delta t = t - 23
+  \Delta t = t - 10
 \]
-from 12:23pm to time $t$ minutes past noon.
+from 12:10pm to time $t$ minutes past noon.
 \end{explanation}
 \end{enumerate}
 \end{example}
@@ -55,12 +55,12 @@ In the context of the last example, the main topic for this class is how to comp
 
 The logic behind the solution is almost identical to point-slope. Supppose we're given a function
 \[
-   r =f(t) \; , \; 14\leq t \leq 60, 
+   r =f(t) \; , \; 0\leq t \leq 60, 
 \]
-that gives the balloon's rate of ascent (in ft/min) at a general time $t$ minutes past noon. To find the height at time $t$, we start with the height of the balloon at 12:23 pm and add to that the change in height from 12:23pm to time $t$. But because the rate of ascent is not necessarily constant, we might not have just one rate to multiply by the length $\Delta t = t-23$ of the time interval. Instead, we'll have (infinitely) many rates and we need to find a way to use these to compute, or at least approximate the change in height. The next few examples illustrate this idea.
+that gives the balloon's rate of ascent (in ft/min) at a general time $t$ minutes past noon. To find the height at time $t$, we start with the height of the balloon at 12:10 pm and add to that the change in height from 12:10pm to time $t$. But because the rate of ascent is not necessarily constant, we'll almost certainly have (infinitely) many rates. Our job is to use these rates to compute, or at least approximate the change in height. The next example illustrates this idea.
 
 \begin{example}  \label{Ex:98dfrghha}
-Suppose we know the balloon is $1900$ feet high at 12:10pm and that we're give a graph of the function
+Suppose we know the balloon is $1900$ feet high at 12:10pm and that we're given a graph of the function
 \[
     r = f(t) \, , \, 0\leq t \leq  60 , 
 \]
@@ -94,49 +94,40 @@ Now we'll suppose that during each subinterval the balloon ascends at a constant
 
 What rate we choose for each $8$-minute interval doesn't really matter as long as we choose the actual rate of ascent at some time during that interval. To make things simple, we'll choose the rate at the start of each subinterval. 
 
-To see the following computation geometrically, move the slider $a$ (the start of our time interval) in Line 2 above to $a=10$ and the slider $b$ (the end of our time interval) in Line 3 to $b=50$. Then the signed area of a shaded retangle measures the approximate change in height during that subintevral. And the approximate change in height from 12:10pm to 12:50pm is just the sum of these signed areas. The sign of the area and the rate of ascent are the same. So rectangles below the horizontal axis contribute a negative signed area (ie. a decrease in height), while those above make a postive contribution (ie. an increase in height).
-
-\begin{enumerate}
-\item Use the graph above to appoximate the change in height. Then approximate the height at 1:00pm.
-
-\item Write an expression for the approximate change in height from 12:34pm to 1:00pm in terms of the unknown function $f$, and then an expression for the approximate height at 1:00pm.
-
-\item Use summation notation to express the change in part (b). Type this expression in Line 5 of the worksheet above. Compare this value with your estimate from part (a).
-
-The approximate change in height from 12:34pm to 1:00pm is
+Then between 12:10pm and 12:18pm, the approximate change in height (measured in feet) is %the product 
 \[
-  1.2 \sum_{i=0}^{\answer{4}} f(\answer{34 + 1.2i})  
+        f(10)(8) \sim (31 \text{ ft/min})(8 \text{ min}) = 248 \text{ ft}. 
 \]
-and the approximate height at 1:00pm is
+Between 12:18pm and 12:26pm, the approximate change in height (measured in feet) is
 \[
-     \answer{2500} + 1.2 \sum_{i=0}^{\answer{4}} f(\answer{34 + 1.2i})  .
+        f(18)(8) \sim (12 \text{ ft/min})(8 \text{ min}) = 96 \text{ ft}. 
 \]
+And we continue similarly to approximate the changes in height (this time negative) over the remaining three 8-minute intervals. So from 12:10pm to 12:50pm the approximate change in height (in feet) is
+\begin{align*}
+  \Delta h_5 &= h - 1900  \\
+               &= (f(10) + f(18) + f(26)+ f(34) + f(42))(8) \\
+               &\sim -448 .
+\end{align*}
 
-\item Repeat parts (a)-(c) using the rate of ascent at the \emph{end} of each subinterval instead. Turn off the folder in Line 11 and activate the folder in Line 18 above. As a check, type your expression for the approximate height in Line 5 above.
+\emph{Verify this computation by typing this expression in Line 38 of the worksheet above.}
 
-The approximate change in height from 12:34pm to 1:00pm is
+\emph{You can see this sum on Line 7 of the worksheet.}
+
+To see the previous computation geometrically, move the slider $a$ (the start of our time interval) in Line 2 above to $a=10$ and the slider $b$ (the end of our time interval) in Line 3 to $b=50$. Then the signed area of a shaded retangle measures the approximate change in height during that subintevral. And the approximate change in height from 12:10pm to 12:50pm is just the sum of these signed areas. The sign of the area and the rate of ascent are the same. So rectangles below the horizontal axis contribute a negative signed area (ie. a decrease in height), while those above make a positive contribution (ie. an increase in height).
+
+Our first approximation to the balloon's height at 12:50pm is then 
 \[
-  1.2 \sum_{i=1}^{\answer{5}} f(\answer{34 + 1.2i})  
-\]
-and the approximate height at 1:00pm is
-\[
-     \answer{2500} + 1.2 \sum_{i=1}^{\answer{5}} f(\answer{34 + 1.2i})  .
+    (1900  - 448 )\text{ ft} \sim 1452 \text{ ft}.
 \]
 
-\item Repeat parts (a)-(c) using the rate of ascent at the \emph{middle} of each subinterval instead. Turn off the folder in Line 18 and activate the folder in Line 24 above. As a check, type your expression for the approximate height in Line 5 above.
+To get a better approximation, we partition the $40$-minute interval from 12:10pm to 12:50pm into more subintervals. Drag the slider $n$ on Line 5 (the number of equal subintervals) to the right and describe what happens to the approximate change in height ($s_1$ in Line 5) and how the picture changes. Use this to approximate the exact change in height and to interpret that change geometrically. 
 
-The approximate change in height from 12:34pm to 1:00pm is
-\[
-  1.2 \sum_{i=0}^{\answer{4}} f(\answer{34.6+ 1.2i})  
-\]
-and the approximate height at 1:00pm is
-\[
-     \answer{2500} + 1.2 \sum_{i=0}^{\answer{4}} f(\answer{34.6 + 1.2i})  .
-\]
+\begin{freeResponse}
+\end{freeResponse}
 
-\item Compare your three estimates for the change in height. Which do you think is most accurate? Explain why.
+ 
 
-\end{enumerate}
+
 \end{example} 
 
 \begin{example}  \label{Ex:IjdRJrehreDF}
