@@ -53,51 +53,18 @@ from 12:23pm to time $t$ minutes past noon.
 
 In the context of the last example, the main topic for this class is how to compute the height function \emph{if the rate of ascent is not constant.}
 
-The logic behind the solution is almost identical to point-slope. So supppose we're given a function
+The logic behind the solution is almost identical to point-slope. Supppose we're given a function
 \[
    r =f(t) \; , \; 14\leq t \leq 60, 
 \]
-that gives the balloon's rate of ascent (in ft/min) at time $t$ minutes past noon. To find the height at time $t$, we start with the height of the balloon at 12:23 pm and add to that the change in height from 12:23pm to time $t$ minutes past noon. But because the rate of ascent might not be constant, we cannot just multiply one rate of ascent by the length $\Delta t = t-23$ of the time interval. We need to find another way to compute, or at least approximate this change instead. The next few examples illustrate this idea.
+that gives the balloon's rate of ascent (in ft/min) at a general time $t$ minutes past noon. To find the height at time $t$, we start with the height of the balloon at 12:23 pm and add to that the change in height from 12:23pm to time $t$. But because the rate of ascent is not necessarily constant, we might not have just one rate to multiply by the length $\Delta t = t-23$ of the time interval. Instead, we'll have (infinitely) many rates and we need to find a way to use these to compute, or at least approximate the change in height. The next few examples illustrate this idea.
 
 \begin{example}  \label{Ex:98dfrghha}
-
-The function 
+Suppose we know the balloon is $1900$ feet high at 12:10pm and that we're give a graph of the function
 \[
     r = f(t) \, , \, 0\leq t \leq  60 , 
 \]
-expresses a balloon's rate of ascent (measured in ft/min) in terms of the number of minutes past noon. Its graph is shown below.
-
-\begin{onlineOnly}
-    \begin{center}
-\desmos{tgi5yiuzab}{450}{600}  
-\end{center}
-\end{onlineOnly}
-
-\href{https://www.desmos.com/calculator/tgi5yiuzab}{152:Balloon Introduction}
-
-\begin{enumerate}
-
-\item When is the balloon ascending? Descending? Give all times for each and explain your reasoning.
-
-\item Do you think the balloon is higher at noon or at 1:00pm? Explain your reasoning. Try to prove your assertion using only arithmetic and simple reasoning.
-
-\item Now suppose the balloon is $2500$ feet above the ground at 12:34pm. 
-
-\begin{enumerate}
-
-\item Use the graph to approximate the balloon's height $30$ seconds later. Explain your reasoning.
-
-\item Is your estimate greater or less than the actual height? Explain your reasoning.
-
-\end{enumerate}
-\end{enumerate}
-\end{example}
-
-We can turn the previous question of differential calculus into an addition problem of integral calculus by estimating the balloon's height at a time farther removed from 12:34. 
-
-\begin{example} \label{ExLKDrDEfRE9}
-
-We'll assume as before that the balloon is $2500$ feet above the ground at 12:34pm, but now we'll approximate its height at 1:00pm.
+that expresses its rate of ascent (measured in ft/min) in terms of the number of minutes past noon. This graph is shown below.
 
 \begin{onlineOnly}
     \begin{center}
@@ -107,14 +74,27 @@ We'll assume as before that the balloon is $2500$ feet above the ground at 12:34
 
 \href{https://www.desmos.com/calculator/h6cworakdw}{152:Balloon Introduction 2}
 
-We'll start by computing a rough approximation of the change in height between 12:34pm and 1:00pm. For this, we'll partition the $26$-minute interval into five equal subintervals of length 
+Our problem is to approximate the balloon's height at 12:50pm.
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{h6cworakdw}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/h6cworakdw}{152:Balloon Introduction 2}
+
+We'll start by computing a rough approximation of the change in height from 12:10pm and 12:50pm. For this, we'll partition the $40$-minute interval into five equal subintervals of length 
 \[
-  \Delta t = \frac{26\text{ min}}{5} = 5.2 \text{ min}.
+  \Delta t = \frac{40\text{ min}}{5} = 8 \text{ min}.
 \]
  
-Now we'll suppose that during each subinterval the balloon ascends at a constant rate. While this is not true, the rate certainly varies less over a $5.2$-minute interval than it does over the entire $26$-minute interval. So we should get a better appoximation  than if we assumed just one constant rate of ascent between 12:34pm and 1:00pm.
+Now we'll suppose that during each subinterval the balloon ascends at a constant rate. While this is not true, the rate certainly varies less over an $8$-minute interval than it does over the entire $40$-minute interval. So we should get a better appoximation  this way than if we assumed just one constant rate of ascent between 12:10pm and 12:50pm.
 
-What rate we choose for each $5.2$-minute interval doesn't really matter as long as we choose the actual rate of ascent at some time during that interval. To make things simple, we'll choose the rate at the start of each subinterval as illustrated in the worksheet above. Then the signed area of a shaded retangle measures the approximate change in height during that subintevral. And the approximate change in height from 12:34pm to 1:00pm is just the sum of these areas.
+What rate we choose for each $8$-minute interval doesn't really matter as long as we choose the actual rate of ascent at some time during that interval. To make things simple, we'll choose the rate at the start of each subinterval. 
+
+To see the following computation geometrically, move the slider $a$ (the start of our time interval) in Line 2 above to $a=10$ and the slider $b$ (the end of our time interval) in Line 3 to $b=50$. Then the signed area of a shaded retangle measures the approximate change in height during that subintevral. And the approximate change in height from 12:10pm to 12:50pm is just the sum of these signed areas. The sign of the area and the rate of ascent are the same. So rectangles below the horizontal axis contribute a negative signed area (ie. a decrease in height), while those above make a postive contribution (ie. an increase in height).
 
 \begin{enumerate}
 \item Use the graph above to appoximate the change in height. Then approximate the height at 1:00pm.
