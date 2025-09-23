@@ -82,7 +82,7 @@ We can turn the previous question of differential calculus into an addition prob
 
 \begin{example} \label{ExLKDrDEfRE9}
 
-We'll assume as before that the balloon is $1900$ feet above the ground at 12:10pm, but now we'll approximate its height at 12:50pm.
+We'll assume as before that the balloon is $1900$ feet above the ground at 12:10pm, and we'll approximate its height at 12:50pm.
 
 \begin{onlineOnly}
     \begin{center}
@@ -102,33 +102,33 @@ What rate we choose for each interval doesn't really matter as long as we choose
 
 Using the rate of ascent at the start of each $8$-minute time interval, the approximate change in height from 12:10pm to 12:50pm is
 \[
-  8 \sum_{i=0}^{\answer{4}} f(\answer{10 + 8i})  
+   \sum_{i=0}^{\answer{4}}8 f(\answer{10 + 8i})  
 \]
-and the approximate height at 1:00pm is
+and the approximate height at 12:50pm is
 \[
-     \answer{1900} + 1.2 \sum_{i=0}^{\answer{4}} f(\answer{10 + 8i})  .
-\]
-
-\item Repeat parts (a)-(c) using the rate of ascent at the \emph{end} of each subinterval instead. Turn off the folder in Line 11 and activate the folder in Line 18 above. As a check, type your expression for the approximate height in Line 5 above.
-
-The approximate change in height from 12:34pm to 1:00pm is
-\[
-  1.2 \sum_{i=1}^{\answer{5}} f(\answer{34 + 1.2i})  
-\]
-and the approximate height at 1:00pm is
-\[
-     \answer{2500} + 1.2 \sum_{i=1}^{\answer{5}} f(\answer{34 + 1.2i})  .
+     \answer{1900} + \sum_{i=0}^{\answer{4}}8 f(\answer{10 + 8i})  .
 \]
 
-\item Repeat parts (a)-(c) using the rate of ascent at the \emph{middle} of each subinterval instead. Turn off the folder in Line 18 and activate the folder in Line 24 above. As a check, type your expression for the approximate height in Line 5 above.
+\item Repeat part (a) using the rate of ascent at the \emph{end} of each subinterval instead. Turn off the folder in Line 11 and activate the folder in Line 18 above. As a check, type your expression for the approximate height in Line 5 above.
 
-The approximate change in height from 12:34pm to 1:00pm is
+The approximate change in height from 12:10pm to 12:50pm is
 \[
-  1.2 \sum_{i=0}^{\answer{4}} f(\answer{34.6+ 1.2i})  
+   \sum_{i=1}^{\answer{5}}8 f(\answer{10 + 8i})  
 \]
-and the approximate height at 1:00pm is
+and the approximate height at 12:50pm is
 \[
-     \answer{2500} + 1.2 \sum_{i=0}^{\answer{4}} f(\answer{34.6 + 1.2i})  .
+     \answer{1900} + \sum_{i=1}^{\answer{5}} 8 f(\answer{10 + 8i})  .
+\]
+
+\item Repeat part (a)using the rate of ascent at the \emph{midpoint} of each subinterval instead. Turn off the folder in Line 18 and activate the folder in Line 24 above. As a check, type your expression for the approximate height in Line 5 above.
+
+The approximate change in height from 12:10pm to 12:50pm is
+\[
+  \sum_{i=0}^{\answer{4}}8 f(\answer{14+ 8i})  
+\]
+and the approximate height at 12:50pm is
+\[
+     \answer{1900} + \sum_{i=0}^{\answer{4}}8 f(\answer{14+ 8i})  .
 \]
 
 \item Compare your three estimates for the change in height. Which do you think is most accurate? Explain why.
@@ -138,21 +138,21 @@ and the approximate height at 1:00pm is
 
 \begin{example}  \label{Ex:IjdRJrehreDF}
 \begin{enumerate}
-\item  Drag the slider in Line 4 of Example 3 to $n=20$ and repeat parts (c) - (e) of Example 3 with $n=20$ equal subintervals. 
+\item  Drag the slider in Line 4 of Example 3 to $n=20$ and repeat parts (a) - (c) of Example 4 with $n=20$ equal subintervals. 
 
 \item Try parts (c) - (e) of Example 3 in general, with $n$-equal subintervals.
 
-Using left endpoints, the approximate height at 1:00pm is
+Using left endpoints, the approximate height at 12:50pm is
 \[
-        f(60) \sim   \answer{2500} +  \answer{\frac{26}{n}} \sum_{i=0}^{\answer{n-1}} f\left(\answer{34+ \frac{26}{n}i}\right)  .
+        f(50) \sim   \answer{1900} +  \answer{\frac{40}{n}} \sum_{i=0}^{\answer{n-1}} f\left(\answer{10+ \frac{40}{n}i}\right)  .
 \]
 With right endpoints,
 \[
-        f(60) \sim   \answer{2500} +  \answer{\frac{26}{n}} \sum_{i=1}^{\answer{n}} f\left(\answer{34+ \frac{26}{n}i}\right)  .
+        f(50) \sim   \answer{1900} +  \answer{\frac{40}{n}} \sum_{i=1}^{\answer{n}} f\left(\answer{10+ \frac{40}{n}i}\right)  .
 \]
 And with midpoints,
 \[
-        f(60) \sim   \answer{2500} +  \answer{\frac{26}{n}} \sum_{i=0}^{\answer{n-1}} f\left(\answer{34.6+ \frac{26}{n}i}\right)  .
+        f(50) \sim   \answer{1900} +  \answer{\frac{40}{n}} \sum_{i=0}^{\answer{n-1}} f\left(\answer{10+\frac{20}{n} + \frac{40}{n}i}\right)  .
 \]
 
 \end{enumerate}
