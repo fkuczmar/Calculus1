@@ -13,29 +13,51 @@ The \emph{differential} in Differential Calculus has the same root as \emph{diff
 
 \emph{Integral Calculus}, on the other hand, is about addition. \emph{Integral} shares the same root as \emph{integer} and comes from the Latin \emph{integrare}, to make whole. 
 
-Addition and subtraction are inverse operations. They undo each other. And in some sense (to be made precise later) integration
-undoes differentiation. But it would be a mistake to think integral calculus is about finding anti-derivatives. While anti-differentiation plays a role, this class is more about recongizing \emph{when} to integrate rather than \emph{how} to integrate. Many of your STEM classes use definite integrals, with an emphasis on setting up and interpreting integrals, not computing their values. 
+Addition and subtraction are inverse operations. They undo each other. Similarly, differentiation undoes integration. But we need to be more precise to claim that integration undoes differentiation. More about this later.
+
+It would be a mistake to think integral calculus is primarily about finding anti-derivatives. While anti-differentiation plays a role in integration, this class is more about recongizing \emph{when} to integrate rather than \emph{how} to integrate. Many of your STEM classes use definite integrals, with an emphasis on setting up and interpreting integrals, not computing their values. 
 
 It would also be a mistake to think this class is about using definite integrals to compute \emph{numbers}, like the distance travelled over a certain time interval or the period of a pendulum. Rather, the emphasis here will be on using definite integrals to create \emph{functions}. Expressing the position of a pendulum as a function of time, for example, gives a lot more information that just computing its period. 
 
-Using definite integrals to write functions generalizes the point-slope equation of a line. You used this equation in differential calculus is to approximate a function in the neighborhood of a point. To capture the local nature of the approximation (ie. the approximation is usually accurate in just a small neighborhood of the point of tangency), it's the point-slope equation, \emph{not} slope-intercept, that works best. The next two examples illustrate this idea.   % the main idea of differential calculus.
+Using definite integrals to write functions generalizes the point-slope equation of a line. You used this equation in differential calculus is to approximate a function in the neighborhood of a point. To capture the local nature of the approximation (ie. the approximation is usually accurate in just a small neighborhood of the point of tangency), it's the point-slope equation, \emph{not} slope-intercept, that works best. Here's an example that illustrates this idea.   % the main idea of differential calculus.
 
 \begin{example}  \label{Ex:IUDFr3f3fgl}
-Between 12:14pm and 1:00pm the temperature of a beaker of water increases at a constant rate of $\frac{33}{13}^\circ$C/sec. The temperature is $23^\circ$C at 12:23pm.
+Between 12:14pm and 1:00pm a balloon ascends at a constant rate of $73$ ft/min. The balloon is $1900$ feet high at 12:23pm.
 
 \begin{enumerate}
 \item Find an expression for the function 
 \[
-       C=f(t)\; , \; 14\leq t \leq 60, 
+       h=g(t)\; , \; 14\leq t \leq 60, 
 \]
-that expresses the temperature of the water (in Celsius degrees) in terms of the number of minutes past noon.
+that expresses the balloon's height (measured in feet) in terms of the number of minutes past noon.
 
 \item Explain the logic behind your expression.
 
+\begin{explanation}
+The function is
+\[
+    h = g(t) = 1900 + 73(t-23) \, , \, 14\leq t \leq 60.
+\]
+The logic behind the expression is this. To find the height at time $t$ minutes past noon, we start with the height ($1900$ feet) at 12:23pm and add the change in height from 12:23pm to time $t$ minutes past noon. The change in height,
+\[
+   \Delta h = 73(t-23)
+\]
+is the product of the rate of ascent ($73$ ft/min) and the number of minutes
+\[
+  \Delta t = t - 23
+\]
+from 12:23pm to time $t$ minutes past noon.
+\end{explanation}
 \end{enumerate}
 \end{example}
 
+In the context of the last example, the main topic for this class is how to compute the height function \emph{if the rate of ascent is not constant.}
 
+The logic behind the solution is almost identical to point-slope. So supppose we're given a function
+\[
+   r =f(t) \; , \; 14\leq t \leq 60, 
+\]
+that gives the balloon's rate of ascent (in ft/min) at time $t$ minutes past noon. To find the height at time $t$, we start with the height of the balloon at 12:23 pm and add to that the change in height from 12:23pm to time $t$ minutes past noon. But because the rate of ascent might not be constant, we cannot just multiply one rate of ascent by the length $\Delta t = t-23$ of the time interval. We need to find another way to compute, or at least approximate this change instead. The next few examples illustrate this idea.
 
 \begin{example}  \label{Ex:98dfrghha}
 
