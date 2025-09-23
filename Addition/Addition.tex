@@ -346,15 +346,36 @@ The total number of hours of daylight during the summer is
 
 \section{The Mercator Map}
 
+Look at a map of Seattle and you’ll see a scale, probably near the bottom. It might be 0.5 miles/inch, or something like that. But you will not see a scale like this on a map of the earth for the simple reason that one does not exist. The scale varies from place to place and is usually a function of latitude. Even at a specific location, there is often not one but infinitely many scaling factors that depend on direction.
+
+But for some maps, the \emph{conformal} ones, the scaling factor is independent of direction and depends only on latitude. The Mercator map is one of these maps. The next few exercises are about this map.
+
 \begin{exercise} \label{EXYYYergbfg}
+The worksheet below shows a Mercator map of the earth. The evenly-spaced vertical lines are the meridians (half-circles running between the north and south poles) and divide the earth into its 24 time zones. The horizontal lines are the parallels (circles of latitude). These are unevenly spaced.
+
+We'll suppose the map is $2\pi \sim 6.3$ feet wide and that the earth is a perfect sphere of radius $3960$ miles. The scale along the equator is then
+\[
+      \frac{2\pi (3960 \text{ miles})}{2\pi \text{ ft} } = 3960 \frac{\text{ miles}}{\text{ ft}} 
+\]
+
+So the $24$ meridians are spaced at intervals of 
+\[
+    \frac{2\pi \text{ ft}}{24}  = \frac{\pi}{12} \text{ ft}
+\] 
+on the map. And along the equator of the earth, they are spaced at intervals of
+\[ 
+          \frac{2\pi (3960) \text{ miles}}{24} = 330\pi\text{ miles} \sim 1037 \text{ miles}. 
+\]
 
 \begin{onlineOnly}
     \begin{center}
-\desmos{vyuyc5hp4g}{450}{600}  
+\desmos{cr8vg7urnc}{450}{600}  
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/calculator/vyuyc5hp4g}{152: Mercator Map Riemann Sum 1}
+\href{https://www.desmos.com/calculator/cr8vg7urnc}{152: Mercator Map Riemann Sum 2}
+
+Segment $AB$ indicates the map scale.  It represents a length of $330\pi \sim 1037$ miles along any parallel. Along the equator $AB$ has length $\pi/12 \sim 0.26$ feet. But drag point $A$ vertically and you'll see how the scale varies with latitude as the length of $AB$ changes. 
 
 \end{exercise}
 
