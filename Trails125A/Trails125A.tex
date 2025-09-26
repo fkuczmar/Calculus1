@@ -45,18 +45,78 @@ make with the $x$-axis at the points with $y$-coordinate $y=3$. Give an exact an
 \end{onlineOnly}
 
 \href{https://www.desmos.com/calculator/df7hjgabzb}{152: Angle of Inclination}
+
+
+\begin{explanation}
+Since we are given the $y$-coordinate of the point of tangency, we should express the derivative of our function not in terms of its input, but in terms of its output.
+
+As a start, note that if $z=\tan\theta$, then
+\begin{align*}
+     \frac{dz}{d\theta} &= \frac{d}{d\theta}\left( \tan\theta  \right) \\
+                                &= \sec^2\theta \\
+                                 &= 1 + \tan^2\theta \\
+                                 &= 1 + z^2 . 
+\end{align*}
+
+For our function $y=4\tan(x/20)$, let $u=x/20$. Then
+\[
+  y = 4 \tan u      
+\]
+and by the chain rule
+\begin{align*}
+         \frac{dy}{dx} &= \frac{dy}{du} \cdot \frac{du}{dx} \\
+                                    &= \frac{d}{du} (4\tan u) \cdot \frac{d}{dx}\left( \frac{1}{20}x \right) \\
+                                    &= 4 (1+\tan^2 u) \left( \frac{1}{20} \right) \\
+                                    &=\frac{1+(y/4)^2}{5} .
+\end{align*}
+
+So the tangent lines at the points on the curve $y=4\tan(x/20)$ with $y$-coordinate $y=3$ have slope
+\begin{align*}
+  \frac{dy}{dx}\Big|_{y=3} &= \left( \frac{1+(y/4)^2}{5}\right) \Big|_{y=3} \\
+                                       &= 5/16.
+\end{align*}
+These tangent lines therefore cut the $x$-axis at the acute angle $\phi =\arctan(5/16)$.
+
+\end{explanation}
+
+
 \end{question}
 
 
 
 \section{A Climber's Trail}
 
+\begin{question}  \label{QPPDFrLMDECC}
+A loading ramp of length $L$ meters runs from the ground to a truck. The ramp makes an angle of $\phi$ radians with the ground. 
+
+Find an expression for the function 
+\[
+      h = f(s) \, , \, 0\leq s \leq L ,
+\]
+that expresses the height of the ramp (in meters) in terms of the distance along the ramp, measured in meters from the bottom of the ramp.
+\end{question}
+
 \begin{question} \label{QOIIdfsdftt444}
 The function
 \[
  h = f(s) =100+ 250s-10s^3 \, , \, 0\leq s \leq 5
 \]
-expresses the altitude (in meters) of a climber's trail in terms of the distance from the trailhead (in km). Find the exact angle the trail makes with the horizontal one mile from the trailhead.
+expresses the altitude (in meters) of a climber's trail in terms of the distance from the trailhead (in km). 
+
+\begin{enumerate}
+
+\item Evaluate the derivative
+\[
+   \frac{dh}{ds}\Big|_{s=1} .
+\]
+Include units.
+
+\item Interpret the meaning of the above derivative using the language of small changes for a \emph{specific} small change.
+
+\item Find the exact angle the trail makes with the horizontal one kilometer from the trailhead.
+
+\end{enumerate}
+
 
 \begin{onlineOnly}
     \begin{center}
@@ -65,6 +125,77 @@ expresses the altitude (in meters) of a climber's trail in terms of the distance
 \end{onlineOnly}
 
 \href{https://www.desmos.com/calculator/ljcugfqmee}{152: Hiking Trail 54}
+
+\begin{explanation}
+\begin{enumerate}
+\item The derivative is
+\begin{align*}
+    \frac{dh}{ds} &= \frac{d}{ds}(  100+ 250s-10s^3 ) \\
+                         &= 250 - 30s^2 \\
+\end{align*}
+and
+\[
+  \frac{dh}{ds}\Big|_{s=1}  = 220 \text{ meters/km} .
+\]
+
+\item The derivative relates a small change
+\[
+   \Delta s = s - 1
+\]
+in distance along the trail from kilometer marker $s=1$ and the corresponding small change
+\[
+    \Delta h = h - f(1) = h - 340
+\]
+in altitude (measured in meters). 
+
+More specifically, if $\Delta s\sim 0$, then
+\begin{align*}
+  \Delta h &\sim \frac{dh}{ds}\Big|_{s=1} \cdot \Delta s \\
+               &= (220 \text{ meters/km})(\Delta s \text{ km})  \\
+                &= 220 \Delta s \text{ meters}.
+\end{align*}
+So for example, if we walk $1$ meter (ie. $0.001$ km) farther along the trail from kilometer marker $s=1$ km, then our altitude increases by approximately
+\[
+     \Delta h \sim 220(0.001)\text{ meters} = 0.2 \text{ meters} .
+\]
+
+\item The description of the derivative's meaning tells us how to compute the trail's inclination angle at kilometer marker $s=1$ km. Since we gain altitude at the rate of
+\[
+     220 \text{ meters/km} = 0.22 \text{ meters in elevation/meter walked}   
+\]
+one kilometer from the trailhead, the trail looks locally like a ramp inclined at the angle
+\[
+  \phi = \arcsin(0.22) \text{ rad}
+\]
+above the horizontal there.
+
+\pskip
+
+{\bf Remark:} It's important to distinguish between the graph of the function $h=f(s)$ that expresses altitude in terms of distance along the trail and the trail profile. The latter is like a picture of the actual trail, assuming the trail stays confined to a vertical plane. For most trails, the two are indistinguishable. The worksheet below, for example, shows our original graph $h=f(s)$ along with the corresponding trail profile (in red).
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{e5kuf1je8p}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/e5kuf1je8p}{152: Hiking Trail 54B}
+
+But for steeper trails, like one an ant might climb, there is a clear difference between the two.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{lktn53d7ju}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/lktn53d7ju}{152: Hiking Trail 54C}
+
+
+
+\end{enumerate}
+\end{explanation}
+
 
 \end{question}
 
