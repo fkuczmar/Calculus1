@@ -136,21 +136,50 @@ Exit Number & Mileage (miles/gallon) \\
 
 
 
-\item Let $e_i$ and $g_i$, $i=1,2,3$ denote the respective exit numbers and gas mileages in the table above. Use summation notation to write your estimates in part (b) above.
+\item Let $e_i$ and $g_i$, $i=1,2,3,4$ denote the respective exit numbers and gas mileages in the table above. Use summation notation to write your estimates in part (b) above.
 
-Assuming the gas mileage is a decreasing function, the best possible lower bound for the number of gallons of gas is
-\[
-  \sum_{i=1}^3 \left( e_{i+1} - e_{i}  \right)\left( \answer{\frac{1}{g_{i+1}}}  \right) .
-\]
-The best possible upper bound is
+Assuming the gas mileage is a decreasing function, the number of gallons of gas burned between Exits 176 and 248 is at least
 \[
   \sum_{i=1}^3 \left( e_{i+1} - e_{i}  \right)\left( \answer{\frac{1}{g_{i}}}  \right) .
 \]
+This is the best possible (ie. greatest possible) lower bound. 
 
+With the same assumption, the number of gallons of gas burned is at most
+\[
+  \sum_{i=1}^3 \left( e_{i+1} - e_{i}  \right)\left( \answer{\frac{1}{g_{i+1}}}  \right) .
+\]
+This is the best possible (ie. least possible) upper bound.
 
-\item Represent the sums in parts (a) and (b) geometrically with two copies of a of the appropriate function (that you need to define) with your explanation. Label the coordinates of the key points. Sketch (and explain) the geometric representation (as an area) of your estimate for the lower bound on one graph, and a geometric representation (and explanation) of your estimate for the upper bound on the other. 
+\item Use the desmos worksheet above to represent the sums in parts (a) and (b) geometrically by activating the appropriate folder in Line 5 (Left endpoints) or Line 11 (Right endpoints).  % with two copies of a of the appropriate function (that you need to define) with your explanation. Label the coordinates of the key points. Sketch (and explain) the geometric representation (as an area) of your estimate for the lower bound on one graph, and a geometric representation (and explanation) of your estimate for the upper bound on the other. 
+\end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+\item The table does not give enough information to determine such bounds because we don't know how the gas mileage varies during each interval. But with the additional assumption that the gas mileage is a decreasing function of the exit number we can compute these bounds.
+
+\item The key, as always in this class, is to consider the constant case. Here that means to assume the gas mileage is constant, say $40$ miles/gallon. Then over a $200$-mile trip, for example, your car would burn
+\[
+      \frac{200 \text{ miles}}{40 \text{ miles/gal}} = 5\text{ gallons}
+\]
+of gas. 
+
+For the greatest possible lower bound (ie. to find at least how many gallons of gas the car burned), we assume the gas mileage is the greatest possible during each interval. Here that means choosing left endpoints. That is, during each interval we assume the gas mileage is constant and equal to the gas mileage at the start of the interval (ie. equal to its maximum over the interval).
+
+So between Exits 176 and 248 the car burns at least
+\[
+   \frac{(200-176) \text{ miles}}{40 \text{ miles/gal}} +  \frac{(210 - 200) \text{ miles}}{32 \text{ miles/gal}} + \frac{(248 - 210) \text{ miles}}{30 \text{ miles/gal}} > 2.179 \text{ gallons}.
+\] 
+
+Similar reasoning shows that between Exits 176 and 248 the car burns at most
+\[
+   \frac{(200-176) \text{ miles}}{32 \text{ miles/gal}} +  \frac{(210 - 200) \text{ miles}}{30 \text{ miles/gal}} + \frac{(248 - 210) \text{ miles}}{25 \text{ miles/gal}} < 2.604 \text{ gallons}.
+\] 
+
 
 \end{enumerate}
+\end{explanation}
+
+
 \end{exercise}
 
 
