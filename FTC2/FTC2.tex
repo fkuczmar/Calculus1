@@ -153,7 +153,7 @@ water? At what approximate rate?
 
 
 
-
+\section{Gas Consumption}
 
 
 \begin{question} \label{QoODROOOD}
@@ -203,9 +203,71 @@ expresses yours speed (in miles/hour) in terms of the number of hours past noon.
 \end{question}
 
 
+\section{On Trails}
 
+\begin{question} \label{QPPdreefr34}
+The function
+\[
+  h = f(s)=5\sin\ \left(\frac{s}{5}\right)\, , \, 0\le s\leq 15,
+\]
+expresses the altitude (in meters) of a beetle's trail in terms of the distance from the start (measured along the trail in meters).
 
+The function 
+\[
+     v = g(t) = \frac{t}{90} + \frac{t^2}{900} \, , \, 0\le t\leq 30,
+\]
+expresses the speed (in meters/min) of the beetle in terms of the number of minutes past noon (when it began its journey).
 
+\begin{enumerate}
+
+\item How far from the start is the beetle at 12:15pm?
+
+\item Find the inclination angle of the trail beneath the beetle at 12:15pm.
+
+\item How fast is the beetle crawling at 12:15pm?
+
+\item Is the beetle gaining or losing altitude at 12:15pm? At what rate?
+
+\item Express the rate at which the beetle's altitude is changing at 12:15pm in terms of some of the following derivatives. Include units for each derivative and explain their meanings.
+
+\begin{enumerate}
+    \item $\frac{dh}{ds}\Big|_{s=15}$
+    \item $\frac{dh}{ds}\Big|_{s=g(15)}$
+    \item $\frac{dh}{ds}\Big|_{s=2.5}$
+    \item $\frac{dv}{dt}\Big|_{t=15}$
+    \item $\frac{d}{dt} \int_0^t g(u)\,du$
+\end{enumerate}
+    
+\end{enumerate}
+
+\end{question}
+
+\begin{question} \label{QLdkf3555}
+The function
+\[
+  \theta = f(s) , \, 0\le s\leq 15,
+\]
+expresses the inclination angle (in radians) of a beetle's trail in terms of the distance from the start (measured along the trail in meters). The trail is $200$ meters above sea level at the start.
+
+The function 
+\[
+     v = g(t) = 5\sin (t/15) \, , \, 0\le t\leq 30,
+\]
+expresses the speed (in meters/min) of the beetle in terms of the number of minutes past noon (when it began its journey). 
+
+\begin{enumerate}
+    \item Find an expression for the function
+    \[
+         h = w(t) \, , \, 0\le t\leq 30,
+    \]
+    that expresses the beetle's elevation in terms of the number of minutes past noon.
+
+    \item Find an expression for the derivative $dh/dt$ and interpret its meaning.
+
+    \item Compare this question  with the Question 5.
+
+\end{enumerate}
+\end{question}
 
 
 
@@ -213,193 +275,3 @@ expresses yours speed (in miles/hour) in terms of the number of hours past noon.
 
 \end{document}
 
-
-
-
-\begin{question} \label{QPfeEFVVD}
-
-The function 
-\[
- v=f(t) \, , \, , 0 \leq t \leq 8, 
-\]
-expresses the speed (in feet/min) of a beetle in terms of the number of minutes past noon.
-
-\begin{enumerate}
-
-\item Write an expression for the distance the beetle crawls from 12:03pm to 12:07pm. Use the graph of the function $v=f(t)$ below to approximate this distance.
-
-\item Write an equation you would solve to determine when the beetle is halfway to its destination. Start by defining an unknown (in a complete sentence, with units). Do not use $t$, it is already taken.
-
-\item Use the graph of the function $v=f(t)$ below to approximate the time in part (b). But first determine whether this time is before or after 12:04pm.
-
-\begin{onlineOnly}
-    \begin{center}
-\desmos{gd54bqgk6l}{450}{600}  
-\end{center}
-\end{onlineOnly}
-
-\href{https://www.desmos.com/calculator/gd54bqgk6l}{152:Beetle 1}
-
-
-\item Suppose 
-\[
-      v(t) = \frac{20}{(t+2)^2}. 
-\] 
-and determine the exact time when the beetle is halfway to its destination.
-
-
-
-\end{enumerate}
-
-\end{question}
-
-
-\begin{question} \label{Q3edFGee}
-
-The function
-\[
- r =f(t) \, , \,  2 \leq t  \leq 36,
-\]
- gives the net rate (in gal/min) at which water flows into a tank at time $t$ minutes past noon.
-
-\begin{enumerate}
-\item Write an expression that gives the change in volume from 12:15pm to 12:32pm.
-
-\item Write an equation you would solve to find when the tank holds $22$ fewer gallons than it does at 12:09pm. Start by defining an unknown (in a complete sentence, with units). Do not use $t$, it is already taken.
-
-\item Use the graph of the function
- \[
- r =f(t) \, , \,  2 \leq t  \leq 36,
-\]
- shown below to approximate the time(s) when the tank holds 22 fewer gallons than it does at 12:09. 
-
-
-\begin{onlineOnly}
-    \begin{center}
-\desmos{rcsfzdhsax}{450}{600}  
-\end{center}
-\end{onlineOnly}
-
-\href{https://www.desmos.com/calculator/rcsfzdhsax}{152:Tank 1}
-
-\item Suppose 
-\[
-     f(t) = 12 - 3\sqrt{t} , 2\leq t \leq 36 .
-\] 
-Use calculus and algebra to find the exact time(s) in part (c). Then use a calculator to approximate these times to the nearest second.
-
-\end{enumerate}
-\end{question}
-
-
-\begin{question} \label{QKDfer3fr}
-
-%Explain your understanding of what our OER text calls Part II of the Fundamental Theorem of Calculus (page 396) and
-% how it relates to the Net Change Theorem. State the theorem, explain what
- %it says, and give some computational examples.
- %Then explain why the theorem is true, giving intuitive examples illustrat
-%ing a variety (at least 3) applications. In the course of your explanation,
-% address and answer the following question.
- 
-The function
-\[
- m=f(s) \, , \, 30\leq s \leq 300
-\]
-expresses your gas mileage (in miles/gallon) in terms of your distance from home. The distance is measured along your route in miles. Its graph is shown below.
-
-\begin{onlineOnly}
-    \begin{center}
-\desmos{v34aycmz93}{450}{600}  
-\end{center}
-\end{onlineOnly}
-
-\href{https://www.desmos.com/calculator/v34aycmz93}{152:Mileage 89}
-
-
-
-Your tank has $12$ gallons of gas when you are $50$ miles from home.
-
-\begin{enumerate}
-\item Suppose you are driving away from home. 
-
-\begin{enumerate}
-
-\item Use the graph above to approximate the number of gallons of gas in your tank when you are $150$ miles from home.
-
-\item Find a function $G_1 = g_1(s)$ that expresses the number of gallons in your tank in terms of your distance (measured along your route in miles) from home.
-
-\end{enumerate}
-
-\item Suppose you are driving home. 
-
-\begin{enumerate}
-
-\item Use the graph above to approximate the number of gallons of gas in your tank when you are $150$ miles from home.
-
-\item Find a function $G_2 = g_2(s)$ that expresses the number of gallons in your tank in terms of your distance (measured along your route in miles) from home.
-
-
-\end{enumerate}
-
-\end{enumerate}
-
-% Finally, point out any aspects of the theorem that you do not fully under
-%stand or ask about something you would like to know more about.
-
-\end{question}
-
-\begin{question} \label{QLkdR343RE}
-The function 
-\[
-r = f(t) = 100/t \, , \, a \leq  t \leq b
-\]
-expreses the rate (in gal/min) at which water flows into a tank in terms of the number of minutes past noon. The tank
- is empty at time $t = a$ minutes past noon and full at time $t = b$ minutes past noon.
-
-\begin{enumerate}
-\item Sketch a graph of the function $r = f(t)$. Label the axes with the appropriate units and variable names.
-
-\item Would you expect the tank to be half-full before or after time $t = (a+b)/2$? Explain.
-
-\item When is the tank half-full?
-
-\item  When does water flow into the tank at a rate equal the average rate at which it ows into the tank between $t = a$ and $t = b$?
-
-\end{enumerate}
-\end{question}
-
-
-\begin{question} \label{QPLDFRr3}
-The function 
-\[
-     r = f(t) \, , \, 0\leq t \leq 12,
-\]
-expresses a balloon's rate of ascent (in ft/min) in terms of the number of minutes past noon. Its graph is shown below.
-
-\begin{onlineOnly}
-    \begin{center}
-\desmos{yp3awkyck8}{450}{600}  
-\end{center}
-\end{onlineOnly}
-
-\href{https://www.desmos.com/calculator/yp3awkyck8}{152:Balloon 11}
-
-\begin{enumerate}
-\item When is the balloon the same height as it is at 12:02pm? Explain.
-
-\item Use the graph to approximate the time(s) when the balloon is $20$ feet higher than it was at 12:02pm.
-
-\item Write an equation whose solution(s) give the time(s) when the balloon is $20$ feet higher than it was at 12:02pm.
-
-\item Suppose
-\[
-      f(t)=80\sin\left( \frac{\pi}{6}t \right) .
-\]
-Use algebra to find exact solution(s) to your equation from part (c). Then use a calculator to approximate the clock time(s) to the nearest second.
-\end{enumerate}
-
-\end{question}
-
-
-
-\end{document}
