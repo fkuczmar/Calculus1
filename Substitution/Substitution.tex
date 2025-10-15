@@ -1,5 +1,5 @@
 \documentclass{ximera}
-\title{$u$-Substitution and Parametrically-defined Curves}
+\title{Substitution and Parametrically-defined Curves}
 
 \newcommand{\pskip}{\vskip 0.1 in}
 
@@ -9,22 +9,78 @@ Substitution and parameterized curves
 \end{abstract}
 \maketitle
 
+\section{Theh Basics}
 
 \begin{question}\label{Q7yyweff}
-The function $f(t)$, $0 \leq t \leq 12$, gives the rate (in ft/hour) at which the
-depth of the water in a large tank is changing at time t hours past noon.
-The water is 40 feet deep at 5:00pm.
+Identify for which of the following definite integrals a $u$-substitution would work. Make the substitution for these and evaluate the integral. Do this by changing the lower and upper bounds and not substituting back.
+
+\begin{enumerate}
+
+\item $\int_0^{\sqrt{\pi}} \theta \sin(\theta^2)\, d\theta$
+
+\item $\int_0^{\pi} \theta^2 \sin(\theta)\, d\theta$
+
+\item $\int_0^2 x^2 (1+x^2)^2 \, dx$
+
+\item $\int_0^2 x^2 (1+x^3)^2 \, dx$
+
+\item $\int_1^2 \frac{\cos \left( \sqrt{x} \right)}{\sqrt{x}}\, dx$
+
+\item $\int_1^2 \sqrt{x} \cos \left( \sqrt{x} \right)\, dx$
+
+\item $\int_0^1 \frac{e^x}{(1+e^x)^2} \ , dx$
+
+\item $\int_0^1 \frac{e^x}{1+e^x} \ , dx$
+
+\item $\int_0^1 \frac{e^x}{1+e^{2x}} \ , dx$
+
+
+\end{enumerate}
+
+\end{question}
+
+
+\section{A Geometric Interpretation}
+To understand what $u$-substitution does geometrically, it helps to think about making a \emph{reverse} $u$-substitution. This means starting with a simple integral and making it more complicated with a substitution. Here's an example.
+
+\begin{example} \label{EKEMrerMMEF}
+We'll start with the integral
+\[
+      I = \int_0^\pi \sin u \, du
+\]
+and make the substitution 
+\[
+     u = t^2 .
+\]
+This substitution really reparameterizes the curve
+\[
+   y = f(u) = \sin u \, , \, 0\leq u \leq \pi
+\] 
+from the standard parameterization
+\[
+   (x,y) = (u,\cos u) \, , \, 0\leq u \leq \pi
+\]
+to the new parameterization
+\[
+   (x,y) = (t^2,\cos (t^2) \, , \, 0\leq t \leq \sqrt{\pi}.
+\]
+
+The substitution maps the rectangle with height $y=\sin u$ and width $du$ to the rectangle with the same height $y=\sin(t^2)$ and width
+\[
+   du = 2t \,dt .
+\]
 
 
 \begin{onlineOnly}
     \begin{center}
-\desmos{gnwlraiqhd}{450}{600}  
+\desmos{toiwzzqkva}{450}{600}  
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/calculator/gnwlraiqhd}{152:Beetle 1}
+\href{https://www.desmos.com/calculator/toiwzzqkva}{152: Sub 2}
 
-\end{question}
+
+\end{example}
 
 \end{document}
 
