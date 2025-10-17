@@ -9,9 +9,93 @@ Quiz solutions.
 \end{abstract}
 \maketitle
 
+\section{Quiz1B}
+
+\begin{question}  \label{QOERrfrefr}
+The table below shows your gas mileage at different readings of the trip ododometer reading (in miles) during a stretch of a 200-mile car trip.
+
+\pskip
+
+\begin{tabular}{|c|c|}
+\hline
+Odometer Reading (miles) & Gas Mileage (miles/gallon) \\
+\hline
+23 & 23 \\  \hline
+35 & 25 \\ \hline
+40 & 30 \\ \hline
+50 & 32 \\ \hline
+%53 & 40 \\ \hline
+\end{tabular}
+
+\pskip \pskip
+
+Assume the gas mileage is an increasing function of the odometer reading and find the best possible (ie. the least) upper bound for the number of gallons of gas your car burned between odometer readings 23 miles and 50 miles. Explain your reasoning thoroughly. Your concluding sentence should start with ``Between odometer readings 23 miles and 50 miles the car burned less than ...''
+\end{question}
+
+\begin{explanation}
+We begin by considering the constant case. Here that means assuming your gas mileage is constant. Suppose for example our car gets $25$ miles/gallon over a 50 mile trip. Then over these 50 miles our car burns
+\[
+   \frac{50 \text{ miles}}{25 \text{ miles/gal}} = 2\text{ gallons}
+\]
+of gas.
+
+Now we would burn the most gas when our car gets the worst (ie. least) gas mileage. So to find the least possible upper bound we should assume the gas mileage is constant over each interval of distance and equal to its minimum over that interval. Since the gas  mileage is assumed to increase throughout the trip, this means we should choose the left endpoint of each interval.
+
+So between  odometer readings 23 miles and 50 miles the car burned less than
+\begin{align*}
+& \frac{(35-23)\text{ miles}}{23\text{ miles/gal}} + \frac{(40-35)\text{ miles}}{25\text{ miles/gal}} +  \frac{(50-40)\text{ miles}}{30\text{ miles/gal}}          < 1.06 \text{ gallons} 
+\end{align*}
+of gas.
+\end{explanation}
 
 
-\section{Quiz2B}
+\section{Quiz 2A}
+
+\begin{question} \label{QKDFEFEFE}
+The table below shows the inclination angle of a mountain trail at several elevations along the trail as it ascends to Snow Lake. The inclination angle is the angle the trail makes with the horizontal.
+
+\pskip
+
+\begin{tabular}{|c|c|}
+\hline
+Inclination Angle (radians) & Elevation (feet) \\
+\hline
+0.25 & 2300 \\  \hline
+0.2  & 2340 \\ \hline
+0.18 & 2400 \\ \hline
+%50 & 32 \\ \hline
+%53 & 40 \\ \hline
+\end{tabular}
+
+\pskip \pskip
+
+
+Assume the inclination angle is a decreasing function of altitude and find the best possible (ie. the greatest) lower bound for the length of the trail between elevations 2300 feet and 2400 feet. Explain your reasoning thoroughly.
+
+
+\begin{explanation}
+We begin by considering the constant case. Here that means supposing the inclination angle is constant. Call the angle $\theta$ and consider a portion of the trail with length $\Delta s$ miles and change in elevation $\Delta h$ miles. Then (draw a picture) since
+\[
+   \sin \theta = \frac{\Delta h}{\Delta s} ,
+\]
+we know that
+\[
+  \Delta s = \frac{\Delta h}{\sin\theta}.
+\]
+
+Now the steeper the trail, the shorter the distance it takes to gain a given change in elevation. So to find a lower bound for the trail length, over each interval we should assume the trail has a constant inclination angle equal to the greatest angle in that interval. Since we've assumed the inclination angle to be a decreasing function over above section of trail, we should choose the left endpoints in our Riemann sum.
+
+So between elevations $2300$ feet and $2400$ feet the length of the trail is at least
+\[
+\frac{(2340 - 2300)\text{ ft}}{\sin(0.25)} + \frac{(2400 - 2340)\text{ ft}}{\sin(0.20)}  > 463.68 \text{ ft}.
+\]
+
+\end{explanation}
+
+\end{question}
+
+
+\section{Quiz 2B}
 \begin{question} \label{QldfFDLRE}
 The function
 \[
@@ -32,6 +116,41 @@ Use the graph of the function $\theta=g(s)$ shown below to help with your explan
 \end{onlineOnly}
 
 \href{https://www.desmos.com/calculator/nzhemrajow}{152: Quiz 3A}
+
+\begin{explanation}
+We begin by considering the constant case. Here that means supposing the inclination angle is constant. Call the angle $\theta$ and consider a portion of the trail with length $\Delta s$ miles and change in elevation $\Delta h$ miles. Then (draw a picture) since
+\[
+   \sin \theta = \frac{\Delta h}{\Delta s} ,
+\]
+we know that
+\[
+  \Delta h = \Delta s \sin\theta.
+\]
+
+Now the less steep the trail, the less the elevation gain over a given distance along the trail. So to find a lower bound for the elevation of Nada Lake, over each interval we should assume the trail has a constant inclination angle equal to the smallest angle in that interval. Since the inclination angle is a decreasing function over the trail from mile-marker 1.6 to Nada lake, we should choose the right endpoints in our Riemann sum.
+
+With $n$-equal subintervals over the trail distance
+\[
+ \Delta s = (3 - 1.6) \text{ miles} = 1.4 \text{ miles},
+\]
+each subinterval has length
+\[
+ \frac{\Delta s}{n} \text{ miles} = \frac{1.4}{n} \text{ miles} .
+\]
+
+So the change in elevation from the $1.6$-mile marker to Nada Lake is at least
+\[
+  \frac{1.4}{n}\sum_{i=1}^{n} \sin\left( g\left( 1.6 + \frac{1.4}{n}i \right) \right) 
+\]
+miles. 
+
+Since the elevation of the trail is 3200 feet at the 1.6 mile-marker and there are $5280$ feet in one mile, the elevation of Nada Lake is at least
+\[
+    3200 + 5280 \left(  \frac{1.4}{n}  \right)\sum_{i=1}^{n} \sin\left( g\left( 1.6 + \frac{1.4}{n}i \right) \right)
+\]
+feet.
+
+\end{explanation}
 
 
 \end{question}
