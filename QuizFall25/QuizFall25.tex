@@ -1,0 +1,44 @@
+\documentclass{ximera}
+\title{Quiz Solutions Fall 2025}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Quiz solutions.
+\end{abstract}
+\maketitle
+
+
+
+\section{Quiz 3A}
+
+
+
+\section{Quiz 3B}
+
+\begin{question} \label{QKDFefggg}
+Evaluate the definite integral
+\[
+  \int_1^4 \frac{2-\sqrt{t}}{t^2} \, dt.
+\]
+
+\begin{explanation}
+The key is to rewrite the integrand as
+\[
+  \frac{2-\sqrt{t}}{t^2} = 2t^{-2} - t^{-3/2} .
+\]
+That way we use the Fundamental Theorem and undo the power rule. Here's the computation.
+
+\begin{align*}
+\int_1^4 \frac{2-\sqrt{t}}{t^2} \, dt  &= \int_1^4 (  2t^{-2} - t^{-3/2}  )\, dt  \\
+                                                      &= \left(  -2t^{-1} + 2t^{-1/2}   \right)\Big|_1^4 \\
+                                                      &= (-\frac{1}{2} + 2)  -(-1 + 2) \\
+                                                       &=\frac{1}{2} .
+\end{align*}
+
+\end{explanation}
+
+\end{question}
+
+\end{document}
