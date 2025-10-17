@@ -11,7 +11,81 @@ Quiz solutions.
 
 
 
+\section{Quiz2B}
+\begin{question} \label{QldfFDLRE}
+The function
+\[
+      \theta = g(s) = \frac{s}{2} - \frac{s^3}{12} \, , \, 0\leq s \leq 3 , 
+\]
+expresses the inclination angle (in radians) of the trail to Nada Lake in terms of the distance from the trailhead (measured along the trail in miles). The inclination angle is the angle the trail makes with the horizontal. It is positive (negative) when the trail slopes upward (downward) in the direction away from the trailhead.
+
+The trail is at an elevation of $3200$ feet $1.6$ miles from the trailhead.
+
+Use summation notation for an expression with $n$ equal intervals of distance to find a lower bound for the trail's elevation (in feet) at Nada Lake (3 miles from the trailhead).
+
+Use the graph of the function $\theta=g(s)$ shown below to help with your explanation.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{nzhemrajow}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/nzhemrajow}{152: Quiz 3A}
+
+
+\end{question}
+
+
+
+
 \section{Quiz 3A}
+
+\begin{question} \label{QLferr3r}
+The function
+\[
+ r =g(t) = 12 -2 |t - 11| , 0 \leq t \leq 20,
+\]
+expresses a balloon’s rate of ascent (in meters/min) in terms of the number of minutes past noon.
+
+\begin{enumerate}
+\item Use geometry, not the Fundamental Theorem, to evaluate the integral
+\[
+  \int_{20}^3 g(t) \, dt.
+\]
+Include a graph of the function to help with your explanation. Shade the region of integration and indicate the direction of integration.
+
+\item Interpret the meaning of the integral, in its form above, in this particular scenario.
+\end{enumerate}
+
+\begin{explanation}
+
+\begin{enumerate}
+
+\item The key to graphing the function is to realize $g(t)$ has its maximum value when $2|t-11|$ is as small as possible. This happens when $t=11$. 
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{wioqqjwyt9}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/wioqqjwyt9}{152: Quiz 3A}
+
+Adding the signed area of the three triangles and integrating from right to left gives
+\begin{align*}
+\int_{20}^3 g(t) \, dt   &= \frac{1}{2}(-3 \text{ min })(-6 \text{ meters/min}) + \frac{1}{2}(-12 \text{ min })(12 \text{ meters/min})  +  \\
+                            &= \frac{1}{2}(-2 \text{ min })(-4 \text{ meters/min})    \\
+                                &= - 59 \text{ ft}.
+\end{align*}
+
+\item The meaning of the integral is that going backward in time from 12:20pm to 12:03pm the balloon loses 59 feet of altitude. More simply stated, \emph{the balloon is 59 feet lower at 12:03pm than it is at 12:20pm.}
+
+\end{enumerate}
+
+\end{explanation}
+
+\end{question}
 
 
 
