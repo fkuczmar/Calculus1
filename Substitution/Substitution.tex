@@ -197,9 +197,9 @@ that expresses the number of gallons of gas in the car in terms of the trip odom
 \]
 that expresses the number of gallons of gas in the car in terms of the number of hours since the start of the trip.
 
-\item Your function for part (b) should be
+\item Your function for part (b) should have been
 \[
-     G = h(t) = 14 - \int_0^t f(g(u))g^\prime(u)  \, du .
+     G = h(t) = 14 - \int_{100}^t f(g(u))g^\prime(u)  \, du .
 \]
 
 Interpret the integral in this expression in two different ways.
@@ -207,7 +207,7 @@ Interpret the integral in this expression in two different ways.
 \begin{enumerate}
 \item By writing it as
 \[
-   \int_0^t f(g(u))(  g^\prime(u)  \, du )
+   \int_{100}^t f(g(u))(  g^\prime(u)  \, du )
 \]
 and describing the meaning of the product $g^\prime(u)\, du$.
 
@@ -229,6 +229,14 @@ and describing the meaning of the product $g^\prime(u)\, du$.
 
 \end{example}
 
+
+\begin{example} \label{ESdfdrhmmn}
+The previous example assumed the car's gas mileage depended only on the trip odometer reading and not on its speed.
+
+A more realistic example would look at the elevation change over a section of trail, the change being independent of how you traverse the trail.
+
+Make up your own example like this. Start with the function $\theta = f(s)$ that expresses the trail's inclination angle in terms of the distance from the trailhead (measured along the trail in km). 
+\end{example}
 
 
 \end{document}
