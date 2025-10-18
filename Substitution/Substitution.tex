@@ -56,14 +56,48 @@ Use a $u$-substitution and algebra to find exact solution(s) to your equation fr
 \end{enumerate}
 \end{question}
 
+
+
+\begin{question} \label{QKdfrerr3}
+Between noon and 8pm the growth rate of a population of bacteria decreases exponentially. At noon the population increases at the rate of $700,000$ bac/hr and at 3pm the population increases at the rate of $400,000$ bac/hr. 
+
+The population is $2$ million at noon.
+
+\begin{enumerate}
+
+\item Sketch by hand a rough graph of the function
+\[
+    r = f(t) \, , \, 0\leq t \leq 8,
+\]
+that expresses the growth rate (in hundreds of thousand of bacteria/hr) in terms of the number of hours past noon.
+
+\item Find an expression for the function in part (a). Do not use $e$.
+
+\item Use part (a) to sketch by hand a graph of the function 
+\[
+ P=g(t) \, , \, 0\leq t \leq 8, 
+\]
+that expresses the population in terms of the number of hours past noon.
+
+\item Find an expression for the function in part (c).
+
+\end{enumerate}
+\end{question}
+
 \begin{question}\label{Q7yyweff}
-Identify for which of the following definite integrals a $u$-substitution would work. Make the substitution for these and evaluate the integral. Do this by changing the lower and upper bounds and not substituting back.
+Identify for which of the following definite integrals a $u$-substitution would work. Make the substitution for these and evaluate the integral. Do this by changing the lower and upper bounds. Do \emph{not} substitute back to the original variable of integration.
 
 \begin{enumerate}
 
 \item $\int_0^{\sqrt{\pi}} \theta \sin(\theta^2)\, d\theta$
 
 \item $\int_0^{\pi} \theta^2 \sin(\theta)\, d\theta$
+
+\item $\int_0^{\pi/2} \sin\theta \cos^3\theta \, d\theta$
+
+\item $\int_0^{\pi/4} \tan\theta \sec^2\theta \, d\theta$
+
+\item $\int_0^{\pi/4} \tan\theta \sec^3\theta \, d\theta$
 
 \item $\int_0^2 x^2 (1+x^2)^2 \, dx$
 
@@ -78,6 +112,10 @@ Identify for which of the following definite integrals a $u$-substitution would 
 \item $\int_0^1 \frac{e^x}{1+e^x} \ , dx$
 
 \item $\int_0^1 \frac{e^x}{1+e^{2x}} \ , dx$
+
+\item $\int_2^3  \frac{x}{\ln x}\, dx$
+
+\item $\int_2^3  \frac{\ln x}{x}\, dx$
 
 
 \end{enumerate}
@@ -129,6 +167,69 @@ The effect is to transform a partition of the interval of integration, originall
 \end{example}
 
 The next example puts this idea in more a more meaningul context.
+
+\begin{example} \label{Ex:KDfdfer3rER}
+
+The function
+\[
+    r = f(s) \, , \, 0 \leq s \leq 240,
+\]
+expresses the rate at which a car burns gas (in gal/mile) in terms of the trip odometer reading (in miles) during a $240$-mile trip.
+
+The car has $14$ gallons of gas at odometer reading $100$ miles.
+
+The function 
+\[
+      s = g(t) \, , \, 0\leq t \leq 4 ,
+\]
+expresses the car's speed (in miles/hour) in terms of the number of hours since the start of the trip.
+
+\begin{enumerate}
+\item Find a function 
+\[
+      G = w(s) \, , \, 0 \leq s \leq 240,
+\]
+that expresses the number of gallons of gas in the car in terms of the trip odometer reading.
+
+\item Make a substitution in your expression from part (a) to find a function 
+\[
+  G = h(t) \, , \, 0 \leq s \leq 240,
+\]
+that expresses the number of gallons of gas in the car in terms of the number of hours since the start of the trip.
+
+\item Your function for part (b) should be
+\[
+     G = h(t) = 14 - \int_0^t f(g(u))g^\prime(u)  \, du .
+\]
+
+Interpret the integral in this expression in two different ways.
+
+\begin{enumerate}
+\item By writing it as
+\[
+   \int_0^t f(g(u))(  g^\prime(u)  \, du )
+\]
+and describing the meaning of the product $g^\prime(u)\, du$.
+
+\item By keeping its original form and describing the meaning of the product $f(g(u))g^\prime(u)$.
+
+\end{enumerate}
+
+\item Drag the slider $w$ in Line 2 of the worksheet below to change the odometer reading function $g$. Describe what happens.
+
+\end{enumerate}
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{gsdzd0lbva}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/gsdzd0lbva}{Substitution and Gas Comsumption 2}
+
+\end{example}
+
+
 
 \end{document}
 
