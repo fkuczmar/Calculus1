@@ -9,6 +9,17 @@ Computing the area of regions in the plane bounded by graphs of functions.
 \end{abstract}
 \maketitle
 
+\emph{Directions:} When computing the area of a region, be sure to do the following.
+\begin{itemize}
+\item State the direction in which you decide to slice the region.
+
+\item Sketch a differential rectangle and label the coordinates of its endpoints.
+
+\item State the area of the differential rectangle.
+
+\item Explain the role of the definite integral in computing the area of the region. 
+\end{itemize}
+
 \section{Parabolas and Power Functions, Part 1}
 
 \begin{question} \label{QWeerFGHG}
@@ -136,12 +147,13 @@ where the coordinates $(x,y)$ are also measured in meters.
 \end{question}
 
 \begin{question} \label{Q88w88ewe}
-Let ${\cal P}$ be the parabola with equation $y=cx^2$ passing through the point $(b,h)$.
+Let ${\cal P}$ be the parabola symmetric about the $y$-axis with its vertex at the origin that passes through the point $(b,h)$. Assume $b,h>0$.
 
 \begin{enumerate}
-\item Express $c$ in terms of $b$ and $h$.
 
 \item Find an equation of the horizontal line that bisects the area of the region bounded by ${\cal P}$ and the line $y=h$.
+
+\item Check that your answer to part (a) is dimensionally correct.
 
 \begin{onlineOnly}
     \begin{center}
@@ -156,7 +168,7 @@ Let ${\cal P}$ be the parabola with equation $y=cx^2$ passing through the point 
 
 
 \begin{question} \label{Q88w4448ewe}
-Let ${\cal P}$ be the parabola with equation $y=cx^2$ passing through the point $(b,h)$.
+Let ${\cal P}$ be the parabola symmetric about the $y$-axis with its vertex at the origin that passes through the point $(b,h)$. Assume $b,h>0$.
 
 \begin{enumerate}
 \item Express $c$ in terms of $b$ and $h$.
@@ -176,6 +188,68 @@ Let ${\cal P}$ be the parabola with equation $y=cx^2$ passing through the point 
 \end{enumerate}
 \end{question}
 
+
+\begin{question} \label{QPlerredd}
+
+The vertical segments below are equally-spaced. The horizontal segments cut the shaded region into $20$ smaller regions. Which of these has the greatest area? The least?
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{wsgteg55ta}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/wsgteg55ta}{152: Self-calibrating area}
+\end{question}
+
+
+\section{Trigonometric Functions}
+
+\begin{question} \label{QLkfeREdfd}
+Let $a,b>0$ be constants.
+
+Find a simplified expression for the area of the shaded region below bounded by the $y$-axis and the curves $y=a\cos x$ and $y=b\sin x$.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{ps1m0hksl0}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/ps1m0hksl0}{152: Sine Cosine Area}
+\end{question}
+
+
+\section{The Rectangular Elastica}
+
+Let $a>0$ be a constant with units of meters and let
+\[
+   f(x) = \int_0^a \frac{u^2}{\sqrt{a^4-u^4}} \, du - \int_0^x \frac{u^2}{\sqrt{a^4-u^4}} \, du .
+\]
+
+\begin{question} \label{QKDFeefrfr3}
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{c3vderglut}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/c3vderglut}{152: Elastica}
+
+\begin{enumerate}
+
+\item Express the coordinates of the $x$ intercept of the curve $y=f(x)$ in terms of $a$.
+
+\item Express the exact and approximate coordinates of the $y$-intercept in terms of $a$.
+
+\item Find an equation of the tangent line to the curve $u=f(x)$ at the point where the line $x=a/2$ intersects the curve.
+
+\item Find an expression for the area bounded by the curve $y=f(x)$ and the $y$-axis. Activate the \emph{Hint} folder in Line 1 of the worksheet above for a hint. 
+
+\end{enumerate}
+
+\end{question}
 
 
 
