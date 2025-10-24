@@ -234,4 +234,97 @@ That way we use the Fundamental Theorem and undo the power rule. Here's the comp
 
 \end{question}
 
+
+\section{Quiz 4A}
+This was almost identical to Quiz 3B.
+
+
+\section{Quiz 4B}
+
+\begin{question} \label{QLDFefe555441}
+
+Use the graph of the function
+\[
+  y = \int_2^x f(t)\, dt
+\]
+shown below to answer the following questions. Explain your reasoning thoroughly in complete sentences.
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{zoyrvkqbv8}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/zoyrvkqbv8}{152: Quiz 4B}
+
+\begin{enumerate}
+
+\item Solve the inequality $f(x)>0$. Explain your reasoning.
+
+\item For what value of $x\in[0,5]$ is $f(x)$ a minimum? Explain your reasoning.
+
+\item Find the minimum value of $f(x)$, $x\in [0,5]$. Explain your reasoning and show your work.
+\end{enumerate}
+
+
+\begin{explanation}
+
+The key point to answering these questions is to recognize that
+\[
+ \frac{d}{dx} \left(   \int_2^x f(t)\, dt \right) = f(t).
+\]
+
+\begin{enumerate}
+\item Solving the inequality $f(x)>0$ means finding the values of $x$ where the function graphed above is increasing. The solution set is therefore
+\[
+  \{ 0 < x <1 \text{ or } 4 < x \leq 5 \}.
+\] 
+
+\item The minimum value of $f(x)$ occurs where the function graphed above is decreasing at the fastest rate. This occurs at approximate $x=3$.
+
+\item The minimum value of $f(x)$ is the slope of the tangent line to the above graph at $x=3$. Using the approximate coordinates of the points $(3,-1.6)$ and $(3.2, -2)$ on the graph, the minimum value is approximately
+\[
+ \frac{\Delta y}{\Delta x} \sim \frac{-0.4}{0.2} = -2.
+\]  
+
+\end{enumerate}
+
+
+We can make better sense of this problem by adding some context. So we'll suppose the function $f(t)$ expresses the rate of ascent (in ft/sec) of a balloon in terms of the number of seconds past noon. Then (changing the variable from $x$ to $t$) the function 
+\[
+  y = g_1(t) = \int_2^t f(x)\, dx ,
+\]
+expresses the balloon's change in height (measured in feet) from time $t=2$ to time $t$ seonds past noon. Adding the balloon's height at time $t=2$, say $h_0$ feet, gives us the height (in feet)
+\[
+ h = g_2(t) = h_0 + \int_2^t f(x)\, dx
+\]
+at time $t$ seconds past noon.
+
+Then since the functions $g_1$ and $g_2$ differ only by a constant, the derivatives 
+\[
+dh/dt = dy/dt 
+\]
+give the balloon's rate of ascent $f(t)$ function. 
+
+So the questions are asking us to determine
+\begin{enumerate}
+\item when the balloon is ascending
+
+\item when the balloon is descending at the fastest rate
+
+\item the fastest rate of descent, expressed as a negative rate.
+
+
+\end{enumerate}
+
+\end{explanation}
+
+
+
+
+\end{question}
+
+
+
 \end{document}
