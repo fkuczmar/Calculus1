@@ -317,14 +317,76 @@ So the questions are asking us to determine
 
 
 \end{enumerate}
-
 \end{explanation}
-
-
-
-
 \end{question}
 
+\section{Quiz 5A}
 
+\begin{question} \label{QOererr3rr3}
+\begin{enumerate}
+\item Evaluate the definite integral
+\[
+      \int_1^2 \frac{5x}{1+9x^2}\, dx .
+\]
+Use substitution as in the homework. Do not skip steps. No credit without using substitution. 
+
+\end{enumerate}
+
+\begin{explanation}
+It helps to write the integral as
+\[
+  \int_1^2 \frac{5x}{1+9x^2}\, dx = \int_1^2 (1+9x^2)^{-1}5x\, dx .
+\]
+
+Then the integrand is a product of two functions,
+\[
+        (1+9x^2)^{-1}
+\]
+and
+\[
+    5x .
+\]
+The first, $(1+9x^2)^{-1}$, is a composition of two functions. And the second $5x$ is a scalar multiple of the derivative
+\[
+ \frac{d}{dx}\left( 1+9x^2  \right) = 18x
+\]
+of the inside function of the composition.
+
+This tells us that the substitution
+\[
+ u = 1 + 9x^2
+\]
+will undo the chain rule.
+
+So with $u=1+9x^2$,  we have
+\[
+    du = 18x \, dx
+\]
+and 
+\[
+     5x\, dx = \frac{5}{18} \, du.
+\]
+
+When $x=1$,
+\[
+      u = 1+9(1)^2 = 10
+\]
+and when $x=2$,
+\[
+     u = 1+9(2)^2 = 37.
+\]
+
+So
+\begin{align*}
+\int_1^2 \frac{5x}{1+9x^2}\, dx  &= \int_1^2 (1+9x^2)^{-1} (5x \, dx)  \\
+                                                  &= \int_{10}^{37} u^{-1} \left(  \frac{5}{18}\, du \right) \\
+                                                  &= \frac{5}{18}\int_{10}^{37} u^{-1} \, du \\
+                                                  & = \frac{5}{18}\ln \left| u \right| \Big|_{u=10}^{u=37} \\
+                                                  &=\frac{5}{18} \left( \ln|37| - \ln|10| \right) \\
+                                                  &= \frac{5}{18} \ln \left( 3.7 \right) .
+\end{align*}
+
+\end{explanation}
+\end{question}
 
 \end{document}
