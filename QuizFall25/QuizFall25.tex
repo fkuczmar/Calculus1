@@ -389,4 +389,72 @@ So
 \end{explanation}
 \end{question}
 
+\section{Quiz 5B}
+
+
+\begin{question}  \label{Q9ierER3P}
+\item Evaluate the definite integral
+\[
+      \int_0^1 \frac{8e^{-3t}}{\sqrt{9-4e^{-3t}}}\, dt .
+\]
+
+\begin{explanation}
+It helps to write the integral as
+\[
+  \int_0^1 \frac{8e^{-3t}}{\sqrt{9-4e^{-3t}}}\, dt =  \int_0^1  8e^{-3t} \left(  9-4e^{-3t}\right)^{-1/2} dt .
+\]
+
+Then the integrand is a product of two functions,
+\[
+        \left(  9-4e^{-3t}\right)^{-1/2}
+\]
+and
+\[
+    8e^{-3t} .
+\]
+The first, $(  9-4e^{-3t})^{-1/2}$, is a composition of two functions. And the second, $8e^{-3t}$, is a scalar multiple of the derivative
+\[
+ \frac{d}{dt}\left(  9-4e^{-3t}  \right) = 12e^{-3t}
+\]
+of the inside function of the composition.
+
+This tells us that the substitution
+\[
+ u =  9-4e^{-3t}
+\]
+will undo the chain rule.
+
+So with $u= 9-4e^{-3t}$,  we have
+\[
+    du = 12e^{-3t} \, dt
+\]
+and 
+\[
+     8 e^{-3t}\, dt = \frac{2}{3} \, du.
+\]
+
+When $t=0$,
+\[
+      u = 9-4e^0 = 5
+\]
+and when $t=1$,
+\[
+     u = 9-4e^{-3}.
+\]
+
+So
+\begin{align*}
+\int_0^1 \frac{8e^{-3t}}{\sqrt{9-4e^{-3t}}}\, dt  &= \int_5^{ 9-4e^{-3}} ( 9-4e^{-3t})^{-1/2} (8e^{-3t} \, dt)  \\
+                                                  &= \int_5^{ 9-4e^{-3}} u^{-1/2} \left(  \frac{2}{3}\, du \right) \\
+                                                  &= \frac{2}{3}\int_5^{ 9-4e^{-3}} u^{-1/2} \, du \\
+                                                  & = \frac{2}{3}(2)(u^{1/2}) \Big|_{u=5}^{u=9-4e^{-3}} \\
+                                                  &=\frac{4}{3} \left( \sqrt{9-4e^{-3}} - \sqrt{5} \right). \\
+\end{align*}
+
+\end{explanation}
+
+
+
+\end{question}
+
 \end{document}
