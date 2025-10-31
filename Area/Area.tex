@@ -209,6 +209,68 @@ Let ${\cal P}$ be the parabola symmetric about the $y$-axis with its vertex at t
 \href{https://www.desmos.com/calculator/avl2r9dubt}{152: Parabola and Tangent Line 3}
 
 \end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+
+\item Let $y=cx^2$ be an equation of the parabola. Then since the point $(a,h)$ lies on the parabola
+\[
+  h = ca^2
+\]
+and 
+\[
+ c = \frac{h}{a^2} .
+\]
+So the parabola has equation
+\[
+   y = \frac{h}{a^2}x^2.
+\]
+ 
+The left and right endpoints of a horizontal slice $AB$ of the region share the same $y$-coordinate. Call it $y$. Since the left endpoint $A(x,y)$ lies on the parabola, 
+\[
+    x = \pm \sqrt{\frac{ya^2}{h}} .
+\]
+But because $A$ lies in the first quadrant, $x\geq 0$ and $A$ has coordinates
+\[
+       \left(  \sqrt{\frac{ya^2}{h}} , y \right) .
+\]
+
+To express the $x$-coordinate of the right endpoint $B$ in terms of $y$, we need an equation of the tangent line to the parabola at the point $P(a,h)$. 
+
+The slope of this tangent line is
+\begin{align*}
+\frac{d}{dx} \left(   \frac{h}{a^2}x^2 \right) \Big|_{x=a}    &= \frac{2h}{a^2}x  \Big|_{x=a}  \\
+                                                      &= \frac{2h}{a} .
+\end{align*}
+
+So an equation of the tangent line is
+\[
+ y = h +\frac{2h}{a} \left(  x - a \right) = \frac{2h}{a}x - h 
+\]
+and $B$ has coordinates
+\[
+   \left(\frac{a}{2h}y + \frac{a}{2}, y \right).
+\]
+
+Now the differential recangle $AB$ has length
+\[
+   \frac{a}{2h}y + \frac{a}{2} - \sqrt{\frac{ya^2}{h}} ,
+\]
+width $dy$ and area
+\[
+    dA = \left( \frac{a}{2h}y + \frac{a}{2} - \sqrt{\frac{ya^2}{h}} \right) \, dy .
+\]
+
+Finally, the area of the region bounded by the $x$-axis, the parabola, and the tangent line at $(a,h)$ is
+\begin{align*}
+  \int_0^h \left( \frac{a}{2h}y + \frac{a}{2} - \sqrt{\frac{ya^2}{h}} \right) \, dy &= \left(    \frac{a}{4h}y^2 + \frac{a}{2}y - \frac{2}{3} \sqrt{\frac{a^2}{h}} y^{3/2} \right)\Big|_{y=0}^{y=h} \\
+                                                     &= \frac{ah}{4} + \frac{ah}{2} - \frac{2ah}{3} \\
+                                                      &= \frac{1}{12} ah .
+\end{align*}
+
+\end{enumerate}
+\end{explanation}
+
 \end{question}
 
 
