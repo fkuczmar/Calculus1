@@ -322,6 +322,49 @@ The area is
 \end{onlineOnly}
 
 \href{https://www.desmos.com/calculator/ps1m0hksl0}{152: Sine Cosine Area}
+
+\begin{explanation}
+Suppose the point of intersection has coordinates 
+\[
+   (x_0, y_0) = (x_0, a \cos\theta_0) = (x_0 , b \sin \theta_0),
+\]
+where 
+\[
+ \theta_ 0 = x_0/k.
+\]
+Then
+\[
+      a\cos\theta_0 = b\sin\theta_0
+\]
+and
+\[
+  \tan\theta_ 0 \ = \frac{a}{b}.
+\]
+
+Since $0 < \theta_0 <\pi/2$, we can draw a right triangle with $\theta_0$ as one of the acute angles, $a$ the length of the side opposite this angle and $b$ the length of the adjacent side. From this we know that
+\[
+     \cos\theta_ 0 = \frac{b}{\sqrt{a^2 + b^2}}
+\]
+and
+\[ 
+    \sin\theta_ 0 = \frac{a}{\sqrt{a^2 + b^2}}.
+\]
+
+Now slice the region into differential rectangles perpendicular to the $x$-axis. Then the general differential rectangle $PQ$ with endpoints $P(x, a\cos(x/k))$ and $Q(x,\sin(x/k))$  has differential area
+\[
+ dA = (a\cos (x/k) - b\sin(x/k)) \, dx .
+\]
+
+So the area of the region is
+\begin{align*}
+ A &= \int_0^{x_0} \left(  a\cos\left( \frac{x}{k}\right) - b\sin \left( \frac{x}{k}\right)   \right) \, dx \\
+   &= \left( ak\sin\left( \frac{x}{k}\right) + bk \cos\left( \frac{x}{k}\right)  \right)\Big|_{x=0}^{x=x_0} \\
+   &=  k \left( \frac{a^2}{\sqrt{a^2+b^2}} + \frac{b^2}{\sqrt{a^2+b^2}} - b    \right) \\
+    &= k (\sqrt{a^2 + b^2} - b) .
+\end{align*}
+
+\end{explanation}
+
 \end{question}
 
 
