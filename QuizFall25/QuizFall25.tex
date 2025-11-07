@@ -452,9 +452,195 @@ So
 \end{align*}
 
 \end{explanation}
+\end{question}
+
+
+\section{Quiz 6A}
+
+\begin{question} \label{QLfdferr33rr}
+A parabola with its vertex at the origin and symmetric about the $y$-axis passes through the point $P(-3,6)$. 
+
+Find the area of the region bounded by the parabola, the tangent line to the parabola at $P$, and the $x$-axis.
+
+Do this by slicing the region perpendicular to the $y$-axis.
+
+\begin{explanation}
+Since the parabola has its vertex at the origin and issymmetric about the $y$-axis, its equation is of the form
+\[
+     y = cx^2
+\]
+for some constant $c\neq 0$. 
+
+Since the point $(-3,6)$ lies on the parabola
+\[
+    6 = c(-3)^2
+\]
+and 
+\[
+ c = 2/3.
+\]
+So the parabola has equation
+\[
+ y = \frac{2}{3}x^2 .
+\]
+
+To find an equation of the tangent line at $(-3,6)$ we first compute the slope by evaluating the derivative $dy/dx$ at $x=-3$. The slope is
+\begin{align*}
+  \frac{dy}{dx}\Big|_{x=-3} & = \frac{d}{dx}\left(\frac{2}{3}x^2\right)\Big|_{x=-3} \\ 
+                                         &= \frac{4}{3}x \Big|_{x=-3} \\
+                                         & = -4 .
+\end{align*}
+
+So an equation of the tangent line at $(-3,6)$ is 
+\[
+    y  = 6 -4 (x+3) 
+\]
+or 
+\[
+ y = -6 - 4x .
+\]
+
+Now slice the region perpendicular to the $y$-axis to get the differential rectangle $AB$. The endpoints share the same $y$-coordinate. Call it $y$. 
+
+The left endpoint $A$ lies on the tangent line with equation
+\[
+ y = -6 - 4x
+\]
+and has $x$-coordinate
+\[
+     x = - \frac{6+y}{4} .
+\]
+So $A$ has coordinates
+\[
+        \left(   - \frac{6+y}{4} , y  \right) .
+\]
+
+The right endpoint $B$ lies on the parabola
+\[
+       y = \frac{2}{3}x^2.
+\]
+So 
+\[
+     x = \pm \sqrt{\frac{3}{2}y} .
+\]
+But since the region is in the second quadrant, the $x$-coordinate of $B$ is negative. So $B$ has $x$-coordinate
+\[
+      x = - \sqrt{\frac{3}{2}y}
+\]
+and coordinates
+\[
+     \left( - \sqrt{\frac{3}{2}y} , y\right) .
+\]
+
+So the differential rectangle $AB$ has width $dy$, length
+\[
+   L = - \sqrt{\frac{3}{2}y} + - \frac{6+y}{4}
+\]
+and differential area
+\[
+  dA = L \, dy = \left( - \sqrt{\frac{3}{2}y} +  \frac{6+y}{4}  \right)  \, dy .
+\]
+
+The area of the region bounded is then the sum
+\[
+     \int_{0}^6 \left( - \sqrt{\frac{3}{2}y} +  \frac{6+y}{4}  \right)  \, dy .
+\]
+of the differential areas. 
+
+Using the fundamental theorem, the area is 
+\begin{align*}
+   \int_{0}^6 \left( - \sqrt{\frac{3}{2}y} +  \frac{6+y}{4}  \right)  \, dy &= \left(-\frac{2}{3}\sqrt{\frac{3}{2}}y^{3/2} + \frac{(6+y)^2}{4}  \right)\Big|_{y=-3}^{y=0} \\
+                         & = 3/2 .
+\end{align*}
+
+\end{explanation}
 
 
 
 \end{question}
+
+
+\section{Quiz 6B}
+
+\begin{question} \label{QPfere3}
+\item A region is bounded by the coordinate axes, the line $x=-3$ and the curve
+\[
+  y = \frac{70}{4x-15} .
+\]
+
+
+\begin{enumerate}
+\item Sketch a reasonably accurate graph of the curve and shade the region.
+
+\item Write an integral that gives the area of the region.
+
+\item Use substitution to evalaute the integral and compute the area of the region.
+\end{enumerate}
+
+
+\begin{explanation}
+\begin{enumerate}
+\item The curve
+\[
+ y = f(x)= \frac{70}{4x-15} 
+\]
+is a linear transformation of the curve $y=1/x$ with a vertical asymptote at $x=15/4$ and no $x$-intercept. So to graph the function over the interval $x\in [-3,0]$ we need only plot the points
+\[
+     (0,f(0)) = (1,-14/3)
+\]
+and
+\[
+   (-3, f(-3)) =(-3,  -70/27) .
+\]
+
+This tells us the function is negative over the interval $x\in[-3,0]$. So a differential rectangle perpendicular to the $x$-axis has upper endpoint $A(x,0)$ and lower endpoint $B(x,70/(4x-15)$. So with a width $dx$ and length
+\[
+    L = 0 - \frac{70}{4x-15} = \frac{-70}{4x-15},
+\]
+the rectangle has differential area %of the differential rectangle is 
+\[
+   dA = L\, dx = \frac{-70}{4x-15} \, dx .
+\]
+
+\item The area of the region is the sum
+\[
+    A =\int_{-3}^0 \frac{-70}{4x-15} \, dx
+\]
+of the differential areas $dA$.
+
+\item To evalaute the above integral, we make the substitution
+\[
+    u = 4x-15.
+\]
+Then 
+\[
+    du = 4x \, dx
+\]
+and
+\[
+  dx = \frac{1}{4} \, du .
+\]
+
+When $x=-3$,
+\[
+ u = 4(-3)-15 = -27
+\]
+and when $x=0$,
+\[
+  u  = 4(0) - 15 = -15.
+\]
+
+So the area of the region is
+\begin{align*}
+\int_{-3}^0 \frac{-70}{4x-15} \, dx  &= - \int_{-27}^{-15} \frac{70}{u} \, \left( \frac{1}{4} \, du\right)  \\
+                                                   &= -\frac{35}{2} \ln |u|\Big|_{u=-27}^{u=-15} \\
+                                                   &= \frac{35}{2} \left( \ln|-27| - \ln|-15| \right) \\
+                                                   &= \frac{35}{2} \ln (27/15) .
+\end{align*}
+
+\end{enumerate}
+\end{explanation}
+\end{question}
+
 
 \end{document}
