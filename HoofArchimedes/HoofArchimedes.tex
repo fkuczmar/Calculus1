@@ -22,16 +22,53 @@ A solid circular cylinder of radius $a$ and height $h$ is sliced by a plane pass
 
 We'll determine the volume of the lower piece (the hoof of Archimedes) by taking slices perpendicular to the coordinate axes . Turn off the folder in Line 2 and activate the appropriate folder in Lines 5, 13, or 22 if you need help visualizing the cross sections.
 
-Slice the solid 
+
 \begin{enumerate}
-\item perpendicular to the $x$-axis (activate the folder in Line 5),
+\item Cmpute the volume by slicing the solid perpendicular to the $x$-axis. To see the cross-sections, turn off the folder \emph{Slanted Face} in Line 2 and activate the folder \emph{Cross-sections perpendicular to the $x$-axis} in Line 5).
+
+\begin{explanation}
+Let the top vertex of the red triangle have coordinates $(x,y,z)$. Then the triangle has area
+\[
+     A = \answer{yz/2}
+\] 
+and the thin slice has differential volume 
+\[
+  dV  = \answer{yz/2}\, d{\answer x} .
+\]
+
+To express the differential volume in terms of $x$, first use the Pythagorean theorem to express $y$ in terms of $x$ to get
+\[
+     y = \answer{\sqrt{a^2-x^2}}.
+\]
+Then use similar triangles (red and green) to get
+\[
+     \frac{z}{y} = \answer{\frac{h}{a}} .
+\]
+and express $z$ in terms of $y$ as
+\[
+  z = \answer{\frac{yh}{a}} .
+\]
+Now substitute the previous expression for $y$ to express the area of the cross-section in terms of $x$,
+\[
+    A = \frac{h}{2a}\left( \answer{a^2 - x^2}  \right).
+\]
+
+So the differential volume of the thin slice is
+\[
+   dA = \frac{h}{2a} \left(  a^2 - x^2 \right) \, dx .
+\]
+
+The volume of the hoof is then
+\[
+  V = 2\int_0^a \frac{h}{2a} \left(  a^2 - x^2 \right) \, dx = \answer{\frac{2}{3}a^2h} .
+\]
+
+\end{explanation}
 
 \item perpendicular to the $y$-axis (activate the folder in Line 13), and
 
 \item perpendicular to the $z$-axis (activate the folder in Line 22).
-\end{enumerate} 
 
-\begin{enumerate}
 \item Check that your expression for the volume is dimensionally correct.
 
 \item What fraction of the original cylinder does the hoof occupy? Activate the folder in Line 33 to see the cylinder.
