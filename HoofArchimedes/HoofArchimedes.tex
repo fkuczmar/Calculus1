@@ -93,7 +93,7 @@ So the volume of the hoof is
 \item Lastly, compute the volume by slicing perpendicular to the $z$-axis. To see the slices turn off the folder in Line 13 and activate the folder in Line 22.
 
 \begin{explanation}
-A common error is to think the cross-sections are semicircles. They are not.
+A common error is to think the cross-sections are semicircles. They are not. Drag the slider $z$ in Line 2 of the worksheet below to see how the cross-sections vary with the $z$-coordinate of the slice.
 
 \begin{onlineOnly}
     \begin{center}
@@ -103,8 +103,40 @@ A common error is to think the cross-sections are semicircles. They are not.
 
 \href{https://www.desmos.com/calculator/gxhq1yelvv}{152: Hoof Cross Sections}
 
+The first step in finding an expression for the area of the cross-section in terms of the coordinates $(x,y,z)$ of the point on the surface directly above $A$ is to find an expression for the angle $\theta = \angle AOW$ above.
 
+This angle has measure 
+\[
+   \theta = \arccos \left(\answer{\frac{y}{a}} \right) .
+\]
 
+So the sector of the circle subtended by $\angle AOB$ has area
+\[
+     A_1 = \answer{a^2} \arccos\left( \frac{y}{a}  \right)
+\]
+and $\Delta AOB$ area
+\[
+  A_2 = \answer{y \sqrt{a^2-y^2}} .
+\]
+
+Then the slice with differential thickness $dz$ has differential volume
+\[
+   dV = a^2\left( \arccos\left( \frac{y}{a}  \right) - y \sqrt{a^2-y^2} \right) \, dz .
+\]
+
+Now to get rid of the mixed variables, we'll do something different and express $dz$ in terms of $dy$. We know
+\[
+    z = \frac{yh}{a} ,
+\]
+so
+\[
+ dz = \answer{\frac{h}{a}} \, dy .
+\]
+
+Then the hoof has volume
+\[
+      V = \frac{h}{a}\int_0^{\answer{a}} \left(   \arccos\left( \frac{y}{a}  \right) - y \sqrt{a^2-y^2} \right)  \, d\answer{y} .
+\]
 
 \end{explanation}
 
