@@ -24,7 +24,7 @@ We'll determine the volume of the lower piece (the hoof of Archimedes) by taking
 
 
 \begin{enumerate}
-\item Cmpute the volume by slicing the solid perpendicular to the $x$-axis. To see the cross-sections, turn off the folder \emph{Slanted Face} in Line 2 and activate the folder \emph{Cross-sections perpendicular to the $x$-axis} in Line 5).
+\item Compute the volume by slicing the solid perpendicular to the $x$-axis. To see the cross-sections, turn off the folder \emph{Slanted Face} in Line 2 and activate the folder \emph{Cross-sections perpendicular to the $x$-axis} in Line 5).
 
 \begin{explanation}
 Let the top vertex of the red triangle have coordinates $(x,y,z)$. Then the triangle has area
@@ -65,9 +65,50 @@ The volume of the hoof is then
 
 \end{explanation}
 
-\item perpendicular to the $y$-axis (activate the folder in Line 13), and
+\item Now compute the volume by slicing perpendicular to the $y$-axis. To see the slices turn off the folder in Line 5 and activate the folder in Line 13.
 
-\item perpendicular to the $z$-axis (activate the folder in Line 22).
+
+\begin{explanation}
+In terms of the coordinates $(x,y,z)$ of the top right vertex of the rectangular cross-section, its area is
+\[
+  A = \answer{2xz}.
+\]
+So the volume of the differential slice is
+\[
+  dV = \answer{2xz}\, d\answer{y}.
+\]
+
+In terms of $y$, the differential volume is
+\[
+   dV = \answer{\frac{2h}{a}y \sqrt{a^2-y^2}} \, dy .
+\]
+
+So the volume of the hoof is
+\[
+    V =   \frac{2h}{a} \int_0^a \answer{y\sqrt{a^2-y^2}}\, dy =  \frac{2}{3}a^2h .
+\]
+
+\end{explanation}
+
+\item Lastly, compute the volume by slicing perpendicular to the $z$-axis. To see the slices turn off the folder in Line 13 and activate the folder in Line 22.
+
+\begin{explanation}
+A common error is to think the cross-sections are semicircles. They are not.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{gxhq1yelvv}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/gxhq1yelvv}{152: Hoof Cross Sections}
+
+
+
+
+\end{explanation}
+
+
 
 \item Check that your expression for the volume is dimensionally correct.
 
