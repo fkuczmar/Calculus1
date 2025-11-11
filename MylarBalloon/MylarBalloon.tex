@@ -14,7 +14,7 @@ The mylar balloon.
 
 \begin{question} \label{QKDFeef343rfr3}
 
-Let $a>0$ be a constant with units of meters and let
+Let $a>0$ be a constant with units of meters and for $x>0$ define
 \[
    f(x) = \int_x^a \frac{u^2}{\sqrt{a^4-u^4}} \, du .
 \]
@@ -40,13 +40,97 @@ Let $a>0$ be a constant with units of meters and let
 
 \item Find an equation of the tangent line to the curve $u=f(x)$ at the point where the line $x=a/2$ intersects the curve. Enter this equation in Line 4 above. Use the point-slope equation of a line, not slope-intercept.
 
-\item Find an expression for the area bounded by the curve $y=f(x)$ and the $y$-axis. Activate the \emph{Hint} folder in Line 1 of the worksheet above for a hint. 
+\item Find an expression for the area bounded by the curve $y=f(x)$ and the coordinate axes. Activate the \emph{Hint} folder in Line 1 of the worksheet above for a hint. 
 
 \item Compare the area in part (d) with the area of the surrounding rectangle. Does the ratio seem reasonable?
 
 \item Activate the folder \emph{Rectangle} in Line 5. Compare the area of this rectangle with the area in part (d).
 
 \end{enumerate}
+
+\begin{explanation}
+
+\begin{enumerate}
+\item The coordinates of the $x$-intercept are the roots of the equation
+\[
+      f(x) = \int_x^a \frac{u^2}{\sqrt{a^4-u^4}} \, du = 0 \, , \, x\geq 0.
+\]
+
+Since the integrand is positive for $u>0$, the integral is zero if and only if $x=a$. So the $x$-intercept has coordinates $(a,0)$.
+
+\item The $y$-intercept has $y$-coordinate
+\[
+  f(0) = \int_0^a \frac{u^2}{\sqrt{a^4-u^4}} \, du  =  \frac{1}{a^2} \int_0^a \frac{u^2}{\sqrt{1 - \left(\frac{u}{a}\right)^4}} \, du .
+\]
+
+Making the substitution $v=u/a$ and some algebra leads to
+\[
+  f(0) = a \int_0^1 \frac{v^2}{\sqrt{1-v^4}}\, dv \sim 0.599a .
+\]
+So the $y$-intercept has coordinates
+\[
+    \left( 0,   a \int_0^1 \frac{v^2}{\sqrt{1-v^4}}\, dv \right) \sim (0,0.599a) .
+\]
+
+\item Since
+\[
+  y =  f(x) = \int_x^a \frac{u^2}{\sqrt{a^4-u^4}} \, du = - \int_a^x \frac{u^2}{\sqrt{a^4-u^4}} \, du ,
+\] 
+by the fundamental theorem
+\begin{align*}
+   \frac{dy}{dx} &= - \frac{d}{dx} \int_a^x \frac{u^2}{\sqrt{a^4-u^4}} \, du \\
+                        &= -\frac{x^2}{\sqrt{a^4-x^4}} .
+\end{align*}
+
+So at the point $(a/2, f(a/2))$, the tangent line has slope
+\begin{align*}
+     \frac{dy}{dx}\Big|_{x=a/2} &=  -\frac{\left( \frac{a}{2} \right)^2}{\sqrt{a^4-\left( \frac{a}{2} \right)^4}} \\
+                                             &= -1/\sqrt{15} .
+\end{align*}
+
+So at the point $(a/2,f(a/2))$ the tangent line to the curve has equation
+\[
+   y = \int_{a/2}^2   \frac{u^2}{\sqrt{a^4-u^4}} \, du - \frac{1}{\sqrt{15}}\left( x - \frac{a}{2} \right) .
+\]
+
+\item Slicing the region perpendicular to the $x$-axis, the area of a differential slice is
+\[
+     dA = y\, dx = \left(   \int_x^a \frac{u^2}{\sqrt{a^4-u^4}} \, du \right) \, dx .
+\]
+So the area of the region bounded by the curve $y=f(x)$ and the coordinate axes is
+\[
+   A = \int_0^a       \left(   \int_x^a \frac{u^2}{\sqrt{a^4-u^4}} \, du \right) \, dx .
+\]
+
+But now we run into two problems. The first is that double integrals our not part of this class. The second is that even if they were, it's still not clear how to evaluate this double integral.
+
+So instead we slice the region perpendicular to the $y$-axis. Then the area of a differential slice is
+\[
+      dA = x\, dy .
+\]
+
+But since
+\[
+      \frac{dy}{dx} =  \frac{-x^2}{\sqrt{a^4 - x^4}} ,
+\]
+\[
+   dy =  \frac{-x^2}{\sqrt{a^4 - x^4}} \, dx
+\]
+and 
+\[
+   dA = x \, dy =  \frac{-x^3}{\sqrt{a^4 - x^4}} \, dx .
+\]
+
+Letting the $y$-intercept have coordinates $(0,b) \sim (0,0.599a)$, the area of the region is
+\begin{align*}
+           A &= \int_0^{b} x\, dy  \\
+               &= \int_a^0 \frac{-x^3}{\sqrt{a^4 - x^4}} \, dx  \\
+               &= \frac{1}{2}a^2 ,
+\end{align*}
+where the last equality follows by making the substitution $u=x^4$ (the details are left for you). 
+\end{enumerate}
+
+\end{explanation}
 \end{question}
 
 \section{Happy Birthday!}
@@ -83,6 +167,47 @@ Rotate two copies of the rectangular elastica of Question 1 about the $y$-axis a
 \item Find an expression for the volume of the balloon in the form $V=ka^3$, for some constant $k$.
 
 \item Use Line 9 of the worksheet above to approximate the constant $k$.
+
+\begin{explanation}
+Slicing the solid perpendicular to the $y$-axis through the point $(x,f(x),0)$, the cross-section is a circle with radius $x$ and area
+\[
+       A = \pi x^2 .
+\]
+So the differential slice with thickness $dy$ has differential volume
+\begin{align*}
+       dV &= \pi x^2 \, dy  \\
+            &= \frac{-x^4}{\sqrt{a^4 - x^4}} \, dx .
+\end{align*} 
+
+And with $(0,b)$ the coordinates of the $y$-intercept of the curve $y=f(x)$, the solid has volume
+\begin{align*}
+    V &= \pi \int_0^b x^2 \, dy  \\
+       &= \pi \int_a^0   \frac{-x^4}{\sqrt{a^4 - x^4}} \, dx \\
+       &= \pi a^3 \int_0^1 \frac{v^4}{\sqrt{1-v^4}} \, dv \\
+        &\sim 0.437 \pi a^3 .
+\end{align*}
+
+As a check, we compare this with the volume $V_c$ of the surrounding right circular cylinder with radius $a$ and height $b \sim 0.6a$. The ratio of volumes is
+\[
+ \frac{V}{V_c} \sim \frac{0.437 \pi a^3}{0.6\pi a^3} \sim 0.73 .
+\]
+
+To better understand this ratio, we compare it with the ratio of the area $A = 0.5a^2$ of the region of rotation and the area $A_R \sim 0.6a^2$ of the surrounding rectangle. This ratio of areas is
+\[
+  \frac{A}{A_R} \sim \frac{0.5a^2}{0.6a^2} \sim 0.83.
+\]
+
+I'm not quite sure about this, but it should be that
+\[
+       \left( \frac{A}{A_R} \right)^{3/2}  < \frac{V}{V_c} < \frac{A}{A_R} ,
+\]
+which is the case here since
+\[
+      \left( \frac{A}{A_R} \right)^{3/2} \sim 0.54 .
+\]
+
+
+\end{explanation}
 
 \end{enumerate}
 
