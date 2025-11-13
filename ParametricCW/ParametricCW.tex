@@ -50,7 +50,7 @@ The key idea is to work with their \emph{signed} areas. Cutting perpendicular to
  dA & = y \, dx \\
       & = g(t) d(f(t)) \\
       & = g(t) (f^\prime(t) \, dt) \\
-      & = g(t) f^\prime (t) dt .
+      & = g(t) f^\prime (t) \, dt .
 \end{align*}
 
 And so the region bounded by the green curve and the $x$-axis has signed area
@@ -58,7 +58,7 @@ And so the region bounded by the green curve and the $x$-axis has signed area
    A = \int_0^4 g(t) f^\prime(t) \, dt.
 \]
 
-Let's stop and think a minute about what we mean by signed area. The sign of the differential area $dA$ depends upon \emph{both} the signs of $y=g(t)$ and $dx = f^\prime (t) dt$. For our example $y = g(t) \geq 0$, and $dA$ has the same sign as $dx$. 
+Let's stop and think a minute about what we mean by signed area. The sign of the differential area $dA$ depends upon \emph{both} the signs of $y=g(t)$ and $dx = f^\prime (t) \, dt$. For our example $y = g(t) \geq 0$, and so $dA$ has the same sign as $dx$. 
 
 \begin{enumerate}
 
@@ -68,6 +68,7 @@ Let's stop and think a minute about what we mean by signed area. The sign of the
 \[
       A_1(t) = \int_0^t g(u) f^\prime(u) \, du.
 \] 
+Then drag the slider $u$ in Line 2 to $u=0$ and activate the folder \emph{Graph of signed area function, slices perp to $x$-axis} in Line 16. Drag $u$ to $u=b=4$ and see the graph of the signed area function. Compare it with your graph.
 
 \item How is the integral 
 \[
@@ -77,6 +78,115 @@ related to the area of the region bounded by the $x$A-axisa and the curve $(x,y)
 \begin{freeResponse}
 \end{freeResponse}
 
+We can also take our differential rectangles perpendicular to the $y$=axis. Then
+\[
+   dA = x \, dy = \answer{f(t) g^\prime(t)}\, dt .
+\]
+
+\item Repeat parts (a)-(c) above for these differential rectangles and the signed area function
+\[
+     A_2(t) = \int_0^t f(u) g^\prime(u) \, du .
+\]
+
+\item Now use the actual coordinate functions
+\[
+     x = f(t) = t^2 - 3t + 3 \, , \, 0\leq t \leq 4
+\]
+and
+\[
+   y = g(t) = 4t - t^2 \, , \, 0\leq t \leq 4
+\]
+to compute the area of the region bounded by the $x$-axis and the curve
+\[
+   (x,y) = (f(t), g(t)) \, , \, 0\leq t \leq 4.
+\]
+Do this twice. Once with slices perpendicular to the $x$-axis and again with slices perpendicular to the $y$-axis.
+
 \end{enumerate}
+
+\section{Exercises}
+
+\begin{exercise}  \label{EOfidf3r3r2}
+
+This question is about the circle
+\[
+     (x,y) = (f(\theta), g(\theta)) = (a \cos \theta , b+a\sin\theta) \, , \, 0\leq \theta \leq 2\pi .
+\]
+Here $a,b$ are positive constants measured in meters.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{weihqr1fxu}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/weihqr1fxu}{152: Parametric 3}
+
+\begin{enumerate}
+
+\item What 
+\item Use the worksheet above to sketch by hand the signed area functions
+\[
+     A_1(\theta) = \int_0^{t} g(t) f^\prime (t) \, dt
+\]
+and
+\[
+  A_2 (\theta) = \int_0^{t} f(t) g^\prime (t) \, dt .
+\]
+
+\item Evaluate the integrals
+\[
+       A_1(2\pi) = \int_0^{2\pi} g(\theta) f^\prime (\theta) \, d\theta
+\]
+and 
+\[
+   A_2(2\pi) = \int_0^{2\pi} f(\theta)g^\prime (\theta) \, d\theta 
+\]
+\emph{geometrically}.
+
+\emph{Hint:} Use the graph of the function
+\[
+     A = a^2 \sin^2\theta \, , \, 0\leq \theta \leq \pi
+\]
+shown below. Work in general, not with the specific value of $a$ in the worksheet.
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{dsoqsyyfba}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/dsoqsyyfba}{152: Sine Squared}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise} \label{EKdfe34dfds}
+Use the parameteriziation
+\[
+    (x,y) = (a\cos\theta, a \sin\theta) \, , \, 0\leq \theta \leq 2\pi,
+\]
+of the circle with radius $a$ meters centered at the origin to find an expression for the volume of a sphere with the same radius.
+
+\end{exercise}
+
+\begin{exercise} \label{Epdfsderenn}
+Find the area bounded by the astroid
+\[
+ (x,y) = (a\cos^3\theta, a \sin^3\theta) \, , \, 0\leq \theta \leq 2\pi ,
+\]
+where $a>0$ is a constant measured in meters.
+\end{exercise}
+
+
+\begin{exercise}  \label{EKDferf3vbbb}
+Find the area bounded by the ellipse
+\[
+   \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1, 
+\]
+where $a,b>0$ are constants measured in meters. 
+
+Start by parameterizing the ellipse.
+\end{exercise}
 
 \end{document}
