@@ -45,6 +45,73 @@ Volume.
 
 \item How can you explain the difference between the fractions in parts (b) and (f)?
 
+\item One last question. Suppose the paraboloid is a tank that is partly filled with water that takes up half the volume of the tank.  Express the depth of the water in terms of the height $h$ of the tank.
+
+Drag the slider $b$ in Line 3 of the workhsheet below to check your work. 
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{ejuarpozjx}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/ejuarpozjx}{152: Paraboloid 2}
+
+\begin{explanation}
+To answer part (h), let $b$ be the depth of the the water (in meters) that takes up half the volume of the tank and let $y=cx^2$ be an equation of the parabola in the first worksheet above.
+
+The segment $AB$ with endpoints $A(0,y)$ on the $y$-axis and $B(x,y)$ on the parabola sweeps out a disk with radius $x$ and area
+\[
+    A = \pi x^2 .
+\]
+So the corresponding differential slice with thickness $dy$ has volume
+\[
+    dV = \pi x^2 \, dy .
+\]
+
+But since $B(x,y)$ lies on the parabola $y=cx^2$, 
+\[
+ x^2 = y/c.
+\]
+and
+\[
+   dV = \pi x^2 \, dy = \frac{\pi}{c} y \, dy .
+\]
+
+Summing these differential volumes gives the volume
+\[
+    V_t = \int_0^h  \frac{\pi}{c} y \, dy 
+\]
+of the tank. 
+
+Similarly the volume of the water with depth $b$ is
+\[
+ V_w = \int_0^b  \frac{\pi}{c} y \, dy  .
+\]
+
+Since the water takes up half the volume of the tank,
+\[
+       \int_0^b  \frac{\pi}{c} y \, dy = \frac{1}{2} \int_0^h \frac{\pi}{c} y \, dy .
+\]
+
+So
+\[
+      \int_0^b y \, dy = \frac{1}{2} \int_0^h y \, dy 
+\]
+and
+\[
+    \frac{b^2}{2} = \frac{h^2}{4} .
+\]
+Then since $b,h>0$, 
+\[
+  b = \frac{h}{\sqrt{2}} .
+\]
+
+So the tank is half full when the depth of the water is $h/\sqrt{2} \sim 0.707h$ meters.
+
+\end{explanation}
+
+
 \end{enumerate}
 \end{question}
 
