@@ -41,9 +41,21 @@ The question we would like to address here is to compute the unsigned (ie. posit
   (x,y) = (f(t), g(t)) \, , \, 0\leq t \leq 4 .
 \]
 
+We'll use with the demonstration below, where the graphs of the coordinate functions are hidden.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{z9ndh3wvvv}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/z9ndh3wvvv}{152: Parametric 2B}
+
+
+
 As usual, our first choice is to decide which way to slice the region and we'll start by slicing perpendicular to the $x$-axis. But this is not really an accurate description because the differential slices run from the $x$-axis to the curve and do not always lie within the region. 
 
-To see this, move the slider the slider $u$ in Line 2 to $u=0.50$ and the slider $v = \Delta t$ in Line 4 to $v=0.3$. You'll see a shaded rectangle that does not lie within the region. Nevertheless, we can use these differential rectangles to compute the area of the region.
+To see this, drag the slider the slider $u$ in Line 2 to move the differential rectangle. Sometimes the rectangle lies below the region, other times it lies partly within and partly below the region, and at other times completely within the region. Nevertheless, we can use these differential rectangles to compute the area of the region.
 
 The key idea is to work with their \emph{signed} areas. Cutting perpendicular to the $x$-axis, the differential rectangles have signed area
 \begin{align*}
@@ -58,7 +70,7 @@ And so the region bounded by the green curve and the $x$-axis has signed area
    A = \int_0^4 g(t) f^\prime(t) \, dt.
 \]
 
-Let's stop and think a minute about what we mean by signed area. The sign of the differential area $dA$ depends upon \emph{both} the signs of $y=g(t)$ and $dx = f^\prime (t) \, dt$. For our example $y = g(t) \geq 0$, and so $dA$ has the same sign as $dx$. 
+Let's stop and think a minute about what we mean by signed area. The sign of the differential area $dA$ depends upon \emph{both} the signs of $y=g(t)$ and $dx = f^\prime (t) \, dt$. For our example $y = g(t) \geq 0$, $dt>0$, and so $dA$ has the same sign as $dx$. 
 
 \begin{enumerate}
 
@@ -68,13 +80,13 @@ Let's stop and think a minute about what we mean by signed area. The sign of the
 \[
       A_1(t) = \int_0^t g(u) f^\prime(u) \, du.
 \] 
-Then drag the slider $u$ in Line 2 to $u=0$ and activate the folder \emph{Graph of signed area function, slices perp to $x$-axis} in Line 16. Drag $u$ to $u=b=4$ and see the graph of the signed area function. Compare it with your graph.
+Then drag the slider $u$ in Line 2 to $u=0$ and activate the folder \emph{Graph of signed area function, slices perp to $x$-axis} in Line 7. Drag $u$ to $u=b=4$ and see the graph of the signed area function. Compare it with your graph.
 
 \item How is the integral 
 \[
   A_1(4) = \int_0^4 g(t) f^\prime(t) \, dt
 \]
-related to the area of the region bounded by the $x$A-axisa and the curve $(x,y) = (f(t), g(t))$? Explain your reasoning.
+related to the area of the region bounded by the $x$-axi and the curve $(x,y) = (f(t), g(t))$? Explain your reasoning.
 \begin{freeResponse}
 \end{freeResponse}
 
