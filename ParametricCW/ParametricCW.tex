@@ -208,4 +208,69 @@ where $a,b>0$ are constants measured in meters.
 Start by parameterizing the ellipse.
 \end{exercise}
 
+\section{Burning Gas}
+
+\begin{example} \label{Ex:KDfdfer3dsferER}
+
+The function
+\[
+    r = f(s) \, , \, 0 \leq s \leq 240,
+\]
+expresses the rate at which a car burns gas (in gal/mile) in terms of the trip odometer reading (in miles) during a $240$-mile trip.
+
+The car has $14$ gallons of gas at odometer reading $100$ miles.
+
+The function 
+\[
+      s = g(t) \, , \, 0\leq t \leq 4 ,
+\]
+expresses the car's trip odometer reading (in miles) in terms of the number of hours since the start of the trip.
+
+\begin{enumerate}
+\item Find a function 
+\[
+      G = w(s) \, , \, 0 \leq s \leq 240,
+\]
+that expresses the number of gallons of gas in the car in terms of the trip odometer reading.
+
+\item Make a substitution in your expression from part (a) to find a function 
+\[
+  G = h(t) \, , \, 0 \leq s \leq 240,
+\]
+that expresses the number of gallons of gas in the car in terms of the number of hours since the start of the trip.
+
+\item Your function for part (b) should have been
+\[
+     G = h(t) = 14 - \int_{100}^t f(g(u))g^\prime(u)  \, du .
+\]
+
+Interpret the integral in this expression in two different ways.
+
+\begin{enumerate}
+\item By writing it as
+\[
+   \int_{100}^t f(g(u))(  g^\prime(u)  \, du )
+\]
+and describing the meaning of the product $g^\prime(u)\, du$.
+
+\item By keeping its original form and describing the meaning of the product $f(g(u))g^\prime(u)$.
+
+\end{enumerate}
+
+\item Drag the slider $w$ in Line 2 of the worksheet below to change the odometer reading function $g$. Describe what happens.
+
+\end{enumerate}
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{gsdzd0lbva}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/gsdzd0lbva}{Substitution and Gas Comsumption 2}
+
+\end{example}
+
+
+
 \end{document}
