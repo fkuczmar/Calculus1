@@ -84,18 +84,24 @@ of these differential arclengths.
 \section{Circles}
 
 \begin{example} \label{Ex:Ld3214v}
-Let $a>0$ be a constant with units of meters.
+This problem is about the semicircle
+\[
+   y = f(x) = \sqrt{a^2-x^2},
+\]
+where the constant $a>0$ is measured in meters.
 
 \begin{enumerate}
-\item Find a function
+\item Use integration to find an expression for the function
 \[
-     s = f(w) , -a \leq w \leq a , 
+     s = g(w) , -a \leq w \leq a , 
 \] 
-that expresses the distance from a point $(w,f(w))$ on the semicircle
+that gives the distance from the point $A(a,0)$ to the point $P$ with coordinates $(w,f(w))$ on the semicircle
 \[
-    y = f(x) = \sqrt{a^2 - x^2}
+    y = f(x) = \sqrt{a^2 - x^2} .
 \] 
-to the point $(a,0)$. Measure the distance along the semicircle.
+Measure the distance from $A$ to $P$ along the semicircle. 
+
+\emph{Start by expressing the differential arclength $ds$ along the semicircle in terms of the differential change $dx$.}
 
 \begin{onlineOnly}
     \begin{center}
@@ -105,13 +111,76 @@ to the point $(a,0)$. Measure the distance along the semicircle.
 
 \href{https://www.desmos.com/calculator/rmeuvbnjds}{152: ArcLength Semicircle}
 
+\item Interpret your result in part (a) geometrically.
+
+\item Sketch by hand a graph of the function $s=g(x)$. Then activate the folder \emph{Arclength Function} in Line 11 above to see how you did.
+
+\item Express $g^\prime(x)$ in terms of $f^\prime(x)$.
+
+\item Express the coordinates of $P$ in terms of its distance $s$ from $(a,0)$ as measured along the semi-circle.
 
 
 \end{enumerate}
 
 \end{example}
 
-\section{Parameterizing a Trail by Arclength}
+\begin{example}
+Let $a>0$ be a constant measured in meters.
+
+Use integration to find an expression for the function 
+\[
+   s = f(\phi) \, , \, 0\leq \phi < 2\pi,
+\]
+that gives the distance from the point $A(a,0)$ to the point $P$  with coordinates $(a\cos\phi, a\sin\phi)$ on the circle
+\[
+     (x,y) = (a\cos\theta, a\sin\theta) \, , \, 0\leq \theta < 2\pi ,
+\]
+in terms of $\phi$. Measure the distance from $A$ to $P$ counterclockwise along the circle.
+
+\emph{Start by expressing the differential arclength $ds$ along the semicircle in terms of the differential change $d\theta$.}
+
+
+\end{example}
+
+
+
+\section{Parameterizing an Astroid by Arclength}d
+
+\begin{example} \label{ExKFmefrr3r9}
+This example is about the curve (an astroid)
+\[
+    (x,y) = (a \cos^3\theta , a\sin^3\theta) \, , \, 0\leq \theta \leq 2\pi,
+\]
+where $a>0$ is a constant measured in meters.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{up6jvtmspl}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/up6jvtmspl}{152: Astroid}
+
+\begin{enumerate}
+\item Find an expression for the function 
+\[
+   s = f(\phi) \, , \, 0\leq \phi < 2\pi,
+\]
+that gives the distance from the point $A(a,0)$ to the point $P$  with coordinates $(a\cos^3\phi, a\sin^3\phi)$ on the astroid
+\[
+     (x,y) = (a\cos^3\theta, a\sin^3\theta) \, , \, 0\leq \theta < 2\pi ,
+\]
+in terms of $\phi$. Measure the distance from $A$ to $P$ counterclockwise along the curve.
+
+\emph{Start by expressing the differential arclength $ds$ along the astroid in terms of the differential change $d\theta$.}
+
+\item Evaluate $f(\pi/2)$ and interpret its meaning. Compare this distance with the straight-line distance from $(a,0)$ to $(0,a)$. 
+
+\item Express the coordinates of a point $P$ on the curve in terms if its distance $s$ from $A$ measured counterclockwise along the astroid.
+
+\end{enumerate}
+
+\end{example}
 
 
 \section{Trail Profiles}
