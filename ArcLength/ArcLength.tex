@@ -11,5 +11,110 @@ Arclength.
 
 \section{The Ideas}
 
+We'll speak of our curves as trails and assume they lie in a vertical plane (they don't twist around a mountain like a real trail usually does).
+
+The constant case for computing the length of a trail is when the trail makes a constant angle $\phi$ with the horizontal. This means that the trail  is a line segment and looks just like a ramp.
+
+In this case, if the endpoints of the ramp have coordinates $(x_1, y_1)$ and $(x_2, y_2)$, the ramp has length
+\[
+   \Delta s = \sqrt{(\Delta x)^2 + (\Delta y)^2} ,
+\]
+where
+\[
+  \Delta x = x_2 - x_1
+\]
+and
+\[
+ \Delta y = y_2 - y_1 .
+\]
+
+It can be helpful to express the length in terms of the inclination angle $\phi$ of the ramp. Here we have two possibilities assuming $\Delta s \geq 0$. They are
+\[
+     \Delta s = \left| \Delta x  \right| \answer{\sec\phi}
+\] 
+or
+\[
+    \Delta s = \left| \Delta y  \right| \answer{\csc\phi} .
+\]
+
+For a general trail, where the inclination angle is not necessarily constant, the Pythagorean theorem tells us the differential arclength is
+\[
+  ds = \sqrt{(dx)^2+(dy)^2} .
+\]
+We can write this in terms of the inclination angle $\phi$ (that now can vary along the curve) as
+\[
+  ds = \sec\phi \, dx
+\]
+or
+\[
+ ds = \csc\phi \, dy .
+\]
+
+When the equation of a trial is expressed as a function $y=f(x)$, we usually write
+\begin{align*}
+   ds  &= \sqrt{(dx)^2+(dy)^2} \\
+         &= \sqrt{1+\left( \frac{dy}{dx} \right)^2}\,  |dx| \\
+        &= \sqrt{1+\left( \frac{dy}{dx} \right)^2}\,  dx
+\end{align*}
+if $dx>0$.
+
+I like to think of 
+\[
+  \sqrt{1+\left( \frac{dy}{dx} \right)^2} \geq 1,
+\]
+as a dimensionless scaling factor that converts a differential change $dx$ along the horizontal to a differential arclength along the trial.
+
+\begin{question} \label{QoERer3439}
+\begin{enumerate}
+\item Express the derivative $dy/dx$ in terms of the inclination angle $\phi$.
+
+\item Express the scaling factor $\sqrt{1+\left( \frac{dy}{dx} \right)^2}$ in terms of $\phi$.
+\end{enumerate}
+\end{question}
+
+
+
+Finally, the length of the trail between points $(a,b)$ and $(c,d)$ (with $c>a$) is the sum 
+\[
+   \int_a^c \sqrt{1+\left( \frac{dy}{dx} \right)^2}\,  dx
+\]
+of these differential arclengths.
+
+
+\section{Circles}
+
+\begin{example} \label{Ex:Ld3214v}
+Let $a>0$ be a constant with units of meters.
+
+\begin{enumerate}
+\item Find a function
+\[
+     s = f(w) , -a \leq w \leq a , 
+\] 
+that expresses the distance from a point $(w,f(w))$ on the semicircle
+\[
+    y = f(x) = \sqrt{a^2 - x^2}
+\] 
+to the point $(a,0)$. Measure the distance along the semicircle.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{rmeuvbnjds}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/rmeuvbnjds}{152: ArcLength Semicircle}
+
+
+
+\end{enumerate}
+
+\end{example}
+
+\section{Parameterizing a Trail by Arclength}
+
+
+\section{Trail Profiles}
+
 
 \end{document}
