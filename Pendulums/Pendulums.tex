@@ -9,7 +9,7 @@ Pendulums.
 \end{abstract}
 \maketitle
 
-\section{The Area of a Circle}
+\section{The Cycloidal Track}
 
 \begin{center}  
 \youtube{jTN8UY_9xV0}  
@@ -17,15 +17,92 @@ Pendulums.
 
 \href{https://www.youtube.com/watch?v=jTN8UY_9xV0}{Cycloid Track}
 
+\begin{example}  \label{EWxer3tr34r}
 
+There are several ways to show that the cycloid is a \emph{tautochrone}. The most insightful uses vectors and we'll do this next quarter. But for  now, here's maybe the second best approach.
 
+We'll start with a paramterization 
+\[
+      (x,y) = \left( a\theta + a \sin\theta , a - a\cos\theta \right) \, , \, -\pi\leq \theta \leq  \pi ,
+\]
+of the cycloid shown in the rectangular coordinate system below, where the parameter $a$ has units of meters.
 
 \begin{onlineOnly}
     \begin{center}
-\desmos{2pe3pmtjyv}{900}{600}
+\desmos{x6qb4zs2rq}{900}{600}
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/calculator/2pe3pmtjyv}{152: Unwrapping Semicircle}
+\href{https://www.desmos.com/calculator/x6qb4zs2rq}{152: Cycloidal Pendulum 1}
+
+We'll start by computing the time for a mass to reach the bottom of the cycloid, assuming the mass is released from rest at the top of the cycloid.
+
+For this, we need just a bit of physics. Supposing the ball to slide along the cycloid without friction, we know the ball's mechanical energy 
+\[ 
+   E = mgh + \frac{1}{2} mv^2
+\]
+is constant. Here $m$ (in kg) is the ball's mass, $h$ (in meters) its height, and $v$ (in m/sec) its speed.  The constant $g\sim 9.8\text{ (m/sec)/sec)}$ is the magnitude of acceleration due the force of gravity near the surface of the earth.
+
+We'll measure the gravitational potential energy $mgh$ from the $y$-axis, so that $h=y$. 
+
+Assuming the ball is released from the top of the cycloid at parameter $\theta=\pi$, the constant mechanical energy of the ball (in terms of $m$, $g$, and $a$) is 
+\[
+  E = \answer{2mga} .
+\]
+
+So when the mass has height $y$ meters,
+\[
+      mgy +  \frac{1}{2} mv^2 = \answer{2mga}
+\]
+and since $v\geq 0$,
+\[
+   v = \answer{\sqrt{g(4a - y )}} .
+\]
+
+Now to compute the time of descent, we first analyze the constant case, the one where speed is constant. Then to travel $\Delta s$ meters at a consant speed of $v$ meters/sec takes
+\[
+   \Delta t = \answer{\frac{\Delta s}{v}} \text{ sec}.
+\]
+
+So to compute the descent time from the release point $(a\pi, 2a)$ to the low point $(0,0)$, we'll sum the differential times
+\[
+   dt = \answer{\frac{ds}{v}} \text{ sec}
+\]
+for the mass to travel the differential distances $ds$ meters along the cycloid.
+
+In order to compute these differential times, we'll need to express the speed as a function of the distance $s$, measured in meters  along the cycloid from the release point $A(\pi a, 2a)$.
+
+For this, we'll first express the differential arclength $s$ in terms of the parameter $\theta$ as 
+\begin{align*}
+   ds & = \sqrt{(dx)^2 + (dy)^2}    \\
+       & = \sqrt{\left( d (a\theta + a \sin\theta)\right)^2 + ( d(a - a\cos\theta))^2}  \\
+       & = \sqrt{\answer{(a + a\cos\theta)^2 + a^2\sin^2\theta}} \, d\theta ,
+\end{align*}
+where the last equality assumes $d\theta \geq 0$.
+
+A little algebra shows 
+\[
+    ds = a \sqrt{2 + 2\cos\theta} \, d\theta .
+\]
+
+Now using the double angle formula
+\[
+  \cos \theta = 2\cos^2 (\theta/2)  - 1
+\]
+gives
+\[
+      ds = \answer{2a\cos(\theta/2)} \, d\theta,  \, , \, -\pi \leq \theta \leq \pi.
+\]
+
+Now we'll sum these differential distances to get the distance along the cycloid measured from $A$ (where $\theta=0$) to the point $P$ with parameter $\theta$. Then
+
+\begin{align*}
+    s  &= \answer{2a}\int_0^\theta \cos(\theta/2) \, d\theta \\
+       & \  \answer{4a \sin(\theta/2)} \, , \, -\pi \leq \theta \leq \pi.
+\end{align*}
+
+
+\end{example}
+
 
 \end{document}
