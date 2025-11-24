@@ -19,7 +19,7 @@ Pendulums.
 
 \begin{example}  \label{EWxer3tr34r}
 
-There are several ways to show that the cycloid is a \emph{tautochrone}. The most insightful uses vectors and we'll do this next quarter. But for  now, here's maybe the second best approach.
+There are several ways to show that the cycloid is a \emph{tautochrone} (ie. that the period of oscillation is independent of the release point). The most insightful uses vectors and we'll do this next quarter. But for  now, here's what might be the second best approach.
 
 We'll start with a paramterization 
 \[
@@ -35,17 +35,17 @@ of the cycloid shown in the rectangular coordinate system below, where the param
 
 \href{https://www.desmos.com/calculator/x6qb4zs2rq}{152: Cycloidal Pendulum 1}
 
-We'll start by computing the time for a mass to reach the bottom of the cycloid, assuming the mass is released from rest at the top of the cycloid.
+We'll start by computing the time for a mass released from the top of the cycloid to reach the low point (at the origin). %bottom of the cycloid, assuming the mass is released from rest at the top of the cycloid.
 
-For this, we need just a bit of physics. Supposing the ball to slide along the cycloid without friction, we know the ball's mechanical energy 
+For this, we need some physics. Supposing the ball to slide along the cycloid without friction implies the ball's mechanical energy 
 \[ 
    E = mgh + \frac{1}{2} mv^2
 \]
-is constant. Here $m$ (in kg) is the ball's mass, $h$ (in meters) its height, and $v$ (in m/sec) its speed.  The constant $g\sim 9.8\text{ (m/sec)/sec)}$ is the magnitude of acceleration due the force of gravity near the surface of the earth.
+is constant. Here $m$ (in kg) is the ball's mass, $h$ its height (in meters), and $v$ (in m/sec) its speed.  The constant $g\sim 9.8\text{ (m/sec)/sec)}$ is the magnitude of acceleration due the force of gravity near the surface of the earth.
 
 We'll measure the gravitational potential energy $mgh$ from the $y$-axis, so that $h=y$. 
 
-Assuming the ball is released from the top of the cycloid at parameter $\theta=\pi$, the constant mechanical energy of the ball (in terms of $m$, $g$, and $a$) is 
+Assuming the ball is released from the top of the cycloid at parameter $\theta=\pi$, the mechanical energy of the ball (in terms of $m$, $g$, and $a$) is 
 \[
   E = \answer{2mga} .
 \]
@@ -56,7 +56,7 @@ So when the mass has height $y$ meters,
 \]
 and since $v\geq 0$,
 \[
-   v = \answer{\sqrt{g(4a - y )}} .
+   v = \answer{\sqrt{2g(2a - y )}} .
 \]
 
 Now to compute the time of descent, we first analyze the constant case, the one where speed is constant. Then to travel $\Delta s$ meters at a consant speed of $v$ meters/sec takes
@@ -65,14 +65,30 @@ Now to compute the time of descent, we first analyze the constant case, the one 
 \]
 
 So to compute the descent time from the release point $(a\pi, 2a)$ to the low point $(0,0)$, we'll sum the differential times
+\begin{align*}
+   dt    &= \frac{ds}{v} \text{ sec} \\
+          &= \frac{ds}{\sqrt{2g(2a - y )}}
+\end{align*}
+for the mass to travel the differential distances $ds$ meters along the cycloid at a speed of $v = \sqrt{g(4a - y )}$ m/sec.
+
+Here we have a choice. We could either
+\begin{enumerate}
+\item express both $ds$ and $y$ in terms of $\theta$, or
+
+\item express $y$ in terms of the arclength parameter $s$, measured from the top of the cylcloid at height $2a$ to height $y$.
+\end{enumerate}
+
+We'll do both. 
+
+For the first, the parameterization tells us
 \[
-   dt = \answer{\frac{ds}{v}} \text{ sec}
+  y = \answer{a - a\cos\theta} \, , \, -\pi \leq \theta \leq \pi.
 \]
-for the mass to travel the differential distances $ds$ meters along the cycloid.
 
-In order to compute these differential times, we'll need to express the speed as a function of the distance $s$, measured in meters  along the cycloid from the release point $A(\pi a, 2a)$.
 
-For this, we'll first express the differential arclength $s$ in terms of the parameter $\theta$ as 
+%In order to compute these differential times, we'll express the speed as a function of the distance $s$, measured in meters  along the cycloid from the release point $A(\pi a, 2a)$.
+
+So it remains only to express express the differential arclength $s$ in terms of the parameter $\theta$ as 
 \begin{align*}
    ds & = \sqrt{(dx)^2 + (dy)^2}    \\
        & = \sqrt{\left( d (a\theta + a \sin\theta)\right)^2 + ( d(a - a\cos\theta))^2}  \\
@@ -91,15 +107,42 @@ Now using the double angle formula
 \]
 gives
 \[
-      ds = \answer{2a\cos(\theta/2)} \, d\theta,  \, , \, -\pi \leq \theta \leq \pi.
+      ds = \answer{2a\cos(\theta/2)} \, d\theta  \, , \, -\pi \leq \theta \leq \pi.
 \]
 
-Now we'll sum these differential distances to get the distance along the cycloid measured from $A$ (where $\theta=0$) to the point $P$ with parameter $\theta$. Then
+So the time (in seconds) for the mass to traverse the differential distance $ds$ (meters) at height $y=a(1-\cos\theta)$ meters is
+\begin{align*}
+   dt & = \frac{ds}{v} \\
+       & = \frac{\answer{2a\cos(\theta/2)}\, d\theta}{\sqrt{2ga(1+\cos\theta)}} .
+\end{align*}
+
+And since $-\pi \leq \theta \leq \pi$, using the double-angle formula for $\cos\theta$ gives the surprising result that
+\[
+    dt = \answer{\sqrt{\frac{a}{g}}} \, d\theta .
+\]
+
+So the quarter-period of oscillation (in seconds) for a mass released from the top of the cycloid is
+\[
+   T = \int_0^{\answer{\pi}} \sqrt{\frac{a}{g}} \, d\theta  =\answer{\pi \sqrt{a/g}}
+\]
+and the full period
+\[
+     4T = 4\pi \sqrt{\frac{a}{g}} \text{ sec}.
+\]
+
+
+
+
+
+
+Summing these differential distances along the cycloid measured from $A$ (where $\theta=\pi$) to the point $P$ with parameter $\theta$ gives the distance $AP$ along the cycloid as
 
 \begin{align*}
     s  &= \answer{2a}\int_0^\theta \cos(\theta/2) \, d\theta \\
        & \  \answer{4a \sin(\theta/2)} \, , \, -\pi \leq \theta \leq \pi.
 \end{align*}
+
+Here we have two choices. One is to stick with the parameter $\theta$. Then
 
 
 \end{example}
