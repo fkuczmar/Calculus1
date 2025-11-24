@@ -125,24 +125,36 @@ So the quarter-period of oscillation (in seconds) for a mass released from the t
 \[
    T = \int_0^{\answer{\pi}} \sqrt{\frac{a}{g}} \, d\theta  =\answer{\pi \sqrt{a/g}}
 \]
-and the full period
+and full period
 \[
      4T = 4\pi \sqrt{\frac{a}{g}} \text{ sec}.
 \]
 
 
+Or we can get the same result by expressing the differential time 
+\begin{align*}
+  dt &= \frac{ds}{v}  \\
+      &= \frac{ds}{\sqrt{2g(2a-y)}}  
+\end{align*} 
+in terms of $s$. This amounts to expressing $y$ in terms of $s$.
 
-
-
-
-Summing these differential distances along the cycloid measured from $A$ (where $\theta=\pi$) to the point $P$ with parameter $\theta$ gives the distance $AP$ along the cycloid as
+For this, we'll first express $s$ in terms of $\theta$ by summing the differential distances $ds = 2a\cos(\theta/2)\, d\theta$ along the cycloid measured from $A$ (where $\theta=\pi$) to the point $P$ with parameter $\theta$. This shows the distance $AP$ along the cycloid is
 
 \begin{align*}
     s  &= \answer{2a}\int_0^\theta \cos(\theta/2) \, d\theta \\
        & \  \answer{4a \sin(\theta/2)} \, , \, -\pi \leq \theta \leq \pi.
 \end{align*}
 
-Here we have two choices. One is to stick with the parameter $\theta$. Then
+And using the double-angle formula
+\[
+  \cos \theta = 1 -2\sin^2(\theta/2) ,
+\]
+tells us that
+\begin{align*}
+         y &= a(1 -\cos\theta)  \\
+            &=2a \sin^2 (\theta/2) \\
+            &= \frac{s^2}{\answer{8a}} .
+\end{align*}
 
 
 \end{example}
