@@ -14,6 +14,11 @@ Pendulums.
 \begin{example} \label{ExKdfMMefr3989}
 A cycloid is the curve traced by a point attached to a circle as the circle rolls on a line.
 
+Drag the slider $\theta_2$ in Line 2 of the worksheet below to roll the circle.
+
+On which line does the circle roll? Explain how you know.
+\begin{freeResponse}
+\end{freeResponse}
 
 \begin{onlineOnly}
     \begin{center}
@@ -23,7 +28,7 @@ A cycloid is the curve traced by a point attached to a circle as the circle roll
 
 \href{https://www.desmos.com/calculator/rs6esnvlfi}{152: Cycloidal Pendulum 2}
 
-We'll parameterize the cycloid above traced by the point $P$ in terms of the marked rotation angle $\theta$ of the rolling circle.  with radius $a$ meters. Do this as follows. 
+We'll parameterize the cycloid above traced by the point $P$ in terms of the marked rotation angle $\theta$ (called $\theta_2$ in the worksheet above) of the rolling circle.  with radius $a$ meters. Do this as follows. 
 
 \begin{enumerate}
 \item Express the components of the vector $\overrightarrow{OC}$ from the origin to the center of the circle in terms of $\theta$ and the radius $a$ of the circle.
@@ -89,9 +94,9 @@ For this, we need some physics. Supposing the ball to slide along the cycloid wi
 \]
 is constant. Here $m$ (in kg) is the ball's mass, $h$ its height (in meters), and $v$ (in m/sec) its speed.  The constant $g\sim 9.8\text{ (m/sec)/sec)}$ is the magnitude of acceleration due the force of gravity near the surface of the earth.
 
-We'll measure the gravitational potential energy $mgh$ from the $y$-axis, so that $h=y$. 
+We'll measure the ball's gravitational potential energy $mgh$ upward from the $y$-axis, so that $h=y$. 
 
-Assuming the ball is released from the top of the cycloid at parameter $\theta=\pi$, the mechanical energy of the ball (in terms of $m$, $g$, and $a$) is 
+We'll assume the the ball is released from the top of the cycloid at parameter $\theta=\pi$ and first express the speed of the ball in terms of its height $y$. In this case the mechanical energy of the ball (in terms of $m$, $g$, and $a$) is always
 \[
   E = \answer{2mga} .
 \]
@@ -115,7 +120,7 @@ So to compute the descent time from the release point $(a\pi, 2a)$ to the low po
    dt    &= \frac{ds}{v} \text{ sec} \\
           &= \frac{ds}{\sqrt{2g(2a - y )}}
 \end{align*}
-for the mass to travel the differential distances $ds$ meters along the cycloid at a speed of $v = \sqrt{g(4a - y )}$ m/sec.
+for the mass to travel the differential distances $ds$ meters along the cycloid at speeds of $v = \sqrt{g(4a - y )}$ m/sec.
 
 Here we have a choice. We could either
 \begin{enumerate}
@@ -134,7 +139,7 @@ For the first, the parameterization tells us
 
 %In order to compute these differential times, we'll express the speed as a function of the distance $s$, measured in meters  along the cycloid from the release point $A(\pi a, 2a)$.
 
-So it remains only to express express the differential arclength $s$ in terms of the parameter $\theta$ as 
+So it remains only to express express the differential arclength $s$ in terms of the parameter $\theta$. Here's the computation.
 \begin{align*}
    ds & = \sqrt{(dx)^2 + (dy)^2}    \\
        & = \sqrt{\left( d (a\theta + a \sin\theta)\right)^2 + ( d(a - a\cos\theta))^2}  \\
@@ -159,10 +164,10 @@ gives
 So the time (in seconds) for the mass to traverse the differential distance $ds$ (meters) at height $y=a(1-\cos\theta)$ meters is
 \begin{align*}
    dt & = \frac{ds}{v} \\
-       & = \frac{\answer{2a\cos(\theta/2)}\, d\theta}{\sqrt{2ga(1+\cos\theta)}} .
+       & = \frac{\answer{2a\cos(\theta/2)}\, d\theta}{\sqrt{2ga(\answer{1+\cos\theta})}} .
 \end{align*}
 
-And since $-\pi \leq \theta \leq \pi$, using the double-angle formula for $\cos\theta$ gives the surprising result that
+And since $-\pi \leq \theta \leq \pi$, we know $\sqrt{\cos^2(\theta/2)} = \cos(\theta/2)$ and using the double-angle formula for $\cos\theta$ gives the surprising result that
 \[
     dt = \answer{\sqrt{\frac{a}{g}}} \, d\theta .
 \]
