@@ -643,4 +643,71 @@ So the area of the region is
 \end{question}
 
 
+\section{Quiz8A}
+
+\begin{question} \label{Q9dfrkDF}
+The base of a solid is the parabolic region below with base $b = 2a$ and height $h$. Cross-sections perpendicular to the $y$-axis
+are rectangles half as tall (in the direction perpendicular to the base) as they are wide.
+
+
+ 
+\begin{onlineOnly}
+    \begin{center}
+\desmos{mbxrsmdho8}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/mbxrsmdho8}{152: Parabola 23}
+
+Express the volume of the solid in terms of b and h. Explain your reasoning.
+
+
+\begin{explanation}
+Let the right endpoint $B$ of the dashed segment above have coordinates $(x,y)$. Then the left endpoint $A$ has coordinates $(-x,y)$.
+
+The rectangular cross-section above segment $\overline{AB}$ has width $2x$, height $x$, and area
+\[
+       A = 2x^2.
+\]
+So correpsonding slice with differential width $dy$ has differential volume
+\[
+ dV = A\, dy = 2x^2 \, dy.
+\] 
+
+To express $dV$ in terms of $y$, we need an equation of the parabola. This equation has the form $y=cx^2$ and since the parabola passes through the point $(a,h)$,
+\[
+           h = ca^2
+\]
+and
+\begin{align*}
+   c   & = \frac{h}{a^2} \\
+        &= \frac{h}{(b/2)^2} \\
+        &= \frac{4h}{b^2} .
+\end{align*}
+
+So the parabola has equation
+\[
+    y = \frac{4h}{b^2}x^2 .
+\]
+Then 
+\[
+  2x^2  = \frac{2b^2}{h} y
+\]
+and 
+\begin{align*}
+   dV = &= 2x^2 \, dy \\
+           &= \frac{2b^2}{h} y \, dy.
+\end{align*}
+
+The volume of the solid is the sum of these differential volumes as $y$ runs from $y=0$ to $y=h$. So the volume is
+\begin{align*}
+           V  & = \int_0^h  \frac{2b^2}{h} y \, dy \\
+               &= \frac{b^2}{h}y^2 \Big|_{y=0}^{y=h}  \\
+               & = b^2 h.
+\end{align*}
+
+\end{explanation}
+\end{question}
+
+
 \end{document}

@@ -5,7 +5,7 @@
 
 \begin{document}
 \begin{abstract}
-Review.
+Some problems for review.
 \end{abstract}
 \maketitle
 
@@ -34,7 +34,7 @@ that expresses the volume of water (measured in gallons) in the tank in terms of
 \begin{enumerate}
 \item Find an explicit expression for the function $g$ that does not have a definite integral.
 
-\item Assuming the water flows forever, determine if there is a large enough tank to hold all the water and not overflow? If so, compute the minimum volume of such a tank. If not, explain why.
+\item Assuming the water flows forever, determine if there is a tank that can hold all the water without overflowing? If so, compute the minimum volume of such a tank. If not, explain why.
 
 Use limits to justify your response.
 \end{enumerate}
@@ -105,5 +105,95 @@ Use trigonometric functions to parameterize the circle of radius $a$ cm centered
 \end{question}
 
 
+\begin{question} \label{QPDFDE3eg45r5r}
+This example is about the curve (an astroid)
+\[
+    (x,y) = (a \cos^3\theta , a\sin^3\theta) \, , \, 0\leq \theta \leq 2\pi,
+\]
+where $a>0$ is a constant measured in meters.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{up6jvtmspl}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/up6jvtmspl}{152: Astroid}
+
+\begin{enumerate}
+\item Find an expression for the function 
+\[
+   s = f(\phi) \, , \, 0\leq \phi < 2\pi,
+\]
+that gives the distance from the point $A(a,0)$ to the point $P$  with coordinates $(a\cos^3\phi, a\sin^3\phi)$ on the astroid
+\[
+     (x,y) = (a\cos^3\theta, a\sin^3\theta) \, , \, 0\leq \theta < 2\pi ,
+\]
+in terms of $\phi$. Measure the distance from $A$ to $P$ counterclockwise along the curve.
+
+\emph{Start by expressing the differential arclength $ds$ along the astroid in terms of the differential change $d\theta$.}
+
+\item Evaluate $f(\pi/2)$ and interpret its meaning. Compare this distance with the straight-line distance from $(a,0)$ to $(0,a)$. 
+
+\item Express the coordinates of a point $P$ on the curve in terms if its distance $s$ from $A$ measured counterclockwise along the astroid.
+
+\end{enumerate}
+\end{question}
+
+
+\begin{question} \label{QK76554s}
+The function
+\[
+    r = f(t) \, , \, 0 \leq t \leq 4,
+\]
+expresses the rate (in gal/mile) at which a car burns gas in terms of the number of hours past noon during a $240$-mile trip.
+
+The function 
+\[
+      s = g(t) \, , \, 0\leq t \leq 4 ,
+\]
+expresses the car's trip odometer reading (in miles) in terms of the number of hours past noon.
+
+The car has $14$ gallons of gas at 1:00pm.
+
+Which of the following functions express the number of gallons in the tank in terms of the number of hours past noon? Select all that apply and explain your reasoning.
+
+\begin{selectAll}
+\choice{$w(t) = 14 + \int_1^t f^\prime(u)g(u) \, du$}
+\choice{$w(t) = 14 + \int_1^t f(t)g^\prime(t) \, dt$}
+\choice[correct]{$w(t) = 14 + \int_1^t f(u)g^\prime(u) \, du$}
+\choice{$w(t) = 14 + \int_{g(1)}^{g(t)} f(u)g^\prime(u) \, du$}
+\choice[correct]{$w(t) = 14 + \int_{g(1)}^{g(t)} f(u) \, du$}
+\choice[correct]{$w(t) = 14 + f(t)g(t) - f(1)g(1) - \int_{1}^{t} f^\prime(u)g(u) \, du$}
+\end{selectAll}
+\end{question}
+
+\begin{question} \label{Q7878dfFGF}
+The function
+\[
+   u = f(t) = u_0 e^{rt} \, , \, 0\leq t \leq 240 ,
+\]
+expresses the consumption rate of Chromium (measured in $10^8$ tons/yr) in terms of the number of years since 1970. Here $u_0$ is the consumption rate at the start of 1970 and $r>0$ is a constant.
+
+At the start of 1970 the global reserves of Chromium totaled $R_0$ hundreds of millions of tons and would have been depleted in $s$ years had the consumption rate remained constant.
+
+\begin{enumerate}
+\item Experss $u_0$ in terms of $R_0$ and $s$.
+
+\item Find a function
+\[
+     R = g(t) \, , \, 0\leq t \leq 240,
+\]
+that expresses the remaining Chromium reserves (measured in $10^8$ tons/yr) in terms of the number of years since 1970. Assume the consumption rate described by the function $u=f(t)$.
+
+\item Find an expression in terms of $R_0$, $s$, and $r$ for the number of years since 1970 when the Chromium reserves were projected to be depleted had the consumption rate grew exponentially as described by the function $u=f(t)$.
+
+\item Check that your expression in part (c) has the correct units.
+\end{enumerate} 
+\end{question}
+
+\begin{question} \label{Q9derJJFe}
+Practice integration.
+\end{question}
 
 \end{document}
