@@ -709,5 +709,56 @@ The volume of the solid is the sum of these differential volumes as $y$ runs fro
 \end{explanation}
 \end{question}
 
+\section{Quiz 8B}
+
+\begin{question} \label{QUFeev3333}
+
+Use integration to express the volume of the red cone in terms of the area $A$ of its base and its height $h$. 
+
+Do this as  follows:
+
+\begin{enumerate}
+\item Establish a one-dimensional coordinate system as shown below.
+
+\item Use similar cones to express the area of the cross-section at coordinate $w$ in terms of $w$, $h$, and $A$.
+
+\item Find an expression for the differential volume of the slice.
+
+\item Integrate to find the volume of the cone.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{6pzlieihca}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/6pzlieihca}{152: Cone}
+
+\end{enumerate}
+
+\begin{explanation}
+Let $w$ be the distance from the vertex to the slicing plane and let $B$ be the area of the cross-section.  Then since the small and large cones have the same shape
+\[
+     \frac{B}{A} = \left(  \frac{w}{h} \right) ^2.
+\]
+So
+\[
+   B = A \left(  \frac{w}{h} \right) ^2
+\]
+and the slice with thickness differential $dw$ has differential volume
+\[
+    dV = A \left(  \frac{w}{h} \right) ^2 \, dw.
+\]
+Sum these volumes to get the volume of the cone,
+\begin{align*}
+    V &= A \int_0^h \left(  \frac{w}{h} \right) ^2 \, dw \\
+       &= \frac{A}{h^2} \int_0^h w^2 \, dw  \\
+       &= \frac{1}{3} Ah .
+\end{align*}
+\end{explanation}
+
+\end{question}
+
+
 
 \end{document}
