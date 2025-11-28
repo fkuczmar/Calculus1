@@ -354,7 +354,7 @@ and the car burns gas at the constant rate of
 
 So in the general case, during the differential time $dt$ hours the car burns
 \[
-   dG = f(t)g^\prime(t)\, dt
+  - dG = f(t)g^\prime(t)\, dt
 \]
 gallons of gas. 
 
@@ -372,7 +372,7 @@ Integration by parts then tells us that (f) is also correct.
 
 Make the substitution $u=g(v)$ in the expression for $-\Delta G$ above. Then 
 \[
-   du = g^\prime(t)\, dt
+   du = g^\prime(v)\, dv
 \]
 and
 \[
@@ -415,6 +415,30 @@ that expresses the remaining Chromium reserves (measured in $10^8$ tons/yr) in t
 
 \item Check that your expression in part (c) has the correct units.
 \end{enumerate} 
+
+\begin{explanation}
+\begin{enumerate}
+\item $u_0 = R_0 / s$.
+
+\item 
+\begin{align*}
+  R  &= g(t)   \\
+      &= R_0 + \int_0^t f(v)\, dv  \\
+      &= R_0 + \frac{R_0}{s} \int_0^t e^{rv} \, dv  \\
+      &= R_0 + \frac{R_0}{rs} (1 - e^{rt}) .
+\end{align*}
+
+\item If $R=0$, then
+\[
+   R_0 + \frac{R_0}{rs} (1 - e^{rt}) = 0
+\]
+and 
+\[
+    t = \frac{\ln(1+rs)}{r} . 
+\]
+
+\end{enumerate}
+\end{explanation}
 \end{question}
 
 \begin{question} \label{Q9derJJFe}
