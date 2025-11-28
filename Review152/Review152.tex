@@ -32,7 +32,7 @@ that expresses the volume of water (measured in gallons) in the tank in terms of
 \]
 
 \begin{enumerate}
-\item Find an explicit expression for the function $g$ that does not have a definite integral.
+\item Find an explicit expression for the function $g$.
 
 \item Assuming the water flows forever, determine if there is a tank that can hold all the water without overflowing? If so, compute the minimum volume of such a tank. If not, explain why.
 
@@ -43,7 +43,7 @@ Use limits to justify your response.
 \end{question}
 
 \begin{question} \label{QKdmfe3dv}
-The function 
+The continuous function 
 \[
    v = f(s) \, , \, 20\leq s \leq 70,
 \]
@@ -61,21 +61,132 @@ that expresses the time (measured in hours past noon) in terms of the trip odome
 \item Suppose now that the speed is a linear function of the odometer reading during this $50$-mile section of the trip. Suppose also the speed is $60$ miles/hour when the odometer reads $20$ miles and $40$ miles/hour when the odometer reads $70$ miles.
 
 \begin{enumerate}
-\item Find an explicit expression for the function $t=g(s)$ that does not have a definite integral.
+\item Find an explicit expression for the function $t=g(s)$.
 
 \item Find the exact clock time when the odometer reads $70$ miles. Then use a calculator to approximate this time to the nearest minute.
 \end{enumerate}
 \end{enumerate}
+
+
+\begin{explanation}
+\begin{enumerate}
+\item If the speed is constant at $v$ miles/hour, then the time it takes to travel $\Delta s$ miles is
+\[
+   \Delta t  =  \frac{\Delta s \text{ miles }}{v \text{ miles/hr}} \text{ hrs}  = \frac{\Delta s}{v} \text{ hrs}.
+\]
+
+If the speed is not constant, we divide the stretch of the trip from odometer reading $50$ miles to odometer reading $s$ miles into small intervals of length $ds$ miles over which the speeds are constant. The time to travel travel the distance $ds$ miles at a speed of $v = f(s)$ miles/hr is
+\[
+     dt = \frac{ds}{v} \text{ hrs}.
+\]
+Adding these differential times gives the time (in hours) to travel from odometer reading $50$ miles to odometer reading $s$ miles as
+\[
+     \Delta t = \int_{50}^s \frac{ds}{f(s)} .
+\]
+
+Since the odometer reads $50$ miles at time $t=4$ hours past noon, when the odometer reading is $s$ miles, the time is
+\begin{align*}
+    t  &= g(s)  \\
+        &= 4 + \Delta t \\
+        &= 4 + \int_{50}^s \frac{1}{f(x)} \, dx .
+\end{align*}
+
+\item The function
+\begin{align*}
+      v  &= f(s)   \\
+          &= 60 - \frac{2}{5} \left( s - 20 \right) \\
+          & = 68 - \frac{2}{5}s   \, , \, 20\leq s \leq 70, 
+\end{align*}
+expresses the speed (in miles/hr) in terms of the odometer reading (in miles). So by part (a)
+\[
+     t = g(s) = 4 + \int_{50}^s \frac{1}{68 - \frac{2}{5}x} \, dx.
+\]
+
+Making the substitution  
+\[
+    u=68 - \frac{2}{5}x 
+\]
+gives (details left for you)
+\begin{align*}
+     t  &= g(s) \\
+        &= 4 - \int_{50}^s \frac{1}{68 - \frac{2}{5}x} \, dx \\
+        &= 4 - \frac{5}{2}\int_{48}^{68-\frac{2}{5}s} \frac{1}{u}  \, du\\
+        & = 4 -   \left( \frac{5}{2}\ln |u|  \Big|_{u=48}^{u=68 - \frac{2}{5}s} \right)  \\
+        &= 4 - \frac{5}{2}\ln\left( \frac{68 - \frac{2}{5}s}{48} \right) .
+\end{align*}
+
+So at the odometer reading $s=70$ miles, the time is
+\begin{align*}
+  t &= g(70)  \\
+     & = 4 - \frac{5}{2}\ln\left( \frac{68 - \frac{2}{5}(70)}{48} \right) \\
+     &= 4 -\frac{5}{2}\ln\left( \frac{40}{48}\right) \\
+     & \sim  4.45 
+\end{align*}
+hours past noon. 
+
+\end{enumerate}
+
+\end{explanation}
 \end{question}
 
 \begin{question} \label{Q9de3rmre}
-Use trigonometric functions to parameterize the circle of radius $a$ cm mcentered at the origin. Then use the parameterization to compute
+Use trigonometric functions to parameterize the circle of radius $a$ cm centered at the origin. Then use the parameterization to compute
 
 \begin{enumerate}
 \item the sphere's volume and
 
 \item the sphere's surface area.
 \end{enumerate}
+
+\begin{explanation}
+ The parameterization in terms of the polar angle $\theta$ of the vector $\overrightarrow{OP}$ from the origin to a point $P(x,y)$ on the circle is 
+\[
+   (x,y) = (a\cos\theta, a \sin \theta) \, , \, 0\leq \theta \leq 2\pi.
+\]
+\begin{enumerate}
+\item Slice the sphere perpendicular to the $y$-axis, the cross section is a circle with radius $x = a\cos\theta$ and area
+\[
+ A = \pi a^2\cos^2\theta .
+\]
+The differential slice has width
+\[
+  dy = d(a\sin\theta) = a\cos\theta \, d\theta
+\]
+and volume
+\[
+  dV = A\, dy = \pi a^3\cos^3\theta \, d\theta .
+\]
+
+So the volume of the sphere is 
+\begin{align*}
+   V &= 2\pi a^3\int_0^{\pi/2} \cos^3\theta \, d\theta \\
+       &= 2\pi a^3 \int_0^{\pi/2} \cos^2\theta  \cos \theta\, d\theta \\
+       &= 2\i a^3 \int_0^{\pi/2} (1-\sin^2\theta ) \cos \theta\, d\theta 
+\end{align*}
+
+Making the substitution $u=\sin\theta$ gives
+\begin{align*}
+     V &= 2\pi a^3 \int_0^{\pi/2} (1-\sin^2\theta ) \cos \theta\, d\theta \\
+        &= 2\pi a^3 \int_0^1 (1-u^2) \, du  \\
+        &= \frac{4\pi}{3} a^3 .
+\end{align*}
+
+\item Slicing the sphere the same way, the differential surface swept out by the arclength $ds = a\, d\theta$ at distance $x = a\cos\theta$ from the $y$-axis has area
+\begin{align*}
+   dA  &= (2\pi x) \, ds \\
+         & = (2\pi a \cos\theta) (a\, d\theta) \\
+         & = 2\pi a^2 \cos\theta \, d\theta.
+\end{align*}
+
+So the surface area of the sphere is
+\begin{align*}
+    S &= 4\pi a^2 \int_0^{\pi/2} \cos\theta \, d\theta  \\
+       &= 4\pi a^2 .
+\end{align*}
+
+
+\end{enumerate}
+\end{explanation}
 \end{question}
 
 \begin{question} \label{QadFefeb}
@@ -102,6 +213,27 @@ Use trigonometric functions to parameterize the circle of radius $a$ cm centered
 \href{https://www.desmos.com/3d/0jqijhbw6z}{152: Golden Sphere}
 
 \end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+\item From the last question, since $y=a\sin\theta$,
+\[
+  dy = a\cos\theta\, d\theta.
+\]
+So
+\[
+  dA = 2\pi a (a \cos\theta \, d\theta) = 2\pi a \, dy   
+\]
+
+and the area of the spherical cap of height $h$ is
+\[
+   A = 2\pi a \int_{a-h}^h dy = 2\pi a h .
+\]
+
+\item Part (a) tells us that the zones all have the same area. Why?
+\end{enumerate}
+\end{explanation}
+
 \end{question}
 
 
@@ -123,7 +255,7 @@ where $a>0$ is a constant measured in meters.
 \begin{enumerate}
 \item Find an expression for the function 
 \[
-   s = f(\phi) \, , \, 0\leq \phi < 2\pi,
+   s = f(\phi) \, , \, 0\leq \phi < \pi/2,
 \]
 that gives the distance from the point $A(a,0)$ to the point $P$  with coordinates $(a\cos^3\phi, a\sin^3\phi)$ on the astroid
 \[
@@ -138,6 +270,48 @@ in terms of $\phi$. Measure the distance from $A$ to $P$ counterclockwise along 
 \item Express the coordinates of a point $P$ on the curve in terms if its distance $s$ from $A$ measured counterclockwise along the astroid.
 
 \end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+\item Since
+\[
+  dx = -3a\cos^2\theta \sin\theta \, d\theta
+\] 
+and
+\[
+  dy = 3a\sin^2\theta\cos\theta\, d\theta ,
+\]
+the differential arclength is
+\begin{align*}
+     ds &= \sqrt{(dx)^2 + (dy)^2}  \\
+         & = 3a\sqrt{\cos^2\theta \sin^2\theta (\cos^2\theta + \sin^2\theta)} \, d\theta \\
+         &= 3a\sqrt{\cos^2\theta \sin^2\theta} \, d\theta \\
+         & = 3a\cos\theta\sin\theta \text{ if } 0\leq \theta \leq \pi/2.
+\end{align*}
+
+Then the arclength from $\theta = 0$ to $\theta = \phi$ is
+\[
+    s = 3a \int_0^\phi  \cos\theta \sin\theta\, d\theta .
+\]
+
+Make the substitution $u=\sin\theta$. Then
+\begin{align*}
+      s &= f(\phi) \\
+         &= 3a \int_0^\phi  \cos\theta \sin\theta\, d\theta  \\
+         &= 3a\int_0^{\sin\phi} u \, du \\
+         & = \frac{3a}{2} \sin^2\phi . 
+ \end{align*}
+
+\item The arclength of the astroid from $(a,0)$ to $(0,a)$ in the first quadrant is
+\[
+   s =f(\pi/2) = 3a/2 = 1.5a.
+\]
+This is a bit more than the straight-line distance $\sqrt{2}a \sim 1.4a$ between these points.
+
+\item We can skip this one.
+\end{enumerate}
+\end{explanation}
+
 \end{question}
 
 
@@ -163,10 +337,61 @@ Which of the following functions express the number of gallons in the tank in te
 \choice{$w(t) = 14 + \int_1^t f(t)g^\prime(t) \, dt$}
 \choice[correct]{$w(t) = 14 + \int_1^t f(u)g^\prime(u) \, du$}
 \choice{$w(t) = 14 + \int_{g(1)}^{g(t)} f(u)g^\prime(u) \, du$}
-\choice[correct]{$w(t) = 14 + \int_{g(1)}^{g(t)} f(u) \, du$}
+\choice[correct]{$w(t) = 14 + \int_{g(1)}^{g(t)} f(g^{-1}(u)) \, du$}
 \choice[correct]{$w(t) = 14 + f(t)g(t) - f(1)g(1) - \int_{1}^{t} f^\prime(u)g(u) \, du$}
 \end{selectAll}
 \end{question}
+
+\begin{explanation}
+For the constant case, suppose the car burns gas at a constant rate of $r=f(t) = 0.03$ gal/mile and the car travels at a constant speed of $60$ miles/hr. Then 
+\[
+      s = g(t) = 60t \, , \, 0\leq t \leq 4
+\]
+and the car burns gas at the constant rate of
+\[
+    \left( 0.03 \frac{\text{ gal}}{\text{mile}} \right)\left(60 \frac{\text{ miles}}{\text{hour}}  \right) = f(t)g^\prime(t) \frac{\text{ gal}}{\text{hour}} .
+\]
+
+So in the general case, during the differential time $dt$ hours the car burns
+\[
+   dG = f(t)g^\prime(t)\, dt
+\]
+gallons of gas. 
+
+And from 1:00pm to time $t$ hours past noon, the car burns
+\[
+  - \Delta G =    \int_1^t f(v)g^\prime(v) \, dv
+\]
+gallons. Since the car has $14$ gallons of gas at 1:00pm, 
+\[
+ G = w(t) = 14 - \int_1^t f(v)g^\prime(v) \, dv
+\]  
+and (c) is correct.
+
+Integration by parts then tells us that (f) is also correct.
+
+Make the substitution $u=g(v)$ in the expression for $-\Delta G$ above. Then 
+\[
+   du = g^\prime(t)\, dt
+\]
+and
+\[
+      v = g^{-1}(u).
+\]
+So
+\begin{align*}
+    - \Delta G &= \int_1^t f(v)g^\prime(v) \, dv \\
+                   &= \int_{g(1)}^{g(t)} f(g^{-1}(u)) \, du 
+\end{align*}
+and (e) is correct.
+
+To understand this, note that $f(g^{-1}(u))$ gives the rate (in gal/hr) at which the car burns gas when the odometer reads $u$ miles. And the product 
+\[
+  f(g^{-1}(u)) \, du
+\]
+gives the number of gallons of gas the car burns as it travels $du$ miles. Summing these differential volumes from odometer readings $g(1)$ to $g(t)$ miles gives the number of gallons of gas the car burns from odometer reading $g(1)$ to odometer reading $g(t)$.
+
+\end{explanation}
 
 \begin{question} \label{Q7878dfFGF}
 The function
