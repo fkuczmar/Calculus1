@@ -1,0 +1,72 @@
+\documentclass{ximera}
+\title{Rates of Change, Gas Mileage}
+
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Limits in context.
+\end{abstract}
+\maketitle
+
+
+\pskip
+
+\section{Gas Mileage} 
+
+\begin{example} \label{Ex:9stghd8gfs}
+The function 
+\[
+   G = f(s) = \frac{2}{5} +\frac{1}{5000} \left( 40(s+2)^2 - (s+2)^3 \right) , \, 0\leq s \leq 23 ,
+\]
+expresses the number of gallons of gas in your car in terms of your distance from home. The distance is measured in miles along your route. 
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{xzkknfpkw3}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Desmos activity available at
+\href{https://www.desmos.com/calculator/xzkknfpkw3}{151: Gas as a Function of Distance}
+
+\begin{enumerate}
+\item Use the graph of the function $f$ shown above to determine if you are driving toward or away from home. Explain your reasoning.
+
+\item Find your average gas mileage (in miles/gallon) over the interval $s \in [8,18]$.
+
+\item Use the graph to approximate your gas mileage at the moment you are $18$ miles from home. Do this by zooming in on the appropriate point.
+
+\item Find an expression for the function $r=h(s)$, that gives your average gas mileage between distances $s$ miles and $18$ miles from home. Include the correct domain.
+
+\item Use the algebra of limits to determine your exact gas mileage at the moment you are $18$ miles from home.
+
+%(d) Use the graph to approximate your distance from home when your car was getting the best mileage. Explain your reasoning. 
+
+%(e) Use the graph to approximate your distance from home when your car was getting the least mileage. Explain your reasoning. 
+
+%(f) Use the algebra of limts to determine your best and worst gas mileages during the trip.
+
+\item Use the result of part (e) to approximate the change in the volume of gas
+\[
+    \Delta G = f(s)-f(18)
+\]
+in terms of the change
+\[
+   \Delta s = s - 18
+\]
+in your distance from home for values of $s$ near $18$ miles. What are the units of the scaling factor?
+
+\item Use the result of part (f) to approximate your distance from home when there are $1.9$ gallons of gas in your tank.
+
+%\item Find an expression for your average gas 
+
+\end{enumerate}
+
+
+\end{example}
+
+
+
+\end{document}
