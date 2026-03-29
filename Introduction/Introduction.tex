@@ -1,11 +1,11 @@
 \documentclass{ximera}
-\title{Introduction}
+\title{Introduction, Part 2}
 
 \newcommand{\pskip}{\vskip 0.1 in}
 
 \begin{document}
 \begin{abstract}
-Introduction to Differential Calculus
+Introduction to small changes and scaling factors.
 \end{abstract}
 \maketitle
 
@@ -48,7 +48,7 @@ in its area.
 
 \pskip
 
-(b) The data in the table above suggests an approximate proportional relationship between $\Delta A$ and $\Delta s$. We can guess the constant of proportionality from the fifth column. As $s\to 5$ (as $s$ approaches $5$), it looks like the ratio $\Delta A/\Delta s$ approaches some number, the constant of proportionality.
+(b) The data in the table above suggests an approximate proportional relationship between $\Delta A$ and $\Delta s$. We can guess the constant of proportionality from the fifth column. As $s\to 5$ (as $s$ approaches $5$), it looks like the ratio $\Delta A/\Delta s$ approaches some number, what we call the \emph{constant of proportionality} or the \emph{scaling factor}.
 
 i) What is that number? $\answer{10}$
 
@@ -63,12 +63,12 @@ So for $\Delta s \sim 0$, we suspect that
    \Delta A \sim \answer{10} \Delta s .
 \]
 
-(c) The constant of proportionality is called the derivative, in this case of the function $A=s^2$, at the input $s=5$. We write this as
+(c) The scaling factor is called the derivative, in this case of the function $A=s^2$, at the input $s=5$. We write this as
 \[
    \frac{dA}{ds}\Big|_{s=5} = \answer{10} .
 \]
 
-(d) We could have taken an algebraic approach to determe this constant of proportionality instead. The idea is to first simplfiy the quotient $\Delta A/\Delta s$ as
+(d) We could have taken an algebraic approach to determe the scaling instead. The idea is to first simplfiy the quotient $\Delta A/\Delta s$ as
 \begin{align*}
             \frac{\Delta A}{\Delta s} &= \frac{s^2-25}{s-5}  \\
                                                 &= \frac{(s + \answer{5})((s - \answer{5})}{s-5} \\
@@ -81,7 +81,7 @@ So, for example, if $s=4.99$, then
 \]
 as shown in the last column of the second row of the above table.
 
-The advantage of this algebraic approach is that we can now compute the proportionality constant as a limit:
+The advantage of this algebraic approach is that we can now compute the scaling factor as a limit:
 \begin{align*}
                     \frac{dA}{ds}\Big|_{s=5} &= \lim_{s\to 5} \frac{\Delta A}{\Delta s} \\
                                                          &=  \lim_{s\to 5} (s+\answer{5}) \\

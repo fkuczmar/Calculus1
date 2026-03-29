@@ -1,5 +1,5 @@
 \documentclass{ximera}
-\title{An Introduction to Differentiable Functions}
+\title{An Introduction to Differentiable Functions, Part 1}
 
 \newcommand{\pskip}{\vskip 0.1 in}
 
@@ -20,11 +20,11 @@ is just the slope of that line or the rate of change of the linear function.
 When the independent variable is time, we can interpret the derivative as an instantaneous rate of change.
 
 \begin{example}  \label{Ex:KJDmft4thghhgdf}
-The graph of the function 
+The function 
 \[
    T = f(m) \, ,  \, 0\leq m \leq 60,
 \]
-expressing the temperature (in $^\circ$C) of a cup of coffee in terms of the number of minutes past noon is shown below.
+expresses the temperature (in $^\circ$C) of a cup of coffee in terms of the number of minutes past noon. It's graph is shown below.
 
 \begin{onlineOnly}
     \begin{center}
@@ -36,27 +36,36 @@ expressing the temperature (in $^\circ$C) of a cup of coffee in terms of the num
 
 
 \begin{enumerate}
-\item Zoom in close enough to the point $P$ above to make the graph look like a straight line. Then approximate the slope of this line. Include units.
+\item Zoom in close enough to the point $P$ above to make the graph look like a straight line. Then approximate the slope of this line. Include units. Then interpret the meaning of the slope in part (a) in the context of this scenario.
 
-\item Use the resut of part (a) to interpret the value and the meaning of the derivative
-\[
-   \frac{dT}{dm} \Big|_{T=40} .
-\]
+\begin{freeResponse}
+\end{freeResponse}
 
-\item Repeat parts (a) and (b) for other temperatures by draggind the slider $T_0$ in Line 2 of the worksheet above. Then see if you can find a relationship between the temperature $T$ and the rate $dT/dm$ at which the temperature of the coffee is changing. 
+
+%Use the resut of part (a) to interpret the value and the meaning of the derivative
+%\[
+%   \frac{dT}{dm} \Big|_{T=40} .
+%\]
+
+\item Repeat part (a) for other temperatures by dragging the slider $T_0$ in Line 2 of the worksheet above. Make a table with two columns, temperature and slope. Then look for a relationship between the temperature $T$ and the rate at which the temperature of the coffee is changing. Summarize your observations.
+\begin{freeResponse}
+\end{freeResponse}
 
 \end{enumerate}
 
-You should have found that 
+You should have found at the moment the coffee's temperature is $40^\circ$C, its temperature is decreasing at the rate of $2^\circ$C/min. We write this sybmolically as
 \[
     \frac{dT}{dm} \Big|_{T=40} = -2^\circ\text{C}/\text{min}.
 \]
+
 This means that at the moment the temperature of the coffee is $40^\circ$C, the temperature is decreasing at the rate of $2^\circ$C/min. As long as we do not think too carefully about what exactly we mean by a moment in time, the meaning of the derivative is pretty clear.
 
 But while this interpretation of the derivative as an instantaneous rate of change is often useful, it is fairly limited in scope. Perhaps the biggest problem is that the idea of slope does not extend to higher dimensions. %I, we really should think about small changes.
 
 \end{example}
 
+
+\begin{example} \label{Exmefr3r430}
 A function $f:\mathbb{R}^2\to \mathbb{R}^2$, like the function
 \[
   (u,v) = f(x,y) = (0.2(x^2-y^2) , 0.4xy) ,
@@ -65,11 +74,11 @@ maps the two-dimensional plane to itself. You can get a feel for the gobal actio
 
 \begin{onlineOnly}
     \begin{center}
-\desmos{h4sslgjjyx}{450}{600}  
+\desmos{59nrhmvrka}{450}{600}  
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/calculator/h4sslgjjyx}{151: Complex Squaring Function}
+\href{https://www.desmos.com/calculator/59nrhmvrka}{151: Complex Squaring Function 2}
 
 By focusing on the shaded square you can get a feeling for the local action of the function near point $P$. Here $f$ maps this square to a square-like region with a different size and orientation. The image becomes more square-like by shrinking the side length $s$ of the original square (do this by dradding Slider $s$ in Line 4 toward $s=0.1$.
 
@@ -87,7 +96,9 @@ The other number is an angle. It is the angle through which we would rotate the 
 \end{enumerate}
 \end{question} 
 
-Fortuntately for us, because our class is about functions $f:\mathbb{R}\to \mathbb{R}$ that map the real line (or a subset thereof) to itself, rotations do not come into play. So the local behavior of such functions, at least where they are differentiable, can be described by just one number. This number, the derivative, measures the local stretching (or scaling) factor. 
+\end{example}
+
+Fortuntately for us, because our class is about functions $f:\mathbb{R}\to \mathbb{R}$ that map the real line (or a subset thereof) to itself, rotations do not come into play. So the local behavior of such functions, at least where they are differentiable, can be described by just one number. This number, the derivative, measures the local scaling factor. The factor converts a small change in the input to a function into an approximate change in its output.
 
 
 
