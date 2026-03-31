@@ -40,20 +40,28 @@ that expresses your height (in feet) above the ground in terms of the distance (
 
 For this, we'll assume the wheel has a radius of $30$ feet and that its center is $40$ feet above the ground.
 
+\begin{onlineOnly}
+    \begin{center}
+\desmos{q6wnvqhnpg}{450}{600}  
+\end{center}
+\end{onlineOnly}
 
+\href{https://www.desmos.com/calculator/q6wnvqhnpg}{151: Ferris Wheel 4}
 
-
-\end{enumerate}
- 
-
-
-The function
+Use the figure above to find an expression for the function $f$. Input your expression in the box below to check your work.
 \[
-      h = f(t)  \, , \, 0\leq t \leq 2.2 ,                     %= -2t^3+7t^2-8t+8 \, , \, 0\leq t \leq 2.2 ,
+    h  = f(s)  = \answer{40-30\cos(s/30)} .
 \]
-expresses the height of a balloon (in hundreds of feet) in terms of the number of minutes past noon.
 
-The graph of the function $h=f(t)$ is shown below.
+\item Now suppose the wheel stops after you have travelled just $15$ feet along your path. The wheel then turns through a small angle and stops again. Our aim is to determine if the small change
+\[
+       \Delta h = f(s) - f(15)
+\] 
+in your height is approximately proportional to the small change
+\[
+  \Delta s = s - 15
+\]
+in the distance you move along your path.
 
 \begin{onlineOnly}
     \begin{center}
@@ -62,6 +70,19 @@ The graph of the function $h=f(t)$ is shown below.
 \end{onlineOnly}
 
 \href{https://www.desmos.com/calculator/uolmkpi5yr}{151: Ferris Wheel 3}
+
+\begin{enumerate}
+\item First find a function 
+\[
+   r = m(v)
+\]
+that expresses the average rate of change in your height with respect to your distance travelled between distances $s=15$ feet and $s=v$ feet. Enter that expression below with the appropriate domain.
+\[
+  r = m(v) = \answer{\frac{30\cos(1/2) - 30\cos(v/30)}{v-15}} \, , \,  v \geq 0 \text{ and } v\neq \answer{15}.
+\]
+\end{enumerate}
+
+\end{enumerate}
 
 
 \end{question}
