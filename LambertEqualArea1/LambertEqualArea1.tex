@@ -1,0 +1,134 @@
+\documentclass{ximera}
+\title{Lambert's Equal-Area Map, Part 1}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Lambert's equal-area map.
+\end{abstract}
+\maketitle
+
+
+\section{Lambert's Equal-Area Map}
+
+
+You probably saw the idea of a scaling factor long before taking calculus. Look at a map of Seattle and you'll see a scale, probably near the bottom. It might be 2 miles/inch, or something like that. But you will not see such a scale on a map of the earth for the simple reason that one does not exist. The scale varies from place to place and is usually a function of latitude. Even at a specific location, there is often not one but infinitely many scaling factors that depend on the direction in which you head. 
+
+The worksheet below shows a way to create a map of the earth by wrapping a cylinder around its equator. The map sends each point of the earth to its nearest point on the cylinder (ie. straight out, directly away from the earth's axis of rotation). Unwrapping the cylinder gives Lambert's equal-area map, from the earth to the points in a rectangle.
+
+\begin{exploration}  \label{EdDkjkeFERerRd8}
+Drag the slider in Line 6  from $r_1=0$ to $r_1=1$ to uwrap the cylinder. Drag sliders $theta_1$, $\phi_1$ in LInes 2 and 4 to vary the longitude and latitude of the point on the sphere.
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{ehyvvttdeo}{800}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/ehyvvttdeo}{152: Mercator 0}
+
+\end{exploration}
+
+Suppose the earth has radius one. Lambert's map sends the circle of latitude $\phi$ (the angle between the plane of the equator and the segments from the sphere's center to points on the circle) to a circle on the cylinder with unit radius. So the map stretches the circle of latitude $\phi$, with radius $\cos\phi$, by the factor
+\[
+ \lambda_p = \frac{1}{\cos\phi}.
+\]
+This is the scaling factor along the circle in the east-west direction at latitude $\phi$.
+
+In the north-south direction the scaling factor is also a function of latitude. The key point is that the map sends a point on the circle of latitude $\phi$ to signed height
+\[
+    h = f(\phi) = \sin\phi 
+\]
+above the plane of the equator. So the scaling factor at latitude $\phi$ in the north-south direction is
+\[
+ \lambda_m = \frac{dh}{d\phi} = \cos \phi.
+ \]
+Drag the slider $m$ in Line 2 of the worksheet below to visualize the scaling factor.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{kbryuogdaj}{450}{600}  %qvk0mzy26u
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/kbryuogdaj}{151: Lambert Map Cosine Function}
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{vwxuwjvxyy}{450}{600}  %qvk0mzy26u
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/vwxuwjvxyy}{151: Lambert Map 2}
+
+
+
+
+
+\section{The Mercator Map}
+
+Watch this video.
+
+\href{https://www.nytimes.com/2025/08/19/world/africa/africa-map-mercator.html}{Equal Earth Projection}
+
+
+\section{Loxodromes}
+
+\href{https://mathcurve.com/courbes3d.gb/loxodromie/sphereloxodromie.shtml}{Rhumb Lines on the Sphere}
+
+For a curve on a sphere of radius $a$ that cuts the meridians at a fixed angle $\alpha$,
+\[
+  d\theta = \frac{\tan \alpha \, d\phi}{\cos\phi} ,
+\]
+where $\phi$ is the latitude and $\theta the longitude. Taking \theta = 0$ at the equator where $\phi=0$,
+\begin{align*}
+ \theta     &= \tan \alpha \int_0^{\phi^*} \sec \phi^* \, d\phi^*\\
+               &= \tan \alpha \operatorname{arctanh}(\sin\phi) .
+\end{align*}
+
+So
+\[
+   \sin\phi = \operatorname{tanh}(k \theta),
+\]
+where $k=\cot\alpha$.
+
+Because $-\pi/2 < \phi < \pi/2$,
+\[
+  \cos\phi =  \frac{1}{\cosh (k \theta)},
+\]
+a parameterization of the rhumb line by longitude is
+\[
+  (x,y,z) = \left( \frac{a\cos\theta}{\cosh(k\theta)} , \frac{a\sin\theta}{\cosh(k\theta)}  , a \tanh(k\theta)  \right) .
+\]
+
+
+And a parameterization by latitude,
+\[
+   (x,y,z) = \left(  a    \cos\phi  ,   a    \cos\phi    ,   a \sin \phi   \right)
+\]
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{6cqnjsuew7}{800}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/6cqnjsuew7}{152: Mercator 1}
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{rbcbxdrvcp}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\begin{onlineOnly}
+    \begin{center}
+\geogebra{mvp9zvge}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.geogebra.org/classic/mvp9zvge}{152: Mercator}
+
+\end{document}
