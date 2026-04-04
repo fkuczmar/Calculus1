@@ -70,10 +70,20 @@ that expresses the length of the shadow (in feet) in terms of the sun's inclinat
 \[
     \frac{ds}{d\theta}\Big|_{\theta = \arctan(1/2)} = \lim_{\alpha\to \arctan(1/2)} \left( \frac{50(\cot \alpha - 2)}{\alpha - \arctan(1/2)}\right)
 \]
-numerically. Do this as follows:
+numerically. This factor converts a small change
+\[
+   \Delta \theta = \theta - \theta_0 = \theta - \arctan(1/2)
+\] 
+in the inclination angle (measured in radians) of the setting sun into an approximation of the change
+\[
+     \Delta s = s - 100
+\]
+in the shadow's length (measured in feet).
+
+Approximate the scaling factor as follows:
 
 \begin{enumerate}
-\item First find a rough approximation by using the worksheet above where the tips of the shadow are shown at equal changes 
+\item First find a rough approximation by looking at the picture above where the tips of the shadows are shown at equal changes 
 \[
    \Delta \theta = \frac{\pi}{2n} = \frac{\pi}{68} \text{ (see Line 17 of the worksheet)}
 \]
@@ -91,7 +101,7 @@ in the inclination angle. Be sure to include units. Explain your reasoning.
 \[
    r = m(\alpha) = \frac{50(\cot \alpha  - \cot\theta_0)}{\alpha - \theta_0}
 \]
-for the average rate of change function. Do this by expressing the trig functions in terms of sine and cosine and doing some algebra.  %The result should be
+for the average rate of change function. Do this by expressing the cotangent function in terms of sine and cosine. Then do some algebra and use a trig identity.  %The result should be
 \[
    r = m(\alpha) = \frac{-50\sin(\answer{\alpha - \theta_0})}{(\answer{\sin\alpha \sin\theta_0})(\alpha - \theta_0)} .
 \]
