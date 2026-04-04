@@ -105,12 +105,37 @@ You'll need to use the fact that
  \lim_{\phi \to 0} \frac{\sin\phi}{\phi} = 1.
 \]
 
-The conclusion is
+The scaling factor is
 \begin{align*}
    \frac{ds}{d\theta}\Big|_{\theta = \theta_0}  &= \lim_{\alpha \to \theta_0} \frac{-50\sin(\alpha - \theta_0)}{(\sin\alpha \sin\theta_0)(\alpha - \theta_0)} \\ \\
-                                                                    &= \answer{\frac{-50}{\sin^2\theta_0}}.
+                                                                    &= -\frac{50}{\sin^2\theta_0}.
 \end{align*}
 
+\item Use the result of part (i) to find the exact value of the scaling factor when the shadow is $100$ feet long. Include units. Compare with your approximation in part (g).
+
+\item Approximate the change
+\[
+    \Delta s = f(\theta) - 100
+\]
+in the shadow's length (measured in feet) in terms of the small change
+\[
+ \Delta \theta = \theta - \arctan(1/2)
+\]
+in the inclination angle (measured in radians).
+
+\[
+       \Delta s \sim \answer{-250} \Delta \theta .
+\]
+
+\item A student explains the scaling factor
+\[
+   \frac{ds}{d\theta}\Big|_{s=100} = -250 \frac{\text{ft}}{\text{rad}}
+\]
+by claiming that when the shadow is 100 feet long and the inclination angle of the sun decreases by $1$ radian, the shadow's length  increases by about $250$ feet. 
+
+Is this correct? If so, explain why. If not explain why not and correct the statement.
+\begin{freeResponse}
+\end{freeResponse}
 
 \end{enumerate}
 \end{question}
