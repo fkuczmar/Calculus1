@@ -47,23 +47,70 @@ Note, the inclination angle is the angle the sun's rays make with the horizon.
 
 \item Find a function
 \[
-       s = f(\theta) \, , \, 0\leq \theta <\pi/2 ,
+       s = f(\theta) \, , \, 0 <  \theta  \leq \pi/2 ,
 \]
 that expresses the length of the shadow (in feet) in terms of the sun's inclination angle (in radians).
 
 \[
-     s = f(\theta) = \answer{50 \cot \theta} \, , \, 0\leq \theta <\pi/2.
+     s = f(\theta) = \answer{50 \cot \theta} \, , \, 0 < \theta \leq \pi/2.
 \]
 
-\item Find the exact inclination angle $\theta_0$ when the shadow has length $100$ feet. 
+\item Find the exact inclination angle $\theta_0$ when the shadow is $100$ feet long. 
 \[
-    \theta_0 = \answer{\arctan 2}.
+    \theta_0 = \answer{\arctan (1/2)}.
 \]
 
-\item Find an expression for the function $r=m(\alpha)$  that expresses average rate of change of the function $f$ between inclination angles $\theta$ and $\alpha$. Include the domain.
+\item Find an expression for the function $r=m(\alpha)$  that expresses average rate of change of the function $f$ between inclination angles $\theta_0$ and $\alpha$ for the angle $\theta_0$ in part (e). Include the domain.
 \[
-         r = m() = 
+         r = m(\alpha) = \answer{\frac{50(\cot \alpha - 2)}{\alpha - \arctan(1/2)}} \, , \,  0\leq \alpha <\pi/2 \text{ and } 
+\alpha \neq \answer{\arctan(1/2)} .
 \]
+
+\item Approximate the value of the scaling factor
+\[
+    \frac{ds}{d\theta}\Big|_{\theta = \arctan(1/2)} = \lim_{\alpha\to \arctan(1/2)} \left( \frac{50(\cot \alpha - 2)}{\alpha - \arctan(1/2)}\right)
+\]
+numerically. Do this as follows:
+
+\begin{enumerate}
+\item First find a rough approximation by using the worksheet above where the tips of the shadow are shown at equal changes 
+\[
+   \Delta \theta = \frac{\pi}{2n} = \frac{\pi}{68} \text{ (see Line 17 of the worksheet)}
+\]
+in the inclination angle. Be sure to include units. Explain your reasoning.
+\begin{freeResponse}
+\end{freeResponse}
+
+\item Next find a better approximation by inputting your expression for the function $r=m(\alpha)$ in Line 2 of the worksheet. Then reveal the average rate of change table in Line 3 by clicking the arrow at the left of the line. Summarize your findings.
+\begin{freeResponse}
+\end{freeResponse}
+
+\end{enumerate}
+
+\item Setting aside the particular value $\theta_0 = \arctan(1/2)$ of the inclination angle for the moment, simplify the expression
+\[
+   r = m(\alpha) = \frac{50(\cot \alpha  - \cot\theta_0)}{\alpha - \theta_0}
+\]
+for the average rate of change function. Do this by expressing the trig functions in terms of sine and cosine and doing some algebra.  %The result should be
+\[
+   r = m(\alpha) = \frac{-50\sin(\answer{\alpha - \theta_0})}{(\answer{\sin\alpha \sin\theta_0})(\alpha - \theta_0)} .
+\]
+
+\item Use the result of part (h) to find an expression for the scaling factor
+\[
+  \frac{ds}{d\theta}\Big|_{\theta = \theta_0} = \lim_{\alpha \to \theta_0} \frac{-50\sin(\alpha - \theta_0)}{(\sin\alpha \sin\theta_0)(\alpha - \theta_0)}  .
+\]
+You'll need to use the fact that
+\[
+ \lim_{\phi \to 0} \frac{\sin\phi}{\phi} = 1.
+\]
+
+The conclusion is
+\begin{align*}
+   \frac{ds}{d\theta}\Big|_{\theta = \theta_0}  &= \lim_{\alpha \to \theta_0} \frac{-50\sin(\alpha - \theta_0)}{(\sin\alpha \sin\theta_0)(\alpha - \theta_0)} \\ \\
+                                                                    &= \answer{\frac{-50}{\sin^2\theta_0}}.
+\end{align*}
+
 
 \end{enumerate}
 \end{question}
