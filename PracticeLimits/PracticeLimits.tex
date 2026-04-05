@@ -20,7 +20,7 @@ The function
 expresses the weight of an astronaut (measured in pounds) in terms of her distance from the center of the earth (measured in thousands of miles).
 
 \begin{enumerate}
-\item  Find an expression for the average rate of change in the astronaut's weight with respect to her distance from the earth's center between distances $r=b$ and $r=c$ thousands of miles from the center. Assume $b,c\geq 4$ and that $b\neq c$.
+\item  Find a fully-simplified expression for the average rate of change in the astronaut's weight with respect to her distance from the earth's center between distances $r=b$ and $r=c$ thousands of miles from the center. Assume $b,c\geq 4$ and that $b\neq c$.
 
 \item Use your \emph{expression from part (a) directly and the definition of the derivative} to find an expression (fully simplified) for the derivative
 \[
@@ -29,15 +29,131 @@ expresses the weight of an astronaut (measured in pounds) in terms of her distan
 
 \item Use part (b) to evaluate the derivative
 \[
-   \frac{dW}{dr}\Big|_{r=2} .
+   \frac{dW}{dr}\Big|_{r=5} .
 \]
 
 \item What are the units of the derivative above?
 
-\item Explain the meaning of the derivative in part (c) using the language of small changes.
+\item Explain the meaning of the derivative in part (c) using the language of scaling factors and small changes.
 \end{enumerate}
 
+\begin{explanation}
+\begin{enumerate}
+\item The average rate of change is
+\begin{align*}
+  \frac{\Delta W}{\Delta r} &= \frac{f(c) - f(b)}{c-b}  \\
+                                       &= \left(\frac{1}{c-b}\right) \left( \frac{2000}{c^2} - \frac{2000}{b^2} \right) \\
+                                       &=\left(\frac{2000}{c-b}\right) \left( \frac{b^2-c^2}{c^2 b^2} \right) \\
+                                        &=\left(\frac{2000}{c-b}\right) \cdot \frac{(b+c)(b-c)}{c^2 b^2}  \\
+                                        &= \frac{-2000(b+c)}{c^2 b^2} .
+\end{align*}
+
+\item The derivative is
+\begin{align*}
+           \frac{dW}{dr}\Big|_{r=b} &= \lim_{\Delta r\to 0} \frac{\Delta W}{\Delta r}  \\
+                                                 &= \lim_{\Delta c\to b} \frac{-2000(b+c)}{c^2 b^2}  \\
+                                                 &= -\frac{2000(b+b)}{b^2 b^2} \\
+                                                 &= -\frac{4000}{b^3} .
+\end{align*}
+
+\item The value of the derivative is
+\begin{align*} 
+                \frac{dW}{dr}\Big|_{r=2}  &=  \left(-\frac{4000}{r^3}\right) \Big|_{r=5} \\
+                                      &= -32 .
+\end{align*}
+
+\item The units of the derivative are pounds/(thousands of miles).
+
+\item The derivative
+\[
+       \frac{dW}{dr}\Big|_{r=2} = -32 \,\,  \frac{\text{lbs}}{\text{thousands of miles}}.
+\]
+is a scaling factor that converts a small change
+\[
+ \Delta r = r-5
+\]
+in the astronaut's distance (in thousands of miles) from the center of the earth into an approximation for the small change
+\[
+   \Delta W = W = f(5) = W - 80
+\]
+in her weight. This means that for $\Delta r \sim 0$
+\[
+   \Delta W \sim -32\Delta r .
+\]
+So if the astronaut's distance to the earth's center increased from $r=5$ miles to $r=5.1$ miles, her weight would change by approximately
+\begin{align*}
+  \Delta W  &\sim \left(  -32 \, \, \frac{\text{lbs}}{\text{thousands of miles}} \right) \left( 0.1 \text{ thousands of miles}  \right) \\
+                &= -3.2 \text{ lbs} .
+\end{align*}
+
+\end{enumerate}
+\end{explanation}
 \end{question}
+
+
+\begin{question}  \label{Qldfer33}
+\begin{enumerate}
+\item Find a function
+\[
+   G = f(P) \, , \, P>0 ,
+\]
+that expresses the number of gallons of gas you can buy with $\$100$ in terms of the price (measured in dollars/gallon).
+
+\item Sketch a graph of the function $f$ by hand.
+
+\item Find a fully-simplified expression for the average rate of change in the number of gallons of gas you can buy with $\$100$ with respect to the price (measured in dollars/gallon) between prices $P=a$ and $P=b$, both measured in dollars/gallon.
+
+\item Use your \emph{expression from part (c) directly and the definition of the derivative} to find an expression (fully simplified) for the derivative
+\[
+   \frac{dG}{dP}\Big|_{P=a} .
+\]
+
+\item What are the units of the derivative? Do \emph{not} simplify the units.
+
+\item Evaluate the derivative
+\[
+  \frac{dG}{dP}\Big|_{P=5} .
+\]
+
+\item  Explain the meaning of the derivative in part (f) using the language of scaling factors and small changes.
+\end{enumerate}
+\end{question}
+
+
+\begin{question} \label{Q9df93rv}
+Between speeds of $20$ miles/hour and $70$ miles/hour the gas mileage of a car (in miles/gallon) is a quadratic function $G=f(v)$ of its speed (in miles/hr). The graph of the function $f$ is shown below.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{6bbnti8zm5}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/6bbnti8zm5}{151: Gas Mileage Quadratic Function}
+
+\begin{enumerate}
+\item Find an expression for the function $G=f(v)$.
+
+\item Find a fully-simplified expression for the average rate of change in the gas mileage (in miles/gal) with respect to speed (measured in miles/gallon) between speeds $v=a$ and $v=b$, both measured in miles/hour.
+
+\item  Use your \emph{expression from part (b) directly and the definition of the derivative} to find an expression (fully simplified) for the derivative
+\[
+   \frac{dG}{dv}\Big|_{v=a} .
+\]
+
+\item What are the units of the derivative? Do \emph{not} simplify the units.
+
+\item Evaluate the derivative
+\[
+  \frac{dG}{dv}\Big|_{v=30} .
+\]
+
+\item  Explain the meaning of the derivative in part (e) using the language of scaling factors and small changes.
+
+\end{enumerate}
+\end{question}
+
+
 
 \begin{question} \label{QOidIdtgt4n}
 The function
@@ -70,7 +186,9 @@ Answer: The function is
    \frac{dr}{dv}\Big|_{v=40} .
 \]
 
-\item What are the units of the derivative above. Explain its meaning in terms of small changes.
+\item What are the units of the derivative above.? Do not simplify the units.
+
+\item Explain the meaning of the derivative in part (d) using the language of scaling factors and small changes.
 
 
 \end{enumerate}
@@ -100,22 +218,22 @@ expresses the area of a square (measured in square feet) in terms of its side le
 
 \item What are the units of the derivative in part (c).
 
-\item Explain the meaning of the derivative (c) in terms of small changes.
+\item Explain the meaning of the derivative (c) in terms scaling factors and small changes.
 
 \begin{explanation}
 You should have found that
 \[
     \frac{dA}{ds}\Big|_{s=5} = 10 \text{ ft}^2/\text{ft} .
 \]
-This means that if the change
+This is a scaling factor that converts a small change
 \[
     \Delta s = s-5 \sim 0,
 \]
-in the side length is small, and  
+in the side length to a good approximation of the change  
 \[
    \Delta A = f(s) - f(5) = f(s)-25
 \]
-is the resulting change in the area, the derivative is a good approximation to the average rate of change. That is,
+in the area. That is, for $\Delta s \sim 0$,
 \[
   \frac{\Delta A}{\Delta s} \sim \frac{dA}{ds}\Big|_{s=5} = 10 \text{ ft}^2/\text{ft},
 \]
