@@ -1,0 +1,230 @@
+\documentclass{ximera}
+\title{Looking Down on the Moon}
+
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Looking at a spherical cap on the moon.
+\end{abstract}
+\maketitle
+
+
+\pskip
+
+
+
+\begin{question}  \label{QKdf3Dfdrler33}
+
+This question is about looking at the moon from Artemis II.
+
+The idea is that the astronaouts can see a portion of the moon from any altitude above its surface. We wish to analyze how a small change in altitude changes the radius of the spherical cap in view. The radius is measured on the moon's surface. It is the orange arc shown below. Drag the slider $h$ (altitude, in thousands of miles) below to see how small changes in the altitude affect the radius of the spherical cap.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{paqpozwuxm}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/paqpozwuxm}{151: Spaceship above earth}
+
+Here is a two-dimensional cross-section of that picture.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{b5c4c7ba17}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/b5c4c7ba17}{151: Distance to Horizon 1}
+
+Drag point $P_2$ in the worksheet below to change the change $\Delta h$ in the altitude. Keep your eye on the change in the radius $\Delta s$ of the visible spherical cap and the ratio $\Delta s/\Delta h$ of changes.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{1oj7ofkmda}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/1oj7ofkmda}{151: Distance to Horizon 2}
+
+
+
+\begin{enumerate}
+
+\item Find a function
+\[
+       s = f(h) \, , \, h \geq >0
+\]
+that expresses the radius of the visible spherical cap (in miles) in terms of the altitude above the surface (in miles). Take the moon to be a perfect sphere of radius $1000$ miles.
+
+\[
+     s = f(h) = \answer{1000\arccos(1000/(1000+h))} \, , \, h \geq 0.
+\]
+
+Click the \emph{Hint} button above for help.
+\begin{hint}
+Use right triangle $\Delta OTP$ to find an expression for the radian measure of angle $\angle POT$. Then use this angle to find an expression for the arclength $AT$.
+
+Here are more details.
+
+\begin{enumerate}
+
+\item  Enter the two side lengths, measured in feet, in right triangle $\Delta OPT$ below.
+\[
+      OT = \answer{1000}
+\]
+and
+\[
+        OP = \answer{h+1000} .
+\]
+
+\pskip
+
+\item Let $\theta$ be the radian measure of $\angle TOP$. Write an equation with a trigonometric function of $\theta$ that relates the two lengths in part (i). Use the Math Editor tab to enter the trig function and the angle $\theta$.
+\[
+     \cos \theta = \answer{\frac{1000}{h+1000}}.
+\]
+
+\pskip
+
+\item Now solve the equation from part (ii) for $\theta$ in terms of $h$. Then use what you know about measuring arclength along a circle to find an expression for the function $f$. Use the Math Editor tab to help.
+\[
+      s = f(h) = \answer{1000 \arccos( \frac{1000}{h+1000})} .
+\]
+\end{enumerate}
+\end{hint}
+
+
+
+
+\item Now suppose we are $250$ miles above the lunar surface. Fill in the missing entries in the table below to approximate the scaling factor that converts a small change 
+\[
+  \Delta h = h - 250
+\]
+in altitude to a good approximation of the change
+\[
+  \Delta s = f(h) - f(250)
+\]
+in the radius of the visible spherical cap.
+
+\begin{center}
+  \begin{tabular}{ | c| c | c | c | c |}
+    \hline
+    $h$ (miles) & $s = f(h)$ (miles) & $\Delta h = h-250$ (miles)  & $\Delta s =f(h) - f(250)$ (miles) & $\Delta s/\Delta h \, (units?)$ \\ \hline
+     $247$ &  &  &   & \\ \hline
+    $248$ &  &  &   & \\ \hline
+    $249$ &  &  &   &  \\ \hline
+    $250$  &  &  &  &   \\ \hline
+    $251$ &  &  &   &  \\ \hline
+    $252$ &  &  &   &  \\ \hline
+    $253$ &  &  &   &  \\ \hline
+    \hline
+  \end{tabular}
+\end{center}
+
+\item Do the data above suggest that the quotients $\Delta s / \Delta h$ approach some number as $h$ approaches 165? If so, use the data to approximate that number. If not, explain why not.
+
+\item Make your own table similar to the one above to get a better approximation, correct to the nearest thousandth, to
+\[
+   \lim_{h\to 250} \frac{f(h) - f(250)}{h-250} .
+\]
+
+\item Use your result to the nearest thousandth, to approximate $\Delta s$ in terms of $\Delta h$ and enter your result below.
+\[
+  \Delta s \sim \answer{1.067} \Delta h , \text{ for } \Delta h \sim 0.
+\] 
+
+\item Find an expression for the function $r=m(\alpha)$  that expresses average rate of change of the function $f$ between inclination angles $\theta_0$ and $\alpha$ for the angle $\theta_0$ in part (e). Include the domain.
+\[
+         r = m(\alpha) = \answer{\frac{50(\cot \alpha - 2)}{\alpha - \arctan(1/2)}} \, , \,  0\leq \alpha <\pi/2 \text{ and } 
+\alpha \neq \answer{\arctan(1/2)} .
+\]
+
+\item Approximate the value of the scaling factor
+\[
+    \frac{ds}{d\theta}\Big|_{\theta = \arctan(1/2)} = \lim_{\alpha\to \arctan(1/2)} \left( \frac{50(\cot \alpha - 2)}{\alpha - \arctan(1/2)}\right)
+\]
+numerically. This factor converts a small change
+\[
+   \Delta \theta = \theta - \theta_0 = \theta - \arctan(1/2)
+\] 
+in the inclination angle (measured in radians) of the setting sun into an approximation of the change
+\[
+     \Delta s = s - 100
+\]
+in the shadow's length (measured in feet).
+
+Approximate the scaling factor as follows:
+
+\begin{enumerate}
+\item First find a rough approximation by looking at the picture above where the tips of the shadows are shown at equal changes 
+\[
+   \Delta \theta = \frac{\pi}{2n} = \frac{\pi}{68} \text{ (see Line 17 of the worksheet)}
+\]
+in the inclination angle. Be sure to include units. Explain your reasoning.
+\begin{freeResponse}
+\end{freeResponse}
+
+\item Next find a better approximation by inputting your expression for the function $r=m(\alpha)$ in Line 2 of the worksheet. Then reveal the average rate of change table in Line 3 by clicking the arrow at the left of the line. Summarize your findings.
+\begin{freeResponse}
+\end{freeResponse}
+
+\end{enumerate}
+
+\item Setting aside the particular value $\theta_0 = \arctan(1/2)$ of the inclination angle for the moment, simplify the expression
+\[
+   r = m(\alpha) = \frac{50(\cot \alpha  - \cot\theta_0)}{\alpha - \theta_0}
+\]
+for the average rate of change function. Do this by expressing the cotangent function in terms of sine and cosine. Then do some algebra and use a trig identity.  %The result should be
+\[
+   r = m(\alpha) = \frac{-50\sin(\answer{\alpha - \theta_0})}{(\answer{\sin\alpha \sin\theta_0})(\alpha - \theta_0)} .
+\]
+
+\item Use the result of part (h) to find an expression for the scaling factor
+\[
+  \frac{ds}{d\theta}\Big|_{\theta = \theta_0} = \lim_{\alpha \to \theta_0} \frac{-50\sin(\alpha - \theta_0)}{(\sin\alpha \sin\theta_0)(\alpha - \theta_0)}  .
+\]
+You'll need to use the fact that
+\[
+ \lim_{\phi \to 0} \frac{\sin\phi}{\phi} = 1.
+\]
+
+The scaling factor is
+\begin{align*}
+   \frac{ds}{d\theta}\Big|_{\theta = \theta_0}  &= \lim_{\alpha \to \theta_0} \frac{-50\sin(\alpha - \theta_0)}{(\sin\alpha \sin\theta_0)(\alpha - \theta_0)} \\ \\
+                                                                    &= -\frac{50}{\sin^2\theta_0}.
+\end{align*}
+
+\item Use the result of part (i) to find the exact value of the scaling factor when the shadow is $100$ feet long. Include units. Compare with your approximation in part (g).
+
+\item Approximate the change
+\[
+    \Delta s = f(\theta) - 100
+\]
+in the shadow's length (measured in feet) in terms of the small change
+\[
+ \Delta \theta = \theta - \arctan(1/2)
+\]
+in the inclination angle (measured in radians).
+
+\[
+       \Delta s \sim \answer{-250} \Delta \theta .
+\]
+
+\item A student explains the scaling factor
+\[
+   \frac{ds}{d\theta}\Big|_{s=100} = -250 \frac{\text{ft}}{\text{rad}}
+\]
+by claiming that when the shadow is 100 feet long and the inclination angle of the sun decreases by $1$ radian, the shadow's length  increases by about $250$ feet. 
+
+Is this correct? If so, explain why. If not explain why not and correct the statement.
+\begin{freeResponse}
+\end{freeResponse}
+
+\end{enumerate}
+\end{question}
+
+
+\end{document}
