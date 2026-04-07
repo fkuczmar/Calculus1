@@ -6,7 +6,7 @@
 
 \begin{document}
 \begin{abstract}
-Looking at a spherical cap on the moon.
+Looking at a spherical cap on the lunar surface.
 \end{abstract}
 \maketitle
 
@@ -19,7 +19,7 @@ Looking at a spherical cap on the moon.
 
 This question is about looking at the moon from Artemis II.
 
-The idea is that the astronaouts can see a portion of the moon from any altitude above its surface. We wish to analyze how a small change in altitude changes the radius of the spherical cap in view. The radius is measured on the moon's surface. It is the orange arc shown below. Drag the slider $h$ (altitude, in thousands of miles) below to see how small changes in the altitude affect the radius of the spherical cap.
+The idea is that the astronauts can see only a portion of the moon from any altitude above its surface. We wish to analyze how a small change in altitude changes the radius of the spherical cap in view. The radius is measured on the moon's surface. It is the orange arc shown below. Drag the slider $h$ (altitude, in thousands of miles) below to see how small changes in the altitude affect the radius of the spherical cap.
 
 \begin{onlineOnly}
     \begin{center}
@@ -39,7 +39,7 @@ Here is a two-dimensional cross-section of that picture.
 
 \href{https://www.desmos.com/calculator/b5c4c7ba17}{151: Distance to Horizon 1}
 
-Drag point $P_2$ in the worksheet below to change the change $\Delta h$ in the altitude. Keep your eye on the change in the radius $\Delta s$ of the visible spherical cap and the ratio $\Delta s/\Delta h$ of changes.
+Drag point $P_2$ toward $P_1$ in the worksheet below to change the change $\Delta h$ in the altitude. Keep your eye on the change in the radius $\Delta s$ of the visible spherical cap and the ratio $\Delta s/\Delta h$ of small changes.
 
 \begin{onlineOnly}
     \begin{center}
@@ -124,9 +124,9 @@ in the radius of the visible spherical cap.
   \end{tabular}
 \end{center}
 
-\item Do the data above suggest that the quotients $\Delta s / \Delta h$ approach some number as $h$ approaches 165? If so, use the data to approximate that number. If not, explain why not.
+\item Do the data above suggest that the quotients $\Delta s / \Delta h$ approach some number as $h$ approaches 250? If so, use the data to approximate that number. If not, explain why not.
 
-\item Make your own table similar to the one above to get a better approximation, correct to the nearest thousandth, to
+\item Make your own table similar to the one above to get a better approximation, correct to the nearest thousandth, of the scaling factor
 \[
    \lim_{h\to 250} \frac{f(h) - f(250)}{h-250} .
 \]
@@ -136,93 +136,25 @@ in the radius of the visible spherical cap.
   \Delta s \sim \answer{1.067} \Delta h , \text{ for } \Delta h \sim 0.
 \] 
 
-\item Find an expression for the function $r=m(\alpha)$  that expresses average rate of change of the function $f$ between inclination angles $\theta_0$ and $\alpha$ for the angle $\theta_0$ in part (e). Include the domain.
-\[
-         r = m(\alpha) = \answer{\frac{50(\cot \alpha - 2)}{\alpha - \arctan(1/2)}} \, , \,  0\leq \alpha <\pi/2 \text{ and } 
-\alpha \neq \answer{\arctan(1/2)} .
-\]
-
-\item Approximate the value of the scaling factor
-\[
-    \frac{ds}{d\theta}\Big|_{\theta = \arctan(1/2)} = \lim_{\alpha\to \arctan(1/2)} \left( \frac{50(\cot \alpha - 2)}{\alpha - \arctan(1/2)}\right)
-\]
-numerically. This factor converts a small change
-\[
-   \Delta \theta = \theta - \theta_0 = \theta - \arctan(1/2)
-\] 
-in the inclination angle (measured in radians) of the setting sun into an approximation of the change
-\[
-     \Delta s = s - 100
-\]
-in the shadow's length (measured in feet).
-
-Approximate the scaling factor as follows:
+\item We now find the exact scaling factor algebraically.
 
 \begin{enumerate}
-\item First find a rough approximation by looking at the picture above where the tips of the shadows are shown at equal changes 
+\item First find an expression for the function
 \[
-   \Delta \theta = \frac{\pi}{2n} = \frac{\pi}{68} \text{ (see Line 17 of the worksheet)}
+     h = f^{-1}(s) 
 \]
-in the inclination angle. Be sure to include units. Explain your reasoning.
-\begin{freeResponse}
-\end{freeResponse}
+that expresses the altitude in terms of the radius of the visible spherical cap, both measured in miles. Include the appropriate domain.
 
-\item Next find a better approximation by inputting your expression for the function $r=m(\alpha)$ in Line 2 of the worksheet. Then reveal the average rate of change table in Line 3 by clicking the arrow at the left of the line. Summarize your findings.
-\begin{freeResponse}
-\end{freeResponse}
+\item Then find a simplified expression for the average rate of change of the function $f^{-1}$ between radii $s=a$ and $s=b$ miles. You should get this:
+\begin{align*}
+     \frac{\Delta h}{\Delta s} &= \frac{f^{-1}(b) - f^{-1}(a)}{b-a} \\ \\
+                                          &=\left(\frac{1000}{\cos(\frac{a}{1000})\cos(\frac{b}{1000})}\right) \left( \frac{\cos(\frac{a}{1000}) - \cos(\frac{b}{1000}) }{b-a} \right) \\
+                                          &= \left(\frac{-1000}{\cos(\frac{a}{1000})\cos(\frac{b}{1000})}\right)                                    \left( \frac{2\sin\left( \frac{a+b}{2000}\right)  \sin\left(\frac{a-b}{2000}\right)}{b-a}  \right)   \\
+                                 &= \left(\frac{-2000 \sin\left( \frac{a+b}{2000}\right)}{\cos(\frac{a}{1000})\cos(\frac{b}{1000})}\right)                                     \left( \frac{\sin\left(\frac{a-b}{2000}\right)}{b-a}  \right)                                     
+ \end{align*}
+
 
 \end{enumerate}
-
-\item Setting aside the particular value $\theta_0 = \arctan(1/2)$ of the inclination angle for the moment, simplify the expression
-\[
-   r = m(\alpha) = \frac{50(\cot \alpha  - \cot\theta_0)}{\alpha - \theta_0}
-\]
-for the average rate of change function. Do this by expressing the cotangent function in terms of sine and cosine. Then do some algebra and use a trig identity.  %The result should be
-\[
-   r = m(\alpha) = \frac{-50\sin(\answer{\alpha - \theta_0})}{(\answer{\sin\alpha \sin\theta_0})(\alpha - \theta_0)} .
-\]
-
-\item Use the result of part (h) to find an expression for the scaling factor
-\[
-  \frac{ds}{d\theta}\Big|_{\theta = \theta_0} = \lim_{\alpha \to \theta_0} \frac{-50\sin(\alpha - \theta_0)}{(\sin\alpha \sin\theta_0)(\alpha - \theta_0)}  .
-\]
-You'll need to use the fact that
-\[
- \lim_{\phi \to 0} \frac{\sin\phi}{\phi} = 1.
-\]
-
-The scaling factor is
-\begin{align*}
-   \frac{ds}{d\theta}\Big|_{\theta = \theta_0}  &= \lim_{\alpha \to \theta_0} \frac{-50\sin(\alpha - \theta_0)}{(\sin\alpha \sin\theta_0)(\alpha - \theta_0)} \\ \\
-                                                                    &= -\frac{50}{\sin^2\theta_0}.
-\end{align*}
-
-\item Use the result of part (i) to find the exact value of the scaling factor when the shadow is $100$ feet long. Include units. Compare with your approximation in part (g).
-
-\item Approximate the change
-\[
-    \Delta s = f(\theta) - 100
-\]
-in the shadow's length (measured in feet) in terms of the small change
-\[
- \Delta \theta = \theta - \arctan(1/2)
-\]
-in the inclination angle (measured in radians).
-
-\[
-       \Delta s \sim \answer{-250} \Delta \theta .
-\]
-
-\item A student explains the scaling factor
-\[
-   \frac{ds}{d\theta}\Big|_{s=100} = -250 \frac{\text{ft}}{\text{rad}}
-\]
-by claiming that when the shadow is 100 feet long and the inclination angle of the sun decreases by $1$ radian, the shadow's length  increases by about $250$ feet. 
-
-Is this correct? If so, explain why. If not explain why not and correct the statement.
-\begin{freeResponse}
-\end{freeResponse}
-
 \end{enumerate}
 \end{question}
 
