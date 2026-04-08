@@ -1,0 +1,113 @@
+\documentclass{ximera}
+\title{Limits and Derivatives, Part 2}
+
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Limits in context.
+\end{abstract}
+\maketitle
+
+
+\pskip
+
+\section{The Sine Function}
+
+\begin{example}  \label{Ex:9u4erdfg9}
+A rock is dropped from rest near the surface of the moon. The function 
+\[
+      s =  f(t) = 0.8 t^2 \, , \, 0 \leq t \leq 10,
+\]
+expresses the distance (in meters) the rock falls in terms of the number of seconds since it was dropped.
+
+\begin{enumerate}
+\item Find a function $v=g(t)$ that gives the average speed of the rock (in meters/sec) between times $t=3$ and $t=b$ seconds. State the domain of $g$.
+
+\item Interpret the average speed as a slope in the worksheet below. 
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{tcti9t3iub}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Desmos activity available at
+\href{https://www.desmos.com/calculator/tcti9t3iub}{151: Moon Rock 1}
+
+\item Drag point $B$ close to point $A$ and approximate the rock's speed $3$ seconds after being dropped.
+
+\item Use the algebra of limits to find the exact speed of the rock three seconds after being dropped.
+
+\item Find an expression for the rock's average speed between times $t=a$ and $t=b$.
+
+\item Use the algebra of limits to find the speed of the rock at time $t=a$ seconds after being dropped. Compare this with the rock's average speed during the first $a$ seconds of its fall. Interpet these speeds geometrically on the graph below.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{v42lwmrlag}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Desmos activity available at
+\href{https://www.desmos.com/calculator/v42lwmrlag}{151: Moon Rock 2}
+
+
+\end{enumerate} 
+
+\end{example}
+
+\section{Limits and Gas Mileage}
+\begin{example} \label{Ex:9sd8gfs}
+The function 
+\[
+   G = f(s) = \frac{2}{5} +\frac{1}{5000}(40(s+2)^2 - (s+2)^3) , \, 0\leq s \leq 23 ,
+\]
+expresses the number of gallons of gas in your car in terms of your distance from home. The distance is measured in miles along your route. 
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{xzkknfpkw3}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Desmos activity available at
+\href{https://www.desmos.com/calculator/xzkknfpkw3}{151: Gas as a Function of Distance}
+
+\begin{enumerate}
+\item Use the graph of the function $f$ shown above to determine if you are driving toward or away from home. Explain your reasoning.
+
+\item Find your average gas mileage (in miles/gallon) between distances $s=8$ and $s=18$ miles from home.
+
+\item Use the graph to approximate your gas mileage at the moment you are $8$ miles from home. Do this by zooming in on the appropriate point.
+
+\item Find a simplified expression for your average gas mileage (in miles/gal) between distances $s=8$ and $s=b$ miles from home. 
+
+\emph{Hint:} Do \emph{not} simplify the expression 
+\[
+     f(8) = \frac{2}{5} +\frac{1}{5000}(40(10)^2 - (10)^3)
+\]
+for $f(8)$. Instead, leave as is and factor the difference of two squares 
+\[
+     A^2 - B^2 = (A+B)(A-B)
+\]
+and the difference of two cubes
+\[
+       A^3 - B^3 = (A-B)(A^2 + AB + B^2).
+\]
+
+\item Use your expression from part (d) and the algebra of limits to determine your exact gas mileage at the moment you are $8$ miles from home.
+
+\item Find a simplified expression for your average gas mileage (in miles/gal) between distances $s=a$ and $s=b$ miles from home.  Use this expression and the algebra of limits to find an expression for your gas mileage at the moment your are $a$ miles from home.
+
+\end{enumerate}
+
+
+
+\end{example}
+
+
+
+
+\end{document}
