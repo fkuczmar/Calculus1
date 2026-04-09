@@ -1,12 +1,12 @@
 \documentclass{ximera}
-\title{Limits and Derivatives, Part 2}
+\title{Limits and Derivatives, Part 2, Trigonometric Functions}
 
 
 \newcommand{\pskip}{\vskip 0.1 in}
 
 \begin{document}
 \begin{abstract}
-Limits in context.
+Derivatives of some trig functions.
 \end{abstract}
 \maketitle
 
@@ -16,96 +16,75 @@ Limits in context.
 \section{The Sine Function}
 
 \begin{example}  \label{Ex:9u4erdfg9}
-A rock is dropped from rest near the surface of the moon. The function 
-\[
-      s =  f(t) = 0.8 t^2 \, , \, 0 \leq t \leq 10,
-\]
-expresses the distance (in meters) the rock falls in terms of the number of seconds since it was dropped.
-
 \begin{enumerate}
-\item Find a function $v=g(t)$ that gives the average speed of the rock (in meters/sec) between times $t=3$ and $t=b$ seconds. State the domain of $g$.
+\item Zoom in near the origin on the graph of the function
+\[
+   y = f(\theta) = \sin\theta \, , \, -2\pi \leq \theta \leq 2\pi.
+\]
+below to approximate the value of the derivative
+\[
+     \frac{dy}{d\theta}\Big|_{\theta = 0}  =   \frac{d}{d\theta} \left( \sin \theta \right)\Big|_{\theta = 0} .
+\]
+Geometrically, the derivate is the slope of the tangent line to the curve $y=\sin\theta$ at the origin.
 
-\item Interpret the average speed as a slope in the worksheet below. 
 
 \begin{onlineOnly}
     \begin{center}
-\desmos{tcti9t3iub}{900}{600}
+\desmos{tordzgkr1za}{900}{600}
 \end{center}
 \end{onlineOnly}
 
 Desmos activity available at
-\href{https://www.desmos.com/calculator/tcti9t3iub}{151: Moon Rock 1}
+\href{https://www.desmos.com/calculator/ordzgkr1za}{151: Sine Graph Basic}
 
-\item Drag point $B$ close to point $A$ and approximate the rock's speed $3$ seconds after being dropped.
+\item Find a simplifed expression for the function $m=r(\theta_1)$ that gives the average rate of change of the function $f(\theta)$ over the interval between $\theta = 0$ and $\theta = \theta_1$. State the domain of this function.
 
-\item Use the algebra of limits to find the exact speed of the rock three seconds after being dropped.
+\item Sketch by hand a graph of the function $m=r(\theta_1)$.
 
-\item Find an expression for the rock's average speed between times $t=a$ and $t=b$.
-
-\item Use the algebra of limits to find the speed of the rock at time $t=a$ seconds after being dropped. Compare this with the rock's average speed during the first $a$ seconds of its fall. Interpet these speeds geometrically on the graph below.
-
-\begin{onlineOnly}
-    \begin{center}
-\desmos{v42lwmrlag}{900}{600}
-\end{center}
-\end{onlineOnly}
-
-Desmos activity available at
-\href{https://www.desmos.com/calculator/v42lwmrlag}{151: Moon Rock 2}
-
-
-\end{enumerate} 
-
-\end{example}
-
-\section{Limits and Gas Mileage}
-\begin{example} \label{Ex:9sd8gfs}
-The function 
+\item Input your expression for the function $m$ in Line 1 of the worksheet. Then open and activate the average rate of change folder in Line 2. Describe what you see? What does this suggest about the value of the derivative
 \[
-   G = f(s) = \frac{2}{5} +\frac{1}{5000}(40(s+2)^2 - (s+2)^3) , \, 0\leq s \leq 23 ,
+   \frac{d}{d\theta} \left( \sin \theta \right)\Big|_{\theta = 0} = \lim_{\theta_0 \to 0} \frac{\sin\theta_0}{\theta_0} ?
 \]
-expresses the number of gallons of gas in your car in terms of your distance from home. The distance is measured in miles along your route. 
-
-\begin{onlineOnly}
-    \begin{center}
-\desmos{xzkknfpkw3}{900}{600}
-\end{center}
-\end{onlineOnly}
-
-Desmos activity available at
-\href{https://www.desmos.com/calculator/xzkknfpkw3}{151: Gas as a Function of Distance}
-
-\begin{enumerate}
-\item Use the graph of the function $f$ shown above to determine if you are driving toward or away from home. Explain your reasoning.
-
-\item Find your average gas mileage (in miles/gallon) between distances $s=8$ and $s=18$ miles from home.
-
-\item Use the graph to approximate your gas mileage at the moment you are $8$ miles from home. Do this by zooming in on the appropriate point.
-
-\item Find a simplified expression for your average gas mileage (in miles/gal) between distances $s=8$ and $s=b$ miles from home. 
-
-\emph{Hint:} Do \emph{not} simplify the expression 
-\[
-     f(8) = \frac{2}{5} +\frac{1}{5000}(40(10)^2 - (10)^3)
-\]
-for $f(8)$. Instead, leave as is and factor the difference of two squares 
-\[
-     A^2 - B^2 = (A+B)(A-B)
-\]
-and the difference of two cubes
-\[
-       A^3 - B^3 = (A-B)(A^2 + AB + B^2).
-\]
-
-\item Use your expression from part (d) and the algebra of limits to determine your exact gas mileage at the moment you are $8$ miles from home.
-
-\item Find a simplified expression for your average gas mileage (in miles/gal) between distances $s=a$ and $s=b$ miles from home.  Use this expression and the algebra of limits to find an expression for your gas mileage at the moment your are $a$ miles from home.
 
 \end{enumerate}
 
-
-
 \end{example}
+
+
+\begin{example} \label{Exldf3r3ffs}
+Let
+\[
+  g(\theta) = \sin \left( \frac{1}{3} \theta \right) \, , \, -6\pi \leq \theta \leq 6\pi.
+\]
+
+\begin{enumerate}
+
+\item Start by graphing this function by hand. Describe the transformation that takes the graph of $y=f(\theta) = \sin\theta$ to the graph of 
+\[
+ y = g(\theta) = f\left(  \frac{1}{3}\theta \right).
+\]
+
+\item Use part (a) to guess the value of the derivative
+\[
+    \frac{d}{d\theta} \left( \sin \left(\frac{1}{3}\theta\right) \right)\Big|_{\theta = 0} .
+\]
+Explain your thinking.
+
+\item Find a simplifed expression for the function $m=r(\theta_1)$ that gives the average rate of change of the function $g(\theta)$ over the interval between $\theta = 0$ and $\theta = \theta_1$. State the domain of this function.
+
+\item Use the fact that
+\[
+ \lim_{\theta\to 0} \frac{\sin\theta}{\theta} = 1
+\]
+and the algebra of limits to evaluate the derivative in part (b).
+
+\end{enumerate}
+\end{example}
+
+
+
+
+
 
 
 
