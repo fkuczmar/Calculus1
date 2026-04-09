@@ -39,7 +39,7 @@ Desmos activity available at
 
 \item Find a simplifed expression for the function $m=r(\theta_1)$ that gives the average rate of change of the function $f(\theta)$ over the interval between $\theta = 0$ and $\theta = \theta_1$. State the domain of this function.
 
-\item Sketch by hand a graph of the function $m=r(\theta_1)$.
+\item Sketch by hand a graph of the function $m=r(\theta_1)$. Drag point $B$ in the graph above to help.
 
 \item Input your expression for the function $m$ in Line 1 of the worksheet. Then open and activate the average rate of change folder in Line 2. Describe what you see? What does this suggest about the value of the derivative
 \[
@@ -83,7 +83,103 @@ and the algebra of limits to evaluate the derivative in part (b).
 
 
 
+\begin{example} \label{ExMf90923111}
 
+Repeat parts (a), (b), and (d) of Example 1 for the derivative
+\[
+    \frac{d}{d\theta} \left( \sin \theta \right)\Big|_{\theta = \pi/6}.
+\]
+Use the graph of the function $y=\sin\theta$ below to help. 
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{bf2ic534ik}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Desmos activity available at
+\href{https://www.desmos.com/calculator/bf2ic534ik}{151: Sine Graph Basic 2}
+
+\end{example}
+
+
+
+\begin{example}
+Let 
+\[
+   f(\theta) = \sin\theta .
+\]
+
+\begin{enumerate}
+\item Find an expression for the average rate of change of the function $f(\theta)$ between angles $\theta = \theta_1$ and $\theta = \theta_2$.
+
+\item Use part (a), the algebra of limits, and the fact that
+\[
+  \lim_{\theta\to 0} \frac{\sin\theta}{\theta} = 1
+\]
+to find an expression for the derivative
+\[
+   \frac{d}{d\theta} \left( \sin \theta \right)\Big|_{\theta = \theta_1} .
+\]
+
+You'll need the identity
+\[
+   \sin B - \sin A = 2\sin\left( \frac{1}{2} \left( B+A  \right)\right) \cos\left( \frac{1}{2} \left( B+A  \right)\right) .
+\]
+
+\item Use the result of part (c) to evaluate the derivative
+\[
+ \frac{d}{d\theta} \left( \sin \theta \right)\Big|_{\theta =\pi/6 } .
+\]
+Compare the exact value with your approximation from Example 3.
+\end{enumerate}
+
+\end{example}
+
+
+\section{A Building's Shadow}
+
+\begin{example} \label{ExLfm3209}
+The function
+\[
+   s = f(\theta) = 50\cot \theta \, , \, 0<\theta\leq \pi/2 ,
+\]
+expresses the length of the shadow of a $50$-foot tall building in terms of the sun's inclination angle.
+
+\begin{enumerate}
+\item Find  an expression for the average rate of change of the function $f(\theta)$ between angles $\theta = \theta_1$ and $\theta = \theta_2$.
+
+\item  Use part (a), the algebra of limits, and the fact that
+\[
+  \lim_{\theta\to 0} \frac{\sin\theta}{\theta} = 1
+\]
+to find an expression for the derivative
+\[
+    \frac{ds}{d\theta} \Big|_{\theta = \theta_1} =   \frac{d}{d\theta} \left( 50 \cot \theta \right)\Big|_{\theta = \theta_1} .
+\]
+
+You'll need the identity
+\[
+   \sin(B-A) = \sin B \cos A - \cos B \sin A.
+\]
+\end{enumerate}
+
+\item Express the derivative in part (b) in terms of the length
+\[
+  s = f(\theta_1) 
+\]
+of the shadow.
+
+\item Use part (c) to find the exact value of the derivative
+\[
+   \frac{ds}{d\theta} \Big|_{s=100} .
+\]
+Compare with your work in the chapter
+
+\href{https://ximera.osu.edu/calcone/Calculus1/Shadow1/Shadow1}{Shadow of a Building, Part 1}
+
+\end{example}
 
 
 
