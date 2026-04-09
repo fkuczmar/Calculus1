@@ -23,7 +23,9 @@ A rock is dropped from rest near the surface of the moon. The function
 expresses the distance (in meters) the rock falls in terms of the number of seconds since it was dropped.
 
 \begin{enumerate}
-\item Find a function $v=g(t)$ that gives the average speed of the rock (in meters/sec) between times $t=3$ and $t=b$ seconds. State the domain of $g$.
+\item Find a function $v=g(t)$ that gives the average speed of the rock (in meters/sec) between times $t=3$ and $t=b$ seconds. Simplify the function. State the domain of $g$.
+
+\item Graph the function $v=g(t)$ by hand. Label the axes with the appropriate variable names and units.
 
 \item Interpret the average speed as a slope in the worksheet below. 
 
@@ -57,6 +59,138 @@ Desmos activity available at
 \end{enumerate} 
 
 \end{example}
+
+
+\section{The Cubing Function, Part 1}
+
+\begin{example} \label{ExLdm221}
+This question is about the function
+\[
+    y = f(x) = x^3 \, , \, -2\leq x \leq 2.
+\]
+Its graph is shown below.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{bb5oac9pik}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Desmos activity available at
+\href{https://www.desmos.com/calculator/bb5oac9pik}{151: Cubing Function 1}
+
+\begin{enumerate}
+\item Zoom in on the graph near the point $(1,1)$ to approximate the derivative 
+\[
+      \frac{dy}{dx} \Big|_{x=1} = \frac{d}{dx}\left( x^3\right)\Big|_{x=1}.
+\]
+As you zoom in closer to the point $(1,1)$ the graph looks more and more like a straight line. The derivative is the slope of this line.
+
+\item Graph by hand the function  $r=m(b)$ that gives the average rate of change of the function $y=f(x)=x^3$ between $x=1$ and $x=b$. Drag point $B$ in the worksheet above to help.
+
+\item Find a simplified expression for the function $r=m(b)$. Include a domain.
+
+\item Input the expression for the function $r=m(x)$ in Line 1 of the worksheet. Then activate and open the Average Rate of Change folder in Line 2. Use the table to guess the value of the derivative in part (a).
+
+\item Use the algebra of limits and your expression for the function $r=m(b)$ to compute the derivative in part (a).
+
+\item Find an equation of the tangent line to the curve $y=x^3$ at the point $(1,1)$.
+
+\item Find the coordinates of the points where the tangent line in part (f) intersects the curve $y=x^3$.
+
+
+\end{enumerate}
+\end{example}
+
+
+\section{The Cubing Funtion in Context}
+\begin{example} \label{ExKK354r3}
+
+\begin{enumerate}
+
+\item Find a function 
+\[
+   V = f(s) , s\geq 0 ,
+\]
+that expresses the volume of a cube (measured in cubic cm ) in terms of its edge length (measured in cm).
+
+\item Find a simplified expression for the average rate of the function $f(s)$ between edge lengths $s=a$ and $s=b$.
+
+\item Use the result of part (b) and the  algebra of limits to evaluate the derivative
+\[
+       f^\prime(s_0) = \frac{dV}{ds}\Big|_{s=a}.
+\]
+
+\item What are the units of the derivative in part (b)? Explain how you know.
+
+\item Find the scaling factor that converts a small change
+\[
+  \Delta s = s - 2
+\]
+in the cube's edge length (in cm) to a good approximation of the corresponding change
+\[
+   \Delta V = f(s) - f(2)
+\]
+in the cube's volume. 
+
+\item What are the units of the scaling factor?
+
+\item Approximate $\Delta V$ in terms of $\Delta s$ for small changes $\Delta s$.
+\end{enumerate}
+\end{example}
+
+
+
+\section{The Cube Root Function in Context}
+
+\begin{example} \label{ExKK3114r3}
+
+\begin{enumerate}
+
+\item Find a function 
+\[
+   s = g(V) , V\geq 0 ,
+\]
+that expresses the edge length of a cube (measured in cm ) in terms of its volume (measured in cubic centimeters).
+
+\item Find an expression for the average rate of the function $g(V)$ between volumes $V=V_1$ and $V=V_2$.
+\[
+   \frac{\Delta s}{\Delta V} = \answer{\frac{V_2^{1/3} - V_1^{1/3}}{V_2-V_1}} \\
+\]
+
+\item Use the algebra of limits to evaluate the derivative
+\[
+       g^\prime(V_1) = \frac{ds}{dV}\Big|_{V=V_1}.
+\]
+
+Do this by first letting $s_1 = V_1^{1/3}$ and $s_2 = V^{1/3}$ and rewriting the average rate of change in part (b) in terms of $s_1$ and $s_2$.
+\[
+         \frac{\Delta s}{\Delta V}  = \answer{\frac{s_2 - s_1}{s_2^3 - s_1^3}}.
+\]
+
+
+
+\item What are the units of the derivative in part (b)? Explain how you know.
+
+\item Find the scaling factor that converts a small change
+\[
+  \Delta V = V - 8
+\]
+in the cube's volume (in cubic cm) to a good approximation of the corresponding change
+\[
+   \Delta s = g(V) -g(8)
+\]
+in the cube's edge length. 
+
+\item What are the units of the scaling factor?
+
+\item Approximate $\Delta s$ in terms of $\Delta V$ for small changes $\Delta V$.
+\end{enumerate}
+\end{example}
+
+
+
+
 
 \section{Limits and Gas Mileage}
 \begin{example} \label{Ex:9sd8gfs}
