@@ -220,6 +220,29 @@ of the sum of two functions.
 \] 
 at the point $(2,3)$. Graph the curve and its tangent line on Desmos. 
 
+\begin{explanation}
+Since
+\begin{align*}
+\frac{dy}{dx}  &= \frac{d}{dx}\left( -x^3 + 4x^2 -3x + 1  \right) \\
+                      &= \frac{d}{dx}(-x^3) +  \frac{d}{dx}(4x^2) -  \frac{d}{dx}(3x) +  \frac{d}{dx}(1) \\
+                      &= -\frac{d}{dx}(x^3) +  4\frac{d}{dx}(x^2) - 3\frac{d}{dx}(x) + 0\\
+                      &= -3x^2 + 4(2x) - 3(1) \\
+                      &= -3x^2 + 8x - 3 ,
+\end{align*}
+the slope of the tangent line to the curve at $(2,-3)$ is
+\[
+  \frac{dy}{dx} \Big|_{x=2} = \left(  -3x^2 + 8x - 3 \right)\Big|_{x=2} = 1.
+\]
+So an equation of the tangent line to the curve 
+\[
+      y = -x^3 + 4x^2 -3x + 1
+\] 
+at the point $(2,3)$ is
+\[
+ y - 2 = x + 3.
+\]
+\end{explanation}
+
 \item The function
 \[
      s = f(h) = 1.22 \sqrt{h} \, , \, 0\leq h \leq 30000 ,
