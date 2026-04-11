@@ -21,18 +21,116 @@ Let $f(x)=x^5$.
      \frac{d}{dx}(f(x)) =   \frac{d}{dx}\left( x^5 \right) .
 \]
 
+\begin{explanation}
+The average rate of change of the function $y = f(x)=x^5$ between $x=a$ and $x=b$ ($b\neq a$) is
+\begin{align*}
+   \frac{\Delta y}{\Delta x}  &= \frac{f(b)-f(a)}{b-a}  \\
+                                        &= \frac{b^5 - a^5}{b-a} \\
+                                        &= \frac{(b-a)(b^4 + b^3a + b^2a^2 + ba^3 + a^4)}{b-a} \\
+                                        &= b^4 + b^3a + b^2a^2 + ba^3 + a^4 \text{ since } b\neq a.
+\end{align*}
+So
+\begin{align*}
+       \frac{d}{dx}\left( x^5  \right)\Big|_{x=a} &= \lim_{b \to a} \frac{f(b)-f(a)}{b-a}  \\
+                                                                    &= \lim_{b\to a} (  b^4 + b^3a + b^2a^2 + ba^3 + a^4 ) \\
+                                                                    &= a^4 + a^3 a + a^2 a^2 + a a^3 +a^4  \\
+                                                                    &= 5a^4 
+\end{align*}
+and 
+\[
+           \frac{d}{dx}\left( x^5 \right) = 5x^4 .
+\]
+
+\end{explanation}
+
 \item Use the result of part (a) to find an expression for the derivative
 \[
     \frac{d}{dx}(f^{-1}(x)) =   \frac{d}{dx}\left( x^{1/5} \right) .
 \]
 Use set-builder notation to state the domains of $f^{-1}(x)$ and its derivative. 
 
+\begin{explanation} 
+Let
+\[
+        y = f^{-1}(x) =  x^{1/5}.
+\] 
+Then the slope of the line between the points $(a, a^{1/5})$ and $(b, b^{1/5})$, $a\neq b$, on the graph of the function $y=x^{1/5}$ is
+\[
+          \frac{\Delta y}{\Delta x} = \frac{b^{1/5} - a^{1/5}}{b - a}.
+\]
+To make this average rate of change look more like the one in part (a), let $a_1 = a^{1/5}$ and $b_1 = b^{1/5}$. Then $a = a_1^5$ and $b = b_1^5$. So
+\begin{align*}
+    \frac{\Delta y}{\Delta x} &= \frac{b^{1/5} - a^{1/5}}{b - a} \\
+                                        &= \frac{b_1-a_1}{b_1^5 - a_1^5}.
+\end{align*}
+Now as $b\to a$, $b_1 \to a_1$, so
+\begin{align*}
+  \frac{dy}{dx}\Big|_{x=a} &= \lim_{b\to a}  \frac{b^{1/5} - a^{1/5}}{b - a} \\
+                                        &= \lim_{b_1\to a_1} \frac{b_1-a_1}{b_1^5 - a_1^5} \\
+                                       &= \frac{1}{5a_1^4}
+\end{align*}
+where the last equality follows from our work in part (a). To express this derivative in terms of $a$, recall that $a_1 = a^{1/5}$. So
+\[
+               a_1^4 =  \left( a^{1/5} \right)^4 = a^{4/5}
+\]
+and
+\begin{align*}
+  \frac{dy}{dx}\Big|_{x=a} &= \frac{1}{5a_1^4} \\
+                                        &= \frac{1}{5a^{4/5}} \\
+                                        &= \frac{1}{5}a^{-4/5} .
+\end{align*}
+
+Our conlusion is that
+\[
+   \frac{d}{dx}\left( x^{1/5} \right) = \frac{1}{5} x^{-4/5}.
+\]
+
+\end{explanation}
+
+
 \item Use the result of part (a) and the algebra of limits to find an expression for the derivative
 \[
     \frac{d}{dx} \left( \frac{1}{f(x)} \right) =   \frac{d}{dx}\left( x^{-5} \right) .
 \]
 
+
+\begin{explanation}
+\begin{align*}
+     \frac{d}{dx}\left( x^{-5} \right)\Big|_{x=a} &= \lim_{b\to a} \frac{b^{-5} - a^{-5}}{b - a} \\
+                                                                   &= \lim_{b\to a} \frac{a^5 - b^5}{b^5a^5(b-a)} \\
+                                                                    &= - \lim_{b\to a} \frac{1}{b^5 a^5} \lim_{b\to a} \frac{b^5 - a^5}{(b-a)} \\
+                                                                     &= -\left(\frac{1}{a^{10}}\right) (5 a^4) \\
+                                                                     &= - \frac{5}{a^6} \\
+                                                                     &= 5a^{-6} .
+\end{align*}
+Our  conclusion is that
+\[
+        \frac{d}{dx}\left( x^{-5} \right) = 5x^{-6} .
+\]
+
+\end{explanation}
+
 \item Use the results of parts (a)-(c) to find equations of the tangent lines to the three curves $y=f(x)$, $y=f^{-1}(x)$, and $y=1/f(x)$ at the point $(1,1)$. Graph the curves and their tangent line in Desmos to check your work.
+
+\begin{explanation}
+The slope of the tangent line to the curve
+\[
+   y = x^5
+\]
+at the point $(1,1)$ is 
+\begin{align*}
+     \frac{dy}{dx}\Big|_{x=1} &= \frac{d}{dx}\left( x^5 \right) \Big|_{x=1} \\
+                                          &= 5x^4 \Big|_{x=1} \\
+                                          &= 5.
+\end{align*}
+So an equation of the tangent line to the curve $y=x^5$ at the point $(1,1)$ is
+\[
+ y - 1 = 5(x-1).
+\]
+
+I'll leave the other two equations and the graphs for you.
+
+\end{explanation}
 
 \end{enumerate}
 
@@ -40,14 +138,24 @@ Use set-builder notation to state the domains of $f^{-1}(x)$ and its derivative.
 
 
 \begin{question}  \label{Qdsferewg}
-(a) Use the results of Question 1 to make a conjecture about the derivative
+\begin{enumerate}
+
+\item Complete the last part of Question 1.
+
+\item Repeat all parts of Question 1 for the function
+\[
+   y = f(x) = x^7.
+\]
+
+\item Make a conjecture about the derivative
 \[
      \frac{d}{dx}(f(x)) =   \frac{d}{dx}\left( x^n \right)
 \]
 of the function $f(x)=x^n$.
 
-(b) What do you get for the derivative when $n=0$? When $n=1$? Are these results correct? Explain.
+\item What do you get for the derivative when $n=0$? When $n=1$? Are these results correct? Explain.
 
+\end{enumerate}
 \end{question}
 
 \begin{question} \label{Qgkhkdsfete}
