@@ -1,0 +1,154 @@
+\documentclass{ximera}
+\title{Derivatives of Polynomials CW}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Working with polynomials and their derivatives.
+\end{abstract}
+\maketitle
+
+\section{The Power Rule}
+
+\begin{question}  \label{Qdef43bbh}
+
+Let 
+\[
+   y = f(x)=ax^6, 
+\]
+where $a$ is a constant and the variables $x$, $y$ are measured in meters.
+
+\begin{enumerate}
+\item What are the units of $a$? How do you know?
+
+\item Find an expression for the average rate of change of the function $f(x)$ between $x=a$ and $x=b$, $a\neq b$.
+
+\item Use part (b) and the algebra of limits to find an expression for the derivative 
+\[
+     \frac{dy}{dx}\Big|_{x=a} =   \frac{d}{dx}\left( x^6 \right)\Big|_{x=a} .
+\]
+
+\item Due to a printing error, the graph of the function $y=f(x) = 234x^6$ is missing below. All we see is a point $A$ on the graph. 
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{qcolims10c}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/qcolims10c}{151: Printers Error 3}
+
+\emph{Without} sketching a graph, drag the slider $m$ so that the blue line is tangent to the curve $y=234x^6$ at $A$. Explain your reasoning.
+
+\item Make a conjecture about the derivative
+\[
+  \frac{d}{dx}\left( x^n \right)
+\]
+for some constant $n$.
+\end{enumerate}
+\end{question}
+
+
+
+\begin{question} \label{QDf3e4e33r}
+
+\item The function
+\[
+     s = f(h) = 1.22 \sqrt{h} \, , \, 0\leq h \leq 30000 ,
+\]
+expresses the distance to the horizon (in miles) in terms of your altitude (in feet).
+
+\begin{enumerate}
+\item Evaluate $f(25)$ and interpret its meaning.
+
+\item Evaluate the derivative 
+\[
+    \frac{ds}{dh}\Big|_{h=25} .
+\]
+Include units.
+
+\item Interpret the above derivative as a scaling factor using the language of small changes.
+
+\end{enumerate}
+
+\end{question}
+
+
+
+
+\section{Stock Price}
+
+\begin{question}  \label{Qkkdg777}
+The function
+\[
+      P = f(t) = 0.1t^3-t^2+t+20 \, , \, 0\leq t \leq 8 ,
+\]
+expresses the price (in dollars/share) of a stock in terms of the number of hours past 9am. The graph of the function is shown below.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{gpqicgxvk3}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/gpqicgxvk3}{151: Stock Price}
+
+\begin{enumerate}
+\item Is the price increasing or decreasing at 10am? Use the graph to estimate this rate as follows:
+
+\begin{enumerate}
+\item First drag point $P$ to the appropriate position.
+
+\item Then drag the slider $m$ (the slope of the orange line) so that the orange line looks parallel to the (red) tangent line to the curve $P=f(t)$.
+\end{enumerate}
+
+\item Use the function to compute the exact rate at which the price is changing at 10am. Include units.
+
+\item Drag sliders $m$ and $b$ (Lines 2 and 3) to approximate the time(s) when the price is decreasing at the rate of ($\$1.8$/share)/hr.
+
+\item Use the function to find the exact time(s) when the price is decreasing at the rate of ($\$1.8$/share)/hr.
+
+\item Find all three-hour time intervals during which the price decreases at an average rate of ($\$2$/share)/hr. Start by defining an unkown in a complete sentence, with units.
+
+
+%\item At what relative rate is the price changing at 10am? Include units.
+
+%\item At what rate is the number of shares you can buy with $\$1000$ changing at 10am? Do \emph{not} use the quotient rule or the chain rule (we have not learned these yet). Use limits instead, but work in general (ie. not with this specific price function).
+%See the Explanation below for help.
+
+%\item Use the sliders $m$ and $b$ to control the line $P=b+mt$ and approximate when the price is decreasing at the rate of $(\$1.8/\text{share})/\text{hr}$. Then use calculus and algebra to compute the exact time(s).
+
+%\item  Use calculus and technology to approximate the time(s) when the price is decreasing at the relative rate of $10\%$/hour.
+
+
+\item Use the graph to approximate the minimum and maximum prices of the stock during the eight-hour period. Then use calculus and algebra to compute these exact prices. \emph{Hint:} What is the value of the derivative $dP/dt$ when the price is a maximum/minimum?
+
+
+%\item Use the slider $u$ (another name for the variable $t$) to approximate the time(s) when the price is decreasing at the fastest rate. Then use calculus to compute the exact time(s). 
+
+%\emph{Hint:} It helps to graph the fuction
+%\[
+ % dP/dt = 0.03t^2 - 2t + 1 \, , \, 0\leq t \leq 8 ,
+%\]
+%Then think about how you would use \emph{calculus} to compute the exact time when the price is decreasing at the fastest rate. This is similar to the previous question. 
+
+%\item Use the graph above to approximate the end of the time interval beginning at 9am over which the price decreases at the greatest average rate.  Do this by activating the folder \emph{secant line} on Line 6 (click the circle on the left) and dragging the slider $u$.
+
+%\item The use calculus and algebra to find the end of the time interval beginning at 9am over which the price decreases at the greatest average rate.  
+
+%\emph{Hint:} Think about the function
+%\[
+ %    m(t) = \frac{f(t)-f(0)}{t-0} \, , \, 0 < t\leq 8 ,
+%\]
+%that expresses the average rate of change of the price (with respect to time) over the time interval between 9am and time $t$ hours past 9am. Then use this function and the ideas of parts (g) and (h).
+
+\end{enumerate}
+\end{question}
+
+
+
+
+
+
+\end{document}
