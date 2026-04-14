@@ -15,21 +15,34 @@ Working with polynomials and their derivatives.
 
 Let 
 \[
-   y = f(x)=ax^6, 
+   y = f(x)=kx^6, 
 \]
-where $a$ is a constant and the variables $x$, $y$ are measured in meters.
+where $k$ is a constant and the variables $x$, $y$ are measured in meters.
 
 \begin{enumerate}
-\item What are the units of $a$? How do you know?
+\item What are the units of $k$? How do you know?
 
 \item Find an expression for the average rate of change of the function $f(x)$ between $x=a$ and $x=b$, $a\neq b$.
 
 \item Use part (b) and the algebra of limits to find an expression for the derivative 
 \[
-     \frac{dy}{dx}\Big|_{x=a} =   \frac{d}{dx}\left( x^6 \right)\Big|_{x=a} .
+     \frac{dy}{dx}\Big|_{x=a} =   \frac{d}{dx}\left(k x^6 \right)\Big|_{x=a} .
 \]
 
-\item Check that your expression for the derivative has the correct units.
+\item Check that your expression for the derivative has the correct units as follows:
+
+\begin{enumerate}
+\item Use the units $x$ and $y$ to find the units of the derivative
+\[
+  \frac{dy}{dx}\Big|_{x=a} = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x}   = \lim{b\to a} \frac{f(b)-f(a)}{b-a}
+\]
+\emph{without} using yor expression for the derivative from part (c).
+
+\item Then use your expression for the derivative from part (c) and the units of $k$ to find the units of the derivative
+\[
+    \frac{dy}{dx}\Big|_{x=a} = 6ka^5 .
+\]
+\end{enumerate}
 
 \item Due to a printing error, the graph of the function $y=f(x) = 234x^6$ is missing below. All we see is a point $A$ on the graph. 
 
@@ -45,9 +58,9 @@ where $a$ is a constant and the variables $x$, $y$ are measured in meters.
 
 \item Make a conjecture about the derivative
 \[
-  \frac{d}{dx}\left( x^n \right)
+  \frac{d}{dx}\left(k x^n \right)
 \]
-for some constant $n$.
+for constants $n$ and $k$.
 \end{enumerate}
 \end{question}
 
@@ -70,7 +83,7 @@ expresses the distance to the horizon (in miles) in terms of your altitude (in f
 \]
 Include units.
 
-\item Interpret the above derivative as a scaling factor using the language of small changes.
+\item Use the language of small changes to interpret the above derivative as a scaling factor.
 
 \end{enumerate}
 
@@ -97,6 +110,8 @@ expresses the price (in dollars/share) of a stock in terms of the number of hour
 \href{https://www.desmos.com/calculator/gpqicgxvk3}{151: Stock Price}
 
 \begin{enumerate}
+\item What are the units of the coefficient $0.1$ in the leading term $0.1t^3$? Explain how you know. 
+
 \item Is the price increasing or decreasing at 10am? Use the graph to estimate this rate as follows:
 
 \begin{enumerate}
