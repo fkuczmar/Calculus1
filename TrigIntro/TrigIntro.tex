@@ -15,7 +15,7 @@ Differentiating trig functions from the definition of the derivative.
 
 \begin{example} \label{ELdebar3}
 
-Play the slider in Line 1 of the worksheet below to watch the motion of a balloon.
+Play the slider in Line 1 of the worksheet below to watch the motion of a balloon. The balloon leaves behind tracks at equal intervals of time (see Line 4). Drag the slider $n$ in Line 2 to change the time interval.
 
 \begin{onlineOnly}
     \begin{center}
@@ -73,7 +73,7 @@ that gives the average rate of change of the function
 \]
 over the interval $[0,\theta]$. Include the domain.
 
-\item Drag the slider $u$ in Line 6 above to sketch by hand a graph of the function $m$. Label the axes with the appropriate varaible names and units.
+\item Drag the slider $u$ in Line 6 above to sketch by hand a graph of the function $m$. Label the axes with the appropriate varaible names and units. Then activat the folder \emph{Average rate of change function} in Line 1 to see how you did. Zoom out to see more of the graph.
 
 \item Approximate the limit
 \[
@@ -93,6 +93,124 @@ in two ways:
 \]
 
 \end{enumerate}
+\end{example}
+
+\section{Sine Proof 1}
+
+\begin{example}  \label{ExMV21er}
+Here's one way to show
+\[
+   \frac{d}{d\theta}\left(  \sin\theta \right) = \cos\theta.
+\]
+ It uses the identity
+\[
+ \sin(\alpha + \beta) = \sin\alpha \cos\beta + \cos \alpha \sin\beta.
+\]
+
+
+\begin{enumerate}
+
+\item First use the result of Example 2 to evaluate the derivative
+\[
+   \frac{d}{d\theta}\left(  \sin\theta \right) \Big|_{\theta=0} .
+\]
+
+\item Use the graph of the function $y=\cos\theta$ to evaluate the derivative
+\[
+  \frac{d}{d\theta}\left(  \cos\theta \right) \Big|_{\theta=0} .
+\]
+Explain your reasoning with a picture.
+\begin{freeResponse}
+\end{freeResponse}
+
+
+\item Explain why
+\[
+      \frac{d}{d\theta}\left(  \sin\theta \right) \Big|_{\theta = \theta_0} = \frac{d}{d\theta}\left(  \sin(\theta + \theta_0)\right) \Big|_{\theta = 0}.
+\]
+Do this by graphing the two functions.
+\begin{freeResponse}
+\end{freeResponse}
+
+\item Then use parts (a)-(c).
+\begin{align*}
+ \frac{d}{d\theta}\left(  \sin\theta \right) \Big|_{\theta = \theta_0} &= \frac{d}{d\theta}\left(  \sin(\theta + \theta_0)\right) \Big|_{\theta = 0} \\
+                    &= \frac{d}{d\theta} \left( \sin\theta\cos\theta_0 + \cos\theta \sin\theta_0  \right)\Big|_{\theta = \theta_0} \\
+                    &= \frac{d}{d\theta} \left( \sin\theta\cos\theta_0 \right)\Big|_{\theta = \theta_0} + \frac{d}{d\theta} \left( \cos\theta\sin\theta_0 \right)\Big|_{\theta = \theta_0}  \\
+                    &= \left( \cos\theta_0 \right)  \frac{d}{d\theta} \left( \sin\theta \right)\Big|_{\theta = \theta_0} + (\sin\theta_0) \frac{d}{d\theta}\left( \cos\theta \right)\Big|_{\theta = \theta_0} \\
+                    &= (\cos\theta_0)(\answer{1}) + (\sin\theta_0)(\answer{0})  \\
+                    & = \answer{\cos} \theta_0 .
+\end{align*}
+
+\end{enumerate}
+\end{example}
+
+
+
+\section{Sine Proof 2}
+
+\begin{example} \label{JJJD3}
+
+Here's another way to show
+\[
+   \frac{d}{d\theta}\left(  \sin\theta \right) = \cos\theta ,
+\]
+this time with limits. It uses the identity
+\[
+ \sin\alpha - \sin \beta = 2\sin\left( \frac{1}{2}\left( \alpha - \beta \right)\right) \cos \left( \frac{1}{2}\left( \alpha +\beta \right)\right) .
+\]
+
+\begin{enumerate}
+
+\item Use the picture below to prove the above identity, at least when $0 < \beta < \alpha < \pi/2$.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{yppjwpuhkz}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/yppjwpuhkz}{151: Difference of Sines}
+
+\item Use the identity to find an expression for
+\[
+       \frac{d}{d\theta}\left(  \sin\theta \right)\Big|_{\theta = \theta_1} = \lim_{\theta_2\to\theta_1} \frac{\sin\theta_2 - \sin\theta_1}{\theta_2 - \theta_1}.
+\]
+\begin{freeResponse}
+\end{freeResponse}
+
+\end{enumerate}
+\end{example}
+
+
+\section{The Derivative of the Cosine Function}
+
+\begin{example} \label{EppfemMvV}
+
+\begin{enumerate}
+
+\item One of the functions below is the graph of the other. Which one?
+\begin{freeResponse}
+\end{freeResponse}
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{atxecntid1}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/atxecntid1}{151: Sine Cosine Derivative}
+
+\item Drag the slider $k$ in Line 1 to find an expression for the derivative
+\[
+  \frac{d}{d\theta}\left(  \cos\theta \right).
+\]
+Explain your reasoning. Include graphs to help with your explanation.
+\begin{freeResponse}
+\end{freeResponse}
+
+\end{enumerate}
+
 \end{example}
 
 
