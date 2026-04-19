@@ -70,6 +70,8 @@ For the worksheet below, do the following.
 \]
 
 \item Drag the slider $u$ (another name for $\theta$ in Line 1 toward zero. What do you notice about the ratio $\sin\theta/\theta$ as you do this?
+\begin{freeResponse}
+\end{freeResponse}
 \end{enumerate}
 
 \begin{onlineOnly}
@@ -78,7 +80,7 @@ For the worksheet below, do the following.
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/calculator/2ocbmfdt5r}{151: Sin theta over theta}
+\href{https://www.desmos.com/calculator/2ocbmfdt5r}{151: Sin theta over theta 0}
 
 
 \end{example}
@@ -122,6 +124,53 @@ in two ways:
 \[
    \lim_{\theta \to 0} \frac{\sin\theta}{\theta} = \answer{1} .
 \]
+
+\end{enumerate}
+\end{example}
+
+\section{Variations on the Limit}
+
+\begin{example}  \label{Exgzmq}
+The purpose of this example is to evaluate the limit
+\[
+  \lim_{\theta\to 0} \frac{\sin (2\theta)}{\theta}.
+\]
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{u1czzdozr7}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/u1czzdozr7}{151: Sin 2theta over theta}
+
+\begin{enumerate}
+\item Interpret the expressions $a \sin 2\theta$ and $a \theta$ geometrically in the worksheet above.
+\begin{freeResponse}
+\end{freeResponse}
+
+\item Drag the slider $u$ (another name for $\theta$) in Line 2 to guess the value of the limit
+\[
+   \lim_{\theta\to 0} \frac{\sin (2\theta)}{\theta}.
+\]
+\begin{freeResponse}
+\end{freeResponse}
+
+\item To compute the limit we'll make the substitution $u = 2\theta$. Then
+\[
+   \theta = \answer{u/2}
+\]
+and as $\theta\to 0$, 
+\[
+  u = 2\theta \to \answer{0}.
+\]
+So
+\begin{align*}
+\lim_{\theta\to 0} \frac{\sin (2\theta)}{\theta} &= \lim_{u\to \answer{0}} \frac{\answer{\sin u}}{\answer{u/2}} \\
+                               &= \answer{2} \lim_{u \to 0} \frac{\answer{\sin u}}{\answer{u}} \\
+                               &= 2 (\answer{1}) \\
+                               &= \answer{2} .
+\end{align*}
 
 \end{enumerate}
 \end{example}
