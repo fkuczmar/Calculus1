@@ -1,0 +1,130 @@
+\documentclass{ximera}
+\title{The Derivative as a Scaling Factor}
+
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Interpreting the derivative as a scaling factor.
+\end{abstract}
+\maketitle
+
+
+\pskip
+
+
+
+\begin{example}  \label{QK3fer33}
+This question is about how a small change in the inclination angle of the setting sun changes the length of a building's shadow.
+
+We'll suppose the function
+\[
+   s = f(\theta) \, , \, 0 < \theta \leq \pi/2
+\]
+expresses the length of the shadow of a 50-foot tall building as the sun sets in terms of the sun's inclination angle, measured (in radians) relative to the horizontal.
+
+\begin{enumerate}
+\item One of the following is correct. Which one? Why?
+\[
+    \frac{ds}{d\theta}\Big|_{s=100} = 250
+\]
+or 
+\[
+  \frac{ds}{d\theta}\Big|_{s=100} = -250
+\]
+
+\item What are the units of the correct derivative above?
+
+\item Explain the meaning of the derivative as a scaling factor.
+\end{enumerate}
+
+
+\begin{explanation}
+\begin{enumerate}
+\item As the sun sets the inclination angle decreases and the shadow's length increases. Therefore, the derivative
+\[
+    \frac{ds}{d\theta} = \lim_{\Delta \theta \to 0} \frac{\Delta s}{\Delta \theta}
+\]
+is negative.
+
+\item The units of the derivative are ft/radian (ie. the units of $s$ divided by the units of $\theta$.
+
+\item The scaling factor is
+\[
+  \frac{ds}{d\theta}\Big|_{s=100} = -250 \frac{\text{ ft}}{\text{ rad}} = -2.50 \frac{\text{ ft}}{0.01 \text{ rad}} .
+\]
+
+This means when we multiply a small change in the inclination angle by the scaling factor we get a good approximation to the change in the shadow's length. So, for example, when the shadow is $100$ feet long and the inclination angle decreases by $0.01$ radians the shadow's length increases by approximately 2.5 feet.
+
+\emph{Note:} It would be incorrect to say that if the inclination angle decreases by $1$ radians the shadow's length increases by approximately 250 feet. The problem here would be that $1$ radian too large of a change in the angle for the scaling factor to give a good approximation to the change in the shadow's length. 
+
+\end{enumerate}
+\end{explanation}
+
+
+\begin{example} \label{ExKver3}
+The function
+\[
+    v = f(h) \, , \, 0\leq h \leq 100,
+\]
+expresses the speed (in meters/sec) of a rock dropped from rest near the surface of the planet Krypton in terms of its height above the surface (in meters).
+
+\begin{enumerate}
+\item One of the following is more likely to be correct? Why?
+\[
+    \frac{dv}{dh}\Big|_{h=20} = 5
+\]
+or 
+\[
+  \frac{ds}{d\theta}\Big|_{h=20} = -5
+\]
+
+\item What are the units of the correct derivative above?
+
+\item Explain the meaning of the derivative as a scaling factor.
+\end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+\item As the rock falls its speed increases as its height above the surface decreases. The derivative
+\[
+    \frac{dv}{dh} = \lim_{\Delta h \to 0} \frac{\Delta v}{\Delta h}
+\]
+is therefore negative.
+
+\item The units of the derivative are 
+\[
+     \frac{\text{units of } v }{\text{units of }h} =  \frac{\text{meters}}{\text{meters/sec}} .
+\]
+
+\item The scaling factor is
+\[
+  \frac{dv}{dh}\Big|_{h=20} = -5 \, \frac{\text{meters/sec}}{\text{meter}}.
+\]
+
+This means when we multiply a small change in the rock's height by the scaling factor we get a good approximation to the change in the rock's speed. So, for example, the rock's speed increases by approximately $5$ m/sec as it falls from a height of $20$ meters to a height of $19$ meters.
+
+\emph{Note:} In general, you should {\bf not} simplfy the units of a derivative. Doing so almost always obscures its meaning. So here, it would not help to write $\text{sec}^{-1}$ for the units of the derivative. 
+
+It would also be incorrect to say for \emph{every} meters the rock falls from a height of $20$ meters, its speed increases by about $5$ metes/sec.  The problem here is that the word \emph{every} implies the scaling factor is constant and would work for large as well as small changes. This is not correct. In fact, the scaling factor here, like most derivatives, continuously changes. 
+
+\end{enumerate}
+\end{explanation}
+
+
+
+\end{example}
+
+
+%\begin{onlineOnly}
+%    \begin{center}
+%\desmos{vsnchdglo0}{900}{600}
+%\end{center}
+%\end{onlineOnly}
+
+%\href{https://www.desmos.com/calculator/vsnchdglo0}{151: Shadow 1}
+\end{example}
+
+
+\end{document}
