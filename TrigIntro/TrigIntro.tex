@@ -242,7 +242,7 @@ this time with limits. It uses the identity
 
 \begin{enumerate}
 
-\item Use the picture below to prove the above identity, at least when $0 < \beta < \alpha < \pi/2$.
+\item Use the picture below to prove the above identity, at least when $0 < \theta_1 < \theta_2 < \pi/2$.
 
 \begin{onlineOnly}
     \begin{center}
@@ -293,6 +293,140 @@ Explain your reasoning. Include graphs to help with your explanation.
 
 \end{example}
 
+\section{Exercises}
+
+\begin{exercise} \label{Pf3mma}
+\begin{enumerate}
+
+\item Find a simplified equation of the tangent line to the curve
+\[
+      y = f(\theta) =  10 - 8\sin\theta
+\]
+at the point $P$ withcoordinates
+\[
+      (\theta_0 , f(\theta_0)),
+\]
+where
+\[
+    \theta_0 = \pi - \arcsin(3/4) .
+\]
+Do this \emph{without} a calcluator.
+
+\item Check your work in the desmos worksheet below by entering the coordinates of $P$ in Line 3 and an equation of the tangent line in Line 4.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{sizljkxbth}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/sizljkxbth}{151: Tangent to Graph Sine 1}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise} \label{ExLm383}
+\begin{enumerate}
+\item Drag the slider in Line 1 in the worksheet below to approximate the $y$-coordinate(s) of all points on the curve
+\[
+    y = f(\theta) = 10 - 12\cos \theta
+\] 
+where the tangent line is parallel to the line
+\[
+  3x + y = 15.
+\]
+
+\item Find simplified expressions for the exact $y$-coordinates without using a calculator. 
+
+Start your solution as follows:
+
+Let $(\theta_0,f(\theta_0)$ be the coordinates of a point on the curve $y=f(\theta)$ where the tangent line is parallel to the line 
+\[
+      3x + y = 15.
+\]
+Then ...
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{8zwsudnvn0}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/8zwsudnvn0}{151: Tangent to Graph Cosine 1}
+
+
+\end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}  \label{Ex983vbvx}
+\begin{enumerate}
+\item Use the graph below to approximate the minimum and maximum outputs of the function
+\[
+      f(\theta) = 3\sin\theta - 5\cos\theta .
+\] 
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{msxpibv77r}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/msxpibv77r}{151: Graph Sine Plus Cosine 1}
+
+\item Use calculus, \emph{not a trigonometric identity}, to find the exact minimum and maximum outputs.
+
+Start your solution as follows:
+
+Let $P$ with coordinates $(\theta_0 , f(\theta_0))$ be a point on the curve
+\[
+      y = f(\theta) =  3\sin\theta - 5\cos\theta .
+\] 
+where the output is a minimum or a maximum. Then the tangent line to the curve at $P$ is horizontal and
+\[
+     \frac{d}{d\theta} \left( 3\sin\theta - 5\cos\theta \right)\Big|_{\theta=\theta_0} = \answer{0}.
+\]
+\end{enumerate}
+
+\end{exercise}
+
+
+\begin{exercise} \label{ExKmd331}
+A ferris wheel has a radius of $40$ feet and its center is $50$ feet above the ground. You ride the wheel for one revolution and then get off.
+
+\begin{enumerate}
+\item Find a function
+\[
+    h = f(\theta) \, , \, 0 \leq \theta \leq 2\pi ,
+\]
+that expresses your height above the ground (in feet) in terms of the rotation angle of the wheel (measured in radians with respect to the downward-pointing vertical.)
+
+\item The wheel comes to a stop for the first time when $\theta = \theta_0$ and you are $80$ above the ground for the second time.
+
+\begin{enumerate}
+\item Use numerical methods to approximate the scaling factor that converts a small change 
+\[
+ \Delta \theta = \theta - \theta_0
+\]
+in the rotation angle to an accurate approximation to the corresponding change
+\[
+  \Delta h = f(\theta_0 + \Delta \theta) - f(\theta_0)
+\]
+in your height above the ground.
+
+\item Use the derivative, not vectors, to find the exact value of the scaling factor.
+
+\item What are the units of the scaling factor?
+
+\item Interpret the scaling factor geometrically.
+
+\item Suppose the wheel turns through the angle $\Delta \theta = 0.05$ radians and stops again. Use the previous result to approximate your new height.
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{exercise}
 
 
 \end{document}
