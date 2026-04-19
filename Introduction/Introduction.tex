@@ -48,7 +48,7 @@ in its area.
 
 \pskip
 
-(b) The data in the table above suggests an approximate proportional relationship between $\Delta A$ and $\Delta s$. We can guess the constant of proportionality from the fifth column. As $s\to 5$ (as $s$ approaches $5$), it looks like the ratio $\Delta A/\Delta s$ approaches some number, what we call the \emph{constant of proportionality} or the \emph{scaling factor}.
+(b) The data in the table above suggests an approximate proportional relationship between $\Delta A$ and $\Delta s$. We can guess the \emph{scaling factor} from the fifth column. As $s\to 5$ (as $s$ approaches $5$), it looks like the ratio $\Delta A/\Delta s$ approaches some number, what we call the \emph{constant of proportionality} or the \emph{scaling factor}.
 
 i) What is that number? $\answer{10}$
 
@@ -122,7 +122,7 @@ Continuing with the above demonstration,
 
 (i) Open the Code folder in Line 3 and turn off the line $PQ$ in Line 7.
 
-(ii) Write an equation for the line through the point $P$ with slope equal to the proportionality constant in the line below and on Line 8 in the desmos worksheet:
+(ii) Write an equation for the line through the point $P$ with slope equal to the scaling factor in the line below and on Line 8 in the desmos worksheet:
 \[
     A = L(s) = \answer{25}+ \answer{10}(s- \answer{5}) .
 \]
@@ -137,12 +137,17 @@ Continuing with the above demonstration,
 \[
  \Delta A = s^2-25  \sim 10 \Delta s = 10 (s-5)
 \]
-square feet. The proportionality constant $10$ has units $ft^2/ft = ft$.
+square feet. The scaling factor $10$ has units $ft^2/ft = ft$.
 }
 
-\item{Zoom in close enough to the graph of the function $A=f(s)=s^2$ near the point $P(5,25)$ and the graph looks like a line with slope equal to the proportionality constant.}
+\emph{This means that if we increase the side length of a square from $5$ feet to $5.1$ feet, for example, the area of the square would increase by approximately}
+\[
+  \Delta A = \left( 10 \text{ ft} \right)(0.1 \text{ ft}) = 1 \text{ ft}^2.
+\]
 
-\item{We can compute the proportionality constant as the limit
+\item{Zoom in close enough to the graph of the function $A=f(s)=s^2$ near the point $P(5,25)$ and the graph looks like a line with slope equal to the scaling factor.}
+
+\item{We can compute the scaling factor as the limit
 \[
     \frac{dA}{ds}\Big|_{s=5} = \lim_{s\to 5} \frac{f(s)-f(5)}{s-5} . 
 \]
@@ -315,7 +320,7 @@ To do this, fill in the missing entries in the table below.
   \Delta s \sim \answer{3.291} \Delta h , \text{ for } \Delta h \sim 0.
 \] 
 
-(f) Explain the meaning of the proportionality constant in parts (d) and (e). Be sure to include units in your explanation.
+(f) Explain the meaning of the scaling factor in parts (d) and (e). Be sure to include units in your explanation.
 
 
 \end{question}
