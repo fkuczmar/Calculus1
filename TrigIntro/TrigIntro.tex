@@ -258,8 +258,30 @@ this time with limits. It uses the identity
 \]
 \begin{freeResponse}
 \end{freeResponse}
-
 \end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+\item Two key points. One is that
+\[
+    P_1 P_2 = 2\sin \left( \frac{1}{2}\left( \theta_2 - \theta_1 \right)   \right).
+\]
+The other is that
+\[
+  \angle P_1 P_2   = \angle  MOQ = \frac{1}{2}\left( \theta_1 + \theta_2 \right).
+\]
+
+\item 
+\begin{align*}
+  \frac{d}{d\theta}\left(  \sin\theta \right)\Big|_{\theta = \theta_1}& = \lim_{\theta_2\to\theta_1} \frac{\sin\theta_2 - \sin\theta_1}{\theta_2 - \theta_1}  \\
+                        &= \lim_{\theta_2\to\theta_1}  \frac{2\sin\left( \frac{1}{2}\left( \theta_2 - \theta_1 \right)\right) \cos \left( \frac{1}{2}\left( \theta_2 +\theta_1 \right)\right)}{\theta_2 - \theta_1} \\
+                         &= \lim_{\theta_2\to\theta_1} \cos \left( \frac{1}{2}\left( \theta_2 +\theta_1 \right)\right) \cdot  \lim_{\theta_2\to\theta_1} \frac{\sin\left( \frac{1}{2}\left( \theta_2 - \theta_1 \right)\right) }{\frac{1}{2}\left( \theta_2 - \theta_1 \right)} \\
+           &= \left(  \cos\theta_1  \right)  (1) \\
+           &= \cos \theta_1
+\end{align*}
+\end{enumerate}
+\end{explanation}
+
 \end{example}
 
 
