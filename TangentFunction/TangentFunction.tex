@@ -35,7 +35,7 @@ as follows.
 \href{https://www.desmos.com/calculator/2la5tvxn56}{151: Tangent Derivative}  
 
 \begin{enumerate}
-\item First convince yourself that the marked angles $\theta = \angle BOA$ and $\angle QBC$ are congruent. Well almost, assuming $d\, \theta \sim 0$.
+\item First convince yourself that the marked angles $\theta = \angle BOA$ and $\angle QBC$ are congruent. Well almost, assuming $\Delta \theta \sim 0$.
 
 \item Express the length $OB$ in terms of $\theta$.
 
@@ -45,16 +45,74 @@ as follows.
 
 \item Then find an expression for 
 \[
-   \frac{dy}{d\theta} = \frac{d}{d\theta} \left(  \frac{\sin\theta}{\cos \theta}  \right) .
+   \frac{dy}{d\theta} = \frac{d}{d\theta} \left( \tan\theta \right) .
 \]
+\end{enumerate}
+\end{question}
+
+\begin{question} \label{Pfmf3901}
+\begin{enumerate}
+\item Find an expression for the average rate of change of the function
+\[
+      f(\theta) = \tan\theta
+\]
+betweem $\theta  =\theta_1$ and $\theta = \theta_2$.
+
+\item Use part (a) and the algebra of limits to find an expression for the derivative
+\[
+     \frac{dy}{d\theta}\Big|_{\theta = \theta_1} =  \frac{d}{d\theta}\left( \tan\theta  \right)\Big|_{\theta = \theta_1} .
+\]
+\emph{Hint:} Use the identity
+\[
+      \sin(\alpha - \beta) = \sin \alpha\cos\beta - \cos\alpha \sin \beta .
+\]
+
+\item Repeat parts (a) and (b) for the function $f(\theta) = \cot\theta$.
+
+\end{enumerate}
+\end{question}
+
+\section{Exercises}
+
+\begin{exercise} \label{Qpfef34}
+Find the $y$-coordinates of all points on the curve
+\[
+  y = f(\theta) = 10 - 4 \tan \theta
+\]
+where the tangent line is parallel to the line
+\[
+      8x - y = 12.
+\]
+
+Start by defining an unkown like this:
+
+Let 
+\[
+  (\theta_0 , f(\theta_0))
+\]
+be the coordinates of the point on the curve $y=f(\theta)$ where the tangent line is parallel ...
+
+\end{exercise}
+
+\begin{exercise}
+In the afternoon hours a $40$-foot tall building casts an $80$-foot long shadow.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{5qqd2t4eny}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/5qqd2t4eny}{151: Building Shadow 7}
+
+\begin{enumerate}
+\item Use the worksheet above to approximate the scaling factor that converts a small change in the inclination angle of the sun (in radians) to an accurate approximation to the change in the length of the shadow. Include units.
+
+\item Use calculus to find the exact scaling factor. Include units.
 \end{enumerate}
 
 
-\end{question}
-
-
-
-
+\end{exercise}
 
 
 \end{document}
