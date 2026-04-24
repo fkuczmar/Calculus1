@@ -27,7 +27,7 @@ The ends of a $25$-foot ladder rest against a vertical wall and a horizontal flo
 \href{https://www.desmos.com/calculator/syz7zherzf}{151: Ladder and ArcSine 5}
 
 \begin{enumerate}
-\item Drag the slider $u$ in Line 1 of the worksheet above to approximate the scaling factor that converts (by multiplication) a small change in the angle the ladder makes with the wall (measured in radians)  to an accurate approximation of the change in the height of ladder's top end above the floor (measured in feet). The tick marks on the radian protractor are spaced at intervals of $0.1$ radians.
+\item Drag the slider $h$ (the height of the ladder's top end above the floor) in Line 1 of the worksheet above to approximate the scaling factor that converts (by multiplication) a small change in the angle the ladder makes with the wall (measured in radians)  to an accurate approximation of the change in the height of ladder's top end above the floor (measured in feet). The tick marks on the radian protractor are spaced at intervals of $0.1$ radians.
 
 \item Use calculus to find the exact value of the scaling factor. Include units. Start by defining a function with meaningful variable names. Include units in your definition.
 
@@ -35,11 +35,98 @@ The ends of a $25$-foot ladder rest against a vertical wall and a horizontal flo
 
 \item How far is the bottom of the ladder from the base of the wall when the scaling factor that converts a small change in the angle the ladder makes with the wall to an accurate approximation to the change in the height of the ladder's top end above the floor is $-10$ ft/radian?
 
-\item Find the scaling factor that converts (by multiplication) a small change in the angle the ladder makes with the floor (measured in radians)  to an accurate approximation of the change in the height of ladder's top end above the floor (measured in feet).  
+\item When the top end of the ladder is $20$ feet above the floor, what is the scaling factor that converts (by multiplication) a small change in the angle the ladder makes with the \emph{floor} (measured in radians)  to an accurate approximation of the change in the height of ladder's top end above the floor (measured in feet).  
 
 \item Interpret the scaling factors in parts (b) and (e) geometrically.
+\end{enumerate}
+\begin{explanation}
+\begin{enumerate}
+\item Drag the slider $h$ in Line 1 from $h=20$ to make a small change $\Delta h$ in the height. Then use the radian protractor to approximate the corresponding change $\Delta \theta$ in the angle the ladder makes with the wall. Finally, compute the average scaling factor $\Delta h/\Delta \theta$. Pay attention to the signs of these changes.
+
+\item  Let 
+\[
+ h = f(\theta) \, , \, 0\leq \theta \leq \pi/2,
+\]
+be the function that expresses the height (in feet) of the top end of the ladder above the floor in terms of the angle (in radians) the ladder makes with the wall.
+
+Then in right triangle $\Delta AOB$ above,
+\[
+  \cos\theta = \frac{h}{25}
+\]
+and
+\[
+ h = f(\theta) = 25\cos\theta.
+\]
+
+Taking the derivative we get
+\begin{align*}
+   \frac{dh}{d\theta} &= \frac{d}{d\theta} \left( 25\cos\theta \right)  \\
+                              &= -25 \sin\theta .
+\end{align*}
+This expresses the scaling factor in terms of the inclination angle $\theta$. 
+
+Now we need to find the scaling factor when $h=20$. For this, let $\theta_0$ be the angle the ladder makes with the wall when its top end is $20$ feet above the floor. Then using the Pythagorean theorem in right triangle $\Delta AOB$ gives the distance (in feet) between the bottom of the ladder and the wall as
+\[
+       AO = \sqrt{25^2 - 20^2} = 15.
+\]
+So 
+\[
+  \sin\theta_0 = \frac{AO}{25} = \frac{15}{25}
+\]
+and the scaling factor is
+\begin{align*}
+    \frac{dh}{d\theta}\Big|_{\theta = \theta_0}  &= -25 \sin\theta \Big|_{\theta = \theta_0}  \\
+                                                        &= -25\sin\theta_0 \\
+                                                        &= -25\left( \frac{15}{25} \right) \\
+                                                        &= -15 .
+\end{align*}
+
+The units of the scaling factor are ft/rad. 
+
+\emph{Interpretation:} When the top of the ladder is $20$ feet above the floor, increasing the angle between the ladder and the wall by $0.1$ radians decreases the height of the ladder's top end by approximate $1.5$ feet.
+
+\item Let 
+\[
+   \Delta \theta = \theta - \theta_0 = \theta - \arccos(4/5)
+\]
+and
+\[
+ \Delta h = h - 20
+\]
+be the respective changes in the angle and height. Then for values of $\Delta \theta \sim 0$, 
+\begin{align*}
+    \Delta h   & \sim \left( \frac{dh}{d\theta}\Big|_{h=20} \right) \Delta \theta \\
+                  &= -15 \Delta \theta .
+\end{align*}
+
+So if $\Delta h = -1/4$,
+\[
+           -\frac{1}{4}\text{ ft}  \sim  \left( -15 \frac{\text{ ft}}{\text{rad}} \right) \Delta \theta   
+\]
+and
+\[
+   \Delta \theta \sim  \left( \frac{1}{4} \text{ ft}\right) \left( \frac{1}{15} \frac{\text{ rad}}{\text{ft}}  \right) = \frac{1}{60} \text{ rad}.
+\]
+So if the top of the ladder slides $0.25$ feet down the wall to a height of $19.75$ feet above the floor, the angle between the laddder and the wall increases by approximately $1/60$ radian.
+
+\item In the expression for the scaling factor 
+\[
+       \frac{dh}{d\theta} = - (25\sin\theta) ,
+\]
+we can interpet $25\sin\theta$ as the length $AO$ in right triangle $AOB$. This is the distance from the bottom end of the ladder to the wall.
+
+So when the scaling factor is $-10$ ft/rad, the bottom end of the ladder is $10$ feet from the wall and its top end is
+\[
+   OB = \sqrt{25^2 - 10^2}\text{ ft} = 5 \sqrt{21} \text{ ft}
+\]
+above the floor.
+
+\item When the angle between the ladder and the wall increases by $\Delta \theta$, the angle between the ladder and the floor decreases by $\Delta \theta$. So the scaling factor that converts a small change in angle the ladder makes with the floor into an accurate appxoimation of the change in the height is $15$ ft/rad.
 
 \end{enumerate}
+\end{explanation}
+
+
 \end{question}
 
 
@@ -65,8 +152,10 @@ The ladder is still $25$ feet long and its top end is $20$ feet above the base o
 \item What effect do you think this change has on the scaling factors?
 
 \item Answer parts (a)-(f) of Question 1 in this scenario.
-
 \end{enumerate}
+
+
+
 \end{question}
 
 
