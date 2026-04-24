@@ -13,9 +13,75 @@ Draining tanks.
 
 \section{Preliminaries}
 
+\section{Thoughts on Differential Equation in Math 152}
+
+It is possible to integrate (ha!) differential equations in a meaningful way rather than saving it for the end.
+
+For me, this approach starts with changing the focus from using definite integrals and Part 2 (?) of the Fundamental Theorem to compute \emph{numbers} to using definite integrals and Part 1 of the FT to find expressions for functions. It makes generalizing the point-slope equation of a line a fundamental part of the course.
+
+Here are two examples.
+
+\begin{example} \label{Exkr340}
+
+\begin{enumerate}
+
+\item \emph{Math 99} During a $50$-mile trip a car gets a constant gase mileage of $40$ miles/gal. When the trip odometer reads $32$ miles, the car has $9$ gallons of gas in its tank.
+
+Find a function
+\[
+       G = h(s) \, , \, 0\leq s \leq 50 ,       
+\]
+that expresses the number of gallons of gas in the tank in terms of the trip odometer reading (in miles).
 
 
-\section{Power Functions}
+\item \emph{Math 152} The function 
+\[
+    m = f(s) = ??? \, , \, 0\leq s \leq 50 ,
+\]
+expresses the gas mileage of a car (measured in miles/gal) in terms of the trip odometer reading (measured in miles) during a $50$-mile trip. When the trip odometer reads $32$ miles, the car has $9$ gallons of gas in its tank.
+
+Find a function
+\[
+     G = h(s) \, , \, 0\leq s \leq 50 ,
+\]
+that expresses the number of gallons of gas in the tank in terms of the trip odometer reading (in miles).
+
+\end{enumerate}
+
+\begin{explanation} 
+\begin{enumerate}
+\item 
+\[
+    G = h(s) = 9 - \frac{1}{40} \left( s-32  \right) \, , \, 0\leq s \leq 50. 
+\]
+
+\item Two approaches. One starts by adding the differential number of gallons of gas
+\[
+    dG = - \frac{ds}{f(s)}
+\]
+the car burns over the intervals $s \in [u, u+du]$ miles as the trip odometer ranges from $s=32$ miles to $s=u$ miles. 
+
+The other starts with an initial value problem
+\[
+   \frac{dG}{ds} = - \frac{1}{f(s)} \, , \, G=9 \text{ when } s=32.
+\]
+
+Either way we get
+\[
+  G = h(s) = 9 - \int_{32}^s \frac{du}{f(u)} \, , \, 0\leq s \leq 50. 
+\]
+
+The two approaches are logically equivalent if we use definite integrals to solve the differential equation. Using indefinite integrals misses the point. The integral stops being a sum and the computation loses meaning.
+
+\end{enumerate} 
+\end{explanation}
+\end{example}
+
+
+Here's a more interesting example.
+
+\section{Which Tanks Drain Faster?}
+Fill a tank with water, punch a small hole in the bottom of the tank, and let the water drain out. The problem is to find a function that expresses the depth of water in terms of time.
 
 \begin{onlineOnly}
     \begin{center}
@@ -24,6 +90,20 @@ Draining tanks.
 \end{onlineOnly}
 
 \href{https://www.desmos.com/calculator/zltxdekv7z}{152: Draining Cylinders}
+
+The given information:
+
+\begin{enumerate}
+\item The cross-sectional area $A=f(h)$ of the tank as a function of depth.
+
+\item The area $a$ of the small hole.
+
+\item The assumption (or theoretical fact) that the water exits the hole with speed
+\[
+  v = g(h) =\sqrt{2gh},
+\] 
+where $h$ is the depth of the water and $g$ the magnitude of the graviational acceleration near the earth's surface.
+\end{enumerate}
 
 
 
