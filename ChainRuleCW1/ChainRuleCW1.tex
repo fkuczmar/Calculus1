@@ -1,0 +1,100 @@
+\documentclass{ximera}
+\title{The Chain Rule CW1}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Problems with the chain rule.
+\end{abstract}
+\maketitle
+
+\section{Practice Questions}
+
+\begin{question} \label{Q8effrfrf}
+The differentialble function
+\[
+      h = f(s) \, , \, 0\leq s \leq 3 ,
+\]
+expresses the altitude (in meters) of a trail in terms of the distance (in km) from the trailhead.
+
+The differentiable function
+\[
+    s = g(t) \, , \, 0\leq t \leq 4,
+\]
+expresses your distance from the trailhead (in km) as you hike along the trail in terms of the number of hours past noon.
+
+\begin{enumerate}
+\item Suppose three kilometers from the trailhead the scaling factor that converts a small change in the distance from the trailhead (in km) into an accurate approximation of the corresponding change in altitude (in meters) is $-250$. Suppose also that $f(3)=1200$.
+
+\begin{enumerate}
+\item What are the units of the scaling factor.
+
+\item Explain the meaning of the scaling factor in terms of \emph{specific} small changes.
+
+\item Approximate the change
+\[
+ \Delta h = h - 1200
+\]
+in altitude in terms of a small change
+\[
+  \Delta s = s -3
+\]
+in distance from the trailhead.
+
+\item Use the Leibniz evaluation notation to write the scaling factor as a derivative.
+\end{enumerate}
+
+\item Suppose also that $g(1.5) = 3$ and that
+\[
+    \frac{ds}{dt} \Big|_{t=1.5} = 2 .
+\]
+
+\begin{enumerate}
+\item What are the units of this derivative?
+
+\item Use everyday Engish to explain the meaning of the derivative.
+
+\item Approximate the change
+\[
+  \Delta s = s - 3
+\]
+in your distance from the trailhead (in km) in terms of a small change
+\[
+     \Delta t = t - 1.5
+\]
+in the number of hours past noon.
+\end{enumerate}
+
+\item Use the results of parts (a) and (b) to approximate your change in altitude ($\Delta h$) in terms of a small change in the number of hours past noon ($\Delta t$).
+
+\item Use everyday English to explain the meaning of the scaling factor in part (c).
+
+\item Our conclusion is 
+\[
+    \frac{dh}{dt}\Big|_{t=1.5} = \frac{dh}{\answer{ds}}\Big|_{s=\answer{3}}    \cdot \frac{\answer{ds}}{\answer{dt}}\Big|_{t=\answer{1.5}}
+\]
+or more generally that the derivative of the function
+\[
+    h = f(g(t)) \, , \, 0\leq t \leq 4,
+\]
+expressing  your altitude (in km) in terms of the number of hours past noon is
+\[
+  \frac{dh}{dt}\Big|_{t=a} = \frac{dh}{\answer{ds}}\Big|_{s=\answer{f(a)}}    \cdot \frac{\answer{ds}}{\answer{dt}}\Big|_{t=\answer{a}} .
+\]
+\end{enumerate}
+
+%The functions $f$ and $g$ are graphed below.
+
+%\begin{onlineOnly}
+%    \begin{center}
+%\desmos{sm5rxml9zi}{900}{600}   sm5rxml9zi
+%\end{center}
+%\end{onlineOnly}
+
+%Worksheet available at \href{https://www.desmos.com/calculator/sm5rxml9zi}{151: Hiking Trail}  %x0ywksqpsw  akk25oy6sz
+
+
+\end{question}
+
+\end{document}
