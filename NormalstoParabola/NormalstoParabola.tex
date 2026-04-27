@@ -1,0 +1,113 @@
+\documentclass{ximera}
+\title{Normals to a Parabola}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Normals to a parabola.
+\end{abstract}
+\maketitle
+
+
+\begin{question} \label{Qpofer3}
+
+
+\pdfOnly{
+Access Desmos interactives through the online version of this text at
+ 
+\href{https://www.desmos.com/calculator/ifsu6n6qt0}.
+}
+ 
+The parabola below has equation 
+\[
+  y  = \frac{x^2}{2p} ,
+\]
+for some constant $p\neq 0$. Point $A$ has coordinates $(a,a^2/(2p))$, and point $B$ has coordinates $(b,b^2/(2p))$. 
+Assume $a\neq b$.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{ifsu6n6qt0}{900}{600}
+\end{center}
+\end{onlineOnly}
+Access this activity online at \href{https://www.desmos.com/calculator/ifsu6n6qt0}{151: Normals to Parabola 2}
+
+\begin{enumerate}
+
+
+\item Find an equation of the normal lines to the parabola at $A$ and $B$.
+
+\item Use algebra to find an equation of the point $P$ where the normal lines intersect.
+
+\item The point $P$ approaches some point $Q$ as $B$ appraoches $A$. Use the algebra of limits to find the coordinates of $Q$.
+
+\end{enumerate}
+
+\begin{explanation}
+An equation of the normal line to the parabola at $A(a,a^2/(2p))$ is
+\[
+   y = \frac{a^2}{2p} - \frac{p}{a}\left( x-a \right)
+\] 
+and an equation of the normal at $B(b,b^2/(2p))$ is
+\[
+  y = \frac{b^2}{2p} - \frac{p}{b}\left( x-b \right) .
+\]
+
+To find the coordinates of the point where the normals intersect, we need to solve the system
+\[
+\begin{cases}
+      y = \frac{a^2}{2p} - \frac{p}{a}\left( x-a \right) \\ \\
+      y = \frac{b^2}{2p} - \frac{p}{b}\left( x-b \right)
+\end{cases}
+\]
+
+Substituting gives
+\[ 
+           \frac{a^2}{2p} - \frac{p}{a}\left( x-a \right) = \frac{b^2}{2p} - \frac{p}{b}\left( x-b \right) .
+\]
+
+After some algebra
+\[
+   \frac{1}{2p} \left(a-b\right)\left( a+b \right) = \frac{p}{ab}\left(b-a  \right)x 
+\]
+and
+\[
+    x =- \frac{ab}{2p^2} \left(a+b \right).
+\]
+
+So as $B\to A$, the $x$-coordinate of the intersection point approaches the $x$-coordinate
+\[
+ x = - \lim_{b\to a} \frac{ab}{2p^2} \left(a+b \right) = -\frac{a^3}{p^2} .
+\]
+of $Q$. 
+
+Since $Q$ lies on the normal through $A$, the $y$-coordinate of $Q$ is
+\begin{align*}
+  y &= \frac{a^2}{2p} - \frac{p}{a}\left( -\frac{a^3}{p^2}-a \right) \\
+          &= \frac{a^2}{2p} + \frac{a^2}{p} + p \\
+          &= \frac{3a^2}{2p} + p .
+\end{align*}
+
+So $Q$ has coordinates
+\[
+      \left(   -\frac{a^3}{p^2}, \frac{3a^2}{2p} + p \right) .
+\]
+
+\end{explanation}
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{xjly7skb9p}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+Access this activity online at \href{https://www.desmos.com/calculator/xjly7skb9p}{151: Normals to Parabola 3}
+
+
+
+
+\end{question}
+
+\end{document}
