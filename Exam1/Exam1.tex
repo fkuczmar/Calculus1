@@ -1,0 +1,243 @@
+\documentclass{ximera}
+\title{Exam 1}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Solution key.
+\end{abstract}
+\maketitle
+
+
+\begin{question} \label{Qpofer33}
+
+Find an equation of the tangent line to the curve
+\[
+          y = \frac{48}{\sqrt{x}} - 3x + 2
+\]
+at the point on the curve with $x$-coordinate $x=4$.
+
+\begin{explanation}
+The tangent line to the curve
+\[
+   y = f(x) = \frac{48}{\sqrt{x}} - 3x + 2
+\]
+at the point $(x,f(x))$ has slope
+
+\begin{align*}
+\frac{dy}{dx} &= \frac{d}{dx} \left(    \frac{48}{\sqrt{x}} - 3x + 2   \right) \\
+                    &= \frac{d}{dx} \left(  48x^{-1/2} \right)  - \frac{d}{dx}\left( 3x \right)  + \frac{d}{dx}(2)   \\
+                &= 48 \frac{d}{dx} \left(  x^{-1/2} \right)  - 3   + 0   \\
+                    &= 48 \left(-\frac{1}{2}x^{-3/2} \right) - 3   \\
+                     &= -24x^{-3/2} - 3.
+\end{align*}
+
+So the tangent line to the curve $y=f(x)$ at the point $(4,f(4))$ has slope
+\begin{align*}
+\frac{dy}{dx}\Big|_{x=4}  &= \left(   -24x^{-3/2} - 3   \right) \Big|_{x=4} \\
+                                      &= -6.
+\end{align*}
+
+To find the $y$-coordinate of the point of tangency, let $x=4$. Then
+\[
+ y = f(4) = 14.
+\] 
+
+So the tangent line to the curve $y=f(x)$ at the point $(4,14)$ has slope $-6$ and equation
+\[
+ y - 14 = -6(x-4).
+\]
+\end{explanation}
+\end{question}
+
+\begin{question} \label{Qldfe430}
+The function
+\[
+    W = f(r) = \frac{2000}{r^2} \, , \, r \geq 4,
+\]
+expresses the weight of an astronaut (measured in pounds) in terms of her distance from the center of the earth (measured in thousands of miles).
+
+\begin{enumerate}
+
+\item Find a fully-simplified expression for the average rate of change in the astronaut’s weight with respect to her distance from the earth’s center between distances $r=b$ and $r=c$ thousands of miles from the center. Assume $b,c \geq 4$ and that $b\neq c$. Work vertically, one equal sign per line. Do not split the page into multiple columns.
+
+\item Use your expression from part (a) and the definition of the derivative (no credit for other methods) to find a fully-simplified expression for the derivative
+\[
+  \frac{dW}{dr}\Big|_{r=a}.
+\]
+No credit for other methods.
+\end{enumerate}
+
+
+\begin{explanation}
+\begin{enumerate}
+\item The average rate of change is
+\begin{align*}
+  \frac{\Delta W}{\Delta r} &= \frac{f(c) - f(b)}{c-b}  \\
+                                       &= \left(\frac{1}{c-b}\right) \left( \frac{2000}{c^2} - \frac{2000}{b^2} \right) \\
+                                       &=\left(\frac{2000}{c-b}\right) \left( \frac{b^2-c^2}{c^2 b^2} \right) \\
+                                        &=\left(\frac{2000}{c-b}\right) \cdot \frac{(b+c)(b-c)}{c^2 b^2}  \\
+                                        &= \frac{-2000(b+c)}{c^2 b^2} .
+\end{align*}
+
+\item The derivative is
+\begin{align*}
+           \frac{dW}{dr}\Big|_{r=a} &= \lim_{\Delta r\to 0} \frac{\Delta W}{\Delta r}  \\
+                                                 &= \lim_{\Delta c\to a} \frac{-2000(a+c)}{c^2 a^2}  \\
+                                                 &= -\frac{2000(a+a)}{a^2 a^2} \\
+                                                 &= -\frac{4000}{a^3} .
+\end{align*}
+\end{enumerate}
+\end{explanation}
+\end{question}
+
+
+\begin{question} \label{Qpfer093}
+
+Use precalculus and arithmetic, but \emph{not} calculus, to give numerical evidence that suggests an answer to this question:
+
+\pskip
+
+A rocket orbits a planet of radius $2000$km at an altitude of $400$ km above the surface. Is there a scaling factor that converts (by multiplication) a small change in orbit's radius to an accurate approximation of the corresponding change in radius of the portion of the planet's surface visible to an astronaut in the rocket? The radius (orange) is measured along the planet's surface.
+
+
+\begin{enumerate}
+
+\item Start by writing a complete sentence that defines a function expressing the radius of the visible portion in terms of the altitude above the surface. Include units in your definition. Use meaningful variable names, \emph{not} $x$ and $y$. Then find an expression for the function. Annotate the picture to help with your explanation.
+
+\item Then gather your evidence in an appropriate table with at least six rows. If the data suggest the existence of a scaling factor, explain why and approximate the scaling factor to the nearest tenth. Include units. If the data suggest otherwise, explain why.
+
+\end{enumerate}
+
+\begin{explanation}
+Let 
+\[
+  r = f(h) \, , \, h\geq 0,
+\]
+be the function that expresses the spherical radius (in km) of surface visible to the astronaut in terms of her altitude above the surface (in km).
+
+Let $\theta$ be the radian measure of $\angle OPT$ between the astronaut's line of sight to the horizon and the downward vertical pointing from the astronaut to the planet's center. 
+
+Then  
+\[
+  \cos\theta = \frac{2000}{2000+h}.
+\]
+And since $0 \leq \theta  < \pi/2$,
+\[
+     \theta = \arccos\left( \frac{2000}{2000+h}  \right) .
+\]
+So the radius of the visible portion (measured in km) is
+\begin{align*}
+    r  &= 2000 \theta \\
+       &= 2000 \arccos\left( \frac{2000}{2000+h}  \right) .
+\end{align*}
+
+\item 
+
+\begin{center}
+  \begin{tabular}{ | c| c | c | c | c |}
+    \hline
+    $h$ (km) & $r = f(h)$ km) & $\Delta h = h-400$ km)  & $\Delta s =f(h) - f(400)$ (km) & $\Delta s/\Delta h \, (km/km)$ \\ \hline
+     $397$ & 1167.59  & -3 & -3.78  & 1.26\\ \hline
+    $398$ & 1168.85  & -2 & -2.52  & 1.26 \\ \hline
+    $399$ & 1170.11 & -1 & -1.26  & 1.26 \\ \hline
+    $400$  & 1171.37 & 0&  0 &   \\ \hline
+    $401$ & 11172.63 & 1  & 1.26  &  1.26 \\ \hline
+    $402$ & 1173.88 & 2 & 2.51 & 1.26 \\ \hline
+    $403$ & 1175.13 & 3 &  3.76 & 1.26 \\ \hline
+    \hline
+  \end{tabular}
+\end{center}
+
+The data suggest the scaling factor is approximately 1.26 km/km. It is dimensionless.
+
+\end{explanation}
+\end{question}
+
+\begin{question} \label{Qpdff3}
+Between speeds of $100$ km/hour and $150$ km/hour, the function
+\[
+  v = f(G) \, , \, 4 \leq  G \leq 17,
+\]
+expresses the speed of a car (in km/hr) in terms of its gas mileage of a car (in km/liter).
+
+Suppose $f(5)= 140$.
+
+\begin{enumerate}
+\item Which of the following is more likely to be correct? Explain your reasoning.
+\[
+    \frac{dv}{dG}\Big|_{G=5} = 0.8
+\]
+or 
+\[
+   \frac{dv}{dG}\Big|_{G=5} =-0.8
+\]
+
+\item (1 point) What are the units of the correct derivative above?
+
+
+\item (2 points) Explain the meaning of the derivative as a scaling factor. Write your explanation in complete sentences \emph{without} any mathematical notation.
+
+\end{enumerate}
+
+
+\begin{explanation}
+\begin{enumerate}
+\item At such high speeds, an increase in the speed would most likely decrease the gas mileage. We would therefore expect the derivative to be negative. So the second choice is most likely correct.
+
+\item The units of the derivative $dv/dG$ are
+\[
+        \frac{\text{km/hr}}{\text{km/liter}} .
+\] 
+
+\item The derivative is a scaling factor that converts (by multiplication) a small change in the mileage (measured in km/liter from $5$ km/liter) to an accurate approximation of the corresponding change in the speed (measured in km/hr).
+
+More specifically, if the gas mileage increases from $5$ km/liter to $5.1$ km/liter, the speed would decrease by approximately $0.08$  km/hr (ie. from $140$ km/hr to $139.92$ km/hr).
+
+\end{enumerate}
+\end{explanation}
+\end{question}
+
+\begin{question} \label{Qof3r}
+The function $T=f(m)$, $0 \leq t \leq 32$, expresses the temperature (in Celsius degrees) of a beaker of water in terms of the number of minutes past noon. Its graph is shown below.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{ifsu6n6qt0}{900}{600}
+\end{center}
+\end{onlineOnly}
+Access this activity online at \href{https://www.desmos.com/calculator/ifsu6n6qt0}{151: Normals to Parabola 2}
+
+Use a straightedge to approximate the time(s) when the temperature is changing at a rate equal to its average rate of change between 12:00pm and 12:32pm. Explain your reasoning thoroughly in complete sentences. Draw on the graph above to help with your explanation. End your explanation with a concluding sentence that captures both the question and your response.
+
+
+The parabola below has equation 
+\[
+  y  = \frac{x^2}{2p} ,
+\]
+for some constant $p\neq 0$. Point $A$ has coordinates $(a,a^2/(2p))$, and point $B$ has coordinates $(b,b^2/(2p))$. 
+Assume $a\neq b$.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{oczzppq2n4}{900}{600}
+\end{center}
+\end{onlineOnly}
+Access this activity online at \href{https://www.desmos.com/calculator/oczzppq2n4}{151: Exam 1 Figure 1S}
+
+\begin{explanation}
+First draw the secant line through the points $(0,f(0))$ and $(32,f(32))$. The slope of this line is the average rate of change in the temperature with respect to time between 12:00pm and 12:32pm.
+
+Second, holding your ruler parallel to the secant line, slide it so that it becomes tangent to the graph. There are three possibilities.
+
+Now since parallel lines have the same slope and the slope of the tangent line to the curve measures the instantaneous rate of the change of temperature with respect to time, the $m$-coordinates of the three points of tangency give the desired times. It looks like these coordinates are approximately $m\sim 4, 17, 29$.
+
+So the temperature of the water is changing at a rate equal to its average rate of change between 12:00pmm and 12:32pm at approximately 12:04pm, 12:17pm, or 12:29pm. 
+
+
+\end{explanation}
+\end{question}
+
+\end{document}
+
