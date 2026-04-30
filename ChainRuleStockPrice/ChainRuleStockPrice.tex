@@ -1,0 +1,63 @@
+\documentclass{ximera}
+\title{The Chain Rule and the Price of a Stock}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+A stock problem with the chain rule.
+\end{abstract}
+\maketitle
+
+
+\begin{question} \label{QLfel33mz}
+The function
+\[
+     P = f(t) = 64 - 20\cos\left(  \frac{t}{4} \right) \, , \, 8\leq t \leq 16,
+\]
+expresses the price of a stock (in dollars/share) in terms of the number of hours past 9am.
+
+\begin{enumerate}
+
+\item What are the units of the constant $40$ in the function above? The constant $20$? The constant $1/4$? Explain your reasoning.
+
+\item Sketch by hand a reasonably accurate graph of the function. Label the axes with the appropriate variable names and units. Include scales on both axes. Label the coordinates of any turning points.
+
+\item Find an expression for the derivative $dP/dt$. Do this by making an explicit $u$-substitution and showing each step of the chain rule. But do \emph{not} use $u$. Use a more meaningful variable instead.
+
+\item What are the units of the derivative $dP/dt$? Interpret its meaning.
+
+\item Find the stock price when it is decreasing at the rate of ($\$3$/share)/hr.
+
+\item Find a function 
+\[
+   P = g(r)
+\]
+that expresses the stock price (in dollars/share) in terms of the rate of change in the price (measured in (dollars/share)/hr). Simplify the expression for your function.
+
+\item Sketch by hand a graph of the function $P=g(r)$. Label the axes with the appropriate variable names and units. 
+
+\item Evaluate the derivative 
+\[
+  \frac{dP}{dr}\Big|_{r=-3}.
+\] 
+Include units and interpret its meaning as a scaling factor. Include an example of how the scaling factor acts on a \emph{specific} small change.
+
+%\item Is the stock price increasing or decreasing the second time the stock sells for $\$45$/share? At what rate?
+
+\item Is the number of shares you can buy with $\$1000$ increasing or decreasing when the price is decreasing at the rate of ($\$4$/share)/hour? 
+
+\begin{enumerate}
+
+\item Use numerical methods, no calculus, to approximate the rate of change (with respect to time) in the number of shares you can buy with $\$1,000$ when the price is decreasing at the rate of ($\$4$/share)/hour. No calculus.
+
+\item Use calculus to compute the rate in part (i). Quotient rule not allowed.
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{question}
+
+\end{document}
+
