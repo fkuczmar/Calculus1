@@ -1,0 +1,119 @@
+\documentclass{ximera}
+\title{The Tangent Function CW1}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+The tangent function and its inverse, classwork.
+\end{abstract}
+\maketitle
+
+
+\section{The Tangent Function}
+
+
+\begin{question} \label{Pfmf3901}
+\begin{enumerate}
+\item Find an expression for the average rate of change of the function
+\[
+      f(\theta) = \tan\theta
+\]
+between $\theta  =\theta_1$ and $\theta = \theta_2$.
+
+\item Use part (a) and the algebra of limits to find an expression for the derivative
+\[
+     \frac{dy}{d\theta}\Big|_{\theta = \theta_1} =  \frac{d}{d\theta}\left( \tan\theta  \right)\Big|_{\theta = \theta_1} .
+\]
+\emph{Hints:} 
+\begin{enumerate}
+\item Remember that
+\[
+    \lim_{\theta\to 0} \frac{\sin\theta}{\theta} = 1.
+\]
+
+\item Use the identity
+\[
+      \sin(\alpha - \beta) = \sin \alpha\cos\beta - \cos\alpha \sin \beta 
+\]
+and modify the explanation to Example 6b in the chapter 
+\href{https://ximera.osu.edu/calcone/Calculus1/TrigIntro/TrigIntro}{Differentiating Trigonometric Functions using Limits}
+of our class notes.
+
+\end{enumerate}
+
+
+\item Repeat parts (a) and (b) for the function $f(\theta) = \cot\theta$.
+
+\end{enumerate}
+\end{question}
+
+\section{Exercises}
+
+\begin{exercise} \label{Qpfef34}
+\begin{enumerate}
+\item Without using a calculator, find the $y$-coordinates of all points on the curve
+\[
+  y = f(\theta) = 10 - 4 \tan \theta
+\]
+where the tangent line is parallel to the line
+\[
+      8x - y = 12.
+\]
+Start by drawing a graph of the function $y=f(\theta)$. Then define an an unkown like this:
+
+Let 
+\[
+  (\theta_0 , f(\theta_0))
+\]
+be the coordinates of the point on the curve $y=f(\theta)$ where the tangent line is parallel ...
+
+\item Repeat part (a) to find the $y$-coordinates of points on the same curve where the tangent line is parallel to the line
+\[
+   x - 8y = 12
+\]
+and then the line
+\[
+   8x + y = 12.
+\]
+Explain what's going on and why. Include a graph.
+\end{enumerate}
+\end{exercise}
+
+
+\begin{exercise} \label{ExKdm4090}
+At some time in the afternoon a $40$-foot tall building casts an $80$-foot long shadow.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{5qqd2t4eny}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/5qqd2t4eny}{151: Building Shadow 7}
+
+\begin{enumerate}
+\item Use the worksheet above to approximate the scaling factor that converts a small change in the inclination angle of the sun (in radians) to an accurate approximation of the change in the length of the shadow. Include units. The tick marks on the protractor are spaced at equal intervals of $0.1$ radian. Explain your reasoning.
+
+\item Find a function that expresses the length of the shadow in terms of the inclination angle of the sun during the afternoon. Use the tangent function. Include a domain.
+
+Choose \emph{meaningful} variables, not $x$ and $y$. Start with a sentence that begins like this:
+
+Let 
+\[
+    ???  =   f( ???) \, , \,   \text{ write the domain here}
+\] 
+be the function that expressess ....
+
+\item Use calculus to find the exact scaling factor that converts a small change in the inclination angle (measured in radians) to an accurate approximation of the change in the shadow's length (measured in feet) when the shadow is $80$ feet long.
+
+End with a concluding stentence that states the scaling factor. Include units.
+
+\item Find the length of the shadow when the scaling factor is $-500$ ft/radian.
+\end{enumerate}
+
+
+\end{exercise}
+
+
+\end{document}
