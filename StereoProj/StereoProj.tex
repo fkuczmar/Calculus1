@@ -68,13 +68,19 @@ Our aim is to see how the scale of the map varies from point to point.
 
 \begin{enumerate}
 
-\item First, suppose on the map below, the scale along the equator (red) is $100$ cm/km. This means each centimeter on the map, measured not as a straight line distance but along an arc of the equator, represents $100$ km along the earth's equator.
+\item First, suppose on the map below, the scale along the equator (red) is $100$ km/cm. This means each centimeter on the map, measured not as a straight line distance but along an arc of the equator, represents $100$ km along the earth's equator.
 
-Use the number line below and simple arithmetic (no trigonometry) to approximate the scale at points on the orange circle of latitude in the direction due north. Note the circles of latitude on the map are plotted equal intervals of latitude on the sphere.
+\begin{enumerate}
+
+\item Use the number line below and simple arithmetic (no trigonometry) to approximate the scale at the south pole. Note the circles of latitude on the map are plotted equal intervals of latitude on the sphere.
+
+\item Use the number line below and simple arithmetic (no trigonometry) to approximate the scale at points on the orange circle of latitude in the direction due north.
 
 Explain your method here and state a clear conclusion.
 \begin{freeResponse}
 \end{freeResponse}
+
+\end{enumerate}
 
 
 \begin{onlineOnly}
@@ -97,25 +103,45 @@ The worksheet below shows a cross-section of the earth through the north and sou
 
 \begin{onlineOnly}
     \begin{center}
-\desmos{sdiaytbpn3}{900}{600}
+\desmos{ncskufxsk3}{900}{600}
 \end{center}
 \end{onlineOnly}
 
-\href{https://www.desmos.com/calculator/sdiaytbpn3}{151: Stereo Proj 2D2}
+\href{https://www.desmos.com/calculator/ncskufxsk3}{151: Stereo Proj 2D2}
 
 \item First express the distance $r_* = OQ$, measured in km, from point $Q$ (in the plane of the equator) to the earth's center in terms of $s$ and $R$. 
 \[
- r_* = \answer{R}\arctan\left( \frac{s}{2R} \right) .
+ r_* = \answer{R\tan\left( \frac{s}{2R} \right)} .
 \]
 
 \item Next, scale the distance $r_*$ (in km) to get the corresponding distance $r=f(s)$ on the map, measured in cm.
 \[
-  r = f(s) = \answer{a \arctan\left( \frac{s}{2R} \right) }.
+  r = f(s) = \answer{a \tan\left( \frac{s}{2R} \right) }.
 \]
 
 \item Now find an expression for the derivative $dr/ds$ and interpret it as a scaling factor. Include units.
+\[
+   \frac{dr}{ds} = \answer{\frac{a}{2R}\sec^2 \left( \frac{s}{2R} \right)}
+\]
 
 \item Express the derivative $dr/ds$ in terms of $r$.
+\[
+   \frac{dr}{ds} =   \answer{\frac{r^2 + a^2}{2Ra}}                          % \answer{\frac{a}{2R}\left( 1+ \left(\frac{r}{a}\right)^2 \right)}
+\]
+
+\item Find an expression for the scale on the map in the direction along the meridian at a point $r$ cm from the map's center.
+
+The scale is
+\[
+ \answer{\frac{2Ra}{r^2 + a^2}} \frac{\text{km}}{\text{cm}} .
+\]
+
+\item Check that your expression in part (h) as the correct units.
+
+
+\item Use your result from part (h) to find the scale at the origin in the map above, where $R/a = 100$ km/cm.
+
+\item Use your result from part (h) to find the scale in the direction of the meridians on the orange circle of latitude. Start by using the number line to approximate the ratio $r/a$. 
 
 \end{enumerate}
 
