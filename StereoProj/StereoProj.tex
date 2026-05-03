@@ -33,14 +33,12 @@ The worksheet below shows a stereogrphic projection of the earth between latitud
 \href{https://www.desmos.com/calculator/wy9zoftmbe}{151: Stereographic Projection World}
 
 
-The worksheet here shows how the map is created. With the south pole $S$A at the top of the sphercical earth, a point $P$ on the surface of the earth gets mapped to the point $P$ in the plane of the equator by the line $\overrightarrow{SP}$. 
+The worksheet here shows how the map is created. With the south pole $S$ at the top of the spherical earth, a point $P$ on the surface is mapped to the point $P^\prime$ in the plane of the equator lying on the line $\overrightarrow{SP}$. 
 
 \begin{enumerate}
 \item Drag the sliders $\theta_1$ (the longitude of $P$) and $\phi_1$ (the latitude of $P$) to see how the projection varies with latitude and longitude. Summarize your observations here.
 \begin{freeResponse}
 \end{freeResponse}
-\end{enumerate}
-
 
 \begin{onlineOnly}
     \begin{center}
@@ -51,6 +49,50 @@ The worksheet here shows how the map is created. With the south pole $S$A at the
 \href{https://www.desmos.com/3d/lnhm28tzak}{152: Stereographic Projection}
 
 
+\item Stereographic projection maps circles on the sphere to circles in the plane. Experiement with the sliders $\theta_1$ (Line 2), $\phi_1$ (Line 4), $r_1$ (Line 6), $t_1$ (Line 8), and $d$ (Line 10). Summarize your observations here.
+\begin{freeResponse}
+\end{freeResponse}
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{dukkzdikzg}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/dukkzdikzg}{152: Stereographic Projection 2}
+
+\end{enumerate}
+
+\begin{question} \label{QPfper3r4311}
+Our aim is to see how the scale of the map varies from point to point. 
+
+\begin{enumerate}
+
+\item First, suppose on the map below, the scale along the equator (red) is $100$ cm/km. This means each centimeter on the map, measured not as a straight line distance but along the equator, represents $100$ km along the earth's equator.
+
+Use the number line below and simple arithmetic (no trigonometry) to approximate the scale at points on the orange circle of latitude in the direction due north. Note the circles of latitude on the map are plotted equal intervals of latitude on the sphere.
+
+Explain your method here and state a clear conclusion.
+\begin{freeResponse}
+\end{freeResponse}
+
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{wy9zoftmbe}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/wy9zoftmbe}{151: Stereographic Projection World}
+
+\item To compute the actual scale in the direction due north at a given distance from the center of the map (the south pole), we'll start by defining two parameters. The first is $R$, the radius of the earth in kilometers. The second is the radius of the equator on the map, measured in centimeters. We'll call this $a$.
+
+\item Our goal now is to find an expression for a function
+\[
+     r = f(s) \, , \, 0\leq s \leq \pi R,
+\]
+that takes as an input the actual distance of a point from the south pole (measured in km) and returns as an output the distance of its image from the center of the map (measured in cm).
+
 \begin{onlineOnly}
     \begin{center}
 \desmos{sdiaytbpn3}{900}{600}
@@ -60,14 +102,11 @@ The worksheet here shows how the map is created. With the south pole $S$A at the
 \href{https://www.desmos.com/calculator/sdiaytbpn3}{151: Stereo Proj 2}
 
 
+\end{enumerate}
 
-\begin{onlineOnly}
-    \begin{center}
-\desmosThreeD{dukkzdikzg}{900}{600}
-\end{center}
-\end{onlineOnly}
 
-\href{https://www.desmos.com/3d/dukkzdikzg}{152: Stereographic Projection 2}
+\end{question}
+
 
 
 
