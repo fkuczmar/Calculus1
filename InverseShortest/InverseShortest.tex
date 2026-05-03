@@ -1,0 +1,223 @@
+\documentclass{ximera}
+\title{Derivatives of Inverse Functions, Shortest Version}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Derivatives of inverse functions, the main ideas.
+\end{abstract}
+\maketitle
+
+\section{The Main Idea}
+
+The main idea here is simple. That the derivative of the \emph{inverse} of a function is the \emph{reciprocal} of the function's derivative. Or expressed more succinctly, \emph{the derivative of the inverse is the reciprocal of the derivative}.
+
+We don't really need to know much about calculus to understand why. 
+
+\begin{question} \label{Qdfer99rf}
+Take for example, the one-to-one function
+\[
+   G =f(s) \, , \, 0\leq s \leq 50 ,
+\]
+that expresses the number of gallons of gas in your car in terms your distance from home as you drive home from school. The distance is measured  along your route in miles.
+
+Then $G$ is an increasing function of $s$. Explain why.
+\begin{freeResponse}
+\end{freeResponse}
+
+The derivative $dG/ds$ gives the rate (in gal/mile) at which your car is burning gas when  you are $s$ miles from home.
+
+The derivative $ds/dG$ of the inverse function
+\[
+    s = f^{-1}(G)
+\]
+gives your gas mileage (in miles/gal)  when you are $s$ miles from home.
+
+It should be clear, from units, notation, and the meanings of the derivatives in this particular scenario, that
+\[
+ \frac{ds}{dG} = \frac{1}{dG/ds} .
+\]
+
+For example, suppose 
+\[
+   f(30) = 8
+\]
+and
+\[
+     \frac{dG}{ds}\Big|_{s=30} = 0.025 .
+\]
+This means when you are $30$ miles from home, your car is buring gas at the rate of $0.025$ gal/mile. So at this moment your gas mileage is
+\[
+     \frac{ds}{dG}\Big|_{G=\answer{8}} =   \frac{1}{\answer{0.025} \text{ gal/mile}} = \answer{40} \text{ miles/gal}.
+\]
+
+\end{question}
+
+\section{Theorem}
+So if $y=f(x)$ is a one-to-one differentiable function of $x$, then the inverse  
+\[
+    x = f^{-1}(y)
+\]
+is a differentiable function of $y$ and
+\[
+   \frac{dx}{dy} \Big|_{y=\answer{f(a)}} =    \frac{1}{(dy/dx)\Big|_{x=a}}    %\frac{1}{\frac{dy}{dx}\Big|_{x=a}} .
+\]
+
+
+\section{Examples}
+
+The difficulty in finding expressions for the inverse of a function is algebraic. The key is to express the derivative of the original function in terms of its \emph{output} instead of its input. 
+
+Here are some examples.
+
+\begin{question}
+\begin{enumerate}
+\item Explain in words, without any mathematical notation, the meaning of $\arctan (4)$.
+\begin{freeResponse}
+\end{freeResponse}
+
+\item Let 
+\[
+    x = f(\theta) = \tan\theta .
+\]
+Find an expression for the derivative 
+\[
+  \frac{d}{dx}\left( \arctan x \right)
+\]
+of the inverse function
+\[
+  \theta = f^{-1}(x) = \arctan x
+\]
+in terms of $x$.
+
+\end{enumerate}
+
+\begin{explanation}
+The derivative of the function 
+\[
+        x=f(\theta) = \tan\theta 
+\]
+is
+\[
+  \frac{dx}{d\theta} = \frac{d}{dx} \left( \tan\theta \right) = \sec^2\theta .
+\]
+
+The key step is here, to express the derivative $\sec^2\theta$ in terms of the output $x=\tan\theta$ of the function $f$. Since
+\[
+    \sec^2\theta = 1 + \tan^2\theta = 1 + x^2 ,
+\]
+\[
+  \frac{dx}{d\theta} = 1 +  x^2
+\]
+and 
+\begin{align*}
+      \frac{d}{dx} \left( \arctan x \right)  &= \frac{d\theta}{dx} \\
+                                                          &= \frac{1}{dx/d\theta} \\
+                                                          &= \frac{1}{\sec^2\theta} \\
+                                                          &= \frac{1}{1+x^2} . 
+\end{align*}
+\end{explanation}
+\end{question}
+
+\begin{question} \label{Qpfmvm20490}
+\begin{enumerate}
+\item Explain in words, without any mathematical notation, the meaning of $\arcsin (-1/3)$.
+
+\item The function
+\[
+     \theta = \arcsin y \, , \, -1 \leq y \leq 1,
+\]
+is \emph{not} the inverse of the function
+\[
+  y = g(\theta) = \sin\theta.
+\]
+Explain why.
+\begin{freeResponse}
+\end{freeResponse}
+
+\item But the function
+\[
+     \theta = f^{-1}(y) = \arcsin y \, , \, -1 \leq y \leq 1,
+\]
+is the inverse of the function
+\[
+  y = f(\theta) = \sin\theta \, , \, -\pi/2 \leq \theta \leq \pi/2.
+\]
+Use the method of Question 2 to find an expression for the derivative
+\[
+    \frac{d}{dy} \left( \arcsin y \right) .
+\]
+
+{\emph Note:} When solving the equation
+\[
+ \cos^2\theta + \sin^2 \theta = 1
+\]
+for $\cos\theta$, there are two solutions. You need to choose one and explain the logic behind your choice.
+\end{enumerate}
+
+\end{question}
+
+\section{Exercises}
+
+\begin{exercise} \label{Epvefm3130}
+Use the method of Question 2 to find expressions for the derivatives of the following functions.
+
+\begin{enumerate}
+\item The function
+\[
+   \theta = \arccos x .
+\]
+
+\item The inverse of the function
+\[
+   y = \sin \theta \, , \, \pi/2 \leq \theta \leq 3\pi/2 .
+\]
+
+\item The inverse of the function
+\[
+  y = \tan\theta \, , \, \pi/2 < \theta < 3\pi/2 .
+\]
+
+\end{enumerate}
+\end{exercise}
+
+
+\begin{exercise} \label{Exmmv8eflzz}
+Use the chain rule and the results above to find simplified expressions for each of the following derivatives. Do \emph{not} simplify any of the functions before differentiating.
+
+\begin{enumerate}
+\item 
+\[
+        \frac{d}{dx} \left( \arctan x + \arctan (1/x)  \right)
+\]
+
+\item 
+\[
+     \frac{d}{dx} \left( \arcsin \left( \sqrt{1-x^2} \right) \right)
+\]
+
+\item 
+\[
+    \frac{d}{dx} \left( \sin(\arccos x) \right)
+\]
+
+\item 
+\[
+    \frac{d}{dx} \left( \arcsin (\sin x) \right)
+\]
+
+\item 
+\[
+     \frac{d}{dx} \left( \sin\left( \arccos \left( \sqrt{1-x^2}\right) \right) \right)
+\]
+
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise} \label{ExLfm000}
+First simplify the function in Exercises 5a, b, c, e and then compute their derivatives. 
+\end{exercise}
+
+
+\end{document}
