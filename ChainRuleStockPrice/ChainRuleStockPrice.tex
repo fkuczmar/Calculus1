@@ -13,13 +13,13 @@ A stock problem with the chain rule.
 \begin{question} \label{QLfel33mz}
 The function
 \[
-     P = f(t) = 64 - 20\cos\left(  \frac{t}{4} \right) \, , \, 8\leq t \leq 16,
+     P = f(t) = 64 - 20\cos\left(  \frac{1}{4} t \right) \, , \, 8\leq t \leq 16,
 \]
 expresses the price of a stock (in dollars/share) in terms of the number of hours past 9am.
 
 \begin{enumerate}
 
-\item What are the units of the constant $40$ in the function above? The constant $20$? The constant $1/4$? Explain your reasoning.
+\item What are the units of the constant $64$ in the function above? The constant $20$? The constant $1/4$? Explain your reasoning.
 
 \item Sketch by hand a reasonably accurate graph of the function. Label the axes with the appropriate variable names and units. Include scales on both axes. Label the coordinates of any turning points.
 
@@ -54,8 +54,110 @@ Include units and interpret its meaning as a scaling factor. Include an example 
 \item Use calculus to compute the rate in part (i). Quotient rule not allowed.
 
 \end{enumerate}
+\end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+\item Because $P$ has units dollars/share, so does the constant $64$. And because the outputs to the cosine function are dimensionless, the coefficient $20$ has these same units.
+
+Because the inputs to the cosine function are measured in radians (ie. are dimensionless) and $t$ is measured in hours, the units 
+of the coefficient $1/4$ are rad/hour or $\text{hr}^{-1}$.
+
+\item The function describes an oscillation about the mean price of $64$ dollars/share, with a maximum oscillation about the mean of $20$ dollars/share and a period of 
+\[
+  \frac{2\pi \text{rad}}{\frac{1}{4}\text{ rad/hr}} = 8\pi \text{ hrs}.
+\]
+
+\item The derivative (omitting some of the required steps) is
+\begin{align*}
+ \frac{dP}{dt} &= \frac{d}{dt} \left(  64 - 20\cos\left(  \frac{1}{4} t \right)\right) \\
+                    &= 20\sin \left(  \frac{1}{4} t \right) \frac{d}{dt}\left( \frac{1}{4}t  \right) \\
+                    &= 5 \sin \left(  \frac{1}{4} t \right) .
+\end{align*}
+
+\item The units of $dP/dt$ are (dollars/share)/hour. The derivative measures the rate at which the stock price is changing with respect to time. Multiplying the derivative by a small time interval (in hours) gives a good approximation to the change in price (in dollars/sh) over that time interval.
+
+\item Suppose the stock price is decreasing at the rate of 3 (dollars/share)/hr at time $t=t_0$ hours past 9am.
+Then
+\begin{align*}
+  -3  &= \frac{dP}{dt}\Big|_{t=t_0} \\
+       &=  5 \sin \left(  \frac{1}{4} t \right)\Big|_{t=t_0} \\
+                                         &= 5 \sin \left(  \frac{1}{4} t_0 \right) .
+\end{align*}
+So
+\[
+           \sin \left(  \frac{1}{4} t_0 \right) = -\frac{3}{5}
+\]
+and
+\begin{align*}
+  \cos \left(  \frac{1}{4} t_0 \right) &= \pm \sqrt{1 - \sin^2 \left(  \frac{1}{4} t_0 \right)} \\
+                                                  &= \pm \frac{4}{5} .
+\end{align*}
+
+To choose the correct sign, we need to remember the domain of the function $P=f(t)$. Since 
+\[
+    8 \leq t_0 \leq 16 ,
+\]
+\[
+  2 \leq \frac{t_0}{4} \leq 4 .
+\]
+So
+\[
+     \frac{\pi}{2} < \frac{t_0}{4} \leq  \frac{3\pi}{2}
+\]
+and therefore
+\[
+  \cos \left(  \frac{1}{4} t_0 \right) < 0.
+\]
+So
+\[
+    \cos \left(  \frac{1}{4} t_0 \right) = - \frac{4}{5}.
+\] 
+Finally, the stock price at this time is
+\begin{align*}
+    f(t_0) &= 64 - 20\cos\left(  \frac{1}{4} t_0 \right) \\
+             &= 64 + 16 \\
+             &= 80.
+\end{align*}
+So when the stock price is decreasing at the rate of $3$ (dollars/share)/hour, the stock is selling at a price of $80$ dollars/share.
+
+\item The solution to this part is much the same as the solution to part (f). We just replace $-3/5$ (dollars/share)/hr with $r$ (dollars/share)/hr).
+
+Omitting the details , we get
+\[
+      \cos (t_0) = -\sqrt{1-\frac{r^2}{25}} = -\frac{1}{5}\sqrt{25 - r^2},
+\]
+where $t_0$ is the time (measured in hours past noon) when the price is increasing at the rate of $r$ (dollars/share)/hr. 
+
+And the stock price at this time is
+\[
+    P = f(t_0) = 64 + 4\sqrt{25-r^2}.
+\]
+and our function is
+\[
+   P = g(r) = 64 + 4\sqrt{25-r^2}.
+\]
+
+\item The graph is part of a semi-circle opening downward. I'll leave it to you to find the correct domain of this function.
+
+\item 
+\begin{align*}
+  \frac{dP}{dr}\Big|_{r=-3} &=  \frac{d}{dr}\left( 64 + 4\sqrt{25-r^2} \right) \Big|_{r=-3} \\
+                                        &=- \frac{4r}{\sqrt{25 - r^2}}\Big|_{r=-3} \\
+                                        &= 3.
+\end{align*} 
+The derivative is 
+\[
+   3 \frac{\text{dollars/share}}{\text{(dollars/share)/hour}} .
+\]
+
+{\bf LEAVE THE UNITS LIKE THIS. DO NOT SIMPLIFY THEM.}
+
+So, for example, during the time it takes the rate of change in the stock price to increase from $-3$ (dollars/share)/hr to $-2.90$ (dollars/share)/hr, the price of the stock increases by approximately $0.30$ dollars/share.  
+
 
 \end{enumerate}
+\end{explanation}
 
 \end{question}
 
