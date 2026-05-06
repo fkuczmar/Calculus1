@@ -1,0 +1,105 @@
+\documentclass{ximera}
+\title{Trigonometry Tangent Line}
+
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Finding an equation of a tangent line.
+\end{abstract}
+\maketitle
+
+
+\pskip
+
+
+
+\begin{question}  \label{QKdftttfdrler33}
+Find an equation of the tagent line to the curve
+\[
+       y  = f(\theta) = \frac{12}{8 - 3\cos\theta}
+\]
+at the point where the curve intersects the line $\theta =\arccos(2/3)$.
+
+\begin{explanation}
+Let 
+\[
+ \theta_0 = \arccos(2/3) .
+\]
+This is the angle between $0$ and $\pi$ whose cosine is $2/3$. 
+
+So $\cos\theta_0 = 2/3$ and when $\theta=\theta_0$, 
+\begin{align*}
+y &= f(\theta_0)  \\
+   &= \frac{12}{8 - 3\cos\theta_0} \\
+   &= \frac{12}{8 - 3(2/3)} \\
+   &=2
+\end{align*}
+
+To find the slope of the tangent line at the point $(\theta_0, f(\theta_0))$ we need to first compute the derivative
+\[
+   \frac{dy}{d\theta} = \frac{d}{d\theta}\left(  \frac{12}{8 - 3\cos\theta} \right) .
+\]
+For this let
+\[
+   u = 8 - 3\cos\theta .
+\]
+Then 
+\[
+   y = 12u^{-1}
+\]
+and by the chain rule
+\begin{align*}
+\frac{dy}{d\theta} &= \frac{dy}{du}\cdot \frac{du}{d\theta} \\
+                           &= \frac{d}{du}\left( 12 u^{-1} \right) \cdot \frac{d}{d\theta}\left( 8 - 3\cos\theta \right) \\
+                           &= (-12 u^{-2})(3\sin\theta) \\
+                           & = -\frac{36\sin\theta}{(8 - 3\cos\theta)^2} .
+\end{align*}
+
+To find the slope of the tangent line to the curve $y=f(\theta)$ at the point $(\theta_0,f(\theta_0))$, we need to evaluate this derivative at $\theta = \theta_0$. This requires simplifying
+\[
+   \sin \theta_0 = \sin (\arccos(2/3)).
+\]
+
+By the Pythagorean theorem
+\[
+      \cos^2 \theta_0 + \sin^2\theta_0 = 1
+\]
+and
+\[
+   \sin\theta_0 = \pm \sqrt{1 -  (2/3)^2} =  \pm \frac{\sqrt{5}}{3} .
+\]
+Now because $0\leq \theta_0 \leq \pi$, 
+\[
+ \sin\theta_0 \geq 0
+\]
+and 
+\[
+    \sin\theta_0 =  \frac{\sqrt{5}}{3}.
+\]
+
+So the slope of the tangent line to the curve $y=f(\theta)$ at the point with coordinates
+\[
+  (\theta_0,f(\theta_0)) = \left( \arccos(2/3), 2  \right)
+\]
+is
+\begin{align*}
+ \frac{dy}{d\theta}\Big|_{\theta = \theta_0}  &= -\frac{36\sin\theta}{(8 - 3\cos\theta)^2} \Big|_{\theta = \theta_0} \\
+                                                                 &= -\frac{12\sqrt{5}}{36} \\
+                                                                  &= - \frac{\sqrt{5}}{3}.
+\end{align*}
+
+So an equation of the tangent line to the curve \[
+       y  = f(\theta) = \frac{12}{8 - 3\cos\theta}
+\]
+at the point where the curve intersects the line $\theta =\arccos(2/3)$ is
+\[
+    y - 2 = - \frac{\sqrt{5}}{3}\left( \theta -\arccos(2/3)  \right) .
+\]
+
+\end{explanation}
+
+\end{question}
+
+\end{document}
