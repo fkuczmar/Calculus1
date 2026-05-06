@@ -9,7 +9,102 @@ Hiking bugs.
 \end{abstract}
 \maketitle
 
-\section{Trails Desribed with Functions}
+
+\section{Trails}
+
+\begin{question} \label{Qler3r3rfd}
+The differentiable function
+\[
+   h = f(s) \, , \, 0\leq s \leq 5,
+\]
+expresses the altitude (in km) along a trail in terms of the distance from the trailhead (measured in km along the trail).
+
+\begin{enumerate}
+\item Suppose
+\[
+    \frac{dh}{ds}\Big|_{s=3} = 0.2 .
+\]
+What are the units of this derivative? Interpret the meaning of the derivative using the language of small changes.
+
+\item What acute angle does the curve $h=f(s)$ make with the $s$-axis at the point $(3, f(3))$.
+
+\item What acute angle does the trail make with the horizontal at the point on the trail $3$ km from the trailhead? 
+
+\item  Suppose
+\[
+    \frac{dh}{ds}\Big|_{s=4} = 1 .
+\]
+Explain what this means.
+\end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+\item The derivative has units $0.2$ km/km. 
+
+It is a dimensionless scaling factor that converts a small change in the distance to the trailhead from the $3$-km mark to an accurate approximation of the corresponding change in altitude (measured in the same units as the distance from the trailhead, whatever those units may be).
+
+For example, if you walk $1$ meter farther along the trial from the $3$-km mark, your altitude increases by approximately $0.2$ meters.
+
+\item Let $\theta$ be the acute angle (in radians) the curve $h=f(s)$ makes with the $s$-axis at the point $(3, f(3))$. Then 
+\[
+  \tan \theta = \frac{dh}{ds}\Big|_{s=3} = 0.2 .
+\]
+And since $-\pi/2 \leq \theta \leq \pi/2$,
+\[
+ \theta = \arctan(0.2).
+\]
+
+\item Let $\phi$ be the acute angle (in radians) the trail makes with the horizontal at the $3$-km mark. From our description in part (a), we know if you walk $\Delta s\sim 0$ meters farther \emph{along the trail} your altitude increases by approximately $0.2 \Delta h$ meters. This tells us
+\[
+   \sin\phi \sim \frac{\Delta h}{\Delta s} \sim 0.2 .
+\]
+Taking a limit as $\Delta s \to 0$ shows that
+\[
+   \sin \phi = \frac{dh}{ds}\Big|_{s=3} = 0.2 .
+\]
+Since $-\pi/2 \leq \phi \leq \pi/2$, at the $3$-km mark the trail slopes upward at an angle of
+\[
+    \phi = \arcsin(0.2) \text{ rad}
+\]
+relative to the horizontal.
+
+\item This means that the trial is vertical at the $4$-km mark. You would be rock-climbing at this point of the trail, not hiking.
+\end{enumerate}
+\end{explanation}
+
+\end{question}
+
+
+\begin{question} \label{Wer3fds}
+The function
+\[
+    h = f\left(s\right)=2000+\frac{1800}{\pi}\tan\left(\frac{\pi}{12}s\right), 0\leq s\leq 4.2,
+\]
+expresses the altitude of a trail (in meters) in terms of the distance from the trailhead (in km).
+\begin{enumerate}
+\item What angle does the trail make with the horizontal at the $4$-km mark?
+\item At what altitude does the trail slope upward at a $30^\circ$ angle relative to the horizontal?
+\end{enumerate}
+\end{question}
+
+
+
+
+\begin{question} \label{Qdf3rra}
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{lktn53d7ju}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/lktn53d7ju}{151: Hiking Trail 54C}
+
+
+
+\end{question}
+
+\section{Trails Described with Functions}
 
 In this section we model a trail with a curve $h=f(x)$, where $x$ and $h$ are measured in meters. We take the $h$-coordinate to measure the height (in meters) above sea-level and suppose the positive $x$-axis points due east.
 
