@@ -1,0 +1,139 @@
+\documentclass{ximera}
+\title{Looking Down on the Moon, Part 2}
+
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Looking at a spherical cap on the lunar surface.
+\end{abstract}
+\maketitle
+
+
+\pskip
+
+
+
+\begin{question}  \label{QKdf3Dfdrler33}
+
+This question is about looking on the moon from a spaceship Artemis II.
+
+The idea is that the astronauts can see only a portion of the moon from any altitude above its surface. We wish to analyze how a small change in altitude changes the radius of the spherical cap in view. The radius is measured on the moon's surface. It is the orange arc shown below. Drag the slider $h$ (altitude, in thousands of miles) below to see how small changes in the altitude affect the radius of the spherical cap.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmosThreeD{paqpozwuxm}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/3d/paqpozwuxm}{151: Spaceship above earth}
+
+Here is a two-dimensional cross-section of that picture.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{b5c4c7ba17}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/b5c4c7ba17}{151: Distance to Horizon 1}
+
+Drag point $P_2$ toward $P_1$ in the worksheet below to change the change $\Delta h$ in the altitude. Keep your eye on the change in the radius $\Delta s$ of the visible spherical cap and the ratio $\Delta s/\Delta h$ of small changes.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{url0dnbaii}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/url0dnbaii}{151: Distance to Horizon 3}
+
+
+
+\begin{enumerate}
+
+\item Find a function
+\[
+       s = f(h) \, , \, h \geq >0
+\]
+that expresses the radius of the visible spherical cap (in miles) in terms of the altitude above the surface (in miles). Take the moon to be a perfect sphere of radius $2000$ km.
+
+\[
+     s = f(h) = \answer{2000\arccos(2000/(2000+h))} \, , \, h \geq 0.
+\]
+
+Click the \emph{Hint} button above for help.
+\begin{hint}
+Use right triangle $\Delta OTP$ to find an expression for the radian measure of angle $\angle POT$. Then use this angle to find an expression for the arclength $AT$.
+
+Here are more details.
+
+\begin{enumerate}
+
+\item  Enter the two side lengths, measured in feet, in right triangle $\Delta OPT$ below.
+\[
+      OT = \answer{2000}
+\]
+and
+\[
+        OP = \answer{h+2000} .
+\]
+
+\pskip
+
+\item Let $\theta$ be the radian measure of $\angle TOP$. Write an equation with a trigonometric function of $\theta$ that relates the two lengths in part (i). Use the Math Editor tab to enter the trig function and the angle $\theta$.
+\[
+     \cos \theta = \answer{\frac{2000}{h+2000}}.
+\]
+
+\pskip
+
+\item Now solve the equation from part (ii) for $\theta$ in terms of $h$. Then use what you know about measuring arclength along a circle to find an expression for the function $f$. Use the Math Editor tab to help.
+\[
+      s = f(h) = \answer{2000 \arccos \left( \frac{2000}{h+2000}\right)} .
+\]
+\end{enumerate}
+\end{hint}
+
+
+
+
+\item Now suppose we are $400$ km above the lunar surface. Fill in the missing entries in the table below to approximate the scaling factor that converts a small change 
+\[
+  \Delta h = h - 400
+\]
+in altitude to a good approximation of the change
+\[
+  \Delta s = f(h) - f(400)
+\]
+in the radius of the visible spherical cap.
+
+\begin{center}
+  \begin{tabular}{ | c| c | c | c | c |}
+    \hline
+    $h$ (km) & $s = f(h)$ (km) & $\Delta h = h-250$ (km)  & $\Delta s =f(h) - f(400)$ (km) & $\Delta s/\Delta h \, (units?)$ \\ \hline
+     $397$ &  &  &   & \\ \hline
+    $398$ &  &  &   & \\ \hline
+    $399$ &  &  &   &  \\ \hline
+    $400$  &  &  &  &   \\ \hline
+    $401$ &  &  &   &  \\ \hline
+    $402$ &  &  &   &  \\ \hline
+    $403$ &  &  &   &  \\ \hline
+    \hline
+  \end{tabular}
+\end{center}
+
+\item Do the data above suggest that the quotients $\Delta s / \Delta h$ approach some number as $h$ approaches 400? If so, use the data to approximate that number. If not, explain why not.
+
+
+\item Use calculus to determine the exact scaling factor. Include units.
+
+\item Explain the meaning of the derivative as a scaling factor. Give an example with \emph{specific} small changes to explain the meaning of the derivative. 
+
+\end{enumerate}
+
+\end{question}
+
+
+\end{document}
