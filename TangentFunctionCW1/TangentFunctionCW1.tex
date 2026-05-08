@@ -27,6 +27,63 @@ Explain your reasoning.
 \end{onlineOnly}
 
 \href{https://www.desmos.com/calculator/omoajhcokg}{151: Tangent Derivative 2}
+
+
+\begin{explanation}
+
+First drag the ruler to the position shown below to approximate the $x$-coordinate $x_A = PA$ of point $B$.
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{hdox48kv6y}{900}{600}
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/hdox48kv6y}{151: Tangent Derivative 3}
+
+Using the scale it looks like
+\[
+     x_A  \sim 33 \text{ cm}.
+\]
+
+Continuing like this, point $B$ has $y$-coordinate
+\[
+   y_A  \sim 16 \text{ cm}.
+\]
+Point $C$ has $y$-coordinate
+\[
+   y_C \sim 22 \text{ cm}.
+\]
+The distance $r = OQ$ is
+\[
+   r \sim 37 \text{ cm} .
+\]
+And the distance $s = BQ$ is 
+\[
+   s \sim 5 \text{ cm}.
+\]
+
+The last two measurements give the approximate radian measure of angle $\Delta \theta$ to be
+\[
+  \Delta \theta \sim \frac{s}{r} \sim \frac{5 \text{ cm}}{37 \text{ cm}} = \frac{5}{37}.
+\]
+
+Also
+\[
+  \tan\theta_0 = \frac{y_A}{x_A} \sim \frac{16 \text{ cm}}{33 \text{ cm}} = \frac{16}{33}
+\]
+and
+\[
+  \tan(\theta_0+\Delta \theta) = \frac{y_C}{x_C} \sim \frac{22 \text{ cm}}{33 \text{ cm}} = \frac{22}{33}.
+\]
+So
+\begin{align*}
+  \frac{d}{d\theta} \left( \tan\theta \right) \Big|_{\theta = \theta_0} &\sim \frac{\tan(\theta_0 + \Delta \theta) - \tan \theta_0}{\Delta \theta} \\
+                                                                                               &\sim \frac{37}{5}\cdot \frac{6}{33}
+\end{align*}
+
+\end{explanation}
+
 \end{question}
 
 
