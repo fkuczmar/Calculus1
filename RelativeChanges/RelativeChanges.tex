@@ -39,14 +39,23 @@ Which would you rather own, $\$1000$ worth of a stock that increases by $\$2$/sh
 \end{freeResponse}
 \end{question}
 
-\begin{question} \label{Q9f03r3r}
-At 10:00am the prices of Stock A and Stock B are both increasing at the rate of $(\$2/\text{share})/\text{hour}$. At 10:00am Stock A sells for $\$50$/share and Stock B for $\$10$/share. Compare the relative rates at which the share prices are changing at 10:00am.
-\begin{freeResponse}
-\end{freeResponse}
-\end{question}
-
 
 \section{Graphical Interpretations}
+
+\begin{question} \label{Qdpf3mmz}
+The price of a stock drops from $\$80$/share at 9am to $\$64$/share at 1pm.
+
+\begin{enumerate}
+\item Find the average rate of change in the stock price between 9am and 1pm. 
+
+\item Find the relative average rate of change in the stock price from 9am to 1pm.
+
+\item Assuming the price decreases at a constant rate, how long would it take the price to drop from $\$80$/share to $\$0$/share?
+
+\item How are your answers to parts (b) and (c) related?
+\end{enumerate}
+
+\end{question}
 
 \begin{question} \label{Qdfl3r3}
 
@@ -62,7 +71,7 @@ expresses the price of a stock (measured in dollars/share) in terms of the numbe
 
 \item Find an expression for the \emph{relative} average rate of change in the stock price from time $t=u$ to time $t=v$ hours past noon. Assume $v>u$.
 
-\item Use the graph to approximate the relative average rate of change in the stock price from 11am to 12:30pm. Do this \emph{without} imposing a scale on the vertical axis. Use only the scale on the horizontal axis.
+\item Use the graph below to approximate the relative average rate of change in the stock price from 11am to 12:30pm. Do this \emph{without} imposing a scale on the vertical axis. Use only the scale on the horizontal axis.
 
 Look at Lines 1-6 of the worksheet for help. 
 
@@ -82,13 +91,35 @@ Desmos activity available at \href{https://www.desmos.com/calculator/pdmoelxdap}
 
 
 
+\section{Relative Instantaneous Rates of Change}
+The relative instantaneous rate of change of a function $P=f(t)$, measures the rate of change $dP/dt$ relative to $P$. It is the 
+product
+\[
+   \frac{1}{P} \cdot \frac{dP}{dt} .
+\]
+For example, if the balance in a bank account is increases at the rate of $\$120$/year at the moment the account has $\$2000$ dollars, then at that moment the balance is increasing at the relative rate of
+\[
+  \frac{1}{2000\text{ dollars}}{\left( 120 \text{ dollars/yr} \right)} = 0.06 \text{ yr}^\text{-1} = 6\% /\text{yr}.
+\]
 
-\begin{question} \label{Qhh43tbbtt}
+
+\begin{question} \label{Q9f03r3r}
+At 10:00am the prices of Stock A and Stock B are both increasing at the rate of $(\$2/\text{share})/\text{hour}$. At 10:00am Stock A sells for $\$50$/share and Stock B for $\$10$/share. Compare the relative rates at which the share prices are changing at 10:00am. Include units.
+\begin{freeResponse}
+\end{freeResponse}
+\end{question}
+
+
+\begin{question} \label{Qhh43tbbt3t}
 The function 
 \[
-      P = f(t) = 5 -3t + t^2 \, , \, 0\leq t \leq 4 , 
+      P = f(t) \, , \, 0\leq t \leq 4 , 
 \]
-expresses the price in $\$$/share of a stock in terms of the number of hours past 9am.
+expresses the price in $\$$/share of a stock in terms of the number of hours past 9am. 
+
+Use the graph of the function below to find approximate answers to each of the following question. Use only the scale on the horizontal axis. Do \emph{not} impose a scale on the vertical axis.
+
+Explain your reasoning thoroughly. Include screenshots to help with your explanations.
 
 \begin{enumerate}
 \item At what relative rate is the price of the stock changing at 10am? 
@@ -102,11 +133,17 @@ expresses the price in $\$$/share of a stock in terms of the number of hours pas
 
 \begin{onlineOnly}
     \begin{center}
-\desmos{hhkveu6lxp}{900}{600}
+\desmos{147urxpi6y}{900}{600}
 \end{center}
 \end{onlineOnly}
 
-Desmos activity available at \href{https://www.desmos.com/calculator/hhkveu6lxp}{151: Stock Price}
+Desmos activity available at \href{https://www.desmos.com/calculator/147urxpi6y}{151: Stock Price Relative 5}
+
+\item Now suppose
+\[
+      P = f(t) = 5 -3t + t^2 \, , \, 0\leq t \leq 4 . 
+\]
+Find exact answers to parts (a)-(d) above. You'll need the quotient rule for (d).
 \end{question}
 
 
