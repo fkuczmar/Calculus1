@@ -35,6 +35,7 @@ We could avoid thinking about an instantaneous growth rate by saying that the av
 
 But saying that the population increases by $0.5$ million bacteria every hour would not completely describe how the population grows. It does \emph{not} imply a constant growth rate because it does not tell us anything about what happens to the popluation over, for example, a half-hour period. The function graphed below shows an example of a non-linear function that increases by $0.5$ million over \emph{every} one-hour interval. Drag the slider $u$ in Line 1 to convince yourself of this.
 
+\begin{question} \label{Qld4f3}
 Describe what you see in the animation and how this suggests the function increases by $0.5$ million over \emph{every} one-hour interval.
 
 \begin{freeResponse}
@@ -49,7 +50,7 @@ Describe what you see in the animation and how this suggests the function increa
 \end{center}
 \end{onlineOnly}
 
-
+\end{question}
 
 %\begin{question}
 
@@ -63,7 +64,8 @@ We could say that the population doubles every hour. Equivalently, we could say 
 
 \begin{question} \label{WEWMRNERer}
 Describe what you see in the animation and how this suggests the function doubles over \emph{every} one-hour interval.
-\end{question}
+\begin{freeResponse}
+\end{freeResponse}
 
 \href{https://www.desmos.com/calculator/zapwlt6qju}{151: Not Constant Rate 3} 
 
@@ -74,6 +76,7 @@ Describe what you see in the animation and how this suggests the function double
 \end{center}
 \end{onlineOnly}
 
+\end{question}
 
 We might try describing what happens to the population over a shorter time interval, say $\Delta t$ hours. Over the time interval from time $t$ hours past noon to time $t+\Delta t$ hours past noon the population increases by 
 \begin{align*}
@@ -91,19 +94,23 @@ millions of bacteria. To get the relative change over this time interval, we div
 
 \begin{question} \label{QODFERerre}
 What are the units of this rate of change?
+\begin{freeResponse}
+\end{freeResponse}
 \end{question}
 
-For example, the relative rate of change in the population over a one hour period is
+For example, the relative change in the population over a one hour period is
 \[ 
         2^1 - 1 = 1 = 100\%,
 \]
-and over a half-hour period is
+and over a half-hour period the relative change is
 \[
     \sqrt{2} - 1 \sim 0.414 \sim 41.4\%.
 \]
 
 \begin{question} \label{QERdftrre}
 Explain why this rate is less than $50\%$.
+\begin{freeResponse}
+\end{freeResponse}
 \end{question}
 
 \begin{exploration} \label{EKDFeredfM}
@@ -121,6 +128,8 @@ The worksheet below shows the graph of the function $P=3(2^t)$.
 
 \begin{enumerate}
 \item Experiment with the worksheet by first dragging the slider $u$ (another name for $t$) in Line 2. Watch how Lines 6, 8, 10 change, as well as how the length of segment $AB$ changes. Describe what you see.
+\begin{freeResponse}
+\end{freeResponse}
 
 Notes:
 
@@ -149,19 +158,25 @@ This is the reciprocal of Line 8.
 
 
 \item Now Drag $h=\Delta t$ in Line 4 to $h=0.5$ and repeat part (a). Describe what you see.
+\begin{freeResponse}
+\end{freeResponse}
 
 \item Drag $h$ closer to zero and describe how Lines 6, 8, and 10 change. Include units for these three expressions.
 
 \item What are the units of Line 10? What is its meaning?
+\begin{freeResponse}
+\end{freeResponse}
 
 \item Summarize your observations.
+\begin{freeResponse}
+\end{freeResponse}
 
 \end{enumerate}
 \end{exploration}
 
 
 \section{Relative Growth Rates}
-We still have not answered the question about how to describe exponential growth \emph{without} a formula. What we know so far is that over time intervals of fixed duration an exponential function increaseses by a fixed percentage.  And Exploration 4 might have suggested that the relative instantaneous growth rate 
+We still have not answered the question about how to describe exponential growth \emph{without} a formula. What we know so far is that the relative average rate of change of an exponential function is constant over a time interval of fixed duration.  And Exploration 4 might have suggested that the relative instantaneous growth rate 
 \[
   \frac{1}{P}\cdot \frac{dP}{dt}
 \]
@@ -169,7 +184,7 @@ is constant for an exponential function. We can show this is true for our functi
 \[
   \frac{\Delta P}{P} = 2^{\Delta t} - 1 .
 \]
-So the relative instantaneous growth rate of the function $f(t)=3(2^t)$ is 
+Then the relative instantaneous growth rate of the function $f(t)=3(2^t)$ is 
 \begin{align*}
       \frac{1}{P}\cdot \frac{dP}{dt} &= \lim_{\Delta t\to  0} \frac{1}{P} \cdot \frac{\Delta P}{\Delta t} \\
                                                    &= \lim_{\Delta t\to  0} \frac{1}{\Delta t} \cdot \frac{\Delta P}{P} \\
@@ -186,7 +201,7 @@ From Exploration 4 we know the approximate value of this limit, and hence the re
         \frac{1}{P}\cdot \frac{dP}{dt} ~\sim 0.693 = 69.3\% / {\text hr}.
 \]
 
-So our population increases at the constant relative rate of approximately $69.3\%$/hr. The exact relative rate turns out to be
+So our population increases at the constant relative (instantaneous) rate of approximately $69.3\%$/hr. The exact relative rate turns out to be
 \[
   \frac{1}{P}\cdot \frac{dP}{dt} = \ln 2 / {\text hr}.
 \]
