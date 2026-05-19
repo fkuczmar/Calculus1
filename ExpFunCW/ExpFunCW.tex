@@ -10,11 +10,73 @@ Exponential problems.
 \maketitle
 
 
-\section{Conceptual Questions}
+\section{What is the Number $e$?}
+Here are three equivalent ways to understand the number $e$.
+
+\begin{enumerate}
+\item It is the number that makes the tangent line to the curve $y=e^x$ at the point $(0,1)$ have slope $1$.
+
+\item It is the number that makes the population function
+\[
+   P = A e^t \, , \, t \in \mathbb{R},
+\] 
+increase at a constant relative instantaneous rate of $100\%$/hr. Here we are assuming $t$ is measured in hours and that $A>0$ is the population at time $t=0$.
+
+\item The number $e$ as a limit:
+\[
+  e = \lim_{n\to \infty} \left( 1 + \frac{1}{n} \right)^n.
+\]
+\end{enumerate}
+
 
 \begin{question}  \label{Q39fvc3m3}
-At some moment the balance in an account is increasing at the relative rate of $4\%$/yr. 
-Use the language of \emph{specific} small changes to interpet the meaning of this statement. 
+
+Suppose the balance balance in an account increases at the relative instantaneous rate of $100\%$/yr. 
+
+\begin{enumerate}
+
+\item Interpret the meaning of this statement in terms of two  \emph{specific} small changes.
+
+\item Use your response to part (a) to approximate the annual growth factor. Multiplying this factor by the current balance gives the balance one year later.
+
+\item Find a better approximation to the annual growth factor.
+
+
+\end{enumerate}
+\end{question}
+
+\begin{question} \label{Qdefer3rv}
+This question is about description (b).
+
+The function
+\[
+    P = f(t) = 1000e^{0.25t} \, , \,  0\leq t \leq 8 ,
+\]
+expresses the balance in an account (measured in dollars) in terms of the number of years since the start of 2026.
+
+\begin{enumerate}
+
+\item Find the one-year growth factor.
+
+\item Find the four-year growth factor.
+
+\item Use your result from part (b) to find the relative instantaneous growth rate. Do \emph{not} compute anything. 
+
+\item Verify your answer to part (c) with the chain rule.
+\end{enumerate}
+\end{question}
+
+
+\begin{question} \label{Qdfe3r3r3r}
+The dashboard reading on a car shows the number of miles you have left to drive before running out of gas. The car's computer determines this number by dividing the number of gallons in your tank by the current rate (in gal/mile) at which the car is buring gas.
+
+Suppose between trip-odometer readings $30$ and $50$ miles, the dashboard always shows you have $200$ miles left to drive before running out of gas.
+
+\begin{enumerate}
+\item Explain why this implies the relative instantaneous rate of change in the volume of gas in your tank is constant over this period of your trip. Find this relative rate.
+
+\item Find a possible expression for the function $G=f(s)$, $30\leq s \leq 50$, that gives the number of gallons of gas in your car as a function of the trip odometer reading.
+\end{enumerate}
 \end{question}
 
 
@@ -59,7 +121,7 @@ Suppose
 Between trip odometer readings $s=90$ and $s=100$ miles, the dashboard reading indicates you always have $50$ miles left to drive before running out of gas.
 
 \begin{enumerate}
-\item Find the instantaneous relative rate of change in the volume of gas in your tank during this period of the trip.
+\item Find the relative instantaneous rate of change in the volume of gas in your tank during this period of the trip.
 
 \item (computation) Find the relative change in the volume of gas in your tank during the 10-mile stretch from odometer reading $s=90$ miles to odometer reading $s=100$ miles.
 
