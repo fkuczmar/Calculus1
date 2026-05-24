@@ -14,43 +14,73 @@ Log functions and their derivatives.
 \begin{question} \label{Qdfggghghhfll}
 
 \begin{enumerate}
+\item Explain the meaning of
+\[
+    \log_2 100.
+\] 
+Approximate the value of this expression \emph{without} a calculator.
+\begin{freeResponse}
+\end{freeResponse}
+
 \item Explain the meaning of 
 \[
   \ln 5 = \log_e 5 .
 \]
+\begin{freeResponse}
+\end{freeResponse}
 
-\item Simplify the function
-\[
-     f(x) = e^{\ln x} .
-\]
-Include the appropriate domain.
 
-\item Use the result of part (b) to find an expression for the derivative
+\item The inverse of the function
 \[
- \frac{d}{dx} \left(  \ln x \right ) .
+      P = f(t) = e^t \, , \, t\in\mathbb{R},
 \]
+is the function 
+\[
+  t = f^{-1}(P) = \ln P \, , \, P>0.
+\]
+Since 
+\[
+      f(f^{-1}(P)) = P \, , \, P>0,
+\]
+the chain rule tells us that
+\[
+     \frac{dP}{dt} \cdot \frac{dt}{dP} = \answer{1}
+\]
+and
+\[
+   \frac{dt}{dP} = \frac{1}{\answer{dP/dt}}.
+\]
+
+
+\item Use part (c) to express the derivative
+\[
+ \frac{d}{dP} \left(  \ln P \right ) \, , \, P>0.
+\]
+in terms of $P$.
+\begin{freeResponse}
+\end{freeResponse}
 \end{enumerate}
 
 %\begin{expandable}
-\begin{explanation}
-To compute the derivative in part (c), we know that since the functions $f(x)=\ln x$ and $g(x)=e^x$ are inverses of one another,
-\[
-    e^{\ln x} = x .
-\]
-Then differentiate both sides of this equation with respect to $x$ to get
-\[
-        \frac{d}{dx} \left(  e^{\ln x} \right) = \frac{dx}{dx} .
-\]
-And by the chain rule we can rewrite this equation as
-\[
-         \left(  e^{\ln x} \right)   \frac{\answer{d}}{dx} \left(  \answer{\ln x} \right) = \answer{1} . 
-\]
-And since $e^{\ln x} = \answer{x}$, 
-\[
-         \frac{d}{dx} \left(  \ln x  \right) = \answer{1/x}.
-\]
+%\begin{explanation}
+%To compute the derivative in part (c), we know that since the functions $f(x)=\ln x$ and $g(x)=e^x$ are inverses of one another,
+%\[
+%    e^{\ln x} = x .
+%\]
+%Then differentiate both sides of this equation with respect to $x$ to get
+%\[
+%        \frac{d}{dx} \left(  e^{\ln x} \right) = \frac{dx}{dx} .
+%\]
+%And by the chain rule we can rewrite this equation as
+%\[
+ %        \left(  e^{\ln x} \right)   \frac{\answer{d}}{dx} \left(  \answer{\ln x} \right) = \answer{1} . 
+%\]
+%And since $e^{\ln x} = \answer{x}$, 
+%\[
+%         \frac{d}{dx} \left(  \ln x  \right) = \answer{1/x}.
+%\]
 %\end{expandable}
-\end{explanation}
+%\end{explanation}
 
 \end{question}
 
@@ -67,16 +97,29 @@ Find simplified expressions for each of the following derivatives. Include an ap
 \[
 \frac{d}{dx} \left( \ln \left( x^2 \right) \right)
 \]
+
+Find each derivative twice.
+
+\begin{enumerate}
+\item By using the chain rule \emph{without} first simplifying each function.
+
+\item By first simplifying each function and then differentiating.
+\end{enumerate}
+
 \end{enumerate}
 
 \end{question}
 
 \begin{question} \label{Q89fghvbnm}
-Find an equation of the tangent line to the curve
+Find the $y$-coordinates of all points on the curve
 \[
-    y = 3\ln \left( \frac{x^2+1}{x^3+1} \right)
+    y = 3\ln \left( 1 + \cos\theta \right)
 \]
-at the point on the curve with $x$-coordinate $x=1$.
+where the tangent line is parallel to the line 
+\[
+      y+\theta = 5. 
+\]
+Do not use a calculator.
 \end{question}
 
 
@@ -105,24 +148,21 @@ Do this by noting that
    -x ,  \text{ if } x<0
 \end{cases}
 \]
-and using the chain rule to compute 
+and using the chain rule.
+
+\item Explain why it would be incorrect to say
 \[
-  \frac{d}{dx}  \left(  -x \right).
+   \frac{d}{dx} \left( \ln x \right) = 1/x.
 \]
 
 \item A reflection about the $y$-axis takes the graph of a function $y=f(x)$ to the graph of a function $y=g(x)$. Describe the transformation that takes the graph of $y=f^\prime(x)$ to the graph of $y=g^\prime(x)$. Explain your reasoning.
+
+\item A reflection about the origin takes the graph of a function $y=f(x)$ to the graph of a function $y=g(x)$. Describe the transformation that takes the graph of $y=f^\prime(x)$ to the graph of $y=g^\prime(x)$. Explain your reasoning.
 
 \end{enumerate}
 
 \end{question}
 
-\begin{question} \label{Qhjklghvbnm}
-Find an equation of the tangent line to the curve
-\[
-    y = 3\ln \Big| \frac{x^2+1}{x^3-1} \Big|
-\]
-at the point on the curve with $x$-coordinate $x=-1$.
-\end{question}
 
 \begin{question}  \label{Q435rtrtgfgfg}
 Let ${\cal L}$ be the tangent line to the curve
@@ -133,6 +173,15 @@ at the point on the curve with $\theta=\pi/7$.
 
 Find the acute angle ${\cal L}$ makes with the $x$-axis.
 \end{question}
+
+\begin{question} \label{Qhjklghvbnm}
+Find an equation of the tangent line to the curve
+\[
+    y = 3\ln \Big| \frac{x^2+1}{x^3-1} \Big|
+\]
+at the point on the curve with $x$-coordinate $x=-1$.
+\end{question}
+
 
 
 \section{Relative Rates of Change}
