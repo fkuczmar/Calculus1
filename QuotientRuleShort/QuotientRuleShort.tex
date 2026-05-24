@@ -9,6 +9,141 @@ Understanding the relative quotient rule.
 \end{abstract}
 \maketitle
 
+\section{Purchasing Power and the Relative Reciprocal Rule}
+
+
+\begin{question} \label{Qdfr3r0z0cx}
+\begin{enumerate}
+\item Suppose the price of oil increases by $25\%$/barrel. Find the relative change in the number of barrels of oil you can buy with $\$10,000$.
+
+Work in general and suppose the original price was $P$ dollars/barrel.
+
+\item Suppose instead the price increases by $10\%$/barrel. What then? By $5\%$/barrel?
+
+\end{enumerate}
+\end{question}
+
+\begin{question} \label{Qpdf30001}
+This problem is a continuous version of the first. It is a calculus problem.
+
+Suppose at some instant the price of oil is increasing at the rate of ($25\%$/barrel)/day. What can we say about the number of barrels of oil we can buy with $\$10,000$ at this instant?
+
+Try these two approaches:
+
+\begin{enumerate}
+\item Suppose first that the price increases at the \emph{constant} relative instantaneous rate of ($25\%$/barrel)/day and that at the moment in question the price is $P_0$ dollars/barrel. 
+
+\begin{enumerate}
+\item Find a function $P=f(t)$ that expresses the price (in dollars/barrel) in terms of the number of days since the moment in question, when the price is $P_0$ dollars/barrel.
+
+The function is
+\[
+     P = f(t) = P_0\answer{e^{0.25t}}.
+\]
+
+\item Then find a function $N=g(t)$ that expresses the number of barrels you can buy with $\$10,000$ in terms of the number of days since the price was $P_0$ dollars/barrel.
+
+The function is
+\[
+   N = g(t) = \frac{10000}{P_0 \answer{e^{0.25t}}}.
+\]
+
+\item Then use the chain rule to first compute the rate of change $dN/dt$. Then find an expression for the relative rate of change
+\[
+   \frac{1}{N} \cdot \frac{dN}{dt}.
+\] 
+
+To get started, write the function as
+\[
+   N = g(t) = 10000 \answer{e^{-0.25t}}.
+\]
+
+\item State a clear conclusion. What can you say if the price is always increasing at the relative instantaneous rate of ($25\%$/barrel)/day?
+
+\begin{freeResponse}
+\end{freeResponse}
+
+\end{enumerate}
+
+\item Now suppose only that at some instant price is increasing at the rate of ($25\%$/barrel)/day. 
+
+We'll let $P=f(t)$ be the function that expresses the price (in dollars/barrel) in terms of the number of days since the instant when the price was increasing at the relative rate of ($25\%$/barrel)/day.
+
+And we'll let 
+\[
+    N = g(t) = \frac{10000}{f(t)} = \frac{10000}{P}
+\]
+be the function that expresses the number of barrels you can buy with $\$10,000$ in terms of the number of days since the price was $P_0$ dollars/barrel.
+
+\begin{enumerate}
+
+\item Use the chain rule to find an expression for the relative rate of change in the number of barrels you can buy with $\$10,000$.
+
+\begin{align*}
+ \frac{dN}{dt} &= \frac{d}{dt} \left(   \frac{10000}{P} \right) \\
+                      &= \answer{-10000P^{-2}}\cdot \frac{dP}{dt} 
+\end{align*}
+Now multiply both sides of this equation by 
+\[
+  \frac{1}{N} = \frac{P}{10000}
+\]
+to get
+\[
+     \frac{1}{N} \cdot \frac{dN}{dt} = \answer{-\frac{1}{P}} \cdot \frac{dP}{dt} .
+\]
+
+\item State a clear conclusion. What can you say if at some moment the price is increasing at the relative rate of ($25\%$/barrel)/day?
+
+\begin{freeResponse}
+\end{freeResponse}
+
+\end{enumerate}
+\end{enumerate}
+\end{question}
+
+\section{National Debt and the Relative Quotient Rule}
+
+\begin{question} \label{Qmfm122190}
+During the course of one year, the national debt of a country increases by $20\%$ and its population increases by $5\%$. Find the relative change in the per-capita (ie. per-person) share of the national debt over the one-year period.
+
+This is an arithmetic problem. Let $P_0$ be the population at the start of the year. Let $D_0$ be the national debt at the start of the year. And let $N_0$ be the per-capita share of the debt at the start of the year. Work from here and express the population, debt, and per-capita share at th end of the year in terms of $P_0$, $D_0$, and $N_0$, respectively.
+
+End with a clear conclusion.
+\begin{freeResponse}
+\end{freeResponse}
+\end{question}
+
+\begin{question} \label{Q1wwf3zm88}
+Suppose at some moment the national debt is increasing at the relative rate of $20\%$/year and at the same moment the population is increasing at the relative rate of $5\%$/year. We wish to find the relative rate at which the per-capita share of the national debt is changing at this moment.
+
+\begin{enumerate}
+\item First use numerical methods to approximate this relative rate of change. Start the same way as before, by letting $P_0$ be the population at that moment and $D_0$ the national debt at that same moment. Then fill in the entries in the table below.
+\begin{center}
+  \begin{tabular}{ | c| c | c | c | c |}
+    \hline
+    $\Delta t$ (years) & $D_0+\Delta D$ & $P_0 + \Delta P$ & $\frac{D_0+\Delta D}{P_0+\Delta P}$ & $\frac{1}{N_0}\cdot \frac{\Delta N}{\Delta t}$ \\ \hline
+      $1$ & $\answer{1.20D_0}$ & $\answer{1.05P_0}$ &  $\answer{1.1428N_0}$ & $\answer{0.1428}$ \\ \hline
+    $0.1$ & $\answer{1.02D_0}$ & $\answer{1.005P_0}$ &  $\answer{1.01493N_0}$ & $\answer{0.1493}$ \\ \hline
+    $0.01$  & $\answer{1.002D_0}$  & $\answer{1.0005P_0}$  & $\answer{1.001499N_0}$ & $\answer{0.1499}$  \\ \hline
+           \hline
+  \end{tabular}
+\end{center}
+
+
+
+
+
+\item Now suppose instead both the national debt and population increase at \emph{constant} relative rates.
+
+\begin{enumerate}
+\item Find functions $D=f(t)$ and $P=g(t)$ that express the debt (in dollars) and the population in terms of the number of years since the debt and population were respectively $D_0$ dollars and $P_0$ people.
+
+\item Use calculus to answer the question. State a clear conclusion. What can you say about the relative rate of change in the per-capita share of the national debt if the debt and population are increasing at the respective relative instantaneous rate of $20\%$/year and $5\%$/year, each assumed to be constant?
+\end{enumerate}
+\end{enumerate}
+
+\end{question}
+
 
 
 
