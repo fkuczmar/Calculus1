@@ -81,7 +81,7 @@ be the function that expresses the number of barrels you can buy with $\$10,000$
 
 \begin{align*}
  \frac{dN}{dt} &= \frac{d}{dt} \left(   \frac{10000}{P} \right) \\
-                      &= \answer{-10000P^{-2}}\cdot \frac{dP}{dt} 
+                      &= \answer{-10000P^{-2}}\cdot \frac{\answer{dP}}{\answer{dt}} 
 \end{align*}
 Now multiply both sides of this equation by 
 \[
@@ -164,15 +164,15 @@ Since
 
 The key is to use the natural log function. Using the chain rule, we know the derivative
 \[
-      \frac{d}{dt} \left( \ln D  \right) = \frac{1}{\answer{D}} \cdot \frac{dD}{dt}
+      \frac{d}{dt} \left( \ln D  \right) = \frac{1}{\answer{D}} \cdot \frac{\answer{dD}}{\answer{dt}}
 \]
 is the relative growth rate of the debt,
 \[
-        \frac{d}{dt} \left( \ln P  \right) = \frac{1}{\answer{P}} \cdot \frac{dP}{dt}
+        \frac{d}{dt} \left( \ln P  \right) = \frac{1}{\answer{P}} \cdot \frac{\answer{dP}}{\answer{dt}}
 \]
 is the relative growth rate of population, and
 \[
-      \frac{d}{dt} \left( \ln N  \right) = \frac{1}{\answer{N}} \cdot \frac{dD}{dt}
+      \frac{d}{dt} \left( \ln N  \right) = \frac{1}{\answer{N}} \cdot \frac{\answer{dD}}{\answer{dt}}
 \]
 is the relative rate of change in the per-capita share of the debt.
 
@@ -200,8 +200,70 @@ So
 \item Suppose at some instant the price of oil is decreasing at the relative rate of ($25\%$/barrel)/day and at the same instant the demand is increasing at the relative rate $10\%$/day. Use the result of part (a) to determine the relative rate of change in the revenue from the sale of oil changing at this instant. Start by defining variables in complete sentences.
 
 \end{enumerate}
+\end{question}
+
+\section{Interpretations}
+
+\begin{question}  \label{Qghmnvngng}
+The function $P=f(t)$, $0\leq t \leq 12$, expresses the population of a colony of bacteria in terms of the number of hours past noon.
+
+Suppose that
+\[
+   \frac{d}{dt} \left(  \ln P \right)\Big|_{t=4} = \frac{d}{dt} \left(  \ln (f(t)) \right)\Big|_{t=4}  = \frac{3}{10} .
+\]
+
+\begin{enumerate}
+\item What are the units of this derivative?
+
+\item Explain the meaning of the derivative as a rate of change.
+
+\item Explain the meaning of the derivative as a scaling factor. Give an example with \emph{specific} changes.
+\end{enumerate}
+\end{question}
+
+\begin{question}  \label{Q3fdsf4thmm}
+The function 
+\[ 
+      G = f(v) = 40-0.08\left(\frac{v}{2}-25\right)^{2}\, \ , \, 25\leq v\leq 65 ,
+\]
+expresses the gas mileage of a car (in miles/gallon) in terms of its speed (in miles/hr).
+
+\begin{enumerate}
+\item Explain the meaning of the derivative 
+\[
+     \frac{d}{dv} \left( \ln (f(v)) \right) .
+\]
+Include units in your explanation. Also, what are the units of $25$ in the above expression? How do you know?
+
+\item Evaluate the above derivative at $v=30$ and explain its meaning as a scaling factor. Give an example with \emph{specific} changes changes.
+\end{enumerate}
+\end{question}
+
+\begin{question}  \label{Qdr34gggtre}
+\begin{enumerate}
+\item Use the website below to compute an accurate estimate of the current rate (in dollars/year) at which the U.S. national debt is changing. Explain your method. 
+
+\href{https://www.usdebtclock.org/}{National Debt Clock}
+
+\item Use the same website to compute an accurate estimate (in people/yr) at which the U.S. population is currently increasing. Look toward the middle of the screen to find the population clock for the U.S.
+
+%\href{https://www.census.gov/popclock/}{Popluation Clock}
+
+\item Use your estimates above and the current national debt and U.S. population to compute
+
+\begin{enumerate}
+   \item the current rate of change in the per-capita share of the national debt.
+
+    \item the current relative rate of change in the per-captia share of the national debt.
+\end{enumerate}
+
+\item Use the website to check your answer to (c)(i). You might need to revisit the site at a later time.
+\end{enumerate} 
+
+Include units in every number in each step of your computations.
 
 \end{question}
+
 
 
 \end{document}
