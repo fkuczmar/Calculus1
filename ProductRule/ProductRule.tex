@@ -1,0 +1,238 @@
+\documentclass{ximera}
+\title{The Product Rule}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+An introduction to the product rule.
+\end{abstract}
+\maketitle
+
+
+\section{The Product Rule, a Special Case}
+
+\begin{question} \label{Q23mcm32}
+The purpose of this question is to prove the relative product rule in a special case. Do \emph{not} assume it to be true.
+
+The functions $P=f(t)$ and $Q=g(t)$ change at constant relative rates. 
+
+\begin{enumerate}
+
+\item Suppose $f(0)=P_0$ and that
+\[
+   \frac{1}{P} \cdot \frac{dP}{dt} = a. 
+\]
+Find an expression for the function $P=f(t)$.
+\[
+    P = f(t) = P_0 \answer{e^{at}} .
+\]
+
+\item Suppose $g(0)=Q_0$ and that
+\[
+   \frac{1}{Q} \cdot \frac{dQ}{dt} = b. 
+\]
+Find an expression for the function $Q=g(t)$.
+\[
+    P = f(t) = Q_0 \answer{e^{b}} .
+\]
+
+\item Find an expression for the function $R = PQ = f(t)g(t)$.
+\[
+      R = PQ = P_0Q_0e^{(\answer{a+b})t} .
+\]
+
+\item Express the relative instantaneous rate of change of the product 
+\[
+  R=PQ = f(t)g(t)
+\]
+in terms of the relative instantaneous rates of change of its factors $P$ and $Q$. Explain your reasoning.
+
+\item State a clear conclusion without mathematical notation. 
+
+If two functions change at constant relative rates, then the relative instantaneous rate of change of their product is equal to ....
+
+\begin{freeResponse}
+\end{freeResponse}
+\end{enumerate}
+
+\end{question}
+
+\section{The Natural Log Function and its Derivative}
+
+\begin{question} \label{Qf0e0feef0}
+\begin{enumerate}
+\item Use the methods of this class, not implicit differentiation, to find the derivative of the inverse of the function
+\[
+     P = f(t) = e^t \, ,\, t\in \mathbb{R}.
+\]
+Include the correct domain.
+
+Start by expressing the derivative $dP/dt$ in terms of $P$.
+
+\item Find simplified expressions for each of the following derivatives. Do each problem twice. First directly as is, then again by simplifying each function before differentiating.
+
+\begin{enumerate}
+\item $\frac{d}{dx} \left( \ln \left( \frac{x}{4} \right) \right)$
+
+\item $\frac{d}{dx} \left( \ln x^4 \right)$
+
+\item $\frac{d}{d\theta} \left(\ln \left| \sec\theta \right|  \right)$
+\end{enumerate}
+\end{enumerate}
+\end{question}
+
+
+\begin{question} \label{Qp0v3f30}
+Let  $P=f(t)>0$ be a differentiable function of $t$.  Use the Leibniz notation to find an expression for the derivative
+\[
+         \frac{d}{dt} \left( \ln P \right) =   \frac{d}{dt} \left( \ln (f(t)) \right) 
+\]
+and interpret its meaning. 
+\end{question}
+
+
+\begin{question} \label{Qppv3frr}
+Suppose $P=f(t)$ and $Q=g(t)$ are positive differentiable functions of $t$. 
+
+\begin{enumerate}
+\item Use the result of Question 3 to express the relative rate of change of the product 
+\[
+   R = h(t) =  PQ = f(t)g(t)
+\]
+in terms of the relative rates of change of $P$ and $Q$.
+
+\item Use the result of part (a) to express the rate of change of the product $R=PQ$ in terms of $P$, $Q$, and their rates of changes. Check your expression has the correct units.
+
+\item State a clear conclusion without mathematical notation. What can you say about the relative instantaneous rate of change of the product of two differentiable functions?
+
+\begin{freeResponse}
+\end{freeResponse}
+
+\end{enumerate}
+\end{question}
+
+
+\section{Demand Functions and the Product Rule}
+
+\begin{question} \label{Qpvm3f33frnb9}
+The function 
+\[
+    Q = f(P) \, , \, 6 \leq P \leq 15,
+\]
+expresses the average number of burgers Five Guys of Edmonds sells (measured in burgers/day) in terms of the price (measure in dollars/burger).
+
+Suppose 
+\[
+     f(10) = 200
+\]
+and
+\[
+   \frac{dQ}{dP}\Big|_{P=10} = -16.
+\]
+
+\begin{enumerate}
+\item Interpret the meaning of the derivative above as a scaling factor. Give an example with \emph{specific} changes.
+
+\item Evaluate the derivative 
+\[
+      \frac{d}{dP} \left( \ln Q  \right)\Big|_{P=10}
+\]
+and interpret its meaning as a scaling factor. Give an example with \emph{specific} changes.
+
+\item Find the scaling factor that converts (by multiplication) a small relative change in the price (measured in dollars/burger, from the price of $\$10$/burger) to an accurate approximation of the corresponding relative change in the average number of burgers sold/day. Include units. Give an example with \emph{specific} changes.
+
+\end{enumerate}
+\end{question}
+
+\begin{question} \label{Qefefrf22}
+This is a continuation of the previous. Use the information given there.
+
+Let 
+\[
+   R = g(P) \, , \, 6\leq P \leq 15,
+\]
+be the function that expresses the average revenue (measued in dollars/day) from the sale of burgers in terms of the price (measured in dollars/burger).
+
+\begin{enumerate}
+\item Use numerical methods to approximate the derivative
+\[
+ \frac{dR}{dP}\Big|_{P=10}.
+\]
+Include \emph{unsimplified} units. Do this by filling in the missing entries in the table below.
+
+Note the entries in the second, third, and fourth columns will be approximations.
+
+\begin{center}
+  \begin{tabular}{ | c| c | c | c | c |}
+    \hline
+    $P$ (dollars/burger) & $Q$ (burgers/day) & $R=PQ$ (dollars/day) & $\Delta R/\Delta P$ (units?) \\ \hline
+      $9$ & $\answer{216}$ & $\answer{1944}$ &  $\answer{56}$ \\ \hline
+    $9.9$ & $\answer{201.6}$ & $\answer{1995.84}$ &  $\answer{41.6}$  \\ \hline
+    $9.99$  & $\answer{200.16}$  & $\answer{1999.5984}$  & $\answer{40.16}$   \\ \hline
+           \hline
+  \end{tabular}
+\end{center}
+
+\item Use calculus to evaluate the derivative
+\[
+       \frac{dR}{dP} \Big|_{P=10}
+\]
+and interpret its meaning in the usual way.
+
+
+\item What are the units of the derivative in part (b)? Explain its meaning in the usual way. Do \emph{not} simplify the units.
+
+\item Evaluate the derivative
+\[
+       \frac{d}{dP} \left( \ln P \right) \Big|_{P=10}
+\]
+and interpret its meaning in the usual way. 
+
+\item Evaluate the derivative
+\[
+       \frac{d}{dP} \left( \ln R \right) \Big|_{P=10}
+\]
+and interpret its meaning in the usual way.
+
+
+\item If you were the manager and Five Guys were currently charging $\$10$/burger, would you raise the price? Explain.
+\begin{freeResponse}
+\end{freeResponse}
+
+\item Simplify the units of the derivative in part (a). What, if anything, does this suggest about its meaning?
+\begin{freeResponse}
+\end{freeResponse}
+\end{enumerate}
+
+\end{question}
+
+\section{Back to the Quotient Rule}
+\begin{question} \label{Qppf3r39c}
+Let $P=f(t)$ and $Q=g(t)>0$ be differentiable functions of $t$.
+
+Let 
+\[
+  R = h(t) = \frac{f(t)}{g(t)} = \frac{P}{Q}.
+\]
+
+Use the algebra of limits to find an expression for the derivative
+\[
+ \frac{d}{dt} \left( \frac{f(t)}{g(t)} \right) = \frac{d}{dt} \left( \frac{P}{Q} \right) .
+\]
+
+Do this as follows:
+
+\begin{align*}
+ \frac{d}{dt} \left( \frac{P}{Q} \right)   &= \lim_{\Delta t \to 0} \frac{\Delta (P/Q)}{\Delta t} \\
+                                                        &= \lim_{\Delta t \to 0} \frac{1}{\Delta t} \cdot \left( \frac{P+\Delta P}{Q+\Delta Q} - \frac{P}{Q}   \right) \\
+                                                       &= \lim_{\Delta t \to 0} \frac{1}{\Delta t} \cdot \left( \frac{\answer{Q\Delta P - P\Delta Q}}{Q(Q+\Delta Q)} \right) \\
+                                                     &=\lim_{\Delta t \to 0} \frac{\Delta P}{\Delta t}\cdot \frac{1}{\answer{Q+\Delta Q}} - \lim_{\Delta t \to 0}\frac{P}{\answer{Q(Q+\Delta Q)}} \cdot \frac{\Delta Q}{\Delta t} \\
+                                                     &= \frac{dP}{dt}\cdot \frac{1}{\answer{Q}} - \frac{P}{\answer{Q^2}}\cdot \frac{dQ}{dt} .
+\end{align*}
+
+\end{question}
+
+
+
+\end{document}
