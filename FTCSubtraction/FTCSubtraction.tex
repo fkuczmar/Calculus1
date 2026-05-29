@@ -3,6 +3,8 @@
 
 \newcommand{\pskip}{\vskip 0.1 in}
 
+\newtheorem{theorem87}{FTC}
+
 \begin{document}
 \begin{abstract}
 FTC
@@ -10,8 +12,8 @@ FTC
 \maketitle
 
 
-\begin{question} \label{QPf4nxEFVVD}
-For another way to sketch the graph of the derivative of a function from the graph of the function, think first about differences in outputs.
+\begin{exploration} \label{QPf4nxEFVVD}
+For another way to sketch the graph of the derivative of a function from the graph of the function, subtract outputs instead of plotting slopes. 
  
 
 \begin{onlineOnly}
@@ -22,22 +24,18 @@ For another way to sketch the graph of the derivative of a function from the gra
 
 \href{https://www.desmos.com/calculatorom47jl8m5t}{Graphical Differntiation}
 
-\end{question}
+\end{exploration}
 
 
 
 
-\begin{question} \label{QPfe4nxEFVVD}
+\begin{exploration} \label{QPfe4nxEFVVD}
 
-\begin{enumerate}
-
-\item Write an expression for the distance the beetle crawls from 12:03pm to 12:07pm. Use the graph of the function $v=f(t)$ below to approximate this distance.
-
-\item Write an equation you would solve to determine when the beetle is halfway to its destination. Start by defining an unknown (in a complete sentence, with units). Do not use $t$, it is already taken.
-
-\item Use the graph of the function $v=f(t)$ below to approximate the time in part (b). But first determine whether this time is before or after 12:04pm.
-
-\end{enumerate}
+To sketch a graph of the function
+\[
+ g(x) = \int_a^x f(t)\, dt
+\]
+for a continuous function $f$, add outputs instead of accumulating signed areas.
 
 \begin{onlineOnly}
     \begin{center}
@@ -47,6 +45,29 @@ For another way to sketch the graph of the derivative of a function from the gra
 
 \href{https://www.desmos.com/calculator/anp4kxvozn}{Graphical Integration}
 
-\end{question}
+\begin{theorem87}
+Let $f$ be a continuous function. Then
+\[
+   \frac{d}{dx} \int_a^x f(t)\, dt = f(x).
+\]
+\end{theorem87}
+\begin{proof}
+Subtraction and division undoes addition and multiplication.
+\end{proof}
+
+\begin{theorem87}
+Let $f$ be a continuously differentiable function. Then
+\[
+   f(x) =  f(a) + \int_a^x f^\prime(t)\, dt .
+\]
+\end{theorem87}
+\begin{proof}
+With the right starting point, addition and multiplication undoes subtraction and division.
+\end{proof}
+
+
+\end{exploration}
+
+
 
 \end{document}
