@@ -1,0 +1,115 @@
+\documentclass{ximera}
+\title{Gas Consumption Explained}
+
+\newcommand{\pskip}{\vskip 0.1 in}
+
+\begin{document}
+\begin{abstract}
+Gas consumption and derivatives.
+\end{abstract}
+\maketitle
+
+
+
+
+\begin{question} \label{Q5geyghhg}
+The function
+\begin{align*}
+    G  &= f(v)    \\
+         &=  45 -\frac{1}{20} \left(v-50 \right)^2 \, , \, 25\leq v \leq 70 ,
+\end{align*}
+graphed below expresses the gas mileage (in miles/gal) of a car in terms of its speed (in miles/hour).
+
+\begin{onlineOnly}
+    \begin{center}
+\desmos{ksjvtmbmew}{450}{600}  
+\end{center}
+\end{onlineOnly}
+
+\href{https://www.desmos.com/calculator/ksjvtmbmew}{151: Burning Gas 54}
+
+There are two questions:
+
+\begin{enumerate}
+\item to first approximate the speeds at which the car burns gas at the minimum and maximum rates, the rates being with respect to time, measured in gallons/hour
+
+\item to use calculus to find these exact speeds.
+\end{enumerate}
+
+\begin{explanation}
+\begin{enumerate}
+\item Let's start with the observation that it is \emph{not} necessarily true that a car burns gas at the maximum (or minimum) rate when its gas mileage is the least (or greatest).
+
+For example, a car (not the one here) might get $15$ miles/gallon at a speed $10$ miles/hour and $30$ miles/gallon at a speed of $60$ miles/hour.
+
+Compare the rates at which the car burns gas at these speeds.
+\begin{freeResponse}
+\end{freeResponse}
+
+\item Since the problem of estimating the speeds when the car burns gas at the minimumm and maximum rates from the graph proved difficult, let's start with a computation.
+
+The key idea here is to forget about the particular function given above and work in general. This will make things much easier to understand.
+
+The first step is to realize that the function
+\[
+  r =g(v) = \frac{v}{G} = \frac{v}{f(v)} \, , \, 20\leq v \leq 70,
+\]
+expresses the rate (in gal/hr) at which the car burns gas in terms of its speed (in miles/hour). Our goal is to minimize/maximize this function over the given interval.
+
+We should find the critical points of the function $g$. Using the quotient rule,
+\begin{align*}
+   \frac{d}{dv} \left( \frac{v}{G} \right) &= \frac{1}{G^2} \left( \frac{dv}{dv} G - v\frac{dG}{dv}  \right) \\
+                                                         &= \frac{1}{G^2} \left( G - v\frac{dG}{dv}  \right) .
+\end{align*}
+
+Since $G>0$, the critical points of the function $g$ occur when
+\[
+  G - v\frac{dG}{dv} = 0 ,
+\]
+or equivalently when
+\[
+      \frac{dG}{dv} = \frac{G}{v} .
+\]
+
+In terms of the above graph, this says at a critical point of the function $r=g(v)$, the slope of the tangent line to the curve $G=f(v)$ is equal to the slope $G/v$ of the line through the origin and the point $(v,G)$. Or put another way, at a critical point the tangent line to the curve $G=f(v)$ passes through the origin.
+
+Use this observation and the slider $v$ in the above workheet to estimate the critical value(s) of the function $r=g(v)$. Explain your reasoning.
+
+\begin{freeResponse}
+\end{freeResponse}
+
+\item By now you might have a better understanding of how to use the above graph to approximate the speeds at which the car bunrs gas at the minimum and maximum rates. The key idea is to interpret the slope of the line $OP$ through the origin and the point $P$ with coordinates $(v,G) = (v,f(v))$. It is \emph{not} the rate at which the car burns gas at a speed of $v$ miles/hour, but it is closely related to that rate.
+
+Explain now how to use the slider $v$ in the above graph to approximate the speeds at which the car burns gas at the miniumum/maximum rates. One of the apprpoximations should be exact.
+
+\begin{freeResponse}
+\end{freeResponse}
+
+\item Now we'll compute these speeds by comparing the rates at the endpoints of the interval $v\in [20,70]$ with the rate at the critical point. We'll find the critical points two ways. 
+
+\begin{enumerate}
+
+\item By using the quotient rule and solving the equation
+\[
+  \frac{dG}{dv} = \frac{G}{v}
+\]
+for the given function $G=f(v)$ above.
+
+\item By \emph{avoiding} the quotient rule and and instead maximizing/minimizing the function
+\[
+  \frac{1}{r} = \frac{G}{v} = \frac{f(v)}{v} .       
+\]
+
+Carry out these computations and compare the two. Which is easier?
+\begin{freeResponse}
+\end{freeResponse}
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{explanation}
+
+\end{question}
+
+\end{document}
